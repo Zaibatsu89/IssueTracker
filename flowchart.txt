@@ -1,0 +1,145 @@
+Task Management Utility gestart...
+
+Voer een zoekterm in (of 'exit' om te stoppen):
+flowchart
+
+Zoeken naar taken met 'flowchart'...
+
+Doorzoeken lijst: Takenlijst...
+Lijst: Takenlijst (31 resultaten)
+--------------------------------------------------
+□ ingrijpen als nieuwe ETC boven volgende tijdtrigger komt in flowcharts
+    WitTronics
+
+□ probleem: 'Ga naar Review' in flowchart 5. Test wijkt af van workflow op Jira
+    WitTronics
+    oplossing: blijf in issue status "Testen" en vraag een review aan bij opdrachtgever
+
+□ probleem: 'update issue status naar "In Review" in flowchart 4. Implementatie wijkt af van workflow op Jira
+    WitTronics
+    oplossing: vervang door 'update issue status naar "Testen"'
+
+□ flowcharts bijwerken voor dinsdagavond
+    WitTronics
+    18 uur
+    Deadline: 08-04-2025
+
+□ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
+    WitTronics
+    oplossing: voeg update ETC's en contact moment toe aan flowcharts
+
+□ probleem: ik heb geen tijd om te kijken naar implementatie mogelijkheden
+    WitTronics
+    oplossing: implementatie mogelijkheden bekijken verplaatsen naar intake in checklist
+    wat ging er mis? intake mag max. 5 minuten duren
+    wat duurde lang? het besef dat de checklist nog altijd leidend is
+    wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts
+
+□ probleem: ik heb geen tijd om het scenario te reproduceren
+    WitTronics
+    oplossing: reproductie verplaatsen naar intake in checklist
+    wat ging er mis? intake mag max. 5 minuten duren
+    wat duurde lang? het besef dat de checklist nog steeds leidend is
+    wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts.
+
+□ probleem: ik heb geen pull request gemaakt
+    WitTronics
+    oplossing: Git-archief aanvragen
+    wat ging er mis? AI is mainstream, wij zijn niet mainstream
+    wat duurde lang? het kunnen negeren van de groen gemarkeerde blokken van de flowcharts
+    hoe kan het sneller? negeer de groen gemarkeerde blokken van de flowcharts, ook al zijn ze mainstream.
+
+✓ flowcharts in groene map meenemen
+    WitTronics
+    Deadline: 26-03-2025
+
+□ flowcharts: confidence level, zet ik mijn huis in? bij iedere processtap
+    WitTronics
+
+□ flowcharts: oplossingsrichting niet zonder overleg verlaten
+    WitTronics
+    - trigger -> wat werkt?
+
+□ voer abstractie door in flowcharts
+    WitTronics
+    intake: keuze uit Jira of documentatie
+    bij Jira: ETC's bedenken
+    bij documentatie: vastgestelde ETC voor uitvoering (implementatie) overnemen
+    Deadline: 28-03-2025
+
+□ digitale flowcharts herstellen
+    WitTronics
+    groen: weghalen
+    geel: wijzigen
+    rood: toevoegen
+    Deadline: 28-03-2025
+
+✓ nadenken over implementatie en test van papieren flowcharts
+    Esther
+    Deadline: 09-03-2025
+
+✓ foto's hele flowchart gemaild naar Esther
+    WitTronics
+    20 uur
+    Deadline: 12-03-2025
+
+□ begrijpt de opdrachtgever de issue? in flowcharts van (Jira) intake
+    WitTronics
+
+□ dag voorbij trigger: vastleggen wat ik doe + duurproef starten, in flowcharts
+    WitTronics
+
+✓ flowcharts meenemen
+    WitTronics
+    Deadline: 17-02-2025
+
+✓ ontwerp flowchart
+    WitTronics
+    Deadline: 14-02-2025
+
+□ na iedere tijd trigger: weet ik waar ik mee bezig ben? in flowcharts
+    WitTronics
+
+□ flowchart bevat nog niet de overlegmomenten
+    WitTronics
+
+□ na '150%' vragen beantwoorden en ETC bedenken, in flowcharts
+    WitTronics
+
+□ na 'haal je 100%/150%' terugkoppelen via 'kan het binnen 100%/150%' naar 'ETC', in flowcharts
+    WitTronics
+
+□ na iedere tijd trigger: past laatste totaal schatting niet in resterende totaal tijd? overleggen, in flowcharts
+    WitTronics
+
+□ 'wat ging er mis?' en 'wat kon er anders?' in reflectie van flowcharts
+    WitTronics
+
+□ welke score voor 'wat levert het mij op?' geef je op ieder antwoord van je reflectie? in flowcharts
+    WitTronics
+
+□ flowchart: afstemming vervolgeffort niet nodig indien totaal van resterende effort binnen initiële schatting ligt
+    WitTronics
+
+□ de hypothese/oplossingsrichting op momenten herevalueren, in flowcharts
+    WitTronics
+    tussen evaluatie en effort schatting de hypothese/oplossingsrichting evalueren, stop indien ongeldig
+
+□ wat gebeurd er als de hypothese omvalt na analyse? in flowcharts
+    WitTronics
+
+□ intake opnieuw? in flowcharts
+    WitTronics
+
+□ breid 'Jeroen' uit in flowcharts
+    WitTronics
+    - hoe heeft het zo lang kunnen duren?
+    - hoe lang verwacht ik nog nodig te hebben?
+    - zijn er snellere methodieken mogelijk?
+    - Jeroen bepaalt vervolg
+    - samen doen we live intake
+    - indien akkoord mag ik terug naar analyse
+
+
+----------------------------------------
+Totaal aantal gevonden taken over alle lijsten: 31
