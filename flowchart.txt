@@ -28,21 +28,21 @@ Lijst: Takenlijst (31 resultaten)
     WitTronics
     oplossing: voeg update ETC's en contact moment toe aan flowcharts
 
-□ probleem: ik heb geen tijd om te kijken naar implementatie mogelijkheden
+✓ probleem: ik heb geen tijd om te kijken naar implementatie mogelijkheden
     WitTronics
     oplossing: implementatie mogelijkheden bekijken verplaatsen naar intake in checklist
     wat ging er mis? intake mag max. 5 minuten duren
     wat duurde lang? het besef dat de checklist nog altijd leidend is
     wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts
 
-□ probleem: ik heb geen tijd om het scenario te reproduceren
+✓ probleem: ik heb geen tijd om het scenario te reproduceren
     WitTronics
     oplossing: reproductie verplaatsen naar intake in checklist
     wat ging er mis? intake mag max. 5 minuten duren
     wat duurde lang? het besef dat de checklist nog steeds leidend is
     wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts.
 
-□ probleem: ik heb geen pull request gemaakt
+✓ probleem: ik heb geen pull request gemaakt
     WitTronics
     oplossing: Git-archief aanvragen
     wat ging er mis? AI is mainstream, wij zijn niet mainstream
