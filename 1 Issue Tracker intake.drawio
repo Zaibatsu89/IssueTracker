@@ -40,8 +40,14 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-17" value="Herhaal proces na 5 minuten" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="910" y="300" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-19" target="pIqAgrGMqvA-EC0-p6iy-23" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="pIqAgrGMqvA-EC0-p6iy-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-19" target="pIqAgrGMqvA-EC0-p6iy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="200" />
+              <mxPoint x="560" y="320" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-19" target="pIqAgrGMqvA-EC0-p6iy-30" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -61,9 +67,6 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-22" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="530" y="130" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-23" value="Kijk naar implementatie mogelijkheden (15 min)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="400" y="240" width="320" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-25" value="Feature" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="410" y="170" width="60" height="30" as="geometry" />
         </mxCell>
@@ -72,9 +75,6 @@
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-30" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="340" y="300" width="40" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-23" target="pIqAgrGMqvA-EC0-p6iy-30" edge="1">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-33" target="pIqAgrGMqvA-EC0-p6iy-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
