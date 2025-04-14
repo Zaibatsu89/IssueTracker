@@ -11,11 +11,11 @@ Lijst: Takenlijst (31 resultaten)
 □ ingrijpen als nieuwe ETC boven volgende tijdtrigger komt in flowcharts
     WitTronics
 
-□ probleem: 'Ga naar Review' in flowchart 5. Test wijkt af van workflow op Jira
+✓ probleem: 'Ga naar Review' in flowchart 5. Test wijkt af van workflow op Jira
     WitTronics
     oplossing: blijf in issue status "Testen" en vraag een review aan bij opdrachtgever
 
-□ probleem: 'update issue status naar "In Review" in flowchart 4. Implementatie wijkt af van workflow op Jira
+✓ probleem: 'update issue status naar "In Review" in flowchart 4. Implementatie wijkt af van workflow op Jira
     WitTronics
     oplossing: vervang door 'update issue status naar "Testen"'
 
@@ -24,7 +24,7 @@ Lijst: Takenlijst (31 resultaten)
     18 uur
     Deadline: 08-04-2025
 
-□ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
+✓ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
     WitTronics
     oplossing: voeg update ETC's en contact moment toe aan flowcharts
 
@@ -100,7 +100,7 @@ Lijst: Takenlijst (31 resultaten)
 □ na iedere tijd trigger: weet ik waar ik mee bezig ben? in flowcharts
     WitTronics
 
-□ flowchart bevat nog niet de overlegmomenten
+✓ flowchart bevat nog niet de overlegmomenten
     WitTronics
 
 □ na '150%' vragen beantwoorden en ETC bedenken, in flowcharts
@@ -131,7 +131,7 @@ Lijst: Takenlijst (31 resultaten)
 □ intake opnieuw? in flowcharts
     WitTronics
 
-□ breid 'Jeroen' uit in flowcharts
+✓ breid 'Jeroen' uit in flowcharts
     WitTronics
     - hoe heeft het zo lang kunnen duren?
     - hoe lang verwacht ik nog nodig te hebben?
