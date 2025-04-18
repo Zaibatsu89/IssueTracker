@@ -6,34 +6,54 @@ flowchart
 Zoeken naar taken met 'flowchart'...
 
 Doorzoeken lijst: Takenlijst...
-Lijst: Takenlijst (31 resultaten)
+Lijst: Takenlijst (36 resultaten)
 --------------------------------------------------
-□ ingrijpen als nieuwe ETC boven volgende tijdtrigger komt in flowcharts
+✓ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
     WitTronics
-
-✓ probleem: 'Ga naar Review' in flowchart 5. Test wijkt af van workflow op Jira
-    WitTronics
-    oplossing: blijf in issue status "Testen" en vraag een review aan bij opdrachtgever
+    oplossing: voeg update ETC's en contact moment toe aan flowcharts
 
 ✓ probleem: 'update issue status naar "In Review" in flowchart 4. Implementatie wijkt af van workflow op Jira
     WitTronics
     oplossing: vervang door 'update issue status naar "Testen"'
 
-□ flowcharts bijwerken voor dinsdagavond
+✓ probleem: 'Ga naar Review' in flowchart 5. Test wijkt af van workflow op Jira
     WitTronics
-    18 uur
-    Deadline: 08-04-2025
+    oplossing: blijf in issue status "Testen" en vraag een review aan bij opdrachtgever
 
-✓ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
+✓ breid 'Jeroen' uit in flowcharts
     WitTronics
-    oplossing: voeg update ETC's en contact moment toe aan flowcharts
+    - hoe heeft het zo lang kunnen duren?
+    - hoe lang verwacht ik nog nodig te hebben?
+    - zijn er snellere methodieken mogelijk?
+    - Jeroen bepaalt vervolg
+    - samen doen we live intake
+    - indien akkoord mag ik terug naar analyse
 
-✓ probleem: ik heb geen tijd om te kijken naar implementatie mogelijkheden
+✓ flowchart bevat nog niet de overlegmomenten
     WitTronics
-    oplossing: implementatie mogelijkheden bekijken verplaatsen naar intake in checklist
-    wat ging er mis? intake mag max. 5 minuten duren
-    wat duurde lang? het besef dat de checklist nog altijd leidend is
-    wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts
+
+□ Flowcharts: alleen delen als het af is -> testen!
+    WitTronics
+
+□ Flowcharts: in review geen weg terug
+    WitTronics
+
+□ Flowcharts: kopieën weghalen
+    WitTronics
+
+✓ flowcharts printen en meenemen naar werk
+    thuis
+    Deadline: 14-04-2025
+
+□ flowcharts: haal bug/feature weg uit intake
+    WitTronics
+
+✓ probleem: ik heb geen pull request gemaakt
+    WitTronics
+    oplossing: Git-archief aanvragen
+    wat ging er mis? AI is mainstream, wij zijn niet mainstream
+    wat duurde lang? het kunnen negeren van de groen gemarkeerde blokken van de flowcharts
+    hoe kan het sneller? negeer de groen gemarkeerde blokken van de flowcharts, ook al zijn ze mainstream.
 
 ✓ probleem: ik heb geen tijd om het scenario te reproduceren
     WitTronics
@@ -42,12 +62,20 @@ Lijst: Takenlijst (31 resultaten)
     wat duurde lang? het besef dat de checklist nog steeds leidend is
     wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts.
 
-✓ probleem: ik heb geen pull request gemaakt
+✓ probleem: ik heb geen tijd om te kijken naar implementatie mogelijkheden
     WitTronics
-    oplossing: Git-archief aanvragen
-    wat ging er mis? AI is mainstream, wij zijn niet mainstream
-    wat duurde lang? het kunnen negeren van de groen gemarkeerde blokken van de flowcharts
-    hoe kan het sneller? negeer de groen gemarkeerde blokken van de flowcharts, ook al zijn ze mainstream.
+    oplossing: implementatie mogelijkheden bekijken verplaatsen naar intake in checklist
+    wat ging er mis? intake mag max. 5 minuten duren
+    wat duurde lang? het besef dat de checklist nog altijd leidend is
+    wat kan er sneller? bewust zijn van de afwijkingen ten opzichte van de checklist bij het ontwerpen van de flowcharts
+
+□ ingrijpen als nieuwe ETC boven volgende tijdtrigger komt in flowcharts
+    WitTronics
+
+□ flowcharts bijwerken voor dinsdagavond
+    WitTronics
+    18 uur
+    Deadline: 08-04-2025
 
 ✓ flowcharts in groene map meenemen
     WitTronics
@@ -100,9 +128,6 @@ Lijst: Takenlijst (31 resultaten)
 □ na iedere tijd trigger: weet ik waar ik mee bezig ben? in flowcharts
     WitTronics
 
-✓ flowchart bevat nog niet de overlegmomenten
-    WitTronics
-
 □ na '150%' vragen beantwoorden en ETC bedenken, in flowcharts
     WitTronics
 
@@ -131,15 +156,6 @@ Lijst: Takenlijst (31 resultaten)
 □ intake opnieuw? in flowcharts
     WitTronics
 
-✓ breid 'Jeroen' uit in flowcharts
-    WitTronics
-    - hoe heeft het zo lang kunnen duren?
-    - hoe lang verwacht ik nog nodig te hebben?
-    - zijn er snellere methodieken mogelijk?
-    - Jeroen bepaalt vervolg
-    - samen doen we live intake
-    - indien akkoord mag ik terug naar analyse
-
 
 ----------------------------------------
-Totaal aantal gevonden taken over alle lijsten: 31
+Totaal aantal gevonden taken over alle lijsten: 36
