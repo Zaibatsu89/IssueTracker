@@ -32,7 +32,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-8" value="Vraag een review aan bij de baas" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="170" y="490" width="180" height="40" as="geometry" />
+          <mxGeometry x="170" y="520" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="A9CifIRJGOpqQVbqJi1m-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZBgMopNVYvy6rprvYICM-10" target="YdKGGtHOr01GeGjWYpcF-6">
           <mxGeometry relative="1" as="geometry" />
@@ -41,10 +41,10 @@
           <mxGeometry x="450" y="270" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-12" value="Ga naar Analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="480" y="490" width="120" height="40" as="geometry" />
+          <mxGeometry x="480" y="520" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-18" value="⚫" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=28;" parent="1" vertex="1">
-          <mxGeometry x="380" y="570" width="40" height="40" as="geometry" />
+          <mxGeometry x="380" y="600" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="YdKGGtHOr01GeGjWYpcF-1" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="245" y="190" width="30" height="30" as="geometry" />
@@ -61,14 +61,14 @@
         <mxCell id="A9CifIRJGOpqQVbqJi1m-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="A9CifIRJGOpqQVbqJi1m-10" target="ZBgMopNVYvy6rprvYICM-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A9CifIRJGOpqQVbqJi1m-10" value="Tests Geslaagd?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="280" y="420" width="240" height="40" as="geometry" />
+        <mxCell id="A9CifIRJGOpqQVbqJi1m-10" value="Resultaat conform&lt;br&gt;verwachting/hypothese?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="420" width="240" height="80" as="geometry" />
         </mxCell>
         <mxCell id="A9CifIRJGOpqQVbqJi1m-11" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="245" y="410" width="30" height="30" as="geometry" />
+          <mxGeometry x="245" y="430" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="A9CifIRJGOpqQVbqJi1m-12" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="520" y="410" width="40" height="30" as="geometry" />
+          <mxGeometry x="520" y="430" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="A9CifIRJGOpqQVbqJi1m-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="YdKGGtHOr01GeGjWYpcF-6" target="A9CifIRJGOpqQVbqJi1m-10">
           <mxGeometry relative="1" as="geometry" />
