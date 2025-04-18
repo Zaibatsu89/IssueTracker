@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="Pagina-1" id="2qbA3W88gErK0AjWZLuX">
-    <mxGraphModel dx="1428" dy="961" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1267" dy="995" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -97,14 +97,8 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-36" value="Interruptie: Issue niet binnen 5 minuten ontvangen?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="440" y="400" width="480" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-38" target="pIqAgrGMqvA-EC0-p6iy-40" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-38" value="Escaleer naar management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="330" y="460" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-40" value="&lt;font&gt;⚫&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillStyle=solid;fillColor=none;perimeterSpacing=0;shadow=0;gradientColor=none;gradientDirection=north;fontSize=28;" parent="1" vertex="1">
-          <mxGeometry x="400" y="520" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-42" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="425" y="390" width="30" height="30" as="geometry" />
@@ -136,7 +130,10 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-55" value="&lt;font&gt;⚫&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillStyle=solid;fillColor=none;perimeterSpacing=0;shadow=0;gradientColor=none;gradientDirection=north;fontSize=28;" parent="1" vertex="1">
           <mxGeometry x="660" y="770" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-53" target="pIqAgrGMqvA-EC0-p6iy-55" edge="1">
+        <mxCell id="ZpPhUitxlaBV-uKMJwad-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-53" target="pIqAgrGMqvA-EC0-p6iy-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZpPhUitxlaBV-uKMJwad-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-38" target="pIqAgrGMqvA-EC0-p6iy-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

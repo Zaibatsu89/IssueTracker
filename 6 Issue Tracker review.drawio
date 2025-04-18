@@ -93,8 +93,8 @@
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-8" value="Herzie requirements" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="400" y="510" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NtpfeUvwCbl0HL1_Pajl-9" value="Terug naar Analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="430" y="680" width="120" height="40" as="geometry" />
+        <mxCell id="NtpfeUvwCbl0HL1_Pajl-9" value="Ga naar Analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="430" y="700" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NtpfeUvwCbl0HL1_Pajl-13" target="NtpfeUvwCbl0HL1_Pajl-17">
           <mxGeometry relative="1" as="geometry" />
@@ -123,13 +123,10 @@
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-19" value="Dien bug in" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="20" y="580" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NtpfeUvwCbl0HL1_Pajl-26" value="Terug naar Test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="NtpfeUvwCbl0HL1_Pajl-26" value="Ga naar Test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="290" y="640" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NtpfeUvwCbl0HL1_Pajl-19" target="9HTOE-4jFLwUNpyO1xvB-22">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="NtpfeUvwCbl0HL1_Pajl-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.145;entryY=0.145;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NtpfeUvwCbl0HL1_Pajl-26" target="9HTOE-4jFLwUNpyO1xvB-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-35" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
@@ -175,13 +172,26 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-51" value="Koppel Terug&lt;br&gt;naar de Klant" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="550" y="580" width="120" height="40" as="geometry" />
+          <mxGeometry x="550" y="560" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NtpfeUvwCbl0HL1_Pajl-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NtpfeUvwCbl0HL1_Pajl-53" target="NtpfeUvwCbl0HL1_Pajl-9">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="NtpfeUvwCbl0HL1_Pajl-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NtpfeUvwCbl0HL1_Pajl-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="680" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="NtpfeUvwCbl0HL1_Pajl-53" value="Documenteer&lt;br&gt;de Feedback" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="560" y="640" width="100" height="40" as="geometry" />
+          <mxGeometry x="560" y="620" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NtpfeUvwCbl0HL1_Pajl-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.145;entryY=0.145;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NtpfeUvwCbl0HL1_Pajl-26" target="9HTOE-4jFLwUNpyO1xvB-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="760" />
+              <mxPoint x="476" y="760" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
