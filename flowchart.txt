@@ -6,8 +6,49 @@ flowchart
 Zoeken naar taken met 'flowchart'...
 
 Doorzoeken lijst: Takenlijst...
-Lijst: Takenlijst (36 resultaten)
+Lijst: Takenlijst (42 resultaten)
 --------------------------------------------------
+□ flowcharts testen
+    thuis
+    Deadline: 24-04-2025
+
+✓ flowcharts mee naar huis nemen
+    WitTronics
+    Deadline: 23-04-2025
+
+✓ laat via mail weten wanneer de flowcharts getest worden
+    WitTronics
+    Deadline: 23-04-2025
+
+□ overeenstemming van ETC's in flowcharts
+    WitTronics
+
+□ events in flowcharts
+    WitTronics
+
+✓ intake opnieuw? in flowcharts
+    WitTronics
+
+✓ de hypothese/oplossingsrichting op momenten herevalueren, in flowcharts
+    WitTronics
+    tussen evaluatie en effort schatting de hypothese/oplossingsrichting evalueren, stop indien ongeldig
+
+✓ dag voorbij trigger: vastleggen wat ik doe + duurproef starten, in flowcharts
+    WitTronics
+
+✓ flowcharts: haal bug/feature weg uit intake
+    WitTronics
+
+✓ Flowcharts: kopieën weghalen
+    WitTronics
+
+✓ Flowcharts: in review geen weg terug
+    WitTronics
+
+□ gebruik fiches bij uitgeprinte flowcharts
+    thuis
+    Deadline: 25-04-2025
+
 ✓ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
     WitTronics
     oplossing: voeg update ETC's en contact moment toe aan flowcharts
@@ -35,18 +76,9 @@ Lijst: Takenlijst (36 resultaten)
 □ Flowcharts: alleen delen als het af is -> testen!
     WitTronics
 
-□ Flowcharts: in review geen weg terug
-    WitTronics
-
-□ Flowcharts: kopieën weghalen
-    WitTronics
-
 ✓ flowcharts printen en meenemen naar werk
     thuis
     Deadline: 14-04-2025
-
-□ flowcharts: haal bug/feature weg uit intake
-    WitTronics
 
 ✓ probleem: ik heb geen pull request gemaakt
     WitTronics
@@ -114,9 +146,6 @@ Lijst: Takenlijst (36 resultaten)
 □ begrijpt de opdrachtgever de issue? in flowcharts van (Jira) intake
     WitTronics
 
-□ dag voorbij trigger: vastleggen wat ik doe + duurproef starten, in flowcharts
-    WitTronics
-
 ✓ flowcharts meenemen
     WitTronics
     Deadline: 17-02-2025
@@ -146,16 +175,9 @@ Lijst: Takenlijst (36 resultaten)
 □ flowchart: afstemming vervolgeffort niet nodig indien totaal van resterende effort binnen initiële schatting ligt
     WitTronics
 
-□ de hypothese/oplossingsrichting op momenten herevalueren, in flowcharts
-    WitTronics
-    tussen evaluatie en effort schatting de hypothese/oplossingsrichting evalueren, stop indien ongeldig
-
 □ wat gebeurd er als de hypothese omvalt na analyse? in flowcharts
-    WitTronics
-
-□ intake opnieuw? in flowcharts
     WitTronics
 
 
 ----------------------------------------
-Totaal aantal gevonden taken over alle lijsten: 36
+Totaal aantal gevonden taken over alle lijsten: 42
