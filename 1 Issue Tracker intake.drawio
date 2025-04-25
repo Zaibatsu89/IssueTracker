@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="Pagina-1" id="2qbA3W88gErK0AjWZLuX">
-    <mxGraphModel dx="1267" dy="995" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1667" dy="995" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -70,13 +70,13 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-43" target="pIqAgrGMqvA-EC0-p6iy-45" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-43" value="Bereken Estimated Time to Completion (ETC)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="780" y="460" width="320" height="40" as="geometry" />
+        <mxCell id="pIqAgrGMqvA-EC0-p6iy-43" value="Bepaal ETC&#39;s van volgende fases" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="820" y="460" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-45" target="pIqAgrGMqvA-EC0-p6iy-47" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-45" value="Overleg prioriteit" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+        <mxCell id="pIqAgrGMqvA-EC0-p6iy-45" value="Overleg ETC&#39;s" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="880" y="520" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-47" target="pIqAgrGMqvA-EC0-p6iy-53" edge="1">
@@ -94,13 +94,13 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-55" value="&lt;font&gt;⚫&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillStyle=solid;fillColor=none;perimeterSpacing=0;shadow=0;gradientColor=none;gradientDirection=north;fontSize=28;" parent="1" vertex="1">
           <mxGeometry x="660" y="770" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZpPhUitxlaBV-uKMJwad-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-53" target="pIqAgrGMqvA-EC0-p6iy-55">
+        <mxCell id="ZpPhUitxlaBV-uKMJwad-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-53" target="pIqAgrGMqvA-EC0-p6iy-55" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZpPhUitxlaBV-uKMJwad-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-38" target="pIqAgrGMqvA-EC0-p6iy-55">
+        <mxCell id="ZpPhUitxlaBV-uKMJwad-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-38" target="pIqAgrGMqvA-EC0-p6iy-55" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZpPhUitxlaBV-uKMJwad-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-4" target="pIqAgrGMqvA-EC0-p6iy-33">
+        <mxCell id="ZpPhUitxlaBV-uKMJwad-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-4" target="pIqAgrGMqvA-EC0-p6iy-33" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="360" y="160" />
