@@ -6,9 +6,32 @@ flowchart
 Zoeken naar taken met 'flowchart'...
 
 Doorzoeken lijst: Takenlijst...
-Lijst: Takenlijst (42 resultaten)
+Lijst: Takenlijst (46 resultaten)
 --------------------------------------------------
-□ flowcharts testen
+□ hoe leg je gebeurtenissen vast in een flowchart?
+    WitTronics
+
+□ gebruik fiches bij uitgeprinte flowcharts
+    thuis
+    Deadline: 02-05-2025
+
+□ Vervang 'Escaleer naar management' door 'Vraag Jira issue aan' in flowchart van intake
+    WitTronics
+
+□ flowchart: ruit 'Issue toegewezen?' uitbreiden met overeenstemming over de oplossingsrichting, zie ook ruit 'Duidelijke beschrijving?'
+    WitTronics
+
+□ uurtje testen
+    flowcharts
+    Deadline: 01-05-2025
+
+✓ events in flowcharts
+    WitTronics
+
+✓ overeenstemming van ETC's in flowcharts
+    WitTronics
+
+✓ flowcharts testen
     thuis
     Deadline: 24-04-2025
 
@@ -19,12 +42,6 @@ Lijst: Takenlijst (42 resultaten)
 ✓ laat via mail weten wanneer de flowcharts getest worden
     WitTronics
     Deadline: 23-04-2025
-
-□ overeenstemming van ETC's in flowcharts
-    WitTronics
-
-□ events in flowcharts
-    WitTronics
 
 ✓ intake opnieuw? in flowcharts
     WitTronics
@@ -44,10 +61,6 @@ Lijst: Takenlijst (42 resultaten)
 
 ✓ Flowcharts: in review geen weg terug
     WitTronics
-
-□ gebruik fiches bij uitgeprinte flowcharts
-    thuis
-    Deadline: 25-04-2025
 
 ✓ probleem: 'ga naar ontwerp' in flowchart 2. analyse wijkt af van checklist
     WitTronics
@@ -180,4 +193,4 @@ Lijst: Takenlijst (42 resultaten)
 
 
 ----------------------------------------
-Totaal aantal gevonden taken over alle lijsten: 42
+Totaal aantal gevonden taken over alle lijsten: 46
