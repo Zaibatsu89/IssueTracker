@@ -7,10 +7,10 @@
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-1" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-180" y="20" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="T5HuY3UBikcQg4io1gTc-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jGqhrhiNvD5DVgsWzt4-2" target="fAx2T377k47rRJYcWd4s-14">
+        <mxCell id="T5HuY3UBikcQg4io1gTc-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-2" target="fAx2T377k47rRJYcWd4s-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nGeKVJ25R1XCQ56sRsgH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jGqhrhiNvD5DVgsWzt4-2" target="nGeKVJ25R1XCQ56sRsgH-1">
+        <mxCell id="nGeKVJ25R1XCQ56sRsgH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-2" target="nGeKVJ25R1XCQ56sRsgH-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-2" value="Conclusie: Kunnen we door?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
@@ -70,7 +70,7 @@
         <mxCell id="VPjDAT8Hv3h-hfrROk6g-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VPjDAT8Hv3h-hfrROk6g-3" target="VPjDAT8Hv3h-hfrROk6g-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VPjDAT8Hv3h-hfrROk6g-3" value="Hypothese/oplossing&lt;br&gt;nog valide/optimaal?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="VPjDAT8Hv3h-hfrROk6g-3" value="Hypothese/oplossing&lt;br&gt;nog valide/optimaal?&lt;br&gt;(100% compleet en gevalideerd)&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-715" y="420" width="240" height="180" as="geometry" />
         </mxCell>
         <mxCell id="VPjDAT8Hv3h-hfrROk6g-7" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
@@ -97,7 +97,7 @@
         <mxCell id="fAx2T377k47rRJYcWd4s-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="VPjDAT8Hv3h-hfrROk6g-7" target="4jGqhrhiNvD5DVgsWzt4-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="T5HuY3UBikcQg4io1gTc-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fAx2T377k47rRJYcWd4s-14" target="fAx2T377k47rRJYcWd4s-16">
+        <mxCell id="T5HuY3UBikcQg4io1gTc-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="fAx2T377k47rRJYcWd4s-14" target="fAx2T377k47rRJYcWd4s-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fAx2T377k47rRJYcWd4s-14" value="Herzie planning" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -137,7 +137,7 @@
         <mxCell id="cSBfqSYras9dlv_O8Q7f-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="cSBfqSYras9dlv_O8Q7f-1" target="4jGqhrhiNvD5DVgsWzt4-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="note_analyse_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="note_analyse_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-715" y="90" width="300" height="50" as="geometry" />
         </mxCell>
       </root>
