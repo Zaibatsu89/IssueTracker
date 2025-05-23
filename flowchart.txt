@@ -8,44 +8,44 @@ Zoeken naar taken met 'flowchart'...
 Doorzoeken lijst: Takenlijst...
 Lijst: Takenlijst (58 resultaten)
 --------------------------------------------------
-□ een iteratie volledig voor 100% afronden voordat je naar de volgende processtap gaat in flowcharts
+✓ voeg deliverable toe aan flowchart van intake
     WitTronics
 
-□ digitaal start/eind tijd noteren per issue in flowcharts
+✓ overeenstemming over conclusie expliciet met JW benoemen in analyse van flowchart
+    WitTronics
+
+✓ één iteratie per checklist in analyse van flowchart
+    WitTronics
+    nieuwe iteratie is nieuw papiertje
+
+✓ nieuwe ETC na tijdtrigger verwerken in originele ETC - verstreken tijd in flowcharts
+    WitTronics
+    teken het uit met een extreem voorbeeld
+
+✓ test tegen de opdracht -> implementeer herinnering aan oplossingsrichting van flowchart in checklist
+    WitTronics
+
+✓ "Zet Jira uitvoerder op de baas" ontbreekt na positief "Resultaat conform verwachting/hypothese?" in test flowchart
+    WitTronics
+
+✓ digitaal start/eind tijd noteren per issue in flowcharts
     WitTronics
     Jira opmerking:
     - Normale tekst -> Koptekst 1: {wat in één woord}
     - +v -> Infopaneel: {starttijd} - {eindtijd}
     - wat?
 
-□ Digitaal start/eind tijd noteren per issue in flowcharts
+✓ een iteratie volledig voor 100% afronden voordat je naar de volgende processtap gaat in flowcharts
     WitTronics
 
-□ "Zet Jira uitvoerder op de baas" ontbreekt na positief "Resultaat conform verwachting/hypothese?" in test flowchart
-    WitTronics
-
-□ gebruik fiches bij uitgeprinte flowcharts
+✓ gebruik fiches bij uitgeprinte flowcharts
     thuis
     Deadline: 23-05-2025
 
-□ test tegen de opdracht -> implementeer herinnering aan oplossingsrichting van flowchart in checklist
+□ Digitaal start/eind tijd noteren per issue in flowcharts
     WitTronics
-
-□ nieuwe ETC na tijdtrigger verwerken in originele ETC - verstreken tijd in flowcharts
-    WitTronics
-    teken het uit met een extreem voorbeeld
 
 ✓ test flowcharts -> er komen nieuwe taken uit
-    WitTronics
-
-□ één iteratie per checklist in analyse van flowchart
-    WitTronics
-    nieuwe iteratie is nieuw papiertje
-
-□ overeenstemming over conclusie expliciet met JW benoemen in analyse van flowchart
-    WitTronics
-
-□ voeg deliverable toe aan flowchart van intake
     WitTronics
 
 ✓ uurtje testen -> laat met appje naar Esther weten hoe het gegaan is
