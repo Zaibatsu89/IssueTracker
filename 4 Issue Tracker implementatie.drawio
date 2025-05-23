@@ -19,12 +19,12 @@
         <mxCell id="TiFKcrr0W4hsWjm5ZOu6-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-1" target="TiFKcrr0W4hsWjm5ZOu6-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KhXMbpCf3MMcaguyabLw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6">
+        <mxCell id="KhXMbpCf3MMcaguyabLw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="400" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TiFKcrr0W4hsWjm5ZOu6-6" value="Klaar voor Review?&lt;div&gt;(100% compleet)&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="TiFKcrr0W4hsWjm5ZOu6-6" value="Klaar voor Review?&lt;br&gt;(100% compleet)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="280" y="200" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="TiFKcrr0W4hsWjm5ZOu6-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-3" target="TiFKcrr0W4hsWjm5ZOu6-6" edge="1">
@@ -106,6 +106,9 @@
         </mxCell>
         <mxCell id="BARPzwNJrIy2e4Yw6iQe-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6" target="TiFKcrr0W4hsWjm5ZOu6-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note_implement_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="320" y="410" width="300" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
