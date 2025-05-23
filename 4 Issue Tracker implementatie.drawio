@@ -95,9 +95,6 @@
         <mxCell id="HxzmSsQBEMeYfOOdos8K-39" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="205" y="640" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="BARPzwNJrIy2e4Yw6iQe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Cy726KbQ8byI3wBGpP1D-3" target="HxzmSsQBEMeYfOOdos8K-25" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="BARPzwNJrIy2e4Yw6iQe-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="HxzmSsQBEMeYfOOdos8K-25" target="TiFKcrr0W4hsWjm5ZOu6-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -107,8 +104,20 @@
         <mxCell id="BARPzwNJrIy2e4Yw6iQe-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6" target="TiFKcrr0W4hsWjm5ZOu6-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="note_implement_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="note_implement_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring van de&lt;br&gt;verstreken tijd, niet het exact&lt;br&gt;digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="320" y="410" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="new_etc_implement" value="Nieuwe ETC / aangepaste planning bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="20" y="610" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_from_boss_to_interrupt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Cy726KbQ8byI3wBGpP1D-3" target="TiFKcrr0W4hsWjm5ZOu6-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="680" />
+              <mxPoint x="10" y="680" />
+              <mxPoint x="10" y="310" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

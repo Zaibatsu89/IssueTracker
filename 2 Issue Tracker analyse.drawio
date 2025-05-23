@@ -109,16 +109,6 @@
         <mxCell id="fAx2T377k47rRJYcWd4s-16" value="Stel jezelf de vragen:&lt;div&gt;- hoe heeft het zo lang kunnen duren?&lt;/div&gt;&lt;div&gt;- hoe lang verwacht ik nog nodig te hebben?&lt;/div&gt;&lt;div&gt;- zijn er snellere methodieken mogelijk?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-470" y="310" width="240" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="3OQzqoWgdmqgKF0QzzsF-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="fAx2T377k47rRJYcWd4s-17" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-520" y="100" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-350" y="480" />
-              <mxPoint x="-199" y="480" />
-              <mxPoint x="-199" y="100" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="fAx2T377k47rRJYcWd4s-17" value="Overleg met de baas!&lt;br&gt;Hij bepaalt het vervolg" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-440" y="410" width="180" height="40" as="geometry" />
         </mxCell>
@@ -137,8 +127,21 @@
         <mxCell id="cSBfqSYras9dlv_O8Q7f-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="cSBfqSYras9dlv_O8Q7f-1" target="4jGqhrhiNvD5DVgsWzt4-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="note_analyse_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="note_analyse_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring van de&lt;br&gt;verstreken tijd, niet het exact&lt;br&gt;digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-715" y="90" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="new_etc_analyse" value="Nieuwe ETC / aangepaste planning bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-490" y="450" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_from_boss_to_analysis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="fAx2T377k47rRJYcWd4s-17" target="4jGqhrhiNvD5DVgsWzt4-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-520" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-350" y="480" />
+              <mxPoint x="-199" y="480" />
+              <mxPoint x="-199" y="100" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
