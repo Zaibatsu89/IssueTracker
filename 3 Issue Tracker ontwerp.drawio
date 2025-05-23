@@ -123,7 +123,7 @@
         <mxCell id="Q7eQB6ahnOV1wmuXno5M-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Q7eQB6ahnOV1wmuXno5M-3" target="368Wiu2XN8IZ5P5MJsfw-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="note_design_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="note_design_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-715" y="90" width="300" height="50" as="geometry" />
         </mxCell>
       </root>

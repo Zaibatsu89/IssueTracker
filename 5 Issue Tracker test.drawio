@@ -108,11 +108,14 @@
         <mxCell id="3kuQJ6-TQR5uzenwmCPh-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="3kuQJ6-TQR5uzenwmCPh-1" target="ZBgMopNVYvy6rprvYICM-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="note_test_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="note_test_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring, niet het&lt;br&gt;exact digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-1535" y="90" width="300" height="50" as="geometry" />
         </mxCell>
         <mxCell id="gVl8olFXBy0THbHI7Fi8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ZBgMopNVYvy6rprvYICM-8" target="9Phk30KJ0mwv_A7ANC2s-18">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="review_transition_note" value="Gaat over naar de Review fase" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1615.5" y="690" width="180" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
