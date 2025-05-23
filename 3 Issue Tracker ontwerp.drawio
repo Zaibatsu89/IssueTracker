@@ -79,8 +79,8 @@
         <mxCell id="rVqab6s_tPt5nCueh6v2-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rVqab6s_tPt5nCueh6v2-9" target="rVqab6s_tPt5nCueh6v2-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rVqab6s_tPt5nCueh6v2-9" value="Herzie planning" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-420" y="240" width="120" height="40" as="geometry" />
+        <mxCell id="rVqab6s_tPt5nCueh6v2-9" value="Herzie planning (Ontwerp)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-450" y="240" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="rVqab6s_tPt5nCueh6v2-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rVqab6s_tPt5nCueh6v2-11" target="rVqab6s_tPt5nCueh6v2-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -112,7 +112,7 @@
         <mxCell id="Q7eQB6ahnOV1wmuXno5M-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Q7eQB6ahnOV1wmuXno5M-3" target="368Wiu2XN8IZ5P5MJsfw-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="note_design_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring van de&lt;br&gt;verstreken tijd, niet het exact&lt;br&gt;digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="note_design_flash" value="Deze wachttijden reflecteren&lt;br&gt;de ETC-monitoring van de&lt;br&gt;verstreken tijd, niet het exact&lt;br&gt;digitaal bijhouden van&lt;br&gt;start/eindtijden per issue." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-715" y="90" width="300" height="50" as="geometry" />
         </mxCell>
         <mxCell id="new_etc_design" value="Nieuwe ETC / aangepaste planning bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">

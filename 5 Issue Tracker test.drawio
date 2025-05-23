@@ -66,8 +66,8 @@
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Phk30KJ0mwv_A7ANC2s-10" target="9Phk30KJ0mwv_A7ANC2s-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9Phk30KJ0mwv_A7ANC2s-10" value="Herzie planning" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-1234.5" y="280" width="120" height="40" as="geometry" />
+        <mxCell id="9Phk30KJ0mwv_A7ANC2s-10" value="Herzie planning (Test)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-1264.5" y="280" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Phk30KJ0mwv_A7ANC2s-11" target="9Phk30KJ0mwv_A7ANC2s-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -120,6 +120,9 @@
               <mxPoint x="-1040" y="120" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="one_iteration_per_checklist_analyse" value="Één iteratie per checklist" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1262.5" y="730" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
