@@ -46,54 +46,23 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-22" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="615" y="275" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="aAQhJHoRpZi1nFY0Yccu-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-38" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="330" y="560" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="540" y="320" />
-              <mxPoint x="330" y="320" />
-              <mxPoint x="330" y="400" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-38" value="Vraag Jira issue aan" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="450" y="200" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="pIqAgrGMqvA-EC0-p6iy-42" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="180" y="130" width="30" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-55" value="⚫" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillStyle=solid;fillColor=none;perimeterSpacing=0;shadow=0;gradientColor=none;gradientDirection=north;fontSize=28;" parent="1" vertex="1">
           <mxGeometry x="310" y="770" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="start_time_tracking_intake" value="Start Tijdsregistratie (in Jira)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="240" y="560" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="QqpQcJzKQm93cHkBsI4F-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="QqpQcJzKQm93cHkBsI4F-6" target="start_time_tracking_intake" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="100" y="160" />
-              <mxPoint x="100" y="260" />
-              <mxPoint x="330" y="260" />
-            </Array>
-          </mxGeometry>
+          <mxGeometry x="240" y="140" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="edge_from_start_time_to_analyse" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="start_time_tracking_intake" target="pIqAgrGMqvA-EC0-p6iy-53" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aAQhJHoRpZi1nFY0Yccu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="QqpQcJzKQm93cHkBsI4F-6" target="pIqAgrGMqvA-EC0-p6iy-38" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="QqpQcJzKQm93cHkBsI4F-6" value="Issue&lt;br&gt;toegewezen?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="210" y="140" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="QqpQcJzKQm93cHkBsI4F-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="QqpQcJzKQm93cHkBsI4F-6" target="QqpQcJzKQm93cHkBsI4F-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="QqpQcJzKQm93cHkBsI4F-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="180" as="sourcePoint" />
+            <mxPoint x="330" y="180" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="QqpQcJzKQm93cHkBsI4F-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-17" target="pIqAgrGMqvA-EC0-p6iy-55" edge="1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="QqpQcJzKQm93cHkBsI4F-12" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="440" y="130" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QqpQcJzKQm93cHkBsI4F-21" value="Volg de checklist&lt;br&gt;van de intake" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="520" y="415" width="120" height="70" as="geometry" />
@@ -109,11 +78,13 @@
         <mxCell id="8KdMEN3eminS15Gr2ujI-1" value="Wacht 5 minuten" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash" parent="1" vertex="1">
           <mxGeometry x="20" y="20" width="60" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="8KdMEN3eminS15Gr2ujI-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8KdMEN3eminS15Gr2ujI-1" target="QqpQcJzKQm93cHkBsI4F-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="8KdMEN3eminS15Gr2ujI-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8KdMEN3eminS15Gr2ujI-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="140" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-53" value="Ga naar Analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="270" y="660" width="120" height="40" as="geometry" />
+          <mxGeometry x="270" y="200" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="aAQhJHoRpZi1nFY0Yccu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-53" target="pIqAgrGMqvA-EC0-p6iy-55" edge="1">
           <mxGeometry relative="1" as="geometry" />
