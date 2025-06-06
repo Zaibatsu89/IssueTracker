@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="anPHKpKsjATY3F31kAi5-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jGqhrhiNvD5DVgsWzt4-1" target="anPHKpKsjATY3F31kAi5-1">
+        <mxCell id="anPHKpKsjATY3F31kAi5-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-1" target="anPHKpKsjATY3F31kAi5-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-160" y="540" />
@@ -36,41 +36,14 @@
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-16" value="Overleg ETC&#39;s met de baas!" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-780" y="310" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="4jGqhrhiNvD5DVgsWzt4-26" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-350" y="780" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-21" value="Interruptie: Onvoldoende informatie binnen 2 uur?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-590" y="740" width="480" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-25" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-110" y="730" width="40" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="fAx2T377k47rRJYcWd4s-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-26" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-350" y="880" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-26" value="Escaleer naar management" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-440" y="820" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-28" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-345" y="780" width="30" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-29" value="⚫" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;fontSize=28;" parent="1" vertex="1">
-          <mxGeometry x="-50" y="860" width="40" height="40" as="geometry" />
+          <mxGeometry x="-240" y="860" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="EGG8GRwtV4Qqv2snek-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="nGeKVJ25R1XCQ56sRsgH-1" target="4jGqhrhiNvD5DVgsWzt4-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="nGeKVJ25R1XCQ56sRsgH-1" value="Bepaal ETC&#39;s van volgende fases" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-810" y="250" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="VPjDAT8Hv3h-hfrROk6g-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="4jGqhrhiNvD5DVgsWzt4-29" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-110" y="760" as="sourcePoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="VPjDAT8Hv3h-hfrROk6g-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VPjDAT8Hv3h-hfrROk6g-3" target="4jGqhrhiNvD5DVgsWzt4-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -143,16 +116,11 @@
             <mxPoint x="-350" y="450" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="anPHKpKsjATY3F31kAi5-1" value="Volg de checklist&lt;br&gt;van de analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="anPHKpKsjATY3F31kAi5-1" value="Volg de checklist&lt;br&gt;van de analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-280" y="570" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="anPHKpKsjATY3F31kAi5-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="anPHKpKsjATY3F31kAi5-1" target="4jGqhrhiNvD5DVgsWzt4-21">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-220" y="680" />
-              <mxPoint x="-350" y="680" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="C3nGnWIzxNDu6vXXZxJW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="anPHKpKsjATY3F31kAi5-1" target="4jGqhrhiNvD5DVgsWzt4-29">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
