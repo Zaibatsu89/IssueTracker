@@ -72,7 +72,7 @@
         <mxCell id="Cy726KbQ8byI3wBGpP1D-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Cy726KbQ8byI3wBGpP1D-1" target="Cy726KbQ8byI3wBGpP1D-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Cy726KbQ8byI3wBGpP1D-1" value="Stel jezelf de vragen:&lt;div&gt;- hoe heeft het zo lang kunnen duren?&lt;/div&gt;&lt;div&gt;- hoe lang verwacht ik nog nodig te hebben?&lt;/div&gt;&lt;div&gt;- zijn er snellere methodieken mogelijk?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+        <mxCell id="Cy726KbQ8byI3wBGpP1D-1" value="Stel jezelf de vragen:&lt;br&gt;- hoe heeft het zo lang kunnen duren?&lt;br&gt;- hoe lang verwacht ik nog nodig te hebben?&lt;br&gt;- zijn er snellere methodieken mogelijk?" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="30" y="470" width="240" height="80" as="geometry" />
         </mxCell>
         <mxCell id="Cy726KbQ8byI3wBGpP1D-3" value="Overleg met de baas!&lt;br&gt;Hij bepaalt het vervolg" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
