@@ -6,8 +6,33 @@ flowchart
 Zoeken naar taken met 'flowchart'...
 
 Doorzoeken lijst: Takenlijst...
-Lijst: Takenlijst (58 resultaten)
+Lijst: Takenlijst (64 resultaten)
 --------------------------------------------------
+□ gebruik fiches bij uitgeprinte flowcharts
+    thuis
+    Deadline: 06-06-2025
+
+□ "Bedenk oplossingen" en "Kies de beste oplossing" toevoegen in analyse flowcharts
+    WitTronics
+
+□ "Interruptie: onvoldoende informatie" weghalen in analyse flowcharts
+    WitTronics
+
+□ "Issue toegewezen" weghalen in intake flowcharts
+    WitTronics
+
+□ "Toewijzing" weghalen in intake flowcharts
+    WitTronics
+
+□ "Issue ontvangen" in witte bolletje van intake flowcharts
+    WitTronics
+
+□ "Vraag om verduidelijking" in intake van flowcharts
+    WitTronics
+
+✓ Digitaal start/eind tijd noteren per issue in flowcharts
+    WitTronics
+
 ✓ voeg deliverable toe aan flowchart van intake
     WitTronics
 
@@ -36,13 +61,6 @@ Lijst: Takenlijst (58 resultaten)
     - wat?
 
 ✓ een iteratie volledig voor 100% afronden voordat je naar de volgende processtap gaat in flowcharts
-    WitTronics
-
-✓ gebruik fiches bij uitgeprinte flowcharts
-    thuis
-    Deadline: 23-05-2025
-
-□ Digitaal start/eind tijd noteren per issue in flowcharts
     WitTronics
 
 ✓ test flowcharts -> er komen nieuwe taken uit
@@ -235,4 +253,4 @@ Lijst: Takenlijst (58 resultaten)
 
 
 ----------------------------------------
-Totaal aantal gevonden taken over alle lijsten: 58
+Totaal aantal gevonden taken over alle lijsten: 64
