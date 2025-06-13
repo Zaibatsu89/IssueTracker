@@ -81,8 +81,8 @@
         <mxCell id="aUmQty4761DTKQVlRTru-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="fAx2T377k47rRJYcWd4s-14" target="aUmQty4761DTKQVlRTru-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fAx2T377k47rRJYcWd4s-14" value="Herzie planning (Analyse)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-440" y="250" width="180" height="40" as="geometry" />
+        <mxCell id="fAx2T377k47rRJYcWd4s-14" value="In de checklist bij de analyse&lt;br&gt;vul je het vakje opnieuw in" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-470" y="250" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fAx2T377k47rRJYcWd4s-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="fAx2T377k47rRJYcWd4s-16" target="fAx2T377k47rRJYcWd4s-17" edge="1">
           <mxGeometry relative="1" as="geometry" />

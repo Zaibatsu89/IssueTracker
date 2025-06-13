@@ -69,8 +69,8 @@
         <mxCell id="wckhP8SufXFgcBh0RfFK-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rVqab6s_tPt5nCueh6v2-9" target="wckhP8SufXFgcBh0RfFK-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rVqab6s_tPt5nCueh6v2-9" value="Herzie planning (Ontwerp)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-450" y="240" width="180" height="40" as="geometry" />
+        <mxCell id="rVqab6s_tPt5nCueh6v2-9" value="In de checklist bij het ontwerp&lt;br&gt;vul je het laatste vakje opnieuw in" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-480" y="250" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="rVqab6s_tPt5nCueh6v2-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rVqab6s_tPt5nCueh6v2-11" target="rVqab6s_tPt5nCueh6v2-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -131,14 +131,14 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-110" y="660" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-520" y="360" />
+              <mxPoint x="-520" y="370" />
               <mxPoint x="-520" y="640" />
               <mxPoint x="-110" y="640" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="wckhP8SufXFgcBh0RfFK-1" value="Haal ik de herziene ETC?&lt;br&gt;(2/3: binnen 100%?,&lt;br&gt;100%: binnen 150%?)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-480" y="300" width="240" height="120" as="geometry" />
+          <mxGeometry x="-480" y="310" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="wckhP8SufXFgcBh0RfFK-5" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-250" y="330" width="40" height="30" as="geometry" />

@@ -20,7 +20,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-6" value="Tests Geslaagd?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-1450" y="170" width="240" height="120" as="geometry" />
+          <mxGeometry x="-1450" y="150" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-8" value="Vraag een review aan bij de baas" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1640" y="850" width="180" height="40" as="geometry" />
@@ -29,10 +29,10 @@
           <mxGeometry x="-1240" y="850" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="YdKGGtHOr01GeGjWYpcF-1" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-1500" y="200" width="30" height="30" as="geometry" />
+          <mxGeometry x="-1480" y="180" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="YdKGGtHOr01GeGjWYpcF-2" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-1220" y="200" width="40" height="30" as="geometry" />
+          <mxGeometry x="-1210" y="180" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="YdKGGtHOr01GeGjWYpcF-6" value="Overleg met de baas!" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1460" y="600" width="120" height="40" as="geometry" />
@@ -58,8 +58,8 @@
         <mxCell id="7WBrUG0mcMwzGGKt-qzG-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="9Phk30KJ0mwv_A7ANC2s-10" target="7WBrUG0mcMwzGGKt-qzG-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9Phk30KJ0mwv_A7ANC2s-10" value="Herzie planning (Test)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-1270" y="280" width="180" height="40" as="geometry" />
+        <mxCell id="9Phk30KJ0mwv_A7ANC2s-10" value="In de checklist bij de test&lt;br&gt;vul je het laatste vakje opnieuw in" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-1300" y="280" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Phk30KJ0mwv_A7ANC2s-11" target="9Phk30KJ0mwv_A7ANC2s-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -105,8 +105,8 @@
             <mxPoint x="-1350" y="130" as="targetPoint" />
             <Array as="points">
               <mxPoint x="-980" y="630" />
-              <mxPoint x="-980" y="140" />
-              <mxPoint x="-1330" y="140" />
+              <mxPoint x="-980" y="130" />
+              <mxPoint x="-1330" y="130" />
             </Array>
           </mxGeometry>
         </mxCell>
