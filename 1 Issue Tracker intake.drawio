@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="K0XlHKTix--os4kYAOm6-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-1" target="pIqAgrGMqvA-EC0-p6iy-4">
+        <mxCell id="K0XlHKTix--os4kYAOm6-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-1" target="pIqAgrGMqvA-EC0-p6iy-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-1" value="Issue ontvangen" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
@@ -19,7 +19,7 @@
         <mxCell id="pIqAgrGMqvA-EC0-p6iy-4" value="Duidelijke beschrijving?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="640" y="220" width="320" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="K0XlHKTix--os4kYAOm6-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pIqAgrGMqvA-EC0-p6iy-6">
+        <mxCell id="K0XlHKTix--os4kYAOm6-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pIqAgrGMqvA-EC0-p6iy-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="580" y="420" as="targetPoint" />
             <Array as="points">
@@ -81,7 +81,7 @@
         <mxCell id="aAQhJHoRpZi1nFY0Yccu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="aAQhJHoRpZi1nFY0Yccu-5" target="aAQhJHoRpZi1nFY0Yccu-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aAQhJHoRpZi1nFY0Yccu-5" value="Oplossingsrichting akkoord?&lt;br&gt;(100% compleet en gevalideerd)&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="aAQhJHoRpZi1nFY0Yccu-5" value="Heb ik in de checklist&lt;br&gt;bij de intake&lt;br&gt;alle vinkjes afgevinkt?&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="460" y="550" width="240" height="180" as="geometry" />
         </mxCell>
         <mxCell id="aAQhJHoRpZi1nFY0Yccu-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QqpQcJzKQm93cHkBsI4F-21" target="aAQhJHoRpZi1nFY0Yccu-5" edge="1">

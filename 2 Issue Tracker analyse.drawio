@@ -21,7 +21,7 @@
         <mxCell id="nGeKVJ25R1XCQ56sRsgH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-2" target="nGeKVJ25R1XCQ56sRsgH-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-2" value="Conclusie: Kunnen we door?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="4jGqhrhiNvD5DVgsWzt4-2" value="Heb ik in de checklist&lt;br&gt;bij de analyse&lt;br&gt;alle vinkjes afgevinkt?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-640" y="140" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-4" value="Ga naar Ontwerp" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">

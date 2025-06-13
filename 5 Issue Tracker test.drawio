@@ -19,7 +19,7 @@
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ZBgMopNVYvy6rprvYICM-6" target="9Phk30KJ0mwv_A7ANC2s-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZBgMopNVYvy6rprvYICM-6" value="Tests Geslaagd?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="ZBgMopNVYvy6rprvYICM-6" value="Heb ik in de checklist&lt;br&gt;bij de test&lt;br&gt;alle vinkjes afgevinkt?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-1450" y="150" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-8" value="Vraag een review aan bij de baas" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
