@@ -6,28 +6,41 @@ flowchart
 Zoeken naar taken met 'flowchart'...
 
 Doorzoeken lijst: Takenlijst...
-Lijst: Takenlijst (64 resultaten)
+Lijst: Takenlijst (68 resultaten)
 --------------------------------------------------
 □ gebruik fiches bij uitgeprinte flowcharts
     thuis
-    Deadline: 06-06-2025
+    Deadline: 13-06-2025
 
-□ "Bedenk oplossingen" en "Kies de beste oplossing" toevoegen in analyse flowcharts
+□ snellere iteraties in flowcharts -> gebruik Google Sheet
+    WitTronics
+    ambitie: vier iteraties per maand
+
+□ "Haal ik de herziene planning?" in analyse flowchart, tussen "Vul vakjes..." en "Stel jezelf de vragen...", bij ja doorgaan naar "Volg de checklist van de analyse", bij nee doorgaan naar "Stel jezelf de vragen"
     WitTronics
 
-□ "Interruptie: onvoldoende informatie" weghalen in analyse flowcharts
+□ "Vul vakjes van analyse in checklist opnieuw in" in analyse flowchart, i.p.v. "Herzie planning"
     WitTronics
 
-□ "Issue toegewezen" weghalen in intake flowcharts
+□ "Heb ik alle vinkjes volgens de checklist van de analyse afgevinkt?" in analyse flowchart, i.p.v. "Conclusie: ..."
     WitTronics
 
-□ "Toewijzing" weghalen in intake flowcharts
+✓ "Vraag om verduidelijking" in intake van flowcharts
     WitTronics
 
-□ "Issue ontvangen" in witte bolletje van intake flowcharts
+✓ "Issue ontvangen" in witte bolletje van intake flowcharts
     WitTronics
 
-□ "Vraag om verduidelijking" in intake van flowcharts
+✓ "Toewijzing" weghalen in intake flowcharts
+    WitTronics
+
+✓ "Issue toegewezen" weghalen in intake flowcharts
+    WitTronics
+
+✓ "Interruptie: onvoldoende informatie" weghalen in analyse flowcharts
+    WitTronics
+
+✓ "Bedenk oplossingen" en "Kies de beste oplossing" toevoegen in analyse flowcharts
     WitTronics
 
 ✓ Digitaal start/eind tijd noteren per issue in flowcharts
@@ -253,4 +266,4 @@ Lijst: Takenlijst (64 resultaten)
 
 
 ----------------------------------------
-Totaal aantal gevonden taken over alle lijsten: 64
+Totaal aantal gevonden taken over alle lijsten: 68
