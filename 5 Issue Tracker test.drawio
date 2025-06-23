@@ -60,9 +60,6 @@
         <mxCell id="A9CifIRJGOpqQVbqJi1m-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="YdKGGtHOr01GeGjWYpcF-6" target="A9CifIRJGOpqQVbqJi1m-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GeQSfSO7VzJ3IVVTPw_z-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Phk30KJ0mwv_A7ANC2s-10" target="GeQSfSO7VzJ3IVVTPw_z-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-10" value="Volg de checklist&lt;br&gt;van de evaluatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1220" y="270" width="120" height="80" as="geometry" />
         </mxCell>
@@ -79,7 +76,7 @@
           <mxGeometry x="-1640" y="900" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="new_etc_test" value="Herziene ETC bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-1160" y="450" width="140" height="30" as="geometry" />
+          <mxGeometry x="-1160" y="530" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="one_iteration_per_checklist_analyse" value="Één iteratie per checklist" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1250" y="900" width="160" height="30" as="geometry" />
@@ -105,6 +102,29 @@
         </mxCell>
         <mxCell id="GeQSfSO7VzJ3IVVTPw_z-4" value="Start&lt;br&gt;timer&lt;br&gt;100% ETC&lt;br&gt;150% ETC" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1200" y="580" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WPbNmLX-22F2OAKIh2ua-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WPbNmLX-22F2OAKIh2ua-1" target="GeQSfSO7VzJ3IVVTPw_z-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WPbNmLX-22F2OAKIh2ua-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="WPbNmLX-22F2OAKIh2ua-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-940" y="870" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-860" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WPbNmLX-22F2OAKIh2ua-1" value="Haal&lt;br&gt;ik het?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-1120" y="400" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WPbNmLX-22F2OAKIh2ua-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9Phk30KJ0mwv_A7ANC2s-10" target="WPbNmLX-22F2OAKIh2ua-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WPbNmLX-22F2OAKIh2ua-4" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1150" y="410" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPbNmLX-22F2OAKIh2ua-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1030" y="410" width="40" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
