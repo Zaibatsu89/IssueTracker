@@ -10,7 +10,7 @@
         <mxCell id="JBpbFmaDMvd9HOYNw7A6-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9HTOE-4jFLwUNpyO1xvB-2" target="9HTOE-4jFLwUNpyO1xvB-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9HTOE-4jFLwUNpyO1xvB-2" value="Acceptatiecriteria Behaald?&lt;br&gt;(100% compleet en gevalideerd)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="9HTOE-4jFLwUNpyO1xvB-2" value="Acceptatiecriteria Behaald?&lt;br&gt;Cross-check checklist" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="390" y="80" width="320" height="120" as="geometry" />
         </mxCell>
         <mxCell id="9HTOE-4jFLwUNpyO1xvB-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="9HTOE-4jFLwUNpyO1xvB-1" edge="1">

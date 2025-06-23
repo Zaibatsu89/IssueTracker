@@ -99,7 +99,7 @@
         <mxCell id="ds2QwDDoq4v9AlY0Knax-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ds2QwDDoq4v9AlY0Knax-9" target="ds2QwDDoq4v9AlY0Knax-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ds2QwDDoq4v9AlY0Knax-9" value="Implementatie conform ontwerp?&lt;br&gt;(100% compleet en gevalideerd)&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="ds2QwDDoq4v9AlY0Knax-9" value="Implementatie conform ontwerp?&lt;br&gt;Cross-check checklist&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="160" y="620" width="240" height="240" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-11" value="Ga naar Test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
