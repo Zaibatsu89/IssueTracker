@@ -61,7 +61,7 @@
         <mxCell id="fAx2T377k47rRJYcWd4s-14" value="Volg de checklist&lt;br&gt;van de evaluatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-410" y="260" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="cSBfqSYras9dlv_O8Q7f-1" value="Wacht 2/3 ETC&lt;br&gt;Wacht 100% ETC&lt;br&gt;Wacht 150% ETC" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash" parent="1" vertex="1">
+        <mxCell id="cSBfqSYras9dlv_O8Q7f-1" value="Na 2/3 ETC&lt;br&gt;Na 100% ETC&lt;br&gt;Na 150% ETC" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash" parent="1" vertex="1">
           <mxGeometry x="-810" y="20" width="60" height="100" as="geometry" />
         </mxCell>
         <mxCell id="cSBfqSYras9dlv_O8Q7f-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="cSBfqSYras9dlv_O8Q7f-1" target="4jGqhrhiNvD5DVgsWzt4-2" edge="1">
@@ -73,7 +73,7 @@
         <mxCell id="new_etc_analyse" value="Herziene ETC&#39;s bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-350" y="490" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_AQnNtS7_EXRlvc5rZi3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="anPHKpKsjATY3F31kAi5-1" target="_AQnNtS7_EXRlvc5rZi3-1">
+        <mxCell id="_AQnNtS7_EXRlvc5rZi3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="anPHKpKsjATY3F31kAi5-1" target="_AQnNtS7_EXRlvc5rZi3-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="anPHKpKsjATY3F31kAi5-1" value="Volg de checklist&lt;br&gt;van de analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -122,10 +122,10 @@
         <mxCell id="mK3eoWY6ewuPBYw4HnUD-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-230" y="400" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_AQnNtS7_EXRlvc5rZi3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_AQnNtS7_EXRlvc5rZi3-1" target="IfsoxwFZ03pQIYbGlcHe-1">
+        <mxCell id="_AQnNtS7_EXRlvc5rZi3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_AQnNtS7_EXRlvc5rZi3-1" target="IfsoxwFZ03pQIYbGlcHe-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_AQnNtS7_EXRlvc5rZi3-1" value="Stop&lt;br&gt;timer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="_AQnNtS7_EXRlvc5rZi3-1" value="Stop&lt;br&gt;timer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-200" y="910" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
