@@ -84,8 +84,8 @@
         <mxCell id="one_iteration_per_checklist_analyse" value="Één iteratie per checklist" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1250" y="900" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="HMu0NrO1gODe0TM42Pfk-1" value="Ga naar&lt;br&gt;volgende&lt;br&gt;processtap" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-985" y="1080" width="90" height="80" as="geometry" />
+        <mxCell id="HMu0NrO1gODe0TM42Pfk-1" value="Ga naar&lt;br&gt;Review" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-980" y="1080" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="GeQSfSO7VzJ3IVVTPw_z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="GeQSfSO7VzJ3IVVTPw_z-1" target="ZBgMopNVYvy6rprvYICM-2" edge="1">
           <mxGeometry relative="1" as="geometry" />

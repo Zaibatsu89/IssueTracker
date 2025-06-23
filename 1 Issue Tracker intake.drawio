@@ -128,8 +128,8 @@
         <mxCell id="C6Cpda3Ud2VKr18Pq7qE-10" value="Start&lt;br&gt;timer&lt;br&gt;5 m." style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="200" y="490" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="V0nXiVUKXp60Femddj-Q-1" value="Ga naar&lt;br&gt;volgende&lt;br&gt;processtap" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="70" y="840" width="120" height="80" as="geometry" />
+        <mxCell id="V0nXiVUKXp60Femddj-Q-1" value="Ga naar&lt;br&gt;Analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="90" y="840" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="0Bv8Ok_RlG2YvhmJOc1f-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Bv8Ok_RlG2YvhmJOc1f-1" target="C6Cpda3Ud2VKr18Pq7qE-3" edge="1">
           <mxGeometry relative="1" as="geometry">

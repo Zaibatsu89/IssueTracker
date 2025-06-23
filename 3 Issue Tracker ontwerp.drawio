@@ -83,8 +83,8 @@
         <mxCell id="new_etc_design" value="Herziene ETC&#39;s bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-350" y="520" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="BIejS24ryKBQ0WzKweAz-1" value="Ga naar&lt;br&gt;volgende&lt;br&gt;processtap" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-185" y="1060" width="90" height="80" as="geometry" />
+        <mxCell id="BIejS24ryKBQ0WzKweAz-1" value="Ga naar&lt;br&gt;Implementatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-180" y="1060" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ri6iHuiouDUUBj4aNEAl-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ri6iHuiouDUUBj4aNEAl-1" target="368Wiu2XN8IZ5P5MJsfw-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
