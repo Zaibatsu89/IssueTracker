@@ -4,11 +4,11 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="GeQSfSO7VzJ3IVVTPw_z-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ZBgMopNVYvy6rprvYICM-1" target="GeQSfSO7VzJ3IVVTPw_z-1" edge="1">
+        <mxCell id="oypxQD-M97g9oZA3KhtU-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBgMopNVYvy6rprvYICM-1" target="GeQSfSO7VzJ3IVVTPw_z-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZBgMopNVYvy6rprvYICM-1" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-1040" y="20" width="40" height="40" as="geometry" />
+        <mxCell id="ZBgMopNVYvy6rprvYICM-1" value="Implementatie&lt;div&gt;afgerond&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-1080" y="20" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-2" value="Volg de checklist&lt;br&gt;van de test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1080" y="670" width="120" height="80" as="geometry" />
@@ -16,7 +16,7 @@
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ZBgMopNVYvy6rprvYICM-6" target="9Phk30KJ0mwv_A7ANC2s-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KkDYEIMZPJeDeknZLRq2-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZBgMopNVYvy6rprvYICM-6" target="lASuhLkGsHflSgnbyM9i-1">
+        <mxCell id="KkDYEIMZPJeDeknZLRq2-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ZBgMopNVYvy6rprvYICM-6" target="lASuhLkGsHflSgnbyM9i-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-6" value="Heb ik in de checklist&lt;br&gt;bij de test&lt;br&gt;alle vinkjes afgevinkt?&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan&lt;br&gt;Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
@@ -80,7 +80,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="GeQSfSO7VzJ3IVVTPw_z-1" value="Start&lt;br&gt;timer&lt;br&gt;2/3 ETC" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-1060" y="120" width="80" height="80" as="geometry" />
+          <mxGeometry x="-1060" y="200" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="GeQSfSO7VzJ3IVVTPw_z-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GeQSfSO7VzJ3IVVTPw_z-4" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -105,7 +105,7 @@
         <mxCell id="WPbNmLX-22F2OAKIh2ua-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1115" y="410" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="KkDYEIMZPJeDeknZLRq2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lASuhLkGsHflSgnbyM9i-1" target="YdKGGtHOr01GeGjWYpcF-6">
+        <mxCell id="KkDYEIMZPJeDeknZLRq2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lASuhLkGsHflSgnbyM9i-1" target="YdKGGtHOr01GeGjWYpcF-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lASuhLkGsHflSgnbyM9i-1" value="Stop&lt;br&gt;timer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -133,7 +133,7 @@
         <mxCell id="XUYz5aM2FxVDx33ND7Ui-6" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-980" y="780" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="KkDYEIMZPJeDeknZLRq2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="XUYz5aM2FxVDx33ND7Ui-1">
+        <mxCell id="KkDYEIMZPJeDeknZLRq2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="XUYz5aM2FxVDx33ND7Ui-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1500" y="340" as="targetPoint" />
             <Array as="points">
