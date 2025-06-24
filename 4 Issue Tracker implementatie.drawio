@@ -13,7 +13,7 @@
         <mxCell id="ds2QwDDoq4v9AlY0Knax-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6" target="TiFKcrr0W4hsWjm5ZOu6-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ds2QwDDoq4v9AlY0Knax-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6" target="ds2QwDDoq4v9AlY0Knax-6" edge="1">
+        <mxCell id="zyCVIRJYcoalk86dwTaP-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="TiFKcrr0W4hsWjm5ZOu6-6" target="br_5F_WJaillPMxCQpYw-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TiFKcrr0W4hsWjm5ZOu6-6" value="Heb ik in de checklist&lt;br&gt;bij de implementatie&lt;br&gt;alle vinkjes afgevinkt?&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan&lt;br&gt;Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
@@ -22,23 +22,15 @@
         <mxCell id="TiFKcrr0W4hsWjm5ZOu6-13" value="Volg de checklist&lt;br&gt;van de evaluatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="440" y="300" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="br_5F_WJaillPMxCQpYw-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="br_5F_WJaillPMxCQpYw-1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="660" y="840" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="TiFKcrr0W4hsWjm5ZOu6-18" value="Volg de checklist&lt;br&gt;van de implementatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="600" y="760" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="TiFKcrr0W4hsWjm5ZOu6-24" value="Ga naar&lt;br&gt;Test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="620" y="1080" width="80" height="80" as="geometry" />
+          <mxGeometry x="600" y="650" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="new_etc_implement" value="Herziene ETC&#39;s bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="520" y="510" width="150" height="30" as="geometry" />
+          <mxGeometry x="510" y="510" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ds2QwDDoq4v9AlY0Knax-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="vZ-xYCv--xy9GDqSJJ-B-1" edge="1">
+        <mxCell id="ds2QwDDoq4v9AlY0Knax-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vZ-xYCv--xy9GDqSJJ-B-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="660" y="760" as="targetPoint" />
+            <mxPoint x="660" y="650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vZ-xYCv--xy9GDqSJJ-B-1" value="Start&lt;br&gt;timer&lt;br&gt;2/3 ETC" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -66,11 +58,11 @@
         <mxCell id="izCTadUUu5lUmZ3SgZxI-7" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="610" y="420" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="br_5F_WJaillPMxCQpYw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="br_5F_WJaillPMxCQpYw-1" target="TiFKcrr0W4hsWjm5ZOu6-24" edge="1">
+        <mxCell id="zyCVIRJYcoalk86dwTaP-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="br_5F_WJaillPMxCQpYw-1" target="ds2QwDDoq4v9AlY0Knax-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="br_5F_WJaillPMxCQpYw-1" value="Stop&lt;br&gt;timer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="620" y="940" width="80" height="80" as="geometry" />
+          <mxGeometry x="140" y="380" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-1" value="Na 2/3 ETC&lt;br&gt;Na 100% ETC&lt;br&gt;Na 150% ETC" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash" parent="1" vertex="1">
           <mxGeometry x="20" y="20" width="60" height="100" as="geometry" />
@@ -88,7 +80,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-6" value="Bepaal ETC&lt;br&gt;van Test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="140" y="300" width="80" height="80" as="geometry" />
+          <mxGeometry x="140" y="520" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-8" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="190" y="200" width="30" height="30" as="geometry" />
@@ -100,45 +92,48 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-9" value="Implementatie conform ontwerp?&lt;br&gt;Cross-check checklist&lt;br&gt;&lt;b&gt;Reminder: Toetsing aan Oplossingsrichting&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="160" y="620" width="240" height="240" as="geometry" />
+          <mxGeometry x="160" y="820" width="240" height="240" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-11" value="Ga naar Test" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="40" y="840" width="150" height="40" as="geometry" />
+          <mxGeometry x="40" y="1040" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-13" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="130" y="710" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-15" value="Ga naar Ontwerp" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="370" y="840" width="150" height="40" as="geometry" />
+          <mxGeometry x="370" y="1040" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ds2QwDDoq4v9AlY0Knax-18" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="400" y="710" width="40" height="30" as="geometry" />
+          <mxGeometry x="400" y="910" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DE7yJp2noRkYKzqwTJvc-1" value="Overleg ETC" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="140" y="460" width="80" height="80" as="geometry" />
+          <mxGeometry x="140" y="660" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="DE7yJp2noRkYKzqwTJvc-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="DE7yJp2noRkYKzqwTJvc-1" target="ds2QwDDoq4v9AlY0Knax-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="okfjqPT975SFiZsOYp1T-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="okfjqPT975SFiZsOYp1T-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="730" y="520" as="targetPoint" />
+            <mxPoint x="730" y="710" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="810" y="670" />
-              <mxPoint x="810" y="520" />
+              <mxPoint x="810" y="820" />
+              <mxPoint x="810" y="710" />
+              <mxPoint x="730" y="710" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="okfjqPT975SFiZsOYp1T-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="okfjqPT975SFiZsOYp1T-1" edge="1">
+        <mxCell id="zyCVIRJYcoalk86dwTaP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="okfjqPT975SFiZsOYp1T-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="660" y="890" as="targetPoint" />
+            <mxPoint x="180" y="350" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="560" y="670" />
+              <mxPoint x="670" y="820" />
+              <mxPoint x="341" y="820" />
+              <mxPoint x="341" y="350" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="okfjqPT975SFiZsOYp1T-1" value="Volgende&lt;br&gt;processtap&lt;br&gt;bepaald?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="670" y="610" width="120" height="120" as="geometry" />
+          <mxGeometry x="670" y="760" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="okfjqPT975SFiZsOYp1T-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="izCTadUUu5lUmZ3SgZxI-1" target="okfjqPT975SFiZsOYp1T-1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -149,10 +144,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="okfjqPT975SFiZsOYp1T-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="770" y="610" width="40" height="30" as="geometry" />
+          <mxGeometry x="760" y="760" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="okfjqPT975SFiZsOYp1T-8" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="670" y="610" width="30" height="30" as="geometry" />
+          <mxGeometry x="670" y="760" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8v-B1rqFmXOZgK07lCos-1" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="910" width="30" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
