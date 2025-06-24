@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="oypxQD-M97g9oZA3KhtU-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBgMopNVYvy6rprvYICM-1" target="GeQSfSO7VzJ3IVVTPw_z-1">
+        <mxCell id="oypxQD-M97g9oZA3KhtU-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ZBgMopNVYvy6rprvYICM-1" target="GeQSfSO7VzJ3IVVTPw_z-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZBgMopNVYvy6rprvYICM-1" value="Implementatie&lt;div&gt;afgerond&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
@@ -34,9 +34,6 @@
         <mxCell id="YdKGGtHOr01GeGjWYpcF-2" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1210" y="190" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="YdKGGtHOr01GeGjWYpcF-6" value="Overleg met de baas!" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-1560" y="540" width="120" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="A9CifIRJGOpqQVbqJi1m-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="A9CifIRJGOpqQVbqJi1m-10" target="ZBgMopNVYvy6rprvYICM-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -52,8 +49,10 @@
         <mxCell id="A9CifIRJGOpqQVbqJi1m-12" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1280" y="870" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A9CifIRJGOpqQVbqJi1m-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="YdKGGtHOr01GeGjWYpcF-6" target="A9CifIRJGOpqQVbqJi1m-10" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="A9CifIRJGOpqQVbqJi1m-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lASuhLkGsHflSgnbyM9i-1" target="A9CifIRJGOpqQVbqJi1m-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1500" y="580" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="9Phk30KJ0mwv_A7ANC2s-10" value="Volg de checklist&lt;br&gt;van de evaluatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1220" y="270" width="120" height="80" as="geometry" />
@@ -104,9 +103,6 @@
         </mxCell>
         <mxCell id="WPbNmLX-22F2OAKIh2ua-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1115" y="410" width="40" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="KkDYEIMZPJeDeknZLRq2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lASuhLkGsHflSgnbyM9i-1" target="YdKGGtHOr01GeGjWYpcF-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lASuhLkGsHflSgnbyM9i-1" value="Stop&lt;br&gt;timer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-1540" y="400" width="80" height="80" as="geometry" />
