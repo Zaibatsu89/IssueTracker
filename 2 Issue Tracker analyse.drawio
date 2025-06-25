@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="e9h_NGHgnimDBdGaRm5t-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jGqhrhiNvD5DVgsWzt4-1" target="iwelmCOiK_s8wFJkXDHl-1">
+        <mxCell id="e9h_NGHgnimDBdGaRm5t-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-1" target="iwelmCOiK_s8wFJkXDHl-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-1" value="Intake&lt;br&gt;afgerond" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
@@ -28,10 +28,7 @@
         <mxCell id="4jGqhrhiNvD5DVgsWzt4-9" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-670" y="170" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4jGqhrhiNvD5DVgsWzt4-16" value="Overleg ETC&#39;s met de baas!" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-780" y="620" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="EGG8GRwtV4Qqv2snek-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="nGeKVJ25R1XCQ56sRsgH-1" target="4jGqhrhiNvD5DVgsWzt4-16" edge="1">
+        <mxCell id="xNZemmh2rBOiGcuLRCfq-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nGeKVJ25R1XCQ56sRsgH-1" target="xNZemmh2rBOiGcuLRCfq-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="nGeKVJ25R1XCQ56sRsgH-1" value="Bepaal ETC&#39;s van volgende fases" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -70,7 +67,7 @@
         <mxCell id="new_etc_analyse" value="Herziene ETC&#39;s bepaald" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-350" y="480" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="e9h_NGHgnimDBdGaRm5t-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="iwelmCOiK_s8wFJkXDHl-1" target="anPHKpKsjATY3F31kAi5-1">
+        <mxCell id="e9h_NGHgnimDBdGaRm5t-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iwelmCOiK_s8wFJkXDHl-1" target="anPHKpKsjATY3F31kAi5-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iwelmCOiK_s8wFJkXDHl-1" value="Start&lt;br&gt;timer&lt;br&gt;2/3 ETC" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -102,7 +99,7 @@
         <mxCell id="mK3eoWY6ewuPBYw4HnUD-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-230" y="400" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="e9h_NGHgnimDBdGaRm5t-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_AQnNtS7_EXRlvc5rZi3-1" target="nGeKVJ25R1XCQ56sRsgH-1">
+        <mxCell id="e9h_NGHgnimDBdGaRm5t-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_AQnNtS7_EXRlvc5rZi3-1" target="nGeKVJ25R1XCQ56sRsgH-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_AQnNtS7_EXRlvc5rZi3-1" value="Stop&lt;br&gt;timer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -142,8 +139,31 @@
         <mxCell id="anPHKpKsjATY3F31kAi5-1" value="Volg de checklist&lt;br&gt;van de analyse" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-220" y="615" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="3ThBBkWTJx1w_lHwbigP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4jGqhrhiNvD5DVgsWzt4-16" target="VPjDAT8Hv3h-hfrROk6g-3" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="xNZemmh2rBOiGcuLRCfq-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="xNZemmh2rBOiGcuLRCfq-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-690" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-590" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xNZemmh2rBOiGcuLRCfq-1" value="Goedkeuring&lt;br&gt;van&lt;br&gt;ETC&#39;s?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="610" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xNZemmh2rBOiGcuLRCfq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="xNZemmh2rBOiGcuLRCfq-1" target="VPjDAT8Hv3h-hfrROk6g-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-790" y="670" />
+              <mxPoint x="-790" y="760" />
+              <mxPoint x="-595" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xNZemmh2rBOiGcuLRCfq-4" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="640" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xNZemmh2rBOiGcuLRCfq-6" value="nee" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-630" y="640" width="40" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
