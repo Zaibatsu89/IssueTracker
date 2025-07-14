@@ -22,7 +22,7 @@
         <mxCell id="6XeSqrVNWN5-QfsoTQw_-4" value="Volg de checklist&lt;br&gt;van de&lt;br&gt;processtap" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="370" y="440" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="6XeSqrVNWN5-QfsoTQw_-6" value="Analyse/ontwerp&lt;br&gt;akkoord of&lt;br&gt;implementatie&lt;br&gt;afgerond?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="6XeSqrVNWN5-QfsoTQw_-6" value="Analyse/ontwerp&lt;br&gt;akkoord of&lt;br&gt;implementatie/test&lt;br&gt;afgerond?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="345" y="860" width="150" height="150" as="geometry" />
         </mxCell>
         <mxCell id="6XeSqrVNWN5-QfsoTQw_-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="6XeSqrVNWN5-QfsoTQw_-6" target="6XeSqrVNWN5-QfsoTQw_-11" edge="1">
@@ -64,7 +64,7 @@
         <mxCell id="wSILvC0bNMtWrUnD-xWg-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wSILvC0bNMtWrUnD-xWg-1" target="6XeSqrVNWN5-QfsoTQw_-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wSILvC0bNMtWrUnD-xWg-1" value="Status&lt;br&gt;review&lt;br&gt;analyse/ontwerp&lt;br&gt;of status&lt;br&gt;implementatie" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+        <mxCell id="wSILvC0bNMtWrUnD-xWg-1" value="Status review&lt;br&gt;indien status&lt;br&gt;analyse/ontwerp" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="370" y="720" width="100" height="100" as="geometry" />
         </mxCell>
       </root>
