@@ -37,7 +37,7 @@
         <mxCell id="CxDcEZhpeJFDtT23GfGT-6" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="330" y="890" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SFcfNjJDbcXd2CHxTJlH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Nuncrc0ZyO2Tr2AsK5PP-2" target="C6Cpda3Ud2VKr18Pq7qE-10">
+        <mxCell id="SFcfNjJDbcXd2CHxTJlH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Nuncrc0ZyO2Tr2AsK5PP-2" target="C6Cpda3Ud2VKr18Pq7qE-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-2" value="Na 5 minuten" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.delay;whiteSpace=wrap;" parent="1" vertex="1">
@@ -49,7 +49,7 @@
         <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-11" value="Volg de&lt;br&gt;analyse" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="230" y="1080" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-12" value="Herhaal de&lt;br&gt;intake" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-12" value="De baas&lt;br&gt;bepaald" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="510" y="1080" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="CxDcEZhpeJFDtT23GfGT-1" target="Nuncrc0ZyO2Tr2AsK5PP-12" edge="1">
