@@ -43,7 +43,7 @@
         <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-11" value="Volg de&lt;br&gt;analyse" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="230" y="1020" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-12" value="De baas&lt;br&gt;bepaald" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-12" value="De baas&lt;br&gt;bepaald volgende&lt;br&gt;status" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="510" y="1020" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Nuncrc0ZyO2Tr2AsK5PP-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="CxDcEZhpeJFDtT23GfGT-1" target="Nuncrc0ZyO2Tr2AsK5PP-12" edge="1">
@@ -62,19 +62,16 @@
         <mxCell id="ZMpfyN2T-mkIy4RZCRI2-1" value="Status =&lt;br&gt;review aanpak" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="370" y="710" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="q-PZmd2ggIYHKluoCE6X-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Nuncrc0ZyO2Tr2AsK5PP-12" target="Nuncrc0ZyO2Tr2AsK5PP-11" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="5JEqURrK0J3-4O7kQpMy-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5JEqURrK0J3-4O7kQpMy-1" target="C6Cpda3Ud2VKr18Pq7qE-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5JEqURrK0J3-4O7kQpMy-1" value="Status =&lt;br&gt;intake" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="370" y="160" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="wRBG14cgb2vdeoKEYDUg-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wRBG14cgb2vdeoKEYDUg-3" target="ZMpfyN2T-mkIy4RZCRI2-1">
+        <mxCell id="wRBG14cgb2vdeoKEYDUg-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="wRBG14cgb2vdeoKEYDUg-3" target="ZMpfyN2T-mkIy4RZCRI2-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wRBG14cgb2vdeoKEYDUg-3" value="Na 5 minuten" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="wRBG14cgb2vdeoKEYDUg-3" value="Na 5 minuten" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="600" y="640" width="100" height="60" as="geometry" />
         </mxCell>
       </root>

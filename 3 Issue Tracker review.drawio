@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="aeVJKpwq92UfEmF5kvRO-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9HTOE-4jFLwUNpyO1xvB-1" target="4OnZ2aAvmUhLM301apzt-2">
+        <mxCell id="aeVJKpwq92UfEmF5kvRO-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="9HTOE-4jFLwUNpyO1xvB-1" target="4OnZ2aAvmUhLM301apzt-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9HTOE-4jFLwUNpyO1xvB-1" value="Status =&lt;br&gt;review&lt;br&gt;final" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
@@ -17,13 +17,16 @@
           <mxGeometry x="20" y="430" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="9HTOE-4jFLwUNpyO1xvB-22" value="⚫" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=28;" parent="1" vertex="1">
-          <mxGeometry x="400" y="650" width="40" height="40" as="geometry" />
+          <mxGeometry x="90" y="670" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="yW9rqUXz34WNlTa8Qf5A-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="yW9rqUXz34WNlTa8Qf5A-1" target="yW9rqUXz34WNlTa8Qf5A-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yW9rqUXz34WNlTa8Qf5A-1" value="Zet Jira status op &quot;Done&quot;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="20" y="510" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ui29QtgTcGZZ2hQ2qWVm-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yW9rqUXz34WNlTa8Qf5A-2" target="9HTOE-4jFLwUNpyO1xvB-22">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yW9rqUXz34WNlTa8Qf5A-2" value="Zet Jira uitvoerder op de baas" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="20" y="590" width="180" height="40" as="geometry" />
@@ -48,15 +51,7 @@
         <mxCell id="note_review_jira_status" value="Dit omvat het digitaal vastleggen&lt;br&gt;van de afronding in het tracking systeem." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="210" y="435" width="270" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="WG5MbHjxhLyEMIehMDqC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="LpOPFTF3wyl8fRQkMcvp-1" target="9HTOE-4jFLwUNpyO1xvB-22" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="710" y="630" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="WG5MbHjxhLyEMIehMDqC-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="yW9rqUXz34WNlTa8Qf5A-2" target="9HTOE-4jFLwUNpyO1xvB-22" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="LpOPFTF3wyl8fRQkMcvp-1" value="De baas&lt;br&gt;bepaald" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="LpOPFTF3wyl8fRQkMcvp-1" value="De baas&lt;br&gt;bepaald volgende&lt;br&gt;status" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="680" y="580" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4OnZ2aAvmUhLM301apzt-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4OnZ2aAvmUhLM301apzt-2" target="NtpfeUvwCbl0HL1_Pajl-62" edge="1">

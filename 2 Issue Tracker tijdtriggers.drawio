@@ -34,7 +34,7 @@
         <mxCell id="6XeSqrVNWN5-QfsoTQw_-11" value="Volg de&lt;br&gt;volgende&lt;br&gt;processtap" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="230" y="950" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6XeSqrVNWN5-QfsoTQw_-17" value="De baas&lt;br&gt;bepaald" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="6XeSqrVNWN5-QfsoTQw_-17" value="De baas&lt;br&gt;bepaald volgende&lt;br&gt;status" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="510" y="950" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6XeSqrVNWN5-QfsoTQw_-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="6XeSqrVNWN5-QfsoTQw_-6" target="6XeSqrVNWN5-QfsoTQw_-17" edge="1">
@@ -97,10 +97,10 @@
         <mxCell id="v8Gcf3aWB2ez_6OU3tgY-6" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="570" y="300" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="V40EabxMdJeOr_-LIasd-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="V40EabxMdJeOr_-LIasd-1" target="6XeSqrVNWN5-QfsoTQw_-21">
+        <mxCell id="V40EabxMdJeOr_-LIasd-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="V40EabxMdJeOr_-LIasd-1" target="6XeSqrVNWN5-QfsoTQw_-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="V40EabxMdJeOr_-LIasd-1" value="Na 2/3 ETC&lt;br&gt;Na 100% ETC&lt;br&gt;Na 150% ETC" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="V40EabxMdJeOr_-LIasd-1" value="Na 2/3 ETC&lt;br&gt;Na 100% ETC&lt;br&gt;Na 150% ETC" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="600" y="50" width="100" height="60" as="geometry" />
         </mxCell>
       </root>
