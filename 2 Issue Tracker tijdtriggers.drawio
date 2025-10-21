@@ -151,13 +151,13 @@
         <mxCell id="OVebM57zTA7p19HzouVy-1" value="Evalueer of&lt;br&gt;implementatie&lt;br&gt;correct en&lt;br&gt;volledig is&lt;br&gt;afgerond" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="70" y="540" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="OVebM57zTA7p19HzouVy-3" value="Afgerond?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="8QulcRzDFXs6gQ-IPZOm-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OVebM57zTA7p19HzouVy-3" target="8QulcRzDFXs6gQ-IPZOm-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OVebM57zTA7p19HzouVy-3" value="0&lt;br&gt;module test&lt;br&gt;fouten?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="100" y="690" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="OVebM57zTA7p19HzouVy-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="OVebM57zTA7p19HzouVy-3" target="6XeSqrVNWN5-QfsoTQw_-11" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="OVebM57zTA7p19HzouVy-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="OVebM57zTA7p19HzouVy-3" target="6tYB-O3YJbzPkiTKSSV2-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OVebM57zTA7p19HzouVy-7" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
@@ -186,6 +186,9 @@
         </mxCell>
         <mxCell id="OVebM57zTA7p19HzouVy-16" value="ja" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="220" y="620" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8QulcRzDFXs6gQ-IPZOm-1" value="Volg de&lt;br&gt;implementatie" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="260" y="710" width="100" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
