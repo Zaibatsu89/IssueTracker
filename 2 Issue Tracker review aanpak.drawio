@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.7">
   <diagram name="Pagina-1" id="MJ030UplFbCXxvErl58G">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="aTvF_1tpoa2jEpWclRVi-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" value="Status =&lt;br&gt;review&lt;br&gt;aanpak" vertex="1">
           <mxGeometry height="100" width="100" x="360" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="Xbr9VCXpClTbccPuhH1U-3" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Aanpak&lt;br&gt;akkoord?" vertex="1">
+        <mxCell id="Xbr9VCXpClTbccPuhH1U-3" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Goedkeuring?" vertex="1">
           <mxGeometry height="100" width="100" x="510" y="440" as="geometry" />
         </mxCell>
         <mxCell id="Xbr9VCXpClTbccPuhH1U-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
@@ -21,9 +21,6 @@
         </mxCell>
         <mxCell id="_XRv2DZFPfR5ChsWDadz-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Volg de&lt;br&gt;analyse" vertex="1">
           <mxGeometry height="60" width="100" x="660" y="650" as="geometry" />
-        </mxCell>
-        <mxCell id="_XRv2DZFPfR5ChsWDadz-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Goedkeuring&lt;br&gt;oplossingsrichting,&lt;br&gt;deliverables&lt;br&gt;en ETC&#39;s?" vertex="1">
-          <mxGeometry height="30" width="60" x="530" y="580" as="geometry" />
         </mxCell>
         <mxCell id="_XRv2DZFPfR5ChsWDadz-6" edge="1" parent="1" source="Xbr9VCXpClTbccPuhH1U-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Xbr9VCXpClTbccPuhH1U-17">
           <mxGeometry relative="1" as="geometry" />
