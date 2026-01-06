@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="Page-1" id="dRIuHNPxK5ljcTMTVuEa">
+    <mxGraphModel dx="834" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-45" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="2NNRtmBDYVnEMtFiFuyq-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-46" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" value="Status =&lt;br&gt;review&lt;br&gt;analyse" vertex="1">
+          <mxGeometry height="100" width="100" x="360" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-47" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="2NNRtmBDYVnEMtFiFuyq-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-48" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Is de baas&lt;br&gt;aanwezig?" vertex="1">
+          <mxGeometry height="100" width="100" x="360" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
+          <mxGeometry height="30" width="60" x="460" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-50" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Meteen meldplicht&lt;br&gt;wanneer de baas&lt;br&gt;aanwezig is" vertex="1">
+          <mxGeometry height="100" width="120" x="210" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
+          <mxGeometry height="30" width="60" x="300" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-52" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2NNRtmBDYVnEMtFiFuyq-69" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-53" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" vertex="1">
+          <mxGeometry height="100" width="120" x="500" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-54" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="2NNRtmBDYVnEMtFiFuyq-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-55" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="2NNRtmBDYVnEMtFiFuyq-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-56" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Na dat de&lt;br&gt;baas weer&lt;br&gt;aanwezig is" vertex="1">
+          <mxGeometry height="60" width="100" x="650" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-57" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Goedkeuring?" vertex="1">
+          <mxGeometry height="100" width="100" x="510" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-58" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Volg het&lt;br&gt;ontwerp" vertex="1">
+          <mxGeometry height="60" width="100" x="650" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-59" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="2NNRtmBDYVnEMtFiFuyq-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-60" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
+          <mxGeometry height="30" width="60" x="610" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-61" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="De baas bepaald&lt;br&gt;volgende status&lt;br&gt;en verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" vertex="1">
+          <mxGeometry height="100" width="116" x="360" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-62" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="2NNRtmBDYVnEMtFiFuyq-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
+          <mxGeometry height="30" width="60" x="450" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-64" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
+          <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-66" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2NNRtmBDYVnEMtFiFuyq-53" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;⏱️&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="535" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-68" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2NNRtmBDYVnEMtFiFuyq-57" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;⏱️&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="50" x="535" y="500" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
