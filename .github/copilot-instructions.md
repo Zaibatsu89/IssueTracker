@@ -1,60 +1,117 @@
-## Purpose
+# Repository-Level Copilot Instructions
 
-This file gives focused, actionable guidance for an AI coding agent (Copilot-style) to be immediately productive in this repository.
+## Project Context & Architecture
 
-## Quick snapshot (what I found)
+### Technology Stack
+- **Primary Language**: C# (.NET 8+)
+- **Architecture Pattern**: Clean Architecture / Onion Architecture
+- **Key Frameworks**: ASP.NET Core, Entity Framework Core
+- **Design Principles**: SOLID, DRY, YAGNI
 
-- Repository root inspected: `xs4all/jobflow`
-- Detectable files in the workspace at inspection time:
-  - `1 Issue Tracker intake.drawio`
-  - `2 Issue Tracker tijdtriggers.drawio`
-  - `3 Issue Tracker review.drawio`
-- No code files, package manifests (package.json, pyproject.toml, .csproj, etc.), or README.md were discoverable during the initial scan. If code exists elsewhere, point the agent to the code subfolder.
+### Code Style & Conventions
 
-## How to get started (concrete steps for the agent)
+#### Naming Conventions
+- Use PascalCase for public members, classes, and methods
+- Use camelCase for private fields with `_` prefix
+- Async methods must have `Async` suffix
+- Interface names must start with `I`
 
-1. Run a manifest scan to discover the app language and build system. Look for these files (stop when you find one): `package.json`, `pyproject.toml`, `requirements.txt`, `Pipfile`, `setup.py`, `requirements.txt`, `pom.xml`, `build.gradle`, `Dockerfile`, `Makefile`, `*.sln`, `*.csproj`.
+#### Language Features
+- Prefer **file-scoped namespaces** for cleaner structure
+- Use **primary constructors** where appropriate (C# 12+)
+- Leverage **collection expressions** `[]` over `new List<T>()`
+- Prefer **pattern matching** and `switch` expressions over conditional chains
+- Use **nullable reference types** consistently - all nullability must be explicit
 
-   Example PowerShell quick-check (run once at repo root):
+#### Async/Await Patterns
+- Always use `ConfigureAwait(false)` in library code
+- Prefer `ValueTask<T>` for frequently-called, often-synchronous methods
+- Never use `.Result` or `.Wait()` - always await properly
+- Use `IAsyncEnumerable<T>` for streaming scenarios
 
-   ```powershell
-   Get-ChildItem -Path . -Recurse -File -Include package.json,pyproject.toml,requirements.txt,setup.py,pom.xml,build.gradle,Dockerfile,Makefile,*.sln,*.csproj | Select-Object -ExpandProperty FullName
-   ```
+### Architecture Guidelines
 
-2. Open the three draw.io diagram files (listed above). They appear to model an "Issue Tracker" flow. Extract component names, actors, and data-flows from shapes and map them to code paths (for example: UI -> API -> DB). If the diagrams reference files or endpoints, prioritize those.
+#### Dependency Injection
+- Constructor injection is the default pattern
+- Avoid service locator anti-pattern
+- Register services with appropriate lifetime (Transient, Scoped, Singleton)
+- Use `IOptions<T>` pattern for configuration binding
 
-3. If no code manifests are found, ask the repo owner these exact questions before editing:
-   - Where is the application code (subfolder path)?
-   - What language/runtime/build system should be used? (Node, Python, .NET, Java, etc.)
-   - What are the canonical dev commands (build, test, run, lint)?
+#### Domain Logic
+- Keep domain entities free of infrastructure concerns
+- Use **Value Objects** for domain concepts without identity
+- Implement **Domain Events** for cross-aggregate communication
+- Validation belongs in domain layer, not controllers
 
-4. When editing or adding code:
-   - Create a short-lived topic branch: `feature/<short-desc>` or `fix/<short-desc>`.
-   - Use imperative, concise commit messages and include an issue/ticket number if provided.
+#### Data Access
+- Repository pattern for complex queries and abstraction
+- Specification pattern for reusable query logic
+- Always use parameterized queries - never string concatenation
+- Leverage `AsNoTracking()` for read-only queries
 
-## Project-specific cues and patterns
+#### Error Handling
+- Use **Result pattern** over exceptions for expected failures
+- Create custom exceptions for domain-specific errors
+- Implement global exception handling middleware
+- Log exceptions with structured logging (Serilog preferred)
 
-- The only concrete artifacts present are three draw.io files that document issue-tracking flows; treat them as source-of-truth for high-level architecture until code is provided.
-- No explicit tests or CI configuration were found; do not assume CI conventions (GitHub Actions) unless you find `.github/workflows`.
+### Testing Standards
 
-## Integration points to look for (when code appears)
+- **Unit tests**: xUnit with FluentAssertions
+- **Mocking**: NSubstitute or Moq
+- **Test naming**: `MethodName_Scenario_ExpectedBehavior`
+- Aim for >80% code coverage on business logic
+- Use `Bogus` for test data generation
 
-- Issue tracker APIs (look for routes or controllers named `issue`, `ticket`, `intake`, `review`).
-- Time-triggered jobs (the file `tijdtriggers` suggests scheduled/background tasks) — search for cron, timers, or job schedulers.
+### Code Generation Preferences
 
-## When adding code or docs — what to include
+#### When suggesting code:
+1. Include appropriate null checks and validation
+2. Add XML documentation for public APIs
+3. Consider performance implications (allocations, boxing, collection sizes)
+4. Include relevant using statements
+5. Suggest corresponding unit tests when implementing new features
 
-- If you add a service implementation, also add:
-  - a short README fragment explaining the service's purpose and how it maps to the diagrams
-  - one minimal smoke test that demonstrates the happy path
-- If you add a new dependency, update the manifest and keep transitive additions minimal.
+#### Prefer:
+- LINQ method syntax over query syntax
+- Expression-bodied members for simple implementations
+- Records for immutable DTOs
+- Minimal APIs for lightweight endpoints
+- Source generators over reflection where applicable
 
-## Questions to surface to the human maintainer (if any of the below are unknown)
+### Common Patterns
 
-- Where is the production deployment target (host, container registry, or server)?
-- Which authentication/authorization model is used (OAuth, API keys, internal)?
-- Are there existing database schemas or migrations the code must follow?
+**Repository Interface Example:**
+```csharp
+public interface IRepository<T> where T : class, IAggregateRoot
+{
+    Task<T?> GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec, CancellationToken ct = default);
+    Task<T> AddAsync(T entity, CancellationToken ct = default);
+    Task UpdateAsync(T entity, CancellationToken ct = default);
+    Task DeleteAsync(T entity, CancellationToken ct = default);
+}
+```
 
----
+**Result Pattern:**
+```csharp
+public readonly record struct Result<T>
+{
+    public T? Value { get; }
+    public Error? Error { get; }
+    public bool IsSuccess => Error is null;
+}
+```
 
-If you'd like, I can now run the manifest scan for you and open the three drawio files to extract component names and suggest an initial skeleton (service folders, minimal manifests). Which would you prefer next?
+### Anti-Patterns to Avoid
+- God objects / classes with too many responsibilities
+- Anemic domain models (all logic in services)
+- Static dependencies and singletons (except truly stateless)
+- Primitive obsession - use Value Objects
+- Repository methods returning `IQueryable<T>`
+
+### Documentation
+- Use triple-slash XML comments for all public APIs
+- Include `<summary>`, `<param>`, `<returns>`, and `<exception>` tags
+- Document complex algorithms with inline comments
+- Keep README.md updated with architecture decisions
