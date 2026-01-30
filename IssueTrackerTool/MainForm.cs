@@ -54,16 +54,19 @@ namespace IssueTrackerTool
         // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=netframework-4.7.2#examples
         private void Timer_Tick(object sender, EventArgs e)
         {
+            TimerLabel.Text = "00:00"; // TODO: tekst op basis van 1 minuut
             Timer.Enabled = false;
         }
         // referentie: https://github.com/microsoft/winappCli/blob/main/src/winapp-GUI/winapp-GUI/MainWindow.xaml.cs#L136
         private void StartTimerButton_Click(object sender, EventArgs e)
         {
+            TimerLabel.Text = "00:01"; // TODO: tekst op basis van 1 minuut
             Timer.Enabled = true;
         }
         // referentie: https://github.com/microsoft/winappCli/blob/main/src/winapp-GUI/winapp-GUI/MainWindow.xaml.cs#L523
         private void StopTimerButton_Click(object sender, EventArgs e)
         {
+            TimerLabel.Text = "00:01"; // TODO: tekst op basis van 1 minuut
             Timer.Enabled = false;
         }
     }
