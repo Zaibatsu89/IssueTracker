@@ -12,6 +12,15 @@ namespace IssueTrackerTool
 {
     public partial class MainForm : Form
     {
+        // referentie: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#single-dimensional-arrays
+        private readonly string[] acties = new string[]
+        {
+            "Intake verwerken",
+            "Oplossing implementeren",
+            "Evalueer of de deliverables correct en volledig zijn afgerond"
+        };
+
+        private uint actieIndex = 0;
         // referentie: https://github.com/microsoft/winappCli/blob/main/src/winapp-GUI/winapp-GUI/MainWindow.xaml.cs#L46
         private string actieInvoer = string.Empty;
 
@@ -38,7 +47,8 @@ namespace IssueTrackerTool
         private void ActieKnop_Click(object sender, EventArgs e)
         {
             actieInvoer = ActieInvoer.Text; // TODO: oude actieInvoer verdwijnt
-            ActieLabel.Text = "Oplossing implementeren"; // TODO: tekst is variabel
+            if (actieIndex < (acties.Length - 1))
+                ActieLabel.Text = acties[++actieIndex];
             ActieInvoer.Text = string.Empty;
         }
         // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=netframework-4.7.2#examples
