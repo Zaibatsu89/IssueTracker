@@ -34,6 +34,9 @@
             this.StartTimerButton = new System.Windows.Forms.Button();
             this.StopTimerButton = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.ActieLabel = new System.Windows.Forms.Label();
+            this.ActieInvoer = new System.Windows.Forms.TextBox();
+            this.ActieKnop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StatusLabel
@@ -67,11 +70,40 @@
             // 
             this.Timer.Interval = 60000;
             // 
+            // ActieLabel
+            // 
+            this.ActieLabel.AutoSize = true;
+            this.ActieLabel.Location = new System.Drawing.Point(16, 137);
+            this.ActieLabel.Name = "ActieLabel";
+            this.ActieLabel.Size = new System.Drawing.Size(90, 13);
+            this.ActieLabel.TabIndex = 3;
+            this.ActieLabel.Text = "Intake verwerken";
+            // 
+            // ActieInvoer
+            // 
+            this.ActieInvoer.Location = new System.Drawing.Point(16, 154);
+            this.ActieInvoer.Multiline = true;
+            this.ActieInvoer.Name = "ActieInvoer";
+            this.ActieInvoer.Size = new System.Drawing.Size(204, 70);
+            this.ActieInvoer.TabIndex = 4;
+            // 
+            // ActieKnop
+            // 
+            this.ActieKnop.Location = new System.Drawing.Point(16, 230);
+            this.ActieKnop.Name = "ActieKnop";
+            this.ActieKnop.Size = new System.Drawing.Size(204, 23);
+            this.ActieKnop.TabIndex = 5;
+            this.ActieKnop.Text = "OK";
+            this.ActieKnop.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ActieKnop);
+            this.Controls.Add(this.ActieInvoer);
+            this.Controls.Add(this.ActieLabel);
             this.Controls.Add(this.StopTimerButton);
             this.Controls.Add(this.StartTimerButton);
             this.Controls.Add(this.StatusLabel);
@@ -89,6 +121,9 @@
         private System.Windows.Forms.Button StartTimerButton;
         private System.Windows.Forms.Button StopTimerButton;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.Label ActieLabel;
+        private System.Windows.Forms.TextBox ActieInvoer;
+        private System.Windows.Forms.Button ActieKnop;
     }
 }
 

@@ -12,6 +12,9 @@ namespace IssueTrackerTool
 {
     public partial class MainForm : Form
     {
+        // referentie: https://github.com/microsoft/winappCli/blob/main/src/winapp-GUI/winapp-GUI/MainWindow.xaml.cs#L46
+        private string actieInvoer = string.Empty;
+
         public MainForm()
         {
             InitializeComponent();
@@ -23,11 +26,20 @@ namespace IssueTrackerTool
             StartTimerButton.Click += StartTimerButton_Click;
             // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=netframework-4.7.2#examples
             Timer.Tick += Timer_Tick;
+            // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.click?view=netframework-4.7.2#examples
+            ActieKnop.Click += ActieKnop_Click;
         }
         // referentie: https://github.com/microsoft/winappCli/blob/main/src/winapp-GUI/winapp-GUI/MainWindow.xaml.cs#L81
         private void SetupWindow()
         {
             Size = new Size(1000, 1000);
+        }
+        // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.click?view=netframework-4.7.2#examples
+        private void ActieKnop_Click(object sender, EventArgs e)
+        {
+            actieInvoer = ActieInvoer.Text; // TODO: oude actieInvoer verdwijnt
+            ActieLabel.Text = "Oplossing implementeren"; // TODO: tekst is variabel
+            ActieInvoer.Text = string.Empty;
         }
         // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.timer?view=netframework-4.7.2#examples
         private void Timer_Tick(object sender, EventArgs e)
