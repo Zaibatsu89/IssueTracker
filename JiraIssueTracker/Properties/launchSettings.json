@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "JiraIssueTracker (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "JiraIssueTracker (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
