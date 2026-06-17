@@ -1078,9 +1078,14 @@ namespace IssueTrackerTool
                                 }
                             }
 
-                            if (isHeadingOrNextAction || string.IsNullOrEmpty(bulletTxt))
+                            if (isHeadingOrNextAction)
                             {
                                 break;
+                            }
+
+                            if (string.IsNullOrEmpty(bulletTxt))
+                            {
+                                continue;
                             }
 
                             var textElements = paragraphs[j].Descendants<Text>().ToList();
