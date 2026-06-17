@@ -669,7 +669,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 C. Bespreek oplossingsrichting, deliverables en ETC’s", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 E. De baas bepaald volgende status", "🫱🏻‍🫲🏻 206F. De baas bepaald volgende status" },
+                { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 206F. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 F. Volg de analyse", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
             };
 
@@ -698,7 +698,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 402. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 E. De baas bepaald volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaald volgende status" },
+                { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 F. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406G. Verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
             };
@@ -727,7 +727,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 602. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 E. De baas bepaald volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaald volgende status" },
+                { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 F. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 606G. Verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg de implementatie", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
@@ -778,7 +778,7 @@ namespace IssueTrackerTool
                 { "E. Meteen meldplicht wanneer de baas aanwezig is", "⚠️ 905F. Meteen meldplicht wanneer de baas aanwezig is" },
                 { "F. Na dat de baas weer aanwezig is", "⚠️ 905T. Na dat de baas weer aanwezig is" },
                 { "G. Overleg vervolgplan", "⚠️ 906. Overleg vervolgplan" },
-                { "H. De baas bepaald volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaald volgende status en verifieert effort per resterende fase" }
+                { "H. De baas bepaalt volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaalt volgende status en verifieert effort per resterende fase" }
             };
 
             var phase10Mappings = new Dictionary<string, string>
@@ -817,7 +817,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 A. Status = review special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
                 { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 D. De baas bepaald volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaald volgende status" },
+                { "🫱🏻‍🫲🏻 D. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 E. Verifieert effort per resterende phase", "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende phase" }
             };
 
@@ -849,7 +849,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 202T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeurig vervolg", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
                 { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. De baas bepaald volgende status" },
+                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
             };
 
@@ -886,7 +886,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 602T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 8. Ik mail naar baas", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaald volgende status en verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status en verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
 
@@ -919,7 +919,7 @@ namespace IssueTrackerTool
                 { "⚠️ B. Meteen meldplicht wanneer de baas aanwezig is", "⚠️ 905F. Meteen meldplicht wanneer de baas aanwezig is" },
                 { "⚠️ C. Na dat de baas weer aanwezig is", "⚠️ 905T. Na dat de baas weer aanwezig is" },
                 { "⚠️ D. Overleg vervolgplan", "⚠️ 906. Overleg vervolgplan" },
-                { "⚠️ E. De baas bepaald volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaald volgende status en verifieert effort per resterende fase" }
+                { "⚠️ E. De baas bepaalt volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaalt volgende status en verifieert effort per resterende fase" }
             };
 
             var phase10CheckMappings = new Dictionary<string, string>
@@ -951,7 +951,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 6. Aanwezigheid monitoren", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 10. De baas bepaald volgende status en verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1206. De baas bepaald volgende status" }
+                { "🫱🏻‍🫲🏻 10. De baas bepaalt volgende status en verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1206. De baas bepaalt volgende status" }
             };
 
             // Clean up old redundant review action paragraphs first from stand-alone Actielijst
@@ -1034,19 +1034,19 @@ namespace IssueTrackerTool
                             }
 
                             // Dynamic insertion of split step
-                            if (newText.Contains("406F. De baas bepaald volgende status"))
+                            if (newText.Contains("406F. De baas bepaalt volgende status"))
                             {
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. Verifieert effort per resterende fase");
                             }
-                            else if (newText.Contains("606F. De baas bepaald volgende status"))
+                            else if (newText.Contains("606F. De baas bepaalt volgende status"))
                             {
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. Verifieert effort per resterende fase");
                             }
-                            else if (newText.Contains("1007F. De baas bepaald volgende status"))
+                            else if (newText.Contains("1007F. De baas bepaalt volgende status"))
                             {
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. Verifieert effort per resterende fase");
                             }
-                            else if (newText.Contains("1206. De baas bepaald volgende status"))
+                            else if (newText.Contains("1206. De baas bepaalt volgende status"))
                             {
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende phase");
                             }

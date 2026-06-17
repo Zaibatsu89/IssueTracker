@@ -28,7 +28,7 @@
             <mxGeometry height="100" width="120" x="510" y="370" as="geometry" />
           </mxCell>
         </object>
-        <object label="De baas bepaald&lt;br&gt;volgende status" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
+        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="80" width="120" x="510" y="600" as="geometry" />
           </mxCell>

@@ -17,7 +17,7 @@
         <mxCell id="XehhIzECJeRqZ1Lm04T6-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
           <mxGeometry height="30" width="60" x="610" y="-530" as="geometry" />
         </mxCell>
-        <object label="De baas&lt;br&gt;bepaald volgende&lt;br&gt;status" Action="206F" id="XehhIzECJeRqZ1Lm04T6-4">
+        <object label="De baas&lt;br&gt;bepaalt volgende&lt;br&gt;status" Action="206F" id="XehhIzECJeRqZ1Lm04T6-4">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="60" width="100" x="360" y="-370" as="geometry" />
           </mxCell>

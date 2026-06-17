@@ -44,7 +44,7 @@
         <mxCell id="2NNRtmBDYVnEMtFiFuyq-60" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
           <mxGeometry height="30" width="60" x="610" y="640" as="geometry" />
         </mxCell>
-        <object label="De baas bepaald&lt;br&gt;volgende status" Action="406F" id="2NNRtmBDYVnEMtFiFuyq-61">
+        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="406F" id="2NNRtmBDYVnEMtFiFuyq-61">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="80" width="120" x="358" y="750" as="geometry" />
           </mxCell>
