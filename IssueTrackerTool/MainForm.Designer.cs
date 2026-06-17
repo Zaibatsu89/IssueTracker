@@ -41,6 +41,9 @@
             this.VoortgangLabel = new System.Windows.Forms.Label();
             this.ResetTimerKnop = new System.Windows.Forms.Button();
             this.AuditLogKnop = new System.Windows.Forms.Button();
+            this.lblJiraIssue = new System.Windows.Forms.Label();
+            this.txtJiraIssue = new System.Windows.Forms.TextBox();
+            this.btnGenereerRapport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StatusLabel
@@ -160,11 +163,44 @@
             this.AuditLogKnop.UseVisualStyleBackColor = false;
             this.AuditLogKnop.Click += new System.EventHandler(this.AuditLogKnop_Click);
             // 
+            // lblJiraIssue
+            // 
+            this.lblJiraIssue.AutoSize = true;
+            this.lblJiraIssue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJiraIssue.Location = new System.Drawing.Point(12, 347);
+            this.lblJiraIssue.Name = "lblJiraIssue";
+            this.lblJiraIssue.Size = new System.Drawing.Size(139, 15);
+            this.lblJiraIssue.TabIndex = 10;
+            this.lblJiraIssue.Text = "Jira-issue (bijv. WT-1234):";
+            // 
+            // txtJiraIssue
+            // 
+            this.txtJiraIssue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJiraIssue.Location = new System.Drawing.Point(12, 367);
+            this.txtJiraIssue.Name = "txtJiraIssue";
+            this.txtJiraIssue.Size = new System.Drawing.Size(297, 23);
+            this.txtJiraIssue.TabIndex = 11;
+            // 
+            // btnGenereerRapport
+            // 
+            this.btnGenereerRapport.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnGenereerRapport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenereerRapport.Location = new System.Drawing.Point(12, 400);
+            this.btnGenereerRapport.Name = "btnGenereerRapport";
+            this.btnGenereerRapport.Size = new System.Drawing.Size(297, 35);
+            this.btnGenereerRapport.TabIndex = 12;
+            this.btnGenereerRapport.Text = "📄 Rapport Genereren";
+            this.btnGenereerRapport.UseVisualStyleBackColor = false;
+            this.btnGenereerRapport.Click += new System.EventHandler(this.btnGenereerRapport_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 350);
+            this.ClientSize = new System.Drawing.Size(325, 455);
+            this.Controls.Add(this.btnGenereerRapport);
+            this.Controls.Add(this.txtJiraIssue);
+            this.Controls.Add(this.lblJiraIssue);
             this.Controls.Add(this.AuditLogKnop);
             this.Controls.Add(this.ResetTimerKnop);
             this.Controls.Add(this.VoortgangLabel);
@@ -200,6 +236,9 @@
         private System.Windows.Forms.Label VoortgangLabel;
         private System.Windows.Forms.Button ResetTimerKnop;
         private System.Windows.Forms.Button AuditLogKnop;
+        private System.Windows.Forms.Label lblJiraIssue;
+        private System.Windows.Forms.TextBox txtJiraIssue;
+        private System.Windows.Forms.Button btnGenereerRapport;
     }
 }
 
