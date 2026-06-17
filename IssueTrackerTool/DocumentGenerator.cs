@@ -666,13 +666,11 @@ namespace IssueTrackerTool
             var phase2Mappings = new Dictionary<string, string>
             {
                 { "🫱🏻‍🫲🏻 A. Status = review aanpak", "🫱🏻‍🫲🏻 201. Status = review aanpak" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 202T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Bespreek oplossingsrichting, deliverables en ETC’s", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
-                { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 206F. De baas bepaald volgende status" },
-                { "🫱🏻‍🫲🏻 H. Volg de analyse", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
+                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 C. Bespreek oplossingsrichting, deliverables en ETC’s", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
+                { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
+                { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 206F. De baas bepaalt volgende status" },
+                { "🫱🏻‍🫲🏻 F. Volg de analyse", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
             };
 
             var phase3Mappings = new Dictionary<string, string>
@@ -697,13 +695,12 @@ namespace IssueTrackerTool
             var phase4Mappings = new Dictionary<string, string>
             {
                 { "🫱🏻‍🫲🏻 A. Status = review analyse", "🫱🏻‍🫲🏻 401. Status = review analyse" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 402. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 402F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 402T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaald volgende status en verifieert effort per resterende fase" },
-                { "🫱🏻‍🫲🏻 H. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
+                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 402. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
+                { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
+                { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaalt volgende status" },
+                { "🫱🏻‍🫲🏻 F. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406G. Verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 G. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
             };
 
             var phase5Mappings = new Dictionary<string, string>
@@ -727,13 +724,12 @@ namespace IssueTrackerTool
             var phase6Mappings = new Dictionary<string, string>
             {
                 { "🫱🏻‍🫲🏻 A. Status = review ontwerp", "🫱🏻‍🫲🏻 601. Status = review ontwerp" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 602. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 602F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 602T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaald volgende status en verifieert effort per resterende fase" },
-                { "🫱🏻‍🫲🏻 H. Volg de implementatie", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
+                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 602. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
+                { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
+                { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status" },
+                { "🫱🏻‍🫲🏻 F. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 606G. Verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 G. Volg de implementatie", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
 
             var phase7Mappings = new Dictionary<string, string>
@@ -782,7 +778,7 @@ namespace IssueTrackerTool
                 { "E. Meteen meldplicht wanneer de baas aanwezig is", "⚠️ 905F. Meteen meldplicht wanneer de baas aanwezig is" },
                 { "F. Na dat de baas weer aanwezig is", "⚠️ 905T. Na dat de baas weer aanwezig is" },
                 { "G. Overleg vervolgplan", "⚠️ 906. Overleg vervolgplan" },
-                { "H. De baas bepaald volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaald volgende status en verifieert effort per resterende fase" }
+                { "H. De baas bepaalt volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaalt volgende status en verifieert effort per resterende fase" }
             };
 
             var phase10Mappings = new Dictionary<string, string>
@@ -819,11 +815,10 @@ namespace IssueTrackerTool
             var phase12Mappings = new Dictionary<string, string>
             {
                 { "🫱🏻‍🫲🏻 A. Status = review special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 1202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 1202T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 F. De baas bepaald volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaald volgende status en verifieert effort per resterende phase" }
+                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
+                { "🫱🏻‍🫲🏻 D. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaalt volgende status" },
+                { "🫱🏻‍🫲🏻 E. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende fase" }
             };
 
             var phase1CheckMappings = new Dictionary<string, string>
@@ -854,7 +849,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 202T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeurig vervolg", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
                 { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. De baas bepaald volgende status" },
+                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
             };
 
@@ -891,7 +886,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 602T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 8. Ik mail naar baas", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaald volgende status en verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status en verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
 
@@ -924,7 +919,7 @@ namespace IssueTrackerTool
                 { "⚠️ B. Meteen meldplicht wanneer de baas aanwezig is", "⚠️ 905F. Meteen meldplicht wanneer de baas aanwezig is" },
                 { "⚠️ C. Na dat de baas weer aanwezig is", "⚠️ 905T. Na dat de baas weer aanwezig is" },
                 { "⚠️ D. Overleg vervolgplan", "⚠️ 906. Overleg vervolgplan" },
-                { "⚠️ E. De baas bepaald volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaald volgende status en verifieert effort per resterende fase" }
+                { "⚠️ E. De baas bepaalt volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaalt volgende status en verifieert effort per resterende fase" }
             };
 
             var phase10CheckMappings = new Dictionary<string, string>
@@ -951,13 +946,16 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker", "🫱🏻‍🫲🏻 1201. Status = review special action" },
                 { "🫱🏻‍🫲🏻 2. Jira-status is Special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
                 { "🫱🏻‍🫲🏻 3. Jira-status wordt Review special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
-                { "🫱🏻‍🫲🏻 4. Baas is mondeling beschikbaar?", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 5. Baas is schriftelijk beschikbaar", "🫱🏻‍🫲🏻 1202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 6. Aanwezigheid monitoren", "🫱🏻‍🫲🏻 1202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 1202T. Na dat de baas weer aanwezig is" },
+                { "🫱🏻‍🫲🏻 4. Baas is mondeling beschikbaar?", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 5. Baas is schriftelijk beschikbaar", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 6. Aanwezigheid monitoren", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
+                { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 10. De baas bepaald volgende status en verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1206. De baas bepaald volgende status en verifieert effort per resterende phase" }
+                { "🫱🏻‍🫲🏻 10. De baas bepaalt volgende status en verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1206. De baas bepaalt volgende status" }
             };
+
+            // Clean up old redundant review action paragraphs first from stand-alone Actielijst
+            CleanActielijstReviewParagraphs(actielijstPath);
 
             PatchFileHeadings(actielijstPath, phase2Mappings, "🫱🏻‍🫲🏻 A. Status = review aanpak");
             PatchFileHeadings(actielijstPath, phase3Mappings, "🔬 A. Status = analyse");
@@ -981,6 +979,9 @@ namespace IssueTrackerTool
             PatchFileHeadings(checklijstPath, phase10CheckMappings, "🫱🏻‍🫲🏻 A. Demonstratie van de oplossing geven");
             PatchFileHeadings(checklijstPath, phase11CheckMappings, "⚙️ A. Start timer (ETC)");
             PatchFileHeadings(checklijstPath, phase12CheckMappings, "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker");
+
+            // Merge consecutive check group headings that are identical
+            MergeConsecutiveCheckGroups(checklijstPath);
         }
 
         private static void PatchFileHeadings(string filePath, Dictionary<string, string> mappings, string startMarker)
@@ -1030,6 +1031,24 @@ namespace IssueTrackerTool
                             for (int i = 1; i < textElements.Count; i++)
                             {
                                 textElements[i].Text = string.Empty;
+                            }
+
+                            // Dynamic insertion of split step
+                            if (newText.Contains("406F. De baas bepaalt volgende status"))
+                            {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. Verifieert effort per resterende fase");
+                            }
+                            else if (newText.Contains("606F. De baas bepaalt volgende status"))
+                            {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. Verifieert effort per resterende fase");
+                            }
+                            else if (newText.Contains("1007F. De baas bepaalt volgende status"))
+                            {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. Verifieert effort per resterende fase");
+                            }
+                            else if (newText.Contains("1206. De baas bepaalt volgende status"))
+                            {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende fase");
                             }
                         }
                     }
@@ -1117,6 +1136,106 @@ namespace IssueTrackerTool
                 }
                 doc.MainDocumentPart.Document.Save();
             }
+        }
+
+        private static string GetParagraphText(Paragraph p)
+        {
+            var sb = new StringBuilder();
+            foreach (var t in p.Descendants<Text>())
+            {
+                sb.Append(t.Text);
+            }
+            return sb.ToString().Trim();
+        }
+
+        private static void CleanActielijstReviewParagraphs(string actielijstPath)
+        {
+            if (!File.Exists(actielijstPath)) return;
+
+            using (WordprocessingDocument doc = WordprocessingDocument.Open(actielijstPath, true))
+            {
+                var body = doc.MainDocumentPart.Document.Body;
+                var toRemove = new List<Paragraph>();
+
+                foreach (var p in body.Descendants<Paragraph>())
+                {
+                    string txt = GetParagraphText(p);
+                    if (txt.Contains("Meteen meldplicht wanneer de baas aanwezig is") ||
+                        txt.Contains("Na dat de baas weer aanwezig is"))
+                    {
+                        toRemove.Add(p);
+                    }
+                }
+
+                foreach (var p in toRemove)
+                {
+                    p.Remove();
+                }
+
+                doc.MainDocumentPart.Document.Save();
+            }
+        }
+
+        private static void MergeConsecutiveCheckGroups(string checklijstPath)
+        {
+            if (!File.Exists(checklijstPath)) return;
+
+            using (WordprocessingDocument doc = WordprocessingDocument.Open(checklijstPath, true))
+            {
+                var body = doc.MainDocumentPart.Document.Body;
+                var paragraphs = body.Descendants<Paragraph>().ToList();
+
+                Paragraph lastHeading = null;
+                var toRemove = new List<Paragraph>();
+
+                foreach (var p in paragraphs)
+                {
+                    string txt = GetParagraphText(p);
+                    bool isHeading = false;
+                    foreach (var em in Emojis)
+                    {
+                        if (txt.StartsWith(em, StringComparison.Ordinal))
+                        {
+                            isHeading = true;
+                            break;
+                        }
+                    }
+
+                    if (isHeading)
+                    {
+                        if (lastHeading != null && GetParagraphText(lastHeading) == txt)
+                        {
+                            toRemove.Add(p);
+                        }
+                        else
+                        {
+                            lastHeading = p;
+                        }
+                    }
+                }
+
+                foreach (var p in toRemove)
+                {
+                    p.Remove();
+                }
+
+                doc.MainDocumentPart.Document.Save();
+            }
+        }
+
+        private static void InsertParagraphAfter(Paragraph p, string text)
+        {
+            var newPara = (Paragraph)p.CloneNode(true);
+            var textElements = newPara.Descendants<Text>().ToList();
+            if (textElements.Count > 0)
+            {
+                textElements[0].Text = text;
+                for (int i = 1; i < textElements.Count; i++)
+                {
+                    textElements[i].Text = string.Empty;
+                }
+            }
+            p.InsertAfterSelf(newPara);
         }
     }
 }

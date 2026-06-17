@@ -52,7 +52,7 @@
             <mxGeometry height="60" width="100" x="650" y="470" as="geometry" />
           </mxCell>
         </object>
-        <object label="De baas bepaald&lt;br&gt;volgende status&lt;br&gt;en verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="907" id="kJhKxd2zfYEuZ5hcswId-12">
+        <object label="De baas bepaalt&lt;br&gt;volgende status&lt;br&gt;en verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="907" id="kJhKxd2zfYEuZ5hcswId-12">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="100" width="116" x="502" y="800" as="geometry" />
           </mxCell>
