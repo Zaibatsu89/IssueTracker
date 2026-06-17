@@ -369,20 +369,12 @@ namespace IssueTrackerTool
         {
             if (text == null) return string.Empty;
 
-            var sb = new StringBuilder();
-            foreach (char c in text)
-            {
-                if (c <= 127)
-                {
-                    sb.Append(c);
-                }
-            }
-            string result = sb.ToString();
-
+            // Remove leading emojis/symbols, then leading numbers/letters
+            string result = Regex.Replace(text, @"^[^\w\s\d]+", "").Trim();
             result = Regex.Replace(result, @"^\s*\d+[\.\s\-]*", "");
             result = Regex.Replace(result, @"^\s*[a-z][\.\s\-]+", "");
 
-            sb.Clear();
+            var sb = new StringBuilder();
             foreach (char c in result)
             {
                 if (char.IsLetterOrDigit(c))
