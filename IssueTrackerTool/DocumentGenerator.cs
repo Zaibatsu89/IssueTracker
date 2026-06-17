@@ -688,7 +688,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 402T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status en verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406F. De baas bepaald volgende status en verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaald volgende status en verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 H. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
             };
 
