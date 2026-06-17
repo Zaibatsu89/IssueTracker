@@ -651,11 +651,11 @@ namespace IssueTrackerTool
             string actielijstPath = Path.Combine(projectRoot, "Actielijst.docx");
             string checklijstPath = Path.Combine(projectRoot, "Checklijst.docx");
 
-            // Copy pristine files from OneDrive backups first to ensure clean state
-            string pristineActielijst = "/home/rinse/OneDrive/Documenten/Werk/2026-06-14/15-48/Actielijst.docx";
-            string pristineChecklijst = "/home/rinse/OneDrive/Documenten/Jobcoach/2025-12-19/Checklijst.docx";
-            if (File.Exists(pristineActielijst)) File.Copy(pristineActielijst, actielijstPath, true);
-            if (File.Exists(pristineChecklijst)) File.Copy(pristineChecklijst, checklijstPath, true);
+            // Copy pristine files from template files in the project root to ensure clean state
+            string templateActielijst = Path.Combine(projectRoot, "Actielijst_Template.docx");
+            string templateChecklijst = Path.Combine(projectRoot, "Checklijst_Template.docx");
+            if (File.Exists(templateActielijst)) File.Copy(templateActielijst, actielijstPath, true);
+            if (File.Exists(templateChecklijst)) File.Copy(templateChecklijst, checklijstPath, true);
 
             var phase2Mappings = new Dictionary<string, string>
             {
