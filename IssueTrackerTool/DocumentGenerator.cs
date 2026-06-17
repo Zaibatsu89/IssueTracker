@@ -48,7 +48,7 @@ namespace IssueTrackerTool
             new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review ontwerp" },
             new PhaseInfo { Number = 7, Name = "Implementatie", DrawioFilename = "7 Issue Tracker implementatie.drawio", Emoji = "⌨️", SectionKeyword = "Implementatie" },
             new PhaseInfo { Number = 8, Name = "Test", DrawioFilename = "8 Issue Tracker test.drawio", Emoji = "🔎", SectionKeyword = "Test" },
-            new PhaseInfo { Number = 9, Name = "Meldplicht", DrawioFilename = "9 Issje Tracker meldplicht.drawio", Emoji = "⚠️", SectionKeyword = "meldplicht" },
+            new PhaseInfo { Number = 9, Name = "Meldplicht", DrawioFilename = "9 Issue Tracker meldplicht.drawio", Emoji = "⚠️", SectionKeyword = "meldplicht" },
             new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "Review Final" },
             new PhaseInfo { Number = 11, Name = "Special action", DrawioFilename = "11 Issue Tracker special action.drawio", Emoji = "⚙️", SectionKeyword = "special action" },
             new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review special action" }
@@ -56,6 +56,9 @@ namespace IssueTrackerTool
 
         public static void Generate(string jiraIssue, string outputPath)
         {
+            // Always ensure the source documents are freshly copied and patched
+            PatchSourceDocuments();
+
             string projectRoot = GetProjectRoot();
             string actielijstPath = Path.Combine(projectRoot, "Actielijst.docx");
             string checklijstPath = Path.Combine(projectRoot, "Checklijst.docx");
@@ -390,6 +393,15 @@ namespace IssueTrackerTool
             string normAction = Normalize(action);
             if (string.IsNullOrEmpty(normAction)) return new List<string>();
 
+            if (normAction == "ontwerpverwerken")
+            {
+                return new List<string>
+                {
+                    "Stappenplan op basis van de opdrachtbeschrijving opstellen",
+                    "Verifiëren of de stappen onderdeel van de opdracht zijn"
+                };
+            }
+
             foreach (var cg in checkGroups)
             {
                 // 1. Must match the phase emoji prefix
@@ -648,6 +660,8 @@ namespace IssueTrackerTool
             string templateChecklijst = Path.Combine(projectRoot, "Checklijst_Template.docx");
             if (File.Exists(templateActielijst)) File.Copy(templateActielijst, actielijstPath, true);
             if (File.Exists(templateChecklijst)) File.Copy(templateChecklijst, checklijstPath, true);
+
+            PatchChecklistBullets(checklijstPath);
 
             var phase2Mappings = new Dictionary<string, string>
             {
@@ -1018,6 +1032,87 @@ namespace IssueTrackerTool
                                 textElements[i].Text = string.Empty;
                             }
                         }
+                    }
+                }
+                doc.MainDocumentPart.Document.Save();
+            }
+        }
+
+        private static void PatchChecklistBullets(string checklijstPath)
+        {
+            if (!File.Exists(checklijstPath)) return;
+
+            using (WordprocessingDocument doc = WordprocessingDocument.Open(checklijstPath, true))
+            {
+                var body = doc.MainDocumentPart.Document.Body;
+                var paragraphs = body.Descendants<Paragraph>().ToList();
+
+                for (int i = 0; i < paragraphs.Count; i++)
+                {
+                    var sb = new StringBuilder();
+                    foreach (var t in paragraphs[i].Descendants<Text>())
+                    {
+                        sb.Append(t.Text);
+                    }
+                    string txt = sb.ToString().Trim();
+
+                    if (txt.Contains("⌨️ B. Houd ik me aan de eenvoudigste oplossing?"))
+                    {
+                        int bulletIndex = 0;
+                        for (int j = i + 1; j < paragraphs.Count; j++)
+                        {
+                            var sbBullet = new StringBuilder();
+                            foreach (var t in paragraphs[j].Descendants<Text>())
+                            {
+                                sbBullet.Append(t.Text);
+                            }
+                            string bulletTxt = sbBullet.ToString().Trim();
+
+                            bool isHeadingOrNextAction = false;
+                            foreach (var em in Emojis)
+                            {
+                                if (bulletTxt.StartsWith(em, StringComparison.Ordinal) || bulletTxt.Contains("Status ="))
+                                {
+                                    isHeadingOrNextAction = true;
+                                    break;
+                                }
+                            }
+
+                            if (isHeadingOrNextAction)
+                            {
+                                break;
+                            }
+
+                            if (string.IsNullOrEmpty(bulletTxt))
+                            {
+                                continue;
+                            }
+
+                            var textElements = paragraphs[j].Descendants<Text>().ToList();
+                            if (textElements.Count > 0)
+                            {
+                                if (bulletIndex == 0)
+                                {
+                                    textElements[0].Text = "☐  Stappenplan op basis van de opdrachtbeschrijving opstellen";
+                                    bulletIndex++;
+                                }
+                                else if (bulletIndex == 1)
+                                {
+                                    textElements[0].Text = "☐  Verifiëren of de stappen onderdeel van de opdracht zijn";
+                                    bulletIndex++;
+                                }
+                                else
+                                {
+                                    textElements[0].Text = string.Empty;
+                                }
+
+                                for (int k = 1; k < textElements.Count; k++)
+                                {
+                                    textElements[k].Text = string.Empty;
+                                }
+                            }
+                        }
+                        break;
                     }
                 }
                 doc.MainDocumentPart.Document.Save();
