@@ -320,12 +320,19 @@ namespace IssueTrackerTool
 
                         if (resultaat == DialogResult.Yes)
                         {
-                            ProcessStartInfo psi = new ProcessStartInfo
+                            try
                             {
-                                FileName = sfd.FileName,
-                                UseShellExecute = true
-                            };
-                            Process.Start(psi);
+                                ProcessStartInfo psi = new ProcessStartInfo
+                                {
+                                    FileName = sfd.FileName,
+                                    UseShellExecute = true
+                                };
+                                Process.Start(psi);
+                            }
+                            catch (Exception openEx)
+                            {
+                                ToonWaarschuwing($"Rapport is gegenereerd, maar kon niet automatisch worden geopend: {openEx.Message}");
+                            }
                         }
                     }
                     catch (Exception ex)
