@@ -65,7 +65,11 @@ namespace IssueTrackerTool
         {
             acties.Clear();
             string geselecteerdeFase = PhaseComboBox.SelectedItem?.ToString() ?? "Special action";
+            VoegFaseActiesToe(geselecteerdeFase);
+        }
 
+        private void VoegFaseActiesToe(string geselecteerdeFase)
+        {
             switch (geselecteerdeFase)
             {
                 case "Analyse":
@@ -268,35 +272,7 @@ namespace IssueTrackerTool
                     // De deliverables zijn niet akkoord.
                     // We voegen de benodigde herhaal-acties toe op basis van de actieve fase.
                     string geselecteerdeFase = PhaseComboBox.SelectedItem?.ToString() ?? "Special action";
-                    switch (geselecteerdeFase)
-                    {
-                        case "Analyse":
-                            acties.Add("Intake verwerken");
-                            acties.Add("Oplossing analyseren");
-                            acties.Add("Evalueer deliverables");
-                            break;
-                        case "Ontwerp":
-                            acties.Add("Analyse verwerken");
-                            acties.Add("Oplossing ontwerpen");
-                            acties.Add("Evalueer deliverables");
-                            break;
-                        case "Implementatie":
-                            acties.Add("Ontwerp verwerken");
-                            acties.Add("Oplossing implementeren");
-                            acties.Add("Evalueer deliverables");
-                            break;
-                        case "Test":
-                            acties.Add("Implementatie verwerken");
-                            acties.Add("Oplossing testen");
-                            acties.Add("Evalueer deliverables");
-                            break;
-                        case "Special action":
-                        default:
-                            acties.Add("Intake verwerken");
-                            acties.Add("Oplossing implementeren");
-                            acties.Add("Evalueer deliverables");
-                            break;
-                    }
+                    VoegFaseActiesToe(geselecteerdeFase);
 
                     // Ga direct door naar de zojuist toegeegde herhaalactie (bijv. "Ontwerp verwerken")
                     actieIndex++;
