@@ -16,13 +16,8 @@ namespace IssueTrackerTool
         private const int STANDAARD_TIMER_SECONDEN = 60;
         private const string AUDIT_LOG_BESTANDSNAAM = "WitTronics_AuditLog.txt";
 
-        // referentie: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#single-dimensional-arrays
-        private readonly string[] acties = new string[]
-        {
-            "Intake verwerken",
-            "Oplossing implementeren",
-            "Evalueer deliverables"
-        };
+        // referentie: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/collections#indexable-collections
+        private readonly List<string> acties = new List<string>();
 
         private int actieIndex = 0;
         private int resterendeSeconden = STANDAARD_TIMER_SECONDEN;
@@ -38,6 +33,68 @@ namespace IssueTrackerTool
         {
             InitializeComponent();
             InitialiseerAuditLog();
+            PhaseComboBox.SelectedIndex = 4; // Selecteert "Special action" als standaard
+        }
+
+        private void PhaseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ResetNaarBeginVanFase();
+        }
+
+        private void ResetNaarBeginVanFase()
+        {
+            lock (timerSlot)
+            {
+                Timer.Stop();
+                actieIndex = 0;
+                auditTraject.Clear();
+                ResetTimer();
+                ActieInvoer.Clear();
+
+                InitialiseerFaseActies();
+
+                if (acties.Count > 0)
+                {
+                    ActieLabel.Text = $"Stap {(actieIndex + 1)}: {acties[actieIndex]}";
+                    VoortgangLabel.Text = $"Voortgang: {actieIndex}/{acties.Count}";
+                }
+            }
+        }
+
+        private void InitialiseerFaseActies()
+        {
+            acties.Clear();
+            string geselecteerdeFase = PhaseComboBox.SelectedItem?.ToString() ?? "Special action";
+
+            switch (geselecteerdeFase)
+            {
+                case "Analyse":
+                    acties.Add("Intake verwerken");
+                    acties.Add("Oplossing analyseren");
+                    acties.Add("Evalueer deliverables");
+                    break;
+                case "Ontwerp":
+                    acties.Add("Analyse verwerken");
+                    acties.Add("Oplossing ontwerpen");
+                    acties.Add("Evalueer deliverables");
+                    break;
+                case "Implementatie":
+                    acties.Add("Ontwerp verwerken");
+                    acties.Add("Oplossing implementeren");
+                    acties.Add("Evalueer deliverables");
+                    break;
+                case "Test":
+                    acties.Add("Implementatie verwerken");
+                    acties.Add("Oplossing testen");
+                    acties.Add("Evalueer deliverables");
+                    break;
+                case "Special action":
+                default:
+                    acties.Add("Intake verwerken");
+                    acties.Add("Oplossing implementeren");
+                    acties.Add("Evalueer deliverables");
+                    break;
+            }
         }
 
         private void InitialiseerAuditLog()
@@ -186,7 +243,7 @@ namespace IssueTrackerTool
             BewaarAuditInvoer(auditInvoer);
 
             // Controleer of traject voltooid is
-            if (actieIndex < (acties.Length - 1))
+            if (actieIndex < (acties.Count - 1))
             {
                 // Ga naar volgende actie
                 actieIndex++;
@@ -197,46 +254,101 @@ namespace IssueTrackerTool
             }
             else
             {
-                // Traject voltooid
-                Timer.Stop();
-
-                string samenvatting = string.Empty;
-                if (auditTraject.Count == 0)
-                    samenvatting = "Geen acties geregistreerd.";
-
-                int totaleTijd = auditTraject.Sum(invoer =>
-                {
-                    return invoer.BestedeTijd;
-                });
-
-                samenvatting = $"Totale tijd: {(totaleTijd / 60)}m {(totaleTijd % 60)}s{Environment.NewLine}" +
-                   $"Acties voltooid: {auditTraject.Count}";
-
-                DialogResult resultaat = MessageBox.Show(
-                    $"🏆 MISSIE VOLTOOID! 🏆{Environment.NewLine}{Environment.NewLine}" +
-                    $"Alle traject-acties zijn afgerond.{Environment.NewLine}{Environment.NewLine}" +
-                    samenvatting + Environment.NewLine + Environment.NewLine +
-                    "Wil je de volledige audit log bekijken?",
-                    "3-0 Overwinning",
+                // De laatste stap ("Evalueer deliverables") is ingevuld.
+                // Nu verifiëren of het resultaat van de evaluatie waar is.
+                DialogResult evalResult = MessageBox.Show(
+                    "Zijn de deliverables correct en volledig afgerond?",
+                    "Evaluatie deliverables",
                     MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Information
+                    MessageBoxIcon.Question
                 );
 
-                LogActie("Traject voltooid - alle acties afgerond");
-
-                if (resultaat == DialogResult.Yes)
+                if (evalResult == DialogResult.No)
                 {
-                    OpenAuditLog();
-                }
+                    // De deliverables zijn niet akkoord.
+                    // We voegen de benodigde herhaal-acties toe op basis van de actieve fase.
+                    string geselecteerdeFase = PhaseComboBox.SelectedItem?.ToString() ?? "Special action";
+                    switch (geselecteerdeFase)
+                    {
+                        case "Analyse":
+                            acties.Add("Intake verwerken");
+                            acties.Add("Oplossing analyseren");
+                            acties.Add("Evalueer deliverables");
+                            break;
+                        case "Ontwerp":
+                            acties.Add("Analyse verwerken");
+                            acties.Add("Oplossing ontwerpen");
+                            acties.Add("Evalueer deliverables");
+                            break;
+                        case "Implementatie":
+                            acties.Add("Ontwerp verwerken");
+                            acties.Add("Oplossing implementeren");
+                            acties.Add("Evalueer deliverables");
+                            break;
+                        case "Test":
+                            acties.Add("Implementatie verwerken");
+                            acties.Add("Oplossing testen");
+                            acties.Add("Evalueer deliverables");
+                            break;
+                        case "Special action":
+                        default:
+                            acties.Add("Intake verwerken");
+                            acties.Add("Oplossing implementeren");
+                            acties.Add("Evalueer deliverables");
+                            break;
+                    }
 
-                // Reset voor volgend traject
-                actieIndex = 0;
-                auditTraject.Clear();
-                ResetTimer();
+                    // Ga direct door naar de zojuist toegeegde herhaalactie (bijv. "Ontwerp verwerken")
+                    actieIndex++;
+                    ResetTimer();
+                    Timer.Start();
+
+                    ToonInfo($"Deliverables niet akkoord. Doorgaan naar actie {actieIndex + 1}: {acties[actieIndex]}.");
+                }
+                else
+                {
+                    // Traject voltooid
+                    Timer.Stop();
+
+                    string samenvatting = string.Empty;
+                    if (auditTraject.Count == 0)
+                        samenvatting = "Geen acties geregistreerd.";
+
+                    int totaleTijd = auditTraject.Sum(invoer =>
+                    {
+                        return invoer.BestedeTijd;
+                    });
+
+                    samenvatting = $"Totale tijd: {(totaleTijd / 60)}m {(totaleTijd % 60)}s{Environment.NewLine}" +
+                       $"Acties voltooid: {auditTraject.Count}";
+
+                    DialogResult resultaat = MessageBox.Show(
+                        $"🏆 MISSIE VOLTOOID! 🏆{Environment.NewLine}{Environment.NewLine}" +
+                        $"Alle traject-acties zijn afgerond.{Environment.NewLine}{Environment.NewLine}" +
+                        samenvatting + Environment.NewLine + Environment.NewLine +
+                        "Wil je de volledige audit log bekijken?",
+                        "3-0 Overwinning",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information
+                    );
+
+                    LogActie("Traject voltooid - alle acties afgerond");
+
+                    if (resultaat == DialogResult.Yes)
+                    {
+                        OpenAuditLog();
+                    }
+
+                    // Reset voor volgend traject
+                    actieIndex = 0;
+                    auditTraject.Clear();
+                    ResetTimer();
+                    InitialiseerFaseActies(); // Reset de actielijst naar de beginfase van 3 stappen
+                }
             }
 
             ActieLabel.Text = $"Stap {(actieIndex + 1)}: {acties[actieIndex]}";
-            VoortgangLabel.Text = $"Voortgang: {actieIndex}/{acties.Length}";
+            VoortgangLabel.Text = $"Voortgang: {actieIndex}/{acties.Count}";
             ActieInvoer.Clear();
         }
 
