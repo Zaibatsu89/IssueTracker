@@ -1183,7 +1183,7 @@ namespace IssueTrackerTool
             using (WordprocessingDocument doc = WordprocessingDocument.Open(checklijstPath, true))
             {
                 var body = doc.MainDocumentPart.Document.Body;
-                var paragraphs = body.Elements<Paragraph>().ToList();
+                var paragraphs = body.Descendants<Paragraph>().ToList();
 
                 Paragraph lastHeading = null;
                 var toRemove = new List<Paragraph>();
