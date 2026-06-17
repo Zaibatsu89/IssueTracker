@@ -286,6 +286,64 @@ namespace IssueTrackerTool
             OpenAuditLog();
         }
 
+        // referentie: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.click?view=netframework-4.7.2#examples
+        private void btnGenereerRapport_Click(object sender, EventArgs e)
+        {
+            string jiraIssue = txtJiraIssue.Text.Trim();
+            if (string.IsNullOrWhiteSpace(jiraIssue))
+            {
+                ToonWaarschuwing("Voer eerst een Jira-issue in.");
+                txtJiraIssue.Focus();
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Word Document (*.docx)|*.docx";
+                sfd.FileName = $"{jiraIssue}_ProcessReport.docx";
+                sfd.Title = "Rapport Opslaan";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    try
+                    {
+                        DocumentGenerator.Generate(jiraIssue, sfd.FileName);
+
+                        Cursor.Current = Cursors.Default;
+                        DialogResult resultaat = MessageBox.Show(
+                            "Rapport succesvol gegenereerd! Wil je het document openen?",
+                            "Succes",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Information
+                        );
+
+                        if (resultaat == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                ProcessStartInfo psi = new ProcessStartInfo
+                                {
+                                    FileName = sfd.FileName,
+                                    UseShellExecute = true
+                                };
+                                Process.Start(psi);
+                            }
+                            catch (Exception openEx)
+                            {
+                                ToonWaarschuwing($"Rapport is gegenereerd, maar kon niet automatisch worden geopend: {openEx.Message}");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Cursor.Current = Cursors.Default;
+                        ToonFout($"Kon rapport niet genereren: {ex.Message}");
+                    }
+                }
+            }
+        }
+
         private void OpenAuditLog()
         {
             try
