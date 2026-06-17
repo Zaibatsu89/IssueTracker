@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.StatusLabel = new System.Windows.Forms.Label();
+            this.PhaseComboBox = new System.Windows.Forms.ComboBox();
             this.StartTimerKnop = new System.Windows.Forms.Button();
             this.StopTimerKnop = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
@@ -52,9 +53,26 @@
             this.StatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLabel.Location = new System.Drawing.Point(12, 9);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(122, 15);
+            this.StatusLabel.Size = new System.Drawing.Size(35, 15);
             this.StatusLabel.TabIndex = 0;
-            this.StatusLabel.Text = "Status: special action";
+            this.StatusLabel.Text = "Fase:";
+            // 
+            // PhaseComboBox
+            // 
+            this.PhaseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PhaseComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhaseComboBox.FormattingEnabled = true;
+            this.PhaseComboBox.Items.AddRange(new object[] {
+            "Analyse",
+            "Ontwerp",
+            "Implementatie",
+            "Test",
+            "Special action"});
+            this.PhaseComboBox.Location = new System.Drawing.Point(70, 6);
+            this.PhaseComboBox.Name = "PhaseComboBox";
+            this.PhaseComboBox.Size = new System.Drawing.Size(239, 23);
+            this.PhaseComboBox.TabIndex = 13;
+            this.PhaseComboBox.SelectedIndexChanged += new System.EventHandler(this.PhaseComboBox_SelectedIndexChanged);
             // 
             // StartTimerKnop
             // 
@@ -211,6 +229,7 @@
             this.Controls.Add(this.StopTimerKnop);
             this.Controls.Add(this.StartTimerKnop);
             this.Controls.Add(this.StatusLabel);
+            this.Controls.Add(this.PhaseComboBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -226,6 +245,7 @@
         #endregion
 
         private System.Windows.Forms.Label StatusLabel;
+        private System.Windows.Forms.ComboBox PhaseComboBox;
         private System.Windows.Forms.Button StartTimerKnop;
         private System.Windows.Forms.Button StopTimerKnop;
         private System.Windows.Forms.Timer Timer;

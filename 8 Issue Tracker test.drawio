@@ -12,7 +12,10 @@
             <mxGeometry height="100" width="100" x="360" y="10" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="wN00o49hInXY7w57lpo8-3" edge="1" parent="1" source="wN00o49hInXY7w57lpo8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="wN00o49hInXY7w57lpo8-38" value="">
+        <mxCell id="wN00o49hInXY7w57lpo8-3" edge="1" parent="1" source="wN00o49hInXY7w57lpo8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="wN00o49hInXY7w57lpo8-38" value="ja">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wN00o49hInXY7w57lpo8-4_nee" edge="1" parent="1" source="wN00o49hInXY7w57lpo8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="wN00o49hInXY7w57lpo8-29" value="nee">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Evalueer of&lt;br&gt;de deliverables&lt;br&gt;correct en&lt;br&gt;volledig zijn&lt;br&gt;afgerond" Action="805" id="wN00o49hInXY7w57lpo8-4">
