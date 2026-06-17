@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="pxuzoADpxMfooJR_diKQ-1" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="pxuzoADpxMfooJR_diKQ-4" value="">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-1" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-4" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Status =&lt;br&gt;review&lt;br&gt;special action" Action="1201" id="pxuzoADpxMfooJR_diKQ-2">
@@ -12,68 +12,38 @@
             <mxGeometry height="100" width="100" x="370" y="20" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-3" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-23">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-3" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Is de baas&lt;br&gt;aanwezig?" Action="1202" id="pxuzoADpxMfooJR_diKQ-4">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="370" y="160" as="geometry" />
+        <object label="Is de baas&lt;br&gt;aanwezig?&lt;br&gt;(indien niet aanwezig:&lt;br&gt;meldplicht)" Action="1202" id="pxuzoADpxMfooJR_diKQ-4">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
+            <mxGeometry height="100" width="120" x="370" y="160" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
-          <mxGeometry height="30" width="60" x="470" y="210" as="geometry" />
-        </mxCell>
-        <object label="Meteen meldplicht&lt;br&gt;wanneer de baas&lt;br&gt;aanwezig is" Action="1202F" id="pxuzoADpxMfooJR_diKQ-6">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="120" x="220" y="370" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
-          <mxGeometry height="30" width="60" x="310" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-8" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pxuzoADpxMfooJR_diKQ-25" value="">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-8" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-17" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="1204" id="pxuzoADpxMfooJR_diKQ-9">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="120" x="510" y="370" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-10" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="pxuzoADpxMfooJR_diKQ-6">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-11" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-23">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Na dat de&lt;br&gt;baas weer&lt;br&gt;aanwezig is" Action="1202T" id="pxuzoADpxMfooJR_diKQ-12">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="660" y="180" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="De baas bepaald&lt;br&gt;volgende status&lt;br&gt;en verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="116" x="512" y="600" as="geometry" />
+        <object label="De baas bepaald&lt;br&gt;volgende status" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
+            <mxGeometry height="80" width="120" x="510" y="600" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="pxuzoADpxMfooJR_diKQ-20" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="20" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-22" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pxuzoADpxMfooJR_diKQ-9" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="&lt;font style=&quot;font-size: 36px;&quot;&gt;⏱️&lt;/font&gt;" Action="1203" id="pxuzoADpxMfooJR_diKQ-23">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="50" x="545" y="280" as="geometry" />
+        <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;phase" Action="1207" id="pxuzoADpxMfooJR_diKQ-27">
+          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="80" width="120" x="510" y="720" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-26" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pxuzoADpxMfooJR_diKQ-17" value="">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-28" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="&lt;font style=&quot;font-size: 36px;&quot;&gt;⏱️&lt;/font&gt;" Action="1205" id="pxuzoADpxMfooJR_diKQ-25">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="50" x="545" y="510" as="geometry" />
-          </mxCell>
-        </object>
       </root>
     </mxGraphModel>
   </diagram>
