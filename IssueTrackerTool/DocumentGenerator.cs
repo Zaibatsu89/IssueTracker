@@ -818,7 +818,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 E. Verifieert effort per resterende phase", "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende phase" }
+                { "🫱🏻‍🫲🏻 E. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende fase" }
             };
 
             var phase1CheckMappings = new Dictionary<string, string>
@@ -1048,7 +1048,7 @@ namespace IssueTrackerTool
                             }
                             else if (newText.Contains("1206. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende phase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende fase");
                             }
                         }
                     }
