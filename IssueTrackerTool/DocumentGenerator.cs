@@ -311,7 +311,6 @@ namespace IssueTrackerTool
             var list = new List<CheckGroup>();
             CheckGroup currentGroup = null;
             string currentSubPhase = "review aanpak"; // Initial default for review check groups
-            bool seenSpecialAction = false;
 
             foreach (var p in paragraphs)
             {
@@ -321,10 +320,6 @@ namespace IssueTrackerTool
                     if (p.StartsWith(em, StringComparison.Ordinal))
                     {
                         isActionRef = true;
-                        if (em == "⚙️" || em == "⚙")
-                        {
-                            seenSpecialAction = true;
-                        }
                         break;
                     }
                 }
@@ -333,21 +328,24 @@ namespace IssueTrackerTool
                 {
                     // Dynamically track the review sub-phase based on action codes or action heading text!
                     string lowerP = p.ToLowerInvariant();
-                    var matchedPhase = Phases.FirstOrDefault(ph => 
-                        ph.Emoji == "🤝🏻" && 
-                        (lowerP.Contains(ph.Name.ToLowerInvariant()) || p.Contains((ph.Number * 10).ToString()))
-                    );
+                    PhaseInfo matchedPhase = null;
+                    var codeMatch = Regex.Match(p, @"\b\d{3,4}\b");
+                    if (codeMatch.Success)
+                    {
+                        int phaseNum = int.Parse(codeMatch.Value) / 100;
+                        matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum && ph.Emoji == "🤝🏻");
+                    }
+
+                    if (matchedPhase == null)
+                    {
+                        matchedPhase = Phases.FirstOrDefault(ph => 
+                            ph.Emoji == "🤝🏻" && lowerP.Contains(ph.Name.ToLowerInvariant())
+                        );
+                    }
 
                     if (matchedPhase != null)
                     {
-                        if (matchedPhase.Number == 2 || matchedPhase.Number == 12)
-                        {
-                            currentSubPhase = seenSpecialAction ? "review special action" : "review aanpak";
-                        }
-                        else
-                        {
-                            currentSubPhase = matchedPhase.SectionKeyword;
-                        }
+                        currentSubPhase = matchedPhase.SectionKeyword;
                     }
 
                     bool isHandshake = p.StartsWith("🤝🏻", StringComparison.Ordinal);
