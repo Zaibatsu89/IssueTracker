@@ -70,19 +70,27 @@
           <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
         </mxCell>
         <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="406G" id="2NNRtmBDYVnEMtFiFuyq-70">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="80" width="120" x="358" y="980" as="geometry" />
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
+            <mxGeometry height="80" width="120" x="358" y="850" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="2NNRtmBDYVnEMtFiFuyq-71" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_analyse_afgekeurd">
+        <mxCell id="2NNRtmBDYVnEMtFiFuyq-71" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="2NNRtmBDYVnEMtFiFuyq-70">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Issue [analyse afgekeurd]" id="object_analyse_afgekeurd">
           <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="140" x="348" y="870" as="geometry" />
+            <mxGeometry height="50" width="140" x="348" y="950" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="edge_afgekeurd_to_terminator" edge="1" parent="1" source="object_analyse_afgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2NNRtmBDYVnEMtFiFuyq-70" value="">
+        <mxCell id="edge_verifieert_to_afgekeurd" edge="1" parent="1" source="2NNRtmBDYVnEMtFiFuyq-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_analyse_afgekeurd" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Volg de&lt;br&gt;afgestemde status" Action="406H" id="terminator_volg_afgestemde_status">
+          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="60" width="120" x="358" y="1030" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_afgekeurd_to_volg" edge="1" parent="1" source="object_analyse_afgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="terminator_volg_afgestemde_status" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
