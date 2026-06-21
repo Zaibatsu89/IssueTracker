@@ -473,10 +473,14 @@ namespace IssueTrackerTool
 
                     if (!string.IsNullOrEmpty(action))
                     {
-                        char lastChar = action[action.Length - 1];
-                        if (char.IsLetter(lastChar) && lastChar != 'T' && lastChar != 'F')
+                        string trimmedAction = action.Trim();
+                        if (trimmedAction.Length > 0)
                         {
-                            Console.WriteLine($"[VALIDATIE WAARSCHUWING] Overtreding bedrijfsregel in '{Path.GetFileName(filePath)}': Action ID '{action}' eindigt met een ongeldige letter. Alleen T of F is toegestaan.");
+                            char lastChar = trimmedAction[trimmedAction.Length - 1];
+                            if (char.IsLetter(lastChar) && lastChar != 'T' && lastChar != 'F')
+                            {
+                                Console.WriteLine($"[VALIDATIE WAARSCHUWING] Overtreding bedrijfsregel in '{Path.GetFileName(filePath)}': Action ID '{action}' eindigt met een ongeldige letter. Alleen T of F is toegestaan.");
+                            }
                         }
                     }
 
@@ -708,7 +712,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
                 { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 407. De baas verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
             };
 
@@ -794,7 +798,8 @@ namespace IssueTrackerTool
             {
                 { "🫱🏻‍🫲🏻 Review Final", "🫱🏻‍🫲🏻 1001. Status = review final" },
                 { "A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1003. Demonstratie van de oplossing geven" },
-                { "B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" }
+                { "B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" },
+                { "🫱🏻🫲🏻 C. De baas bepaalt volgende status", "🫱🏻🫲🏻 1007F. De baas bepaalt volgende status" }
             };
 
             var phase11Mappings = new Dictionary<string, string>
