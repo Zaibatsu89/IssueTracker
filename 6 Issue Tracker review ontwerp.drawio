@@ -4,9 +4,9 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <object label="Status =&lt;br&gt;review&lt;br&gt;ontwerp" Action="601" id="bfeaoe4yX_S7tX3q-7-V-26">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="10" as="geometry" />
+        <object label="Issue [ontworpen]" Action="601" id="bfeaoe4yX_S7tX3q-7-V-26">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="140" x="340" y="40" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="bfeaoe4yX_S7tX3q-7-V-27" edge="1" parent="1" source="bfeaoe4yX_S7tX3q-7-V-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bfeaoe4yX_S7tX3q-7-V-33">
@@ -32,10 +32,18 @@
         </object>
         <object label="Volg de&lt;br&gt;implementatie" Action="606T" id="bfeaoe4yX_S7tX3q-7-V-38">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="650" y="820" as="geometry" />
+            <mxGeometry height="60" width="100" x="650" y="950" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="bfeaoe4yX_S7tX3q-7-V-39" edge="1" parent="1" source="bfeaoe4yX_S7tX3q-7-V-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="bfeaoe4yX_S7tX3q-7-V-38">
+        <mxCell id="bfeaoe4yX_S7tX3q-7-V-39" edge="1" parent="1" source="bfeaoe4yX_S7tX3q-7-V-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_ontwerp_goedgekeurd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Issue [ontwerp goedgekeurd]" id="object_ontwerp_goedgekeurd">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="620" y="820" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_goedgekeurd_to_terminator" edge="1" parent="1" source="object_ontwerp_goedgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="bfeaoe4yX_S7tX3q-7-V-38" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="bfeaoe4yX_S7tX3q-7-V-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
@@ -63,10 +71,18 @@
         </mxCell>
         <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="606G" id="bfeaoe4yX_S7tX3q-7-V-51">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="80" width="120" x="358" y="870" as="geometry" />
+            <mxGeometry height="80" width="120" x="358" y="980" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="bfeaoe4yX_S7tX3q-7-V-52" edge="1" parent="1" source="bfeaoe4yX_S7tX3q-7-V-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bfeaoe4yX_S7tX3q-7-V-51">
+        <mxCell id="bfeaoe4yX_S7tX3q-7-V-52" edge="1" parent="1" source="bfeaoe4yX_S7tX3q-7-V-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_ontwerp_afgekeurd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Issue [ontwerp afgekeurd]" id="object_ontwerp_afgekeurd">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="140" x="348" y="870" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_afgekeurd_to_terminator" edge="1" parent="1" source="object_ontwerp_afgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="bfeaoe4yX_S7tX3q-7-V-51" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

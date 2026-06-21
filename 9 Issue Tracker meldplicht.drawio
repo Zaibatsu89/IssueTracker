@@ -7,9 +7,9 @@
         <mxCell id="IjQxlhujuJK-shiPwm0T-2" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="kJhKxd2zfYEuZ5hcswId-17" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Status =&lt;br&gt;meldplicht" Action="901" id="kJhKxd2zfYEuZ5hcswId-1">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="10" as="geometry" />
+        <object label="Issue [meldplicht getriggerd]" Action="901" id="kJhKxd2zfYEuZ5hcswId-1">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="330" y="40" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="IjQxlhujuJK-shiPwm0T-6" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="kJhKxd2zfYEuZ5hcswId-8">
@@ -31,7 +31,7 @@
         <mxCell id="kJhKxd2zfYEuZ5hcswId-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
           <mxGeometry height="30" width="60" x="310" y="500" as="geometry" />
         </mxCell>
-        <mxCell id="IjQxlhujuJK-shiPwm0T-8" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="kJhKxd2zfYEuZ5hcswId-12" value="">
+        <mxCell id="IjQxlhujuJK-shiPwm0T-8" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="object_meldplicht_voltooid" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Overleg vervolgplan" Action="906" id="kJhKxd2zfYEuZ5hcswId-8">
@@ -54,9 +54,17 @@
         </object>
         <object label="De baas bepaalt&lt;br&gt;volgende status&lt;br&gt;en verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="907" id="kJhKxd2zfYEuZ5hcswId-12">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="116" x="502" y="800" as="geometry" />
+            <mxGeometry height="100" width="116" x="502" y="910" as="geometry" />
           </mxCell>
         </object>
+        <object label="Issue [meldplicht voltooid]" id="object_meldplicht_voltooid">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="480" y="800" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_meldplicht_voltooid_to_terminator" edge="1" parent="1" source="object_meldplicht_voltooid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="kJhKxd2zfYEuZ5hcswId-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="kJhKxd2zfYEuZ5hcswId-13" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
         </mxCell>
