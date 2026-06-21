@@ -15,6 +15,7 @@ namespace IssueTrackerTool
     public static class DocumentGenerator
     {
         private static readonly string[] Emojis = { "⏱️", "🤝🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
+        private const string VariationSelector = "\uFE0F";
 
         public class PhaseInfo
         {
@@ -155,10 +156,10 @@ namespace IssueTrackerTool
                         foreach (var action in matchingSection.Actions)
                         {
                             bool isSubHeader = false;
-                            string actionNorm = action.Replace("\uFE0F", "").TrimStart();
+                            string actionNorm = action.Replace(VariationSelector, "").TrimStart();
                             foreach (var em in Emojis)
                             {
-                                string emNorm = em.Replace("\uFE0F", "");
+                                string emNorm = em.Replace(VariationSelector, "");
                                 if (actionNorm.StartsWith(emNorm, StringComparison.Ordinal))
                                 {
                                     isSubHeader = true;
@@ -257,11 +258,11 @@ namespace IssueTrackerTool
             foreach (var p in paragraphs)
             {
                 bool hasEmoji = false;
-                string pNorm = p.Replace("\uFE0F", "").TrimStart();
+                string pNorm = p.Replace(VariationSelector, "").TrimStart();
                 string pEmoji = "";
                 foreach (var em in Emojis)
                 {
-                    string emNorm = em.Replace("\uFE0F", "");
+                    string emNorm = em.Replace(VariationSelector, "");
                     if (pNorm.StartsWith(emNorm, StringComparison.Ordinal))
                     {
                         hasEmoji = true;
