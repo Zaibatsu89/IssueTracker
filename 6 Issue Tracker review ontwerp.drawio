@@ -69,7 +69,7 @@
         <mxCell id="bfeaoe4yX_S7tX3q-7-V-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
           <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
         </mxCell>
-        <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="606G" id="bfeaoe4yX_S7tX3q-7-V-51">
+        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="606G" id="bfeaoe4yX_S7tX3q-7-V-51">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="80" width="120" x="358" y="980" as="geometry" />
           </mxCell>

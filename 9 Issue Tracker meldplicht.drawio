@@ -41,7 +41,7 @@
         <mxCell id="edge_baas_bepaalt_to_meldplicht_voltooid" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_meldplicht_voltooid" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="908" id="new_verifieert_effort">
+        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="908" id="new_verifieert_effort">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="80" width="120" x="500" y="1010" as="geometry" />
           </mxCell>
