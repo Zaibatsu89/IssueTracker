@@ -329,25 +329,22 @@ namespace IssueTrackerTool
                 if (isActionRef)
                 {
                     // Dynamically track the review sub-phase based on action codes or action heading text!
-                    if (p.Contains("40") || p.ToLowerInvariant().Contains("review analyse"))
+                    string lowerP = p.ToLowerInvariant();
+                    var matchedPhase = Phases.FirstOrDefault(ph => 
+                        ph.Emoji == "🤝🏻" && 
+                        (lowerP.Contains(ph.Name.ToLowerInvariant()) || p.Contains((ph.Number * 10).ToString()))
+                    );
+
+                    if (matchedPhase != null)
                     {
-                        currentSubPhase = "review analyse";
-                    }
-                    else if (p.Contains("60") || p.ToLowerInvariant().Contains("review ontwerp"))
-                    {
-                        currentSubPhase = "review ontwerp";
-                    }
-                    else if (p.Contains("100") || p.ToLowerInvariant().Contains("review final"))
-                    {
-                        currentSubPhase = "review final";
-                    }
-                    else if (p.Contains("120") || p.ToLowerInvariant().Contains("review special action"))
-                    {
-                        currentSubPhase = "review special action";
-                    }
-                    else if (p.Contains("20") || p.ToLowerInvariant().Contains("review aanpak"))
-                    {
-                        currentSubPhase = seenSpecialAction ? "review special action" : "review aanpak";
+                        if (matchedPhase.Number == 2 || matchedPhase.Number == 12)
+                        {
+                            currentSubPhase = seenSpecialAction ? "review special action" : "review aanpak";
+                        }
+                        else
+                        {
+                            currentSubPhase = matchedPhase.SectionKeyword;
+                        }
                     }
 
                     bool isHandshake = p.StartsWith("🤝🏻", StringComparison.Ordinal);
