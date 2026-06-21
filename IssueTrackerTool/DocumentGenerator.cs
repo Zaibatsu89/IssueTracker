@@ -1036,23 +1036,23 @@ namespace IssueTrackerTool
                             // Dynamic insertion of split step
                             if (newText.Contains("406F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406H. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("606F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606H. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1007F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. De baas verifieert effort per resterende fase");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007H. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1206. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. De baas verifieert effort per resterende fase");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1209. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. De baas verifieert effort per resterende fase");
                             }
                         }
                     }
