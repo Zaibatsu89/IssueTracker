@@ -32,7 +32,7 @@ Per review flowchart `.drawio` bestand zullen we de volgende XML-transformaties 
 4.  **Nieuwe specifieke status-node toevoegen**:
     - Er wordt een nieuw rechthoekig statusblok (`shape=rounded=0`) aangemaakt met het specifieke label zoals gedefinieerd in de tabel hierboven (bijv. `Issue [intake niet uitgevoerd]`).
 5.  **Verbinden naar terminator**:
-    - De nieuwe status-node wordt via een pijl verbonden met de reeds bestaande terminator-node `De baas bepaalt volgende status`.
+    - De nieuwe status-node wordt via een pijl verbonden met een terminator-node (let op: zorg ervoor dat dit pad niet doorstroomt naar de afgekeurd-status in de flowcharts waar De baas bepaalt volgende status een procesblok is).
 
 ---
 
