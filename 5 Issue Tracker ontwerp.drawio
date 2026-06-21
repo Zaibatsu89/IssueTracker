@@ -19,8 +19,8 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Evalueer of&lt;br&gt;de deliverables&lt;br&gt;correct en&lt;br&gt;volledig zijn&lt;br&gt;afgerond" Action="505" id="z5xtCpzYsnNJJag9wdNT-4">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="570" as="geometry" />
+          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="140" width="160" x="330" y="550" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="z5xtCpzYsnNJJag9wdNT-5" edge="1" parent="1" source="z5xtCpzYsnNJJag9wdNT-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="z5xtCpzYsnNJJag9wdNT-37">

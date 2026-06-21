@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36">
   <diagram id="BnLUZblOsesBlHXev8Wl" name="Page-1">
-    <mxGraphModel dx="842" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1460" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,7 @@
             <mxGeometry height="100" width="120" x="370" y="150" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-8" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-17" value="">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-8" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-decision_goedkeuring" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="1204" id="pxuzoADpxMfooJR_diKQ-9">
@@ -28,9 +28,20 @@
             <mxGeometry height="100" width="120" x="510" y="360" as="geometry" />
           </mxCell>
         </object>
+        <mxCell id="edge_goedkeuring_nee" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-decision_goedkeuring" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-17" value="nee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_goedkeuring_ja" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-decision_goedkeuring" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_special_action_goedgekeurd" value="ja">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Goedkeuring?" Action="1205" id="pxuzoADpxMfooJR_diKQ-decision_goedkeuring">
+          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="100" width="100" x="520" y="500" as="geometry" />
+          </mxCell>
+        </object>
         <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="80" width="120" x="510" y="590" as="geometry" />
+            <mxGeometry height="80" width="120" x="340" y="640" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="pxuzoADpxMfooJR_diKQ-20" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
@@ -38,19 +49,38 @@
         </mxCell>
         <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="1207" id="pxuzoADpxMfooJR_diKQ-27">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="80" width="120" x="510" y="820" as="geometry" />
+            <mxGeometry height="80" width="120" x="340" y="880" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-28" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_special_action_goedgekeurd">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-28" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_special_action_afgekeurd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Issue [speciale actie afgekeurd]" id="object_special_action_afgekeurd">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="320" y="760" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_afgekeurd_to_terminator" edge="1" parent="1" source="object_special_action_afgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_goedgekeurd_to_jira_baas" edge="1" parent="1" source="object_special_action_goedgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-action_jira_baas" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Issue [speciale actie goedgekeurd]" id="object_special_action_goedgekeurd">
           <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="160" x="490" y="710" as="geometry" />
+            <mxGeometry height="50" width="160" x="620" y="760" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="edge_goedgekeurd_to_terminator" edge="1" parent="1" source="object_special_action_goedgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pxuzoADpxMfooJR_diKQ-27" value="">
+        <mxCell id="edge_jira_baas_to_final" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-action_jira_baas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="final_donut_special_action" value="">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Zet Jira&lt;br&gt;uitvoerder op&lt;br&gt;de baas" Action="1208" id="pxuzoADpxMfooJR_diKQ-action_jira_baas">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
+            <mxGeometry height="100" width="100" x="650" y="860" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="final_donut_special_action" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.donut;dx=10;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="680" y="1010" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
