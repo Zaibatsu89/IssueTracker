@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36">
   <diagram id="BnLUZblOsesBlHXev8Wl" name="Page-1">
-    <mxGraphModel dx="1460" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="829" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,7 +23,7 @@
         <mxCell id="pxuzoADpxMfooJR_diKQ-8" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-decision_goedkeuring" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="1204" id="pxuzoADpxMfooJR_diKQ-9">
+        <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="1203" id="pxuzoADpxMfooJR_diKQ-9">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="120" x="510" y="360" as="geometry" />
           </mxCell>
@@ -34,12 +34,12 @@
         <mxCell id="edge_goedkeuring_ja" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-decision_goedkeuring" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_special_action_goedgekeurd" value="ja">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Goedkeuring?" Action="1205" id="pxuzoADpxMfooJR_diKQ-decision_goedkeuring">
+        <object label="Goedkeuring?" Action="1204" id="pxuzoADpxMfooJR_diKQ-decision_goedkeuring">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="100" width="100" x="520" y="500" as="geometry" />
           </mxCell>
         </object>
-        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
+        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1204F" id="pxuzoADpxMfooJR_diKQ-17">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="80" width="120" x="340" y="640" as="geometry" />
           </mxCell>
@@ -82,7 +82,7 @@
         <mxCell id="edge_jira_baas_to_final" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-action_jira_baas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="final_donut_special_action" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Zet Jira&lt;br&gt;uitvoerder op&lt;br&gt;de baas" Action="1208" id="pxuzoADpxMfooJR_diKQ-action_jira_baas">
+        <object label="Zet Jira&lt;br&gt;uitvoerder op&lt;br&gt;de baas" Action="1204T" id="pxuzoADpxMfooJR_diKQ-action_jira_baas">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="100" x="650" y="860" as="geometry" />
           </mxCell>

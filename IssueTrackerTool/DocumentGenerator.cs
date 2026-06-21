@@ -14,7 +14,8 @@ namespace IssueTrackerTool
 {
     public static class DocumentGenerator
     {
-        private static readonly string[] Emojis = { "⏱️", "🫱🏻‍🫲🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
+        private static readonly string[] Emojis = { "⏱️", "🤝🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
+        private const string VariationSelector = "\uFE0F";
 
         public class PhaseInfo
         {
@@ -41,17 +42,17 @@ namespace IssueTrackerTool
         private static readonly List<PhaseInfo> Phases = new List<PhaseInfo>
         {
             new PhaseInfo { Number = 1, Name = "Intake", DrawioFilename = "1 Issue Tracker intake.drawio", Emoji = "⏱️", SectionKeyword = "intake" },
-            new PhaseInfo { Number = 2, Name = "Review aanpak", DrawioFilename = "2 Issue Tracker review aanpak.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review aanpak" },
+            new PhaseInfo { Number = 2, Name = "Review aanpak", DrawioFilename = "2 Issue Tracker review aanpak.drawio", Emoji = "🤝🏻", SectionKeyword = "review aanpak" },
             new PhaseInfo { Number = 3, Name = "Analyse", DrawioFilename = "3 Issue Tracker analyse.drawio", Emoji = "🔬", SectionKeyword = "analyse" },
-            new PhaseInfo { Number = 4, Name = "Review analyse", DrawioFilename = "4 Issue Tracker review analyse.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review analyse" },
+            new PhaseInfo { Number = 4, Name = "Review analyse", DrawioFilename = "4 Issue Tracker review analyse.drawio", Emoji = "🤝🏻", SectionKeyword = "review analyse" },
             new PhaseInfo { Number = 5, Name = "Ontwerp", DrawioFilename = "5 Issue Tracker ontwerp.drawio", Emoji = "✏️", SectionKeyword = "Ontwerp" },
-            new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review ontwerp" },
+            new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🤝🏻", SectionKeyword = "review ontwerp" },
             new PhaseInfo { Number = 7, Name = "Implementatie", DrawioFilename = "7 Issue Tracker implementatie.drawio", Emoji = "⌨️", SectionKeyword = "Implementatie" },
             new PhaseInfo { Number = 8, Name = "Test", DrawioFilename = "8 Issue Tracker test.drawio", Emoji = "🔎", SectionKeyword = "Test" },
             new PhaseInfo { Number = 9, Name = "Meldplicht", DrawioFilename = "9 Issue Tracker meldplicht.drawio", Emoji = "⚠️", SectionKeyword = "meldplicht" },
-            new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "Review Final" },
+            new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🤝🏻", SectionKeyword = "Review Final" },
             new PhaseInfo { Number = 11, Name = "Special action", DrawioFilename = "11 Issue Tracker special action.drawio", Emoji = "⚙️", SectionKeyword = "special action" },
-            new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review special action" }
+            new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🤝🏻", SectionKeyword = "review special action" }
         };
 
         public static void Generate(string jiraIssue, string outputPath)
@@ -143,54 +144,23 @@ namespace IssueTrackerTool
                         }
                     }
 
-                    // Re-use standard review template if specific review isn't found
-                    if (matchingSection == null && phase.Emoji == "🫱🏻‍🫲🏻")
-                    {
-                        foreach (var s in actieSections)
-                        {
-                            if (s.Heading.ToLowerInvariant().Contains("review") && !s.Heading.ToLowerInvariant().Contains("final"))
-                            {
-                                matchingSection = s;
-                                break;
-                            }
-                        }
-                    }
-
                     if (matchingSection != null)
                     {
-                                                bool isFallback = !matchingSection.Heading.Contains(phase.Number.ToString() + "0") && 
-                                           !matchingSection.Heading.Contains(phase.Number.ToString());
-                         
                         string headingToUse = matchingSection.Heading;
-                        if (isFallback)
+                        if (!string.IsNullOrEmpty(headingToUse))
                         {
-                            string oldPrefix = matchingSection.Heading.Contains("201") ? "20" : 
-                                               matchingSection.Heading.Contains("401") ? "40" : "60";
-                            string newPrefix = phase.Number.ToString() + "0";
-                             
-                            headingToUse = headingToUse.Replace(oldPrefix, newPrefix)
-                                                      .Replace("review aanpak", phase.SectionKeyword.ToLowerInvariant())
-                                                      .Replace("review analyse", phase.SectionKeyword.ToLowerInvariant())
-                                                      .Replace("review ontwerp", phase.SectionKeyword.ToLowerInvariant());
+                            headingToUse = char.ToUpper(headingToUse[0]) + headingToUse.Substring(1);
                         }
-
                         AddHeading2(body, headingToUse, "2E75B6");
 
                         foreach (var action in matchingSection.Actions)
                         {
-                            string actionToUse = action;
-                            if (isFallback)
-                            {
-                                string oldPrefix = matchingSection.Heading.Contains("201") ? "20" : 
-                                                   matchingSection.Heading.Contains("401") ? "40" : "60";
-                                string newPrefix = phase.Number.ToString() + "0";
-                                actionToUse = actionToUse.Replace(oldPrefix, newPrefix);
-                            }
-
                             bool isSubHeader = false;
+                            string actionNorm = action.Replace(VariationSelector, "").TrimStart();
                             foreach (var em in Emojis)
                             {
-                                if (actionToUse.StartsWith(em, StringComparison.Ordinal))
+                                string emNorm = em.Replace(VariationSelector, "");
+                                if (actionNorm.StartsWith(emNorm, StringComparison.Ordinal))
                                 {
                                     isSubHeader = true;
                                     break;
@@ -199,9 +169,9 @@ namespace IssueTrackerTool
 
                             if (isSubHeader)
                             {
-                                AddParagraph(body, actionToUse, bold: true, colorHex: "1F497D", leftIndent: 180);
+                                AddParagraph(body, action, bold: true, colorHex: "1F497D", leftIndent: 180);
 
-                                var checks = FindChecksForAction(actionToUse, checkGroups, phase.Emoji, phase.SectionKeyword);
+                                var checks = FindChecksForAction(action, checkGroups, phase.Emoji, phase.SectionKeyword);
                                 if (checks.Count > 0)
                                 {
                                     foreach (var check in checks)
@@ -212,9 +182,9 @@ namespace IssueTrackerTool
                             }
                             else
                             {
-                                AddParagraph(body, actionToUse, leftIndent: 360);
+                                AddParagraph(body, action, leftIndent: 360);
 
-                                var checks = FindChecksForAction(actionToUse, checkGroups, phase.Emoji, phase.SectionKeyword);
+                                var checks = FindChecksForAction(action, checkGroups, phase.Emoji, phase.SectionKeyword);
                                 if (checks.Count > 0)
                                 {
                                     foreach (var check in checks)
@@ -283,29 +253,53 @@ namespace IssueTrackerTool
         {
             var sections = new List<PhaseSection>();
             PhaseSection currentSection = null;
+            string currentSectionKeyword = null;
 
             foreach (var p in paragraphs)
             {
-                bool isHeading = false;
+                bool hasEmoji = false;
+                string pNorm = p.Replace(VariationSelector, "").TrimStart();
+                string pEmoji = "";
                 foreach (var em in Emojis)
                 {
-                    if (p.StartsWith(em, StringComparison.Ordinal))
+                    string emNorm = em.Replace(VariationSelector, "");
+                    if (pNorm.StartsWith(emNorm, StringComparison.Ordinal))
                     {
-                        if (p.Contains("Status =") || p == "✏️ Ontwerp" || p == "⌨️ Implementatie" || p == "🔎 Test" || p == "🫱🏻‍🫲🏻 Review Final" || p == "⚠️ Meldplicht" || p == "⚙️ Special action")
+                        hasEmoji = true;
+                        pEmoji = emNorm;
+                        pNorm = pNorm.Substring(emNorm.Length).TrimStart();
+                        break;
+                    }
+                }
+
+                bool isHeading = false;
+                if (hasEmoji)
+                {
+                    var match = Regex.Match(pNorm, @"^(\d+)");
+                    if (match.Success)
+                    {
+                        int num = int.Parse(match.Groups[1].Value);
+                        if (num % 100 == 1)
                         {
                             isHeading = true;
-                            break;
+                            int phaseNum = num / 100;
+                            var matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum);
+                            if (matchedPhase != null && matchedPhase.SectionKeyword != currentSectionKeyword)
+                            {
+                                currentSectionKeyword = matchedPhase.SectionKeyword;
+                                currentSection = new PhaseSection { Heading = currentSectionKeyword };
+                                sections.Add(currentSection);
+                            }
                         }
                     }
                 }
 
-                if (isHeading)
+                if (currentSection != null && !isHeading)
                 {
-                    currentSection = new PhaseSection { Heading = p };
-                    sections.Add(currentSection);
-                }
-                else if (currentSection != null)
-                {
+                    if (p.ToLowerInvariant().Contains("status ="))
+                    {
+                        continue;
+                    }
                     currentSection.Actions.Add(p);
                 }
             }
@@ -333,27 +327,33 @@ namespace IssueTrackerTool
                 if (isActionRef)
                 {
                     // Dynamically track the review sub-phase based on action codes or action heading text!
-                    if (p.Contains("40") || p.ToLowerInvariant().Contains("review analyse"))
+                    string lowerP = p.ToLowerInvariant();
+                    PhaseInfo matchedPhase = null;
+                    var codeMatch = Regex.Match(p, @"\b\d{3,4}\b");
+                    if (codeMatch.Success)
                     {
-                        currentSubPhase = "review analyse";
+                        int phaseNum = int.Parse(codeMatch.Value) / 100;
+                        matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum && ph.Emoji == "🤝🏻");
                     }
-                    else if (p.Contains("60") || p.ToLowerInvariant().Contains("review ontwerp"))
+
+                    if (matchedPhase == null)
                     {
-                        currentSubPhase = "review ontwerp";
+                        matchedPhase = Phases.FirstOrDefault(ph => 
+                            ph.Emoji == "🤝🏻" && lowerP.Contains(ph.Name.ToLowerInvariant())
+                        );
                     }
-                    else if (p.Contains("100") || p.ToLowerInvariant().Contains("review final"))
+
+                    if (matchedPhase != null)
                     {
-                        currentSubPhase = "review final";
+                        currentSubPhase = matchedPhase.SectionKeyword;
                     }
-                    else if (p.Contains("20") || p.ToLowerInvariant().Contains("review aanpak"))
-                    {
-                        currentSubPhase = "review aanpak";
-                    }
+
+                    bool isHandshake = p.StartsWith("🤝🏻", StringComparison.Ordinal);
 
                     currentGroup = new CheckGroup
                     {
                         Heading = p,
-                        SubPhase = p.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) ? currentSubPhase : string.Empty
+                        SubPhase = isHandshake ? currentSubPhase : string.Empty
                     };
                     list.Add(currentGroup);
                 }
@@ -385,6 +385,16 @@ namespace IssueTrackerTool
             return sb.ToString();
         }
 
+        private static bool IsEmojiMatch(string heading, string phaseEmoji)
+        {
+            if (heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) return true;
+
+            bool isHeadingHandshake = heading.StartsWith("🤝🏻", StringComparison.Ordinal);
+            bool isPhaseHandshake = phaseEmoji == "🤝🏻";
+
+            return isHeadingHandshake && isPhaseHandshake;
+        }
+
         private static List<string> FindChecksForAction(string action, List<CheckGroup> checkGroups, string phaseEmoji, string sectionKeyword)
         {
             string normAction = Normalize(action);
@@ -402,10 +412,10 @@ namespace IssueTrackerTool
             foreach (var cg in checkGroups)
             {
                 // 1. Must match the phase emoji prefix
-                if (!cg.Heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) continue;
+                if (!IsEmojiMatch(cg.Heading, phaseEmoji)) continue;
 
                 // 2. If it's a review phase, must match the specific review sub-phase keyword!
-                if (phaseEmoji == "🫱🏻‍🫲🏻")
+                if (phaseEmoji == "🤝🏻")
                 {
                     if (!string.IsNullOrEmpty(cg.SubPhase) && 
                         !string.IsNullOrEmpty(sectionKeyword) && 

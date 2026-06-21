@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="OA8Psgw5BU6XrezAwxYp">
-    <mxGraphModel dx="1420" dy="970" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="829" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -61,7 +61,7 @@
         <mxCell id="mpQzUtWff58q1bPTKcpG-19" edge="1" parent="1" source="mpQzUtWff58q1bPTKcpG-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mpQzUtWff58q1bPTKcpG-22" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Beëindig&lt;br&gt;tijdsregistratie" Action="1007T" id="mpQzUtWff58q1bPTKcpG-20">
+        <object label="Beëindig&lt;br&gt;tijdsregistratie" Action="1006T" id="mpQzUtWff58q1bPTKcpG-20">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="100" x="650" y="980" as="geometry" />
           </mxCell>
@@ -69,7 +69,7 @@
         <mxCell id="mpQzUtWff58q1bPTKcpG-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Dit omvat het digitaal vastleggen van de afronding in Jira" vertex="1">
           <mxGeometry height="30" width="120" x="520" y="1020" as="geometry" />
         </mxCell>
-        <object label="Zet Jira&lt;br&gt;uitvoerder op&lt;br&gt;de baas" Action="1008" id="mpQzUtWff58q1bPTKcpG-22">
+        <object label="Zet Jira&lt;br&gt;uitvoerder op&lt;br&gt;de baas" Action="1007" id="mpQzUtWff58q1bPTKcpG-22">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="100" x="650" y="1130" as="geometry" />
           </mxCell>
@@ -88,7 +88,7 @@
         <mxCell id="mpQzUtWff58q1bPTKcpG-23" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.donut;dx=10;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="" vertex="1">
           <mxGeometry height="40" width="40" x="680" y="1360" as="geometry" />
         </mxCell>
-        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1007F" id="mpQzUtWff58q1bPTKcpG-14">
+        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1006F" id="mpQzUtWff58q1bPTKcpG-14">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="80" width="120" x="250" y="830" as="geometry" />
           </mxCell>
@@ -96,7 +96,7 @@
         <mxCell id="mpQzUtWff58q1bPTKcpG-34" edge="1" parent="1" source="mpQzUtWff58q1bPTKcpG-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mpQzUtWff58q1bPTKcpG-33">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="1009" id="mpQzUtWff58q1bPTKcpG-33">
+        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="1008" id="mpQzUtWff58q1bPTKcpG-33">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="80" width="120" x="250" y="930" as="geometry" />
           </mxCell>
@@ -109,7 +109,7 @@
             <mxGeometry height="50" width="200" x="210" y="1030" as="geometry" />
           </mxCell>
         </object>
-        <object label="Volg de&lt;br&gt;afgestemde status" Action="1010" id="terminator_volg_afgestemde_status">
+        <object label="Volg de&lt;br&gt;afgestemde status" Action="1009" id="terminator_volg_afgestemde_status">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="60" width="120" x="250" y="1110" as="geometry" />
           </mxCell>

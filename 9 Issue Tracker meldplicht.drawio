@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="RxTZmvJhkROvXh92HXGi">
-    <mxGraphModel dx="842" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1177" dy="1152" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -15,12 +15,12 @@
         <mxCell id="IjQxlhujuJK-shiPwm0T-6" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="kJhKxd2zfYEuZ5hcswId-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Is de baas&lt;br&gt;aanwezig?&lt;br&gt;(indien niet aanwezig:&lt;br&gt;meldplicht)" Action="905" id="kJhKxd2zfYEuZ5hcswId-3">
+        <object label="Is de baas&lt;br&gt;aanwezig?&lt;br&gt;(indien niet aanwezig:&lt;br&gt;wachten)" Action="905" id="kJhKxd2zfYEuZ5hcswId-3">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="120" x="350" y="450" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="IjQxlhujuJK-shiPwm0T-8" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="kJhKxd2zfYEuZ5hcswId-12" value="">
+        <mxCell id="t8s6E_-A3Us-5MdbCyu4-8" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Overleg vervolgplan" Action="906" id="kJhKxd2zfYEuZ5hcswId-8">
@@ -28,27 +28,6 @@
             <mxGeometry height="100" width="120" x="500" y="660" as="geometry" />
           </mxCell>
         </object>
-        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="907" id="kJhKxd2zfYEuZ5hcswId-12">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="80" width="120" x="500" y="800" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="Issue [meldplicht voltooid]" id="object_meldplicht_voltooid">
-          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="160" x="480" y="920" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="edge_baas_bepaalt_to_meldplicht_voltooid" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_meldplicht_voltooid" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="908" id="new_verifieert_effort">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="80" width="120" x="500" y="1010" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="edge_meldplicht_voltooid_to_verifieert_effort" edge="1" parent="1" source="object_meldplicht_voltooid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="new_verifieert_effort" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="kJhKxd2zfYEuZ5hcswId-13" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
         </mxCell>
@@ -76,6 +55,35 @@
             <mxGeometry height="80" width="80" x="370" y="240" as="geometry" />
           </mxCell>
         </object>
+        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="907" id="t8s6E_-A3Us-5MdbCyu4-1">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
+            <mxGeometry height="80" width="120" x="500" y="800" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="908" id="t8s6E_-A3Us-5MdbCyu4-2">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
+            <mxGeometry height="80" width="120" x="500" y="900" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t8s6E_-A3Us-5MdbCyu4-3" edge="1" parent="1" source="t8s6E_-A3Us-5MdbCyu4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t8s6E_-A3Us-5MdbCyu4-4" edge="1" parent="1" source="t8s6E_-A3Us-5MdbCyu4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Issue [meldplicht voltooid]" id="t8s6E_-A3Us-5MdbCyu4-5">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="480" y="1000" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Volg de&lt;br&gt;afgestemde status" Action="909" id="t8s6E_-A3Us-5MdbCyu4-6">
+          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="60" width="120" x="500" y="1080" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t8s6E_-A3Us-5MdbCyu4-7" edge="1" parent="1" source="t8s6E_-A3Us-5MdbCyu4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
