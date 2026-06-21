@@ -155,9 +155,11 @@ namespace IssueTrackerTool
                         foreach (var action in matchingSection.Actions)
                         {
                             bool isSubHeader = false;
+                            string actionNorm = action.Replace("\uFE0F", "").TrimStart();
                             foreach (var em in Emojis)
                             {
-                                if (action.StartsWith(em, StringComparison.Ordinal))
+                                string emNorm = em.Replace("\uFE0F", "");
+                                if (actionNorm.StartsWith(emNorm, StringComparison.Ordinal))
                                 {
                                     isSubHeader = true;
                                     break;
