@@ -143,54 +143,21 @@ namespace IssueTrackerTool
                         }
                     }
 
-                    // Re-use standard review template if specific review isn't found
-                    if (matchingSection == null && phase.Emoji == "🫱🏻‍🫲🏻")
-                    {
-                        foreach (var s in actieSections)
-                        {
-                            if (s.Heading.ToLowerInvariant().Contains("review") && !s.Heading.ToLowerInvariant().Contains("final"))
-                            {
-                                matchingSection = s;
-                                break;
-                            }
-                        }
-                    }
-
                     if (matchingSection != null)
                     {
-                                                bool isFallback = !matchingSection.Heading.Contains(phase.Number.ToString() + "0") && 
-                                           !matchingSection.Heading.Contains(phase.Number.ToString());
-                         
                         string headingToUse = matchingSection.Heading;
-                        if (isFallback)
+                        if (headingToUse.Length > 0)
                         {
-                            string oldPrefix = matchingSection.Heading.Contains("201") ? "20" : 
-                                               matchingSection.Heading.Contains("401") ? "40" : "60";
-                            string newPrefix = phase.Number.ToString() + "0";
-                             
-                            headingToUse = headingToUse.Replace(oldPrefix, newPrefix)
-                                                      .Replace("review aanpak", phase.SectionKeyword.ToLowerInvariant())
-                                                      .Replace("review analyse", phase.SectionKeyword.ToLowerInvariant())
-                                                      .Replace("review ontwerp", phase.SectionKeyword.ToLowerInvariant());
+                            headingToUse = char.ToUpper(headingToUse[0]) + headingToUse.Substring(1);
                         }
-
                         AddHeading2(body, headingToUse, "2E75B6");
 
                         foreach (var action in matchingSection.Actions)
                         {
-                            string actionToUse = action;
-                            if (isFallback)
-                            {
-                                string oldPrefix = matchingSection.Heading.Contains("201") ? "20" : 
-                                                   matchingSection.Heading.Contains("401") ? "40" : "60";
-                                string newPrefix = phase.Number.ToString() + "0";
-                                actionToUse = actionToUse.Replace(oldPrefix, newPrefix);
-                            }
-
                             bool isSubHeader = false;
                             foreach (var em in Emojis)
                             {
-                                if (actionToUse.StartsWith(em, StringComparison.Ordinal))
+                                if (action.StartsWith(em, StringComparison.Ordinal))
                                 {
                                     isSubHeader = true;
                                     break;
@@ -199,9 +166,9 @@ namespace IssueTrackerTool
 
                             if (isSubHeader)
                             {
-                                AddParagraph(body, actionToUse, bold: true, colorHex: "1F497D", leftIndent: 180);
+                                AddParagraph(body, action, bold: true, colorHex: "1F497D", leftIndent: 180);
 
-                                var checks = FindChecksForAction(actionToUse, checkGroups, phase.Emoji, phase.SectionKeyword);
+                                var checks = FindChecksForAction(action, checkGroups, phase.Emoji, phase.SectionKeyword);
                                 if (checks.Count > 0)
                                 {
                                     foreach (var check in checks)
@@ -212,9 +179,9 @@ namespace IssueTrackerTool
                             }
                             else
                             {
-                                AddParagraph(body, actionToUse, leftIndent: 360);
+                                AddParagraph(body, action, leftIndent: 360);
 
-                                var checks = FindChecksForAction(actionToUse, checkGroups, phase.Emoji, phase.SectionKeyword);
+                                var checks = FindChecksForAction(action, checkGroups, phase.Emoji, phase.SectionKeyword);
                                 if (checks.Count > 0)
                                 {
                                     foreach (var check in checks)
@@ -283,29 +250,51 @@ namespace IssueTrackerTool
         {
             var sections = new List<PhaseSection>();
             PhaseSection currentSection = null;
+            string currentSectionKeyword = null;
 
             foreach (var p in paragraphs)
             {
-                bool isHeading = false;
+                bool hasEmoji = false;
+                string pNorm = p.Replace("\uFE0F", "").TrimStart();
+                string pEmoji = "";
                 foreach (var em in Emojis)
                 {
-                    if (p.StartsWith(em, StringComparison.Ordinal))
+                    string emNorm = em.Replace("\uFE0F", "");
+                    if (pNorm.StartsWith(emNorm, StringComparison.Ordinal))
                     {
-                        if (p.Contains("Status =") || p == "✏️ Ontwerp" || p == "⌨️ Implementatie" || p == "🔎 Test" || p == "🫱🏻‍🫲🏻 Review Final" || p == "⚠️ Meldplicht" || p == "⚙️ Special action")
+                        hasEmoji = true;
+                        pEmoji = emNorm;
+                        pNorm = pNorm.Substring(emNorm.Length).TrimStart();
+                        break;
+                    }
+                }
+
+                if (hasEmoji)
+                {
+                    var match = Regex.Match(pNorm, @"^(\d+)");
+                    if (match.Success)
+                    {
+                        int num = int.Parse(match.Groups[1].Value);
+                        if (num % 100 == 1)
                         {
-                            isHeading = true;
-                            break;
+                            int phaseNum = num / 100;
+                            var matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum);
+                            if (matchedPhase != null && matchedPhase.SectionKeyword != currentSectionKeyword)
+                            {
+                                currentSectionKeyword = matchedPhase.SectionKeyword;
+                                currentSection = new PhaseSection { Heading = currentSectionKeyword };
+                                sections.Add(currentSection);
+                            }
                         }
                     }
                 }
 
-                if (isHeading)
+                if (currentSection != null)
                 {
-                    currentSection = new PhaseSection { Heading = p };
-                    sections.Add(currentSection);
-                }
-                else if (currentSection != null)
-                {
+                    if (p.ToLowerInvariant().Contains("status ="))
+                    {
+                        continue;
+                    }
                     currentSection.Actions.Add(p);
                 }
             }
@@ -317,6 +306,7 @@ namespace IssueTrackerTool
             var list = new List<CheckGroup>();
             CheckGroup currentGroup = null;
             string currentSubPhase = "review aanpak"; // Initial default for review check groups
+            bool seenSpecialAction = false;
 
             foreach (var p in paragraphs)
             {
@@ -326,6 +316,10 @@ namespace IssueTrackerTool
                     if (p.StartsWith(em, StringComparison.Ordinal))
                     {
                         isActionRef = true;
+                        if (em == "⚙️" || em == "⚙")
+                        {
+                            seenSpecialAction = true;
+                        }
                         break;
                     }
                 }
@@ -345,9 +339,13 @@ namespace IssueTrackerTool
                     {
                         currentSubPhase = "review final";
                     }
+                    else if (p.Contains("120") || p.ToLowerInvariant().Contains("review special action"))
+                    {
+                        currentSubPhase = "review special action";
+                    }
                     else if (p.Contains("20") || p.ToLowerInvariant().Contains("review aanpak"))
                     {
-                        currentSubPhase = "review aanpak";
+                        currentSubPhase = seenSpecialAction ? "review special action" : "review aanpak";
                     }
 
                     currentGroup = new CheckGroup
