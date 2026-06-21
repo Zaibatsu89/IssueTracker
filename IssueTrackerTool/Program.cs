@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace IssueTrackerTool
@@ -17,8 +17,6 @@ namespace IssueTrackerTool
                 string outputPath = args[2];
                 try
                 {
-                    Console.WriteLine("Natively patching source Word documents first...");
-                    DocumentGenerator.PatchSourceDocuments();
                     Console.WriteLine($"Starting headless generation for {jiraIssue} to {outputPath}...");
                     DocumentGenerator.Generate(jiraIssue, outputPath);
                     Console.WriteLine("Headless generation SUCCEEDED!");
