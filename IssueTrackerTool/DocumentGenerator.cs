@@ -14,7 +14,7 @@ namespace IssueTrackerTool
 {
     public static class DocumentGenerator
     {
-        private static readonly string[] Emojis = { "⏱️", "🫱🏻‍🫲🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
+        private static readonly string[] Emojis = { "⏱️", "🫱🏻‍🫲🏻", "🤝🏻", "🤝", "🔬", "✏️", "⌨️", "🔎", "⚠️", "🛑", "⚙️" };
 
         public class PhaseInfo
         {
@@ -348,10 +348,14 @@ namespace IssueTrackerTool
                         currentSubPhase = seenSpecialAction ? "review special action" : "review aanpak";
                     }
 
+                    bool isHandshake = p.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) || 
+                                       p.StartsWith("🤝🏻", StringComparison.Ordinal) || 
+                                       p.StartsWith("🤝", StringComparison.Ordinal);
+
                     currentGroup = new CheckGroup
                     {
                         Heading = p,
-                        SubPhase = p.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) ? currentSubPhase : string.Empty
+                        SubPhase = isHandshake ? currentSubPhase : string.Empty
                     };
                     list.Add(currentGroup);
                 }
@@ -383,6 +387,18 @@ namespace IssueTrackerTool
             return sb.ToString();
         }
 
+        private static bool IsEmojiMatch(string heading, string phaseEmoji)
+        {
+            if (heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) return true;
+
+            bool isHeadingHandshake = heading.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) || 
+                                      heading.StartsWith("🤝🏻", StringComparison.Ordinal) || 
+                                      heading.StartsWith("🤝", StringComparison.Ordinal);
+            bool isPhaseHandshake = phaseEmoji == "🫱🏻‍🫲🏻" || phaseEmoji == "🤝🏻" || phaseEmoji == "🤝";
+
+            return isHeadingHandshake && isPhaseHandshake;
+        }
+
         private static List<string> FindChecksForAction(string action, List<CheckGroup> checkGroups, string phaseEmoji, string sectionKeyword)
         {
             string normAction = Normalize(action);
@@ -400,10 +416,10 @@ namespace IssueTrackerTool
             foreach (var cg in checkGroups)
             {
                 // 1. Must match the phase emoji prefix
-                if (!cg.Heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) continue;
+                if (!IsEmojiMatch(cg.Heading, phaseEmoji)) continue;
 
                 // 2. If it's a review phase, must match the specific review sub-phase keyword!
-                if (phaseEmoji == "🫱🏻‍🫲🏻")
+                if (phaseEmoji == "🫱🏻‍🫲🏻" || phaseEmoji == "🤝🏻" || phaseEmoji == "🤝")
                 {
                     if (!string.IsNullOrEmpty(cg.SubPhase) && 
                         !string.IsNullOrEmpty(sectionKeyword) && 

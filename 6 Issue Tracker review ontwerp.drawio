@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="xUmxnnQjNxfceoNyn1dV">
-    <mxGraphModel dx="842" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="829" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,17 +20,17 @@
         <mxCell id="bfeaoe4yX_S7tX3q-7-V-32" edge="1" parent="1" source="bfeaoe4yX_S7tX3q-7-V-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="bfeaoe4yX_S7tX3q-7-V-37">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="604" id="bfeaoe4yX_S7tX3q-7-V-33">
+        <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="603" id="bfeaoe4yX_S7tX3q-7-V-33">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="100" width="120" x="500" y="360" as="geometry" />
           </mxCell>
         </object>
-        <object label="Goedkeuring?" Action="606" id="bfeaoe4yX_S7tX3q-7-V-37">
+        <object label="Goedkeuring?" Action="604" id="bfeaoe4yX_S7tX3q-7-V-37">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="100" width="100" x="510" y="590" as="geometry" />
           </mxCell>
         </object>
-        <object label="Volg de&lt;br&gt;implementatie" Action="606T" id="bfeaoe4yX_S7tX3q-7-V-38">
+        <object label="Volg de&lt;br&gt;implementatie" Action="604T" id="bfeaoe4yX_S7tX3q-7-V-38">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="60" width="100" x="650" y="950" as="geometry" />
           </mxCell>
@@ -49,7 +49,7 @@
         <mxCell id="bfeaoe4yX_S7tX3q-7-V-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
           <mxGeometry height="30" width="60" x="600" y="640" as="geometry" />
         </mxCell>
-        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="606F" id="bfeaoe4yX_S7tX3q-7-V-41">
+        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="604F" id="bfeaoe4yX_S7tX3q-7-V-41">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
             <mxGeometry height="80" width="120" x="358" y="750" as="geometry" />
           </mxCell>
