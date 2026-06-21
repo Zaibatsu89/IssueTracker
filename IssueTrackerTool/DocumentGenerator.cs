@@ -668,12 +668,6 @@ namespace IssueTrackerTool
             string actielijstPath = Path.Combine(projectRoot, "Actielijst.docx");
             string checklijstPath = Path.Combine(projectRoot, "Checklijst.docx");
 
-            // Copy pristine files from template files in the project root to ensure clean state
-            string templateActielijst = Path.Combine(projectRoot, "Actielijst_Template.docx");
-            string templateChecklijst = Path.Combine(projectRoot, "Checklijst_Template.docx");
-            if (File.Exists(templateActielijst)) File.Copy(templateActielijst, actielijstPath, true);
-            if (File.Exists(templateChecklijst)) File.Copy(templateChecklijst, checklijstPath, true);
-
             PatchChecklistBullets(checklijstPath);
 
             var phase2Mappings = new Dictionary<string, string>
