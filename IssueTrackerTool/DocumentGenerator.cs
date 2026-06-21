@@ -14,7 +14,7 @@ namespace IssueTrackerTool
 {
     public static class DocumentGenerator
     {
-        private static readonly string[] Emojis = { "⏱️", "🫱🏻‍🫲🏻", "🤝🏻", "🤝", "🔬", "✏️", "⌨️", "🔎", "⚠️", "🛑", "⚙️" };
+        private static readonly string[] Emojis = { "⏱️", "🤝🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
 
         public class PhaseInfo
         {
@@ -41,17 +41,17 @@ namespace IssueTrackerTool
         private static readonly List<PhaseInfo> Phases = new List<PhaseInfo>
         {
             new PhaseInfo { Number = 1, Name = "Intake", DrawioFilename = "1 Issue Tracker intake.drawio", Emoji = "⏱️", SectionKeyword = "intake" },
-            new PhaseInfo { Number = 2, Name = "Review aanpak", DrawioFilename = "2 Issue Tracker review aanpak.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review aanpak" },
+            new PhaseInfo { Number = 2, Name = "Review aanpak", DrawioFilename = "2 Issue Tracker review aanpak.drawio", Emoji = "🤝🏻", SectionKeyword = "review aanpak" },
             new PhaseInfo { Number = 3, Name = "Analyse", DrawioFilename = "3 Issue Tracker analyse.drawio", Emoji = "🔬", SectionKeyword = "analyse" },
-            new PhaseInfo { Number = 4, Name = "Review analyse", DrawioFilename = "4 Issue Tracker review analyse.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review analyse" },
+            new PhaseInfo { Number = 4, Name = "Review analyse", DrawioFilename = "4 Issue Tracker review analyse.drawio", Emoji = "🤝🏻", SectionKeyword = "review analyse" },
             new PhaseInfo { Number = 5, Name = "Ontwerp", DrawioFilename = "5 Issue Tracker ontwerp.drawio", Emoji = "✏️", SectionKeyword = "Ontwerp" },
-            new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review ontwerp" },
+            new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🤝🏻", SectionKeyword = "review ontwerp" },
             new PhaseInfo { Number = 7, Name = "Implementatie", DrawioFilename = "7 Issue Tracker implementatie.drawio", Emoji = "⌨️", SectionKeyword = "Implementatie" },
             new PhaseInfo { Number = 8, Name = "Test", DrawioFilename = "8 Issue Tracker test.drawio", Emoji = "🔎", SectionKeyword = "Test" },
             new PhaseInfo { Number = 9, Name = "Meldplicht", DrawioFilename = "9 Issue Tracker meldplicht.drawio", Emoji = "⚠️", SectionKeyword = "meldplicht" },
-            new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "Review Final" },
+            new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🤝🏻", SectionKeyword = "Review Final" },
             new PhaseInfo { Number = 11, Name = "Special action", DrawioFilename = "11 Issue Tracker special action.drawio", Emoji = "⚙️", SectionKeyword = "special action" },
-            new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review special action" }
+            new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🤝🏻", SectionKeyword = "review special action" }
         };
 
         public static void Generate(string jiraIssue, string outputPath)
@@ -348,9 +348,7 @@ namespace IssueTrackerTool
                         currentSubPhase = seenSpecialAction ? "review special action" : "review aanpak";
                     }
 
-                    bool isHandshake = p.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) || 
-                                       p.StartsWith("🤝🏻", StringComparison.Ordinal) || 
-                                       p.StartsWith("🤝", StringComparison.Ordinal);
+                    bool isHandshake = p.StartsWith("🤝🏻", StringComparison.Ordinal);
 
                     currentGroup = new CheckGroup
                     {
@@ -391,10 +389,8 @@ namespace IssueTrackerTool
         {
             if (heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) return true;
 
-            bool isHeadingHandshake = heading.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) || 
-                                      heading.StartsWith("🤝🏻", StringComparison.Ordinal) || 
-                                      heading.StartsWith("🤝", StringComparison.Ordinal);
-            bool isPhaseHandshake = phaseEmoji == "🫱🏻‍🫲🏻" || phaseEmoji == "🤝🏻" || phaseEmoji == "🤝";
+            bool isHeadingHandshake = heading.StartsWith("🤝🏻", StringComparison.Ordinal);
+            bool isPhaseHandshake = phaseEmoji == "🤝🏻";
 
             return isHeadingHandshake && isPhaseHandshake;
         }
@@ -419,7 +415,7 @@ namespace IssueTrackerTool
                 if (!IsEmojiMatch(cg.Heading, phaseEmoji)) continue;
 
                 // 2. If it's a review phase, must match the specific review sub-phase keyword!
-                if (phaseEmoji == "🫱🏻‍🫲🏻" || phaseEmoji == "🤝🏻" || phaseEmoji == "🤝")
+                if (phaseEmoji == "🤝🏻")
                 {
                     if (!string.IsNullOrEmpty(cg.SubPhase) && 
                         !string.IsNullOrEmpty(sectionKeyword) && 
