@@ -272,6 +272,7 @@ namespace IssueTrackerTool
                     }
                 }
 
+                bool isHeading = false;
                 if (hasEmoji)
                 {
                     var match = Regex.Match(pNorm, @"^(\d+)");
@@ -280,6 +281,7 @@ namespace IssueTrackerTool
                         int num = int.Parse(match.Groups[1].Value);
                         if (num % 100 == 1)
                         {
+                            isHeading = true;
                             int phaseNum = num / 100;
                             var matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum);
                             if (matchedPhase != null && matchedPhase.SectionKeyword != currentSectionKeyword)
@@ -292,7 +294,7 @@ namespace IssueTrackerTool
                     }
                 }
 
-                if (currentSection != null)
+                if (currentSection != null && !isHeading)
                 {
                     if (p.ToLowerInvariant().Contains("status ="))
                     {
