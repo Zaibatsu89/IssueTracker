@@ -7,9 +7,9 @@
         <mxCell id="pxuzoADpxMfooJR_diKQ-1" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-4" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Status =&lt;br&gt;review&lt;br&gt;special action" Action="1201" id="pxuzoADpxMfooJR_diKQ-2">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="370" y="20" as="geometry" />
+        <object label="Issue [speciale actie uitgevoerd]" Action="1201" id="pxuzoADpxMfooJR_diKQ-2">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="340" y="40" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="pxuzoADpxMfooJR_diKQ-3" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-9">
@@ -17,7 +17,7 @@
         </mxCell>
         <object label="Is de baas&lt;br&gt;aanwezig?&lt;br&gt;(indien niet aanwezig:&lt;br&gt;meldplicht)" Action="1202" id="pxuzoADpxMfooJR_diKQ-4">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="120" x="370" y="160" as="geometry" />
+            <mxGeometry height="100" width="120" x="370" y="150" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="pxuzoADpxMfooJR_diKQ-8" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-17" value="">
@@ -25,23 +25,31 @@
         </mxCell>
         <object label="Overleg resultaten&lt;br&gt;voor goedkeuring&lt;br&gt;vervolg" Action="1204" id="pxuzoADpxMfooJR_diKQ-9">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="120" x="510" y="370" as="geometry" />
+            <mxGeometry height="100" width="120" x="510" y="360" as="geometry" />
           </mxCell>
         </object>
         <object label="De baas bepaalt&lt;br&gt;volgende status" Action="1206" id="pxuzoADpxMfooJR_diKQ-17">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="80" width="120" x="510" y="600" as="geometry" />
+            <mxGeometry height="80" width="120" x="510" y="590" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="pxuzoADpxMfooJR_diKQ-20" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="60" x="20" y="40" as="geometry" />
+          <mxGeometry height="30" width="60" x="20" y="30" as="geometry" />
         </mxCell>
         <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="1207" id="pxuzoADpxMfooJR_diKQ-27">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="80" width="120" x="510" y="720" as="geometry" />
+            <mxGeometry height="80" width="120" x="510" y="820" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="pxuzoADpxMfooJR_diKQ-28" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pxuzoADpxMfooJR_diKQ-27">
+        <mxCell id="pxuzoADpxMfooJR_diKQ-28" edge="1" parent="1" source="pxuzoADpxMfooJR_diKQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="object_special_action_goedgekeurd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Issue [speciale actie goedgekeurd]" id="object_special_action_goedgekeurd">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
+            <mxGeometry height="50" width="160" x="490" y="710" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_goedgekeurd_to_terminator" edge="1" parent="1" source="object_special_action_goedgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pxuzoADpxMfooJR_diKQ-27" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
