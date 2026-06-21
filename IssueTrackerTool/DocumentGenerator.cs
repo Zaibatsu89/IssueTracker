@@ -147,7 +147,7 @@ namespace IssueTrackerTool
                     if (matchingSection != null)
                     {
                         string headingToUse = matchingSection.Heading;
-                        if (headingToUse.Length > 0)
+                        if (!string.IsNullOrEmpty(headingToUse))
                         {
                             headingToUse = char.ToUpper(headingToUse[0]) + headingToUse.Substring(1);
                         }
