@@ -699,7 +699,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
                 { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 F. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406G. Verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
             };
 
@@ -728,7 +728,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
                 { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 F. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 606G. Verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg de implementatie", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
 
@@ -818,7 +818,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 B. Is de baas aanwezig? (indien niet aanwezig: meldplicht)", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig? (indien niet aanwezig: meldplicht)" },
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 E. Verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende fase" }
+                { "🫱🏻‍🫲🏻 E. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1207. De baas verifieert effort per resterende fase" }
             };
 
             var phase1CheckMappings = new Dictionary<string, string>
@@ -1036,19 +1036,19 @@ namespace IssueTrackerTool
                             // Dynamic insertion of split step
                             if (newText.Contains("406F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. Verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("606F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. Verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1007F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. Verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1206. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. Verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. De baas verifieert effort per resterende fase");
                             }
                         }
                     }

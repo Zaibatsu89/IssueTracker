@@ -47,7 +47,7 @@
         <mxCell id="pxuzoADpxMfooJR_diKQ-20" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="20" y="30" as="geometry" />
         </mxCell>
-        <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="1207" id="pxuzoADpxMfooJR_diKQ-27">
+        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="1207" id="pxuzoADpxMfooJR_diKQ-27">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="80" width="120" x="340" y="880" as="geometry" />
           </mxCell>

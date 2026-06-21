@@ -104,7 +104,7 @@
         <mxCell id="edge_afgekeurd_to_verifieert" edge="1" parent="1" source="object_final_afgekeurd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mpQzUtWff58q1bPTKcpG-33">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Verifieert effort&lt;br&gt;per resterende&lt;br&gt;fase" Action="1007G" id="mpQzUtWff58q1bPTKcpG-33">
+        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="1007G" id="mpQzUtWff58q1bPTKcpG-33">
           <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
             <mxGeometry height="80" width="120" x="250" y="1060" as="geometry" />
           </mxCell>
