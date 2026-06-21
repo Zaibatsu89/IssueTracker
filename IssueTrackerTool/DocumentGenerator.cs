@@ -471,6 +471,19 @@ namespace IssueTrackerTool
                     string action = (string)obj.Attribute("Action");
                     string label = (string)obj.Attribute("label");
 
+                    if (!string.IsNullOrEmpty(action))
+                    {
+                        string trimmedAction = action.Trim();
+                        if (trimmedAction.Length > 0)
+                        {
+                            char lastChar = trimmedAction[trimmedAction.Length - 1];
+                            if (char.IsLetter(lastChar) && lastChar != 'T' && lastChar != 'F')
+                            {
+                                Console.WriteLine($"[VALIDATIE WAARSCHUWING] Overtreding bedrijfsregel in '{Path.GetFileName(filePath)}': Action ID '{action}' eindigt met een ongeldige letter. Alleen T of F is toegestaan.");
+                            }
+                        }
+                    }
+
                     if (!string.IsNullOrEmpty(action) && !string.IsNullOrEmpty(label))
                     {
                         string decoded = WebUtility.HtmlDecode(label);
@@ -699,7 +712,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
                 { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 407. De baas verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
             };
 
@@ -728,7 +741,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 C. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 D. Goedkeuring?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
                 { "🫱🏻‍🫲🏻 E. De baas bepaalt volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status" },
-                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 F. De baas verifieert effort per resterende fase", "🫱🏻‍🫲🏻 607. De baas verifieert effort per resterende fase" },
                 { "🫱🏻‍🫲🏻 G. Volg de implementatie", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
 
@@ -784,8 +797,9 @@ namespace IssueTrackerTool
             var phase10Mappings = new Dictionary<string, string>
             {
                 { "🫱🏻‍🫲🏻 Review Final", "🫱🏻‍🫲🏻 1001. Status = review final" },
-                { "A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1004. Demonstratie van de oplossing geven" },
-                { "B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" }
+                { "A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1003. Demonstratie van de oplossing geven" },
+                { "B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" },
+                { "🫱🏻🫲🏻 C. De baas bepaalt volgende status", "🫱🏻🫲🏻 1007F. De baas bepaalt volgende status" }
             };
 
             var phase11Mappings = new Dictionary<string, string>
@@ -924,7 +938,7 @@ namespace IssueTrackerTool
 
             var phase10CheckMappings = new Dictionary<string, string>
             {
-                { "🫱🏻‍🫲🏻 A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1004. Demonstratie van de oplossing geven" },
+                { "🫱🏻‍🫲🏻 A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1003. Demonstratie van de oplossing geven" },
                 { "🫱🏻‍🫲🏻 B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" }
             };
 
@@ -1036,18 +1050,18 @@ namespace IssueTrackerTool
                             // Dynamic insertion of split step
                             if (newText.Contains("406F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406H. Volg de afgestemde status");
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 408. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 407. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("606F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606H. Volg de afgestemde status");
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 608. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 607. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1007F. De baas bepaalt volgende status"))
                             {
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007H. Volg de afgestemde status");
-                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. De baas verifieert effort per resterende fase");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1010. Volg de afgestemde status");
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1009. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1206. De baas bepaalt volgende status"))
                             {

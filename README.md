@@ -48,3 +48,17 @@ mono IssueTrackerTool/bin/Debug/IssueTrackerTool.exe --test-generate "TEST-123" 
 ### Wat dit commando doet:
 1. De bron templates (`Actielijst_Template.docx` en `Checklijst_Template.docx`) kopiëren en patchen naar de actuele templates (`Actielijst.docx` en `Checklijst.docx`) op basis van de definities in de `.drawio` XML-bestanden.
 2. Een gecombineerd procesrapport genereren op de doellocatie met alle stappen in de juiste volgorde.
+
+---
+
+## Draw.io Flowchart Conventies
+
+Om ervoor te zorgen dat de `IssueTrackerTool` de processtappen correct kan interpreteren en valideren, gelden de volgende richtlijnen voor **Action ID's**:
+
+1. **Achtervoegsel Beperking (T/F)**: 
+   - Als een Action ID eindigt met een letter, mag dit **alleen** een `T` (True/Ja) of `F` (False/Nee) zijn.
+   - Elke andere letter aan het einde van een Action ID (zoals `G`, `H`, etc.) is in **overtreding**.
+2. **Eerste Stap na Keuze**:
+   - Bij een vertakking met meerdere stappen na een beslissing (keuze), krijgt **alleen het eerste item** (direct na de keuze) de `T` of `F` achter het ID.
+   - De daaropvolgende stappen in hetzelfde pad krijgen een regulier numeriek ID zonder letter-achtervoegsel.
+
