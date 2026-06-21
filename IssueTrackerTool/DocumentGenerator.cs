@@ -849,7 +849,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 202T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeurig vervolg", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
                 { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. De baas bepaalt volgende status" },
+                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. Volg de intake" },
                 { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
             };
 
@@ -886,7 +886,7 @@ namespace IssueTrackerTool
                 { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 602T. Na dat de baas weer aanwezig is" },
                 { "🫱🏻‍🫲🏻 8. Ik mail naar baas", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
                 { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status en verifieert effort per resterende fase" },
+                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaalt volgende status" },
                 { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
             };
 
@@ -1036,18 +1036,22 @@ namespace IssueTrackerTool
                             // Dynamic insertion of split step
                             if (newText.Contains("406F. De baas bepaalt volgende status"))
                             {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406H. Volg de afgestemde status");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 406G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("606F. De baas bepaalt volgende status"))
                             {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606H. Volg de afgestemde status");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 606G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1007F. De baas bepaalt volgende status"))
                             {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007H. Volg de afgestemde status");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1007G. De baas verifieert effort per resterende fase");
                             }
                             else if (newText.Contains("1206. De baas bepaalt volgende status"))
                             {
+                                InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1209. Volg de afgestemde status");
                                 InsertParagraphAfter(p, "🫱🏻‍🫲🏻 1207. De baas verifieert effort per resterende fase");
                             }
                         }
