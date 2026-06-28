@@ -52,22 +52,43 @@ Bij het genereren van een procesrapport voert de tool de volgende stappen uit:
 
 ## Draw.io Flowchart & BPMN Conventies
 
-Om ervoor te zorgen dat de `IssueTrackerTool` de processtappen correct kan interpreteren, mappen en valideren, gelden de volgende richtlijnen:
+Het gehele project is gemoderniseerd naar **BPMN 2.0 modelleringsstandaarden**. Om ervoor te zorgen dat de `IssueTrackerTool` de processtappen correct kan interpreteren, mappen en valideren, gelden de volgende richtlijnen:
 
-### 1. BPMN Lane Structuur (Review-bestanden)
-De review flowcharts (zoals `2`, `4`, `6`, `10` en `12`) maken gebruik van een BPMN-swimlane-structuur om rollen te verdelen:
+### 1. BPMN Vormen en Elementen (Project-breed)
+Alle `.drawio` flowcharts maken exclusief gebruik van gestandaardiseerde BPMN-componenten in plaats van klassieke flowchart-vormen:
+* **Events (`shape=mxgraph.bpmn.event`)**:
+  * *Start Events*: Groene dunne cirkels (`outline=standard;symbol=general`) die het begin van de fase aanduiden.
+  * *Intermediate/Timer Catch Events*: Dubbele cirkels (`outline=catch;symbol=timer`) voor tijds- of ETC-triggers.
+  * *End Events*: Dikke cirkels (`outline=end;symbol=general`) die de beëindiging of doorstroming naar een volgende fase representeren.
+* **Tasks (`shape=mxgraph.bpmn.task`)**:
+  * Gekoppeld aan actieve werkstappen met een unieke `Action` ID (zoals `301`, `504`). Voorzien van de `taskMarker=user` markering.
+* **Gateways (`shape=mxgraph.bpmn.gateway`)**:
+  * *Exclusive (XOR)*: Rhombus-vormen met een kruis (`gatewaySymbol=exclusive`) om keuzes en vertakkingen te modelleren.
+  * *Parallel (AND)*: Rhombus-vormen met een plusteken (`gatewaySymbol=parallel`) om parallelle workflows (zoals gelijktijdige urenregistratie/ETC-timers en medewerkerstaken) te splitsen of samen te voegen.
+
+### 2. BPMN Lane Structuur (Review- en Overlegfases)
+Fases die een samenwerkings- of goedkeuringsmoment met de opdrachtgever/baas bevatten (**Fase 2, 4, 6, 9, 10 en 12**) zijn uitgebreid met een fysieke zwembaan-indeling:
 * **Medewerker (links)** en **Opdrachtgever (rechts)**.
-* Gerealiseerd via een Draw.io tabel-component (`shape=table;childLayout=tableLayout`).
+* Gerealiseerd via een Draw.io tabel-component (`shape=table;childLayout=tableLayout;container=1`).
 
-### 2. Action ID Mappings per Review-fase
-Om overlappingen te voorkomen, heeft elke review-fase een eigen unieke numerieke reeks:
-* **Fase 2 (Review aanpak)**: 200-reeks (bijv. `201`, `202`, `203`, `204`)
-* **Fase 4 (Review analyse)**: 400-reeks (bijv. `401`, `402`, `403`, `404`)
-* **Fase 6 (Review ontwerp)**: 600-reeks (bijv. `601`, `602`, `603`, `604`)
-* **Fase 10 (Review final)**: 1000-reeks (bijv. `1001`, `1002`, `1003`, `1004`)
-* **Fase 12 (Review special action)**: 1200-reeks (bijv. `1201`, `1202`, `1203`, `1204`)
+De puur interne inhoudelijke fases (**Fase 1, 3, 5, 7, 8 en 11**) hebben géén zwembanen (omdat deze uitsluitend door de medewerker worden uitgevoerd), maar maken wel volledig gebruik van de hierboven genoemde BPMN-vormen.
 
-### 3. XOR-gateway Vertakkingen en Letter-achtervoegsels (T/F)
+### 3. Action ID Mappings per Review-fase
+Om overlappingen te voorkomen, heeft elke proces- en reviewfase een eigen unieke numerieke reeks:
+* **Fase 1 (Intake)**: 100-reeks
+* **Fase 2 (Review aanpak)**: 200-reeks
+* **Fase 3 (Analyse)**: 300-reeks
+* **Fase 4 (Review analyse)**: 400-reeks
+* **Fase 5 (Ontwerp)**: 500-reeks
+* **Fase 6 (Review ontwerp)**: 600-reeks
+* **Fase 7 (Implementatie)**: 700-reeks
+* **Fase 8 (Test)**: 800-reeks
+* **Fase 9 (Meldplicht)**: 900-reeks
+* **Fase 10 (Review final)**: 1000-reeks
+* **Fase 11 (Special action)**: 1100-reeks
+* **Fase 12 (Review special action)**: 1200-reeks
+
+### 4. XOR-gateway Vertakkingen en Letter-achtervoegsels (T/F)
 * **Achtervoegsel Beperking**: Als een Action ID eindigt met een letter, mag dit **alleen** een `T` (True/Ja) of `F` (False/Nee) zijn. Elke andere letter (zoals `G`, `H`, etc.) is in overtreding en triggert een validatiewaarschuwing.
 * **Gateway-edges**: De uitgaande edges vanaf beslissingen/XOR-gateways dragen de Action ID's met het juiste achtervoegsel om de routering consistent te mappen (bijv. `604T` voor goedgekeurd / True en `604F` voor afgekeurd / False).
 * **Eerste Stap na Keuze**: Bij een vertakking met meerdere stappen krijgt **alleen het eerste item** (direct na de keuze/gateway) de `T` of `F` achter het ID. De daaropvolgende stappen in hetzelfde pad krijgen een reguliere numerieke ID zonder achtervoegsel.
