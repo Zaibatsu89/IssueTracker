@@ -1,87 +1,119 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="RxTZmvJhkROvXh92HXGi">
-    <mxGraphModel dx="1177" dy="1152" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="969" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="IjQxlhujuJK-shiPwm0T-2" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="kJhKxd2zfYEuZ5hcswId-17" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-18" parent="1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;" value="" vertex="1">
+          <mxGeometry height="1061" width="480" x="320" y="20" as="geometry" />
         </mxCell>
-        <object label="Issue [meldplicht getriggerd]" Action="901" id="kJhKxd2zfYEuZ5hcswId-1">
-          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="160" x="330" y="40" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="IjQxlhujuJK-shiPwm0T-6" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="kJhKxd2zfYEuZ5hcswId-8">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-19" parent="mIc6XLMKuAxiAPNymMe0-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
+          <mxGeometry height="40" width="480" as="geometry" />
         </mxCell>
-        <object label="Is de baas&lt;br&gt;aanwezig?&lt;br&gt;(indien niet aanwezig:&lt;br&gt;wachten)" Action="905" id="kJhKxd2zfYEuZ5hcswId-3">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="120" x="350" y="450" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="t8s6E_-A3Us-5MdbCyu4-8" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-20" parent="mIc6XLMKuAxiAPNymMe0-19" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="&lt;b&gt;Medewerker&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="240" as="geometry">
+            <mxRectangle height="40" width="240" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
-        <object label="Overleg vervolgplan" Action="906" id="kJhKxd2zfYEuZ5hcswId-8">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="120" x="500" y="660" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="kJhKxd2zfYEuZ5hcswId-13" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-21" parent="mIc6XLMKuAxiAPNymMe0-19" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="&lt;b&gt;Opdrachtgever&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="240" x="240" as="geometry">
+            <mxRectangle height="40" width="240" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-22" parent="mIc6XLMKuAxiAPNymMe0-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
+          <mxGeometry height="1021" width="480" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-23" parent="mIc6XLMKuAxiAPNymMe0-22" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="1021" width="240" as="geometry">
+            <mxRectangle height="1021" width="240" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mIc6XLMKuAxiAPNymMe0-24" parent="mIc6XLMKuAxiAPNymMe0-22" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="1021" width="240" x="240" as="geometry">
+            <mxRectangle height="1021" width="240" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XehhIzECJeRqZ1Lm04T6-9" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="IjQxlhujuJK-shiPwm0T-3" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="IjQxlhujuJK-shiPwm0T-1" value="">
+        <mxCell id="XehhIzECJeRqZ1Lm04T6-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
+          <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
+        </mxCell>
+        <object label="[meldplicht getriggerd]" id="bpmn_start_event">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="420" y="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Start timer (5 min)" Action="902" id="bpmn_task_start_timer">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="370" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Stel vervolgplan op" Action="903" id="bpmn_task_stel_plan_op">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="370" y="250" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Stop timer (5 min)" Action="904" id="bpmn_task_stop_timer">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="370" y="350" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Is de baas aanwezig? (indien niet aanwezig: wachten)" Action="905" id="bpmn_task_baas_aanwezig">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="370" y="450" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Overleg vervolgplan" Action="906" id="bpmn_task_overleg">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="610" y="550" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="De baas bepaalt volgende status" Action="907" id="bpmn_task_status">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="610" y="650" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="De baas verifieert effort per resterende fase" Action="908" id="bpmn_task_effort">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="610" y="750" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Volg de afgestemde status" Action="909" id="bpmn_task_volg_status">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="70" width="140" x="370" y="850" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="[meldplicht voltooid]" id="bpmn_end_event">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="420" y="950" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_start_to_start_timer" edge="1" parent="1" source="bpmn_start_event" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_start_timer">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="&lt;font style=&quot;font-size: 36px;&quot;&gt;⏱️&lt;/font&gt;" Action="902" id="kJhKxd2zfYEuZ5hcswId-17">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="50" x="385" y="150" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="IjQxlhujuJK-shiPwm0T-5" edge="1" parent="1" source="kJhKxd2zfYEuZ5hcswId-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="kJhKxd2zfYEuZ5hcswId-3" value="">
+        <mxCell id="edge_start_timer_to_stel_plan" edge="1" parent="1" source="bpmn_task_start_timer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_stel_plan_op">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="&lt;font style=&quot;font-size: 36px;&quot;&gt;⏱️&lt;/font&gt;" Action="904" id="kJhKxd2zfYEuZ5hcswId-18">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="50" x="385" y="360" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="IjQxlhujuJK-shiPwm0T-4" edge="1" parent="1" source="IjQxlhujuJK-shiPwm0T-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="kJhKxd2zfYEuZ5hcswId-18" value="">
+        <mxCell id="edge_stel_plan_to_stop_timer" edge="1" parent="1" source="bpmn_task_stel_plan_op" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_stop_timer">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Stel vervolgplan op" Action="903" id="IjQxlhujuJK-shiPwm0T-1">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="80" width="80" x="370" y="240" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="De baas bepaalt&lt;br&gt;volgende status" Action="907" id="t8s6E_-A3Us-5MdbCyu4-1">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="80" width="120" x="500" y="800" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="De baas verifieert&lt;br&gt;effort per&lt;br&gt;resterende fase" Action="908" id="t8s6E_-A3Us-5MdbCyu4-2">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="80" width="120" x="500" y="900" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="t8s6E_-A3Us-5MdbCyu4-3" edge="1" parent="1" source="t8s6E_-A3Us-5MdbCyu4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-2">
+        <mxCell id="edge_stop_timer_to_baas_aanwezig" edge="1" parent="1" source="bpmn_task_stop_timer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_baas_aanwezig">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="t8s6E_-A3Us-5MdbCyu4-4" edge="1" parent="1" source="t8s6E_-A3Us-5MdbCyu4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-5" value="">
+        <mxCell id="edge_baas_aanwezig_to_overleg" edge="1" parent="1" source="bpmn_task_baas_aanwezig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_overleg">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Issue [meldplicht voltooid]" id="t8s6E_-A3Us-5MdbCyu4-5">
-          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1">
-            <mxGeometry height="50" width="160" x="480" y="1000" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="Volg de&lt;br&gt;afgestemde status" Action="909" id="t8s6E_-A3Us-5MdbCyu4-6">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="120" x="500" y="1080" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="t8s6E_-A3Us-5MdbCyu4-7" edge="1" parent="1" source="t8s6E_-A3Us-5MdbCyu4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8s6E_-A3Us-5MdbCyu4-6" value="">
+        <mxCell id="edge_overleg_to_status" edge="1" parent="1" source="bpmn_task_overleg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_status_to_effort" edge="1" parent="1" source="bpmn_task_status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_effort">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_effort_to_volg_status" edge="1" parent="1" source="bpmn_task_effort" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_volg_status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_volg_status_to_end" edge="1" parent="1" source="bpmn_task_volg_status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_end_event">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
