@@ -104,9 +104,6 @@
         <mxCell id="edge_deliverables_to_planning" edge="1" parent="1" source="bpmn_task_deliverables" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="bpmn_task_planning">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge_planning_to_stop_timer" edge="1" parent="1" source="bpmn_task_deliverables" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="bpmn_task_planning">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="edge_planning_to_stop_timer_actual" edge="1" parent="1" source="bpmn_task_planning" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="bpmn_task_stop_timer">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
