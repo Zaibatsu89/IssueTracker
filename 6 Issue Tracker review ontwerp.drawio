@@ -1,5 +1,5 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
-  <diagram name="Page-1" id="XNishPgJ8gbamc2b0VwM">
+  <diagram name="Page-1" id="xUmxnnQjNxfceoNyn1dV">
     <mxGraphModel dx="969" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -39,12 +39,12 @@
         <mxCell id="XehhIzECJeRqZ1Lm04T6-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
           <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
         </mxCell>
-        <object label="[issue geanalyseerd]" id="bpmn_start_event">
+        <object label="[issue ontworpen]" id="bpmn_start_event">
           <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;strokeWidth=2;" vertex="1">
             <mxGeometry height="40" width="40" x="420" y="80" as="geometry" />
           </mxCell>
         </object>
-        <object label="Uitvoeren gezamenlijke analyse" Action="401" id="bpmn_task_intake">
+        <object label="Uitvoeren gezamenlijk ontwerp review" Action="601" id="bpmn_task_intake">
           <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
             <mxGeometry height="70" width="140" x="370" y="160" as="geometry" />
           </mxCell>
@@ -54,7 +54,7 @@
             <mxGeometry height="40" width="40" x="420" y="260" as="geometry" />
           </mxCell>
         </object>
-        <object label="[automatische notificatie verzonden]" Action="402" id="bpmn_event_notification">
+        <object label="[automatische notificatie verzonden]" Action="602" id="bpmn_event_notification">
           <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=throwing;symbol=message;strokeWidth=2;" vertex="1">
             <mxGeometry height="50" width="50" x="340" y="340" as="geometry" />
           </mxCell>
@@ -64,7 +64,7 @@
             <mxGeometry height="40" width="40" x="420" y="420" as="geometry" />
           </mxCell>
         </object>
-        <object label="Beoordelen resultaat" Action="403" id="bpmn_task_beoordeling">
+        <object label="Beoordelen resultaat" Action="603" id="bpmn_task_beoordeling">
           <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
             <mxGeometry height="70" width="140" x="610" y="500" as="geometry" />
           </mxCell>
@@ -74,12 +74,12 @@
             <mxGeometry height="40" width="40" x="660" y="600" as="geometry" />
           </mxCell>
         </object>
-        <object label="Starten ontwerp" Action="404" id="bpmn_task_analyse">
+        <object label="Starten realisatie/bouw" Action="604" id="bpmn_task_analyse">
           <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
             <mxGeometry height="70" width="140" x="370" y="700" as="geometry" />
           </mxCell>
         </object>
-        <object label="[ontwerp gestart]" id="bpmn_end_event">
+        <object label="[realisatie/bouw gestart]" id="bpmn_end_event">
           <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;strokeWidth=2;" vertex="1">
             <mxGeometry height="40" width="40" x="420" y="800" as="geometry" />
           </mxCell>
@@ -110,14 +110,14 @@
         <mxCell id="edge_beoordelen_to_xor" edge="1" parent="1" source="bpmn_task_beoordeling" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_xor">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="[goedgekeurd]" Action="404T" id="edge_xor_to_analyse">
+        <object label="[goedgekeurd]" Action="604T" id="edge_xor_to_analyse">
           <mxCell edge="1" parent="1" source="bpmn_gateway_xor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="bpmn_task_analyse">
             <mxGeometry relative="1" x="-0.3" as="geometry">
               <mxPoint as="offset" />
             </mxGeometry>
           </mxCell>
         </object>
-        <object label="[afgekeurd]" Action="404F" id="edge_xor_to_intake">
+        <object label="[afgekeurd]" Action="604F" id="edge_xor_to_intake">
           <mxCell edge="1" parent="1" source="bpmn_gateway_xor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=1.004;entryY=0.413;entryDx=0;entryDy=0;entryPerimeter=0;" target="bpmn_task_intake">
             <mxGeometry relative="1" x="-0.7994" as="geometry">
               <mxPoint as="offset" />
