@@ -71,3 +71,19 @@ Om overlappingen te voorkomen, heeft elke review-fase een eigen unieke numerieke
 * **Achtervoegsel Beperking**: Als een Action ID eindigt met een letter, mag dit **alleen** een `T` (True/Ja) of `F` (False/Nee) zijn. Elke andere letter (zoals `G`, `H`, etc.) is in overtreding en triggert een validatiewaarschuwing.
 * **Gateway-edges**: De uitgaande edges vanaf beslissingen/XOR-gateways dragen de Action ID's met het juiste achtervoegsel om de routering consistent te mappen (bijv. `604T` voor goedgekeurd / True en `604F` voor afgekeurd / False).
 * **Eerste Stap na Keuze**: Bij een vertakking met meerdere stappen krijgt **alleen het eerste item** (direct na de keuze/gateway) de `T` of `F` achter het ID. De daaropvolgende stappen in hetzelfde pad krijgen een reguliere numerieke ID zonder achtervoegsel.
+
+---
+
+## Jira Workflow Status Mapping & Discrepanties
+
+Om de Jira-workflow zo overzichtelijk en onderhoudbaar mogelijk te houden, is er een bewuste ontwerpkeuze gemaakt over hoe om te gaan met discrepanties tussen de inhoudelijke processtappen (de flowcharts) en de technische Jira-statussen:
+
+**Discrepanties worden afgehandeld binnen de bestaande Jira-statussen.** Er worden geen extra Jira-statussen aangemaakt voor zij-processen of tussentijdse reviews.
+
+### Belangrijkste uitwerkingen:
+1. **Meldplicht (`9 Issue Tracker meldplicht.drawio`)**:
+   * Hoewel Meldplicht in de codebase een aparte procesfase is, bestaat er **geen aparte `Meldplicht` status** in Jira.
+   * Wanneer de meldplicht wordt getriggerd vanuit een actieve fase (zoals *Ontwerp*, *Implementatie*, of *Test*), wordt dit zij-proces volledig binnen de bestaande Jira-status van die actieve fase uitgevoerd en afgerond.
+2. **Review Special Action (`12 Issue Tracker review special action.drawio`)**:
+   * In de Jira-workflow is `SpecialAction` een terminale status zonder verdere uitgaande transities.
+   * De review van een speciale actie door de baas (Fase 12) wordt administratief volledig afgehandeld binnen de bestaande Jira-status **SpecialAction**.
