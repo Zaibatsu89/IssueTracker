@@ -1,4 +1,4 @@
-graph TD
+flowchart TD
     bpmn_start_event(("[intake gestart]"))
     bpmn_task_nieuw["Issue [nieuw]"]
     bpmn_task_start_timer["Start timer (ETC)"]
@@ -6,7 +6,7 @@ graph TD
     bpmn_task_deliverables["Deliverable specificatie:"]
     bpmn_task_planning["Schattingen per fase"]
     bpmn_task_stop_timer["Stop timer (ETC)"]
-    bpmn_gateway_bijzonderheden["Bijzonderheden gezien?"]
+    bpmn_gateway_bijzonderheden{"Bijzonderheden gezien?"}
     bpmn_task_intake_voltooid["Issue [intake voltooid]"]
     bpmn_end_aanpak(("[volg review aanpak]"))
     bpmn_task_meldplicht_getriggerd["Issue [meldplicht getriggerd]"]
