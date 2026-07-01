@@ -1,20 +1,20 @@
-%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%
+%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%
 flowchart TD
-    bpmn_start_event(["[analyse<br />goedgekeurd]"])
+    bpmn_start_event(["[analyse\ngoedgekeurd]"])
     bpmn_gateway_fork{"+"}
     bpmn_task_intake["Analyse verwerken"]
     bpmn_task_oplossing["Oplossing ontwerpen"]
-    bpmn_event_etc(("[na 2/3, 100% of<br />150% ETC]"))
-    bpmn_task_inschatting["Hoe lang denk je nog<br />nodig te hebben?"]
-    bpmn_task_verantwoording["Hoe heeft het zo<br />lang kunnen duren?"]
+    bpmn_event_etc(("[na 2/3, 100% of\n150% ETC]"))
+    bpmn_task_inschatting["Hoe lang denk je nog\nnodig te hebben?"]
+    bpmn_task_verantwoording["Hoe heeft het zo\nlang kunnen duren?"]
     bpmn_gateway_join{"+"}
-    bpmn_end_regulier(["[volg review<br />ontwerp]"])
+    bpmn_end_regulier(["[volg review\nontwerp]"])
     bpmn_end_bijzonderheden(["[volg meldplicht]"])
     bpmn_gateway_kwaliteit -->|"[onvolledig]"| bpmn_task_intake
     bpmn_gateway_kwaliteit -->|"[volledig]"| bpmn_gateway_join
     bpmn_gateway_haalbaarheid -->|"[haalbaar]"| bpmn_gateway_join
     bpmn_gateway_haalbaarheid -->|"[onhaalbaar]"| bpmn_task_verantwoording
-    bpmn_gateway_bijzonderheden -->|"[geen<br />bijzonderheden]"| bpmn_end_regulier
+    bpmn_gateway_bijzonderheden -->|"[geen\nbijzonderheden]"| bpmn_end_regulier
     bpmn_gateway_bijzonderheden -->|"[bijzonderheden]"| bpmn_end_bijzonderheden
     bpmn_start_event --> bpmn_gateway_fork
     bpmn_gateway_fork --> bpmn_task_intake

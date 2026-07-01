@@ -1,13 +1,13 @@
-%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%
+%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%
 flowchart TD
     bpmn_start_event(["[issue ontworpen]"])
-    bpmn_task_intake["Uitvoeren<br />gezamenlijk ontwerp<br />review"]
+    bpmn_task_intake["Uitvoeren\ngezamenlijk ontwerp\nreview"]
     bpmn_gateway_fork{"+"}
-    bpmn_event_notification(("[automatische<br />notificatie<br />verzonden]"))
+    bpmn_event_notification(("[automatische\nnotificatie\nverzonden]"))
     bpmn_gateway_join{"+"}
     bpmn_task_beoordeling["Beoordelen resultaat"]
-    bpmn_task_analyse["Starten<br />realisatie/bouw"]
-    bpmn_end_event(["[realisatie/bouw<br />gestart]"])
+    bpmn_task_analyse["Starten\nrealisatie/bouw"]
+    bpmn_end_event(["[realisatie/bouw\ngestart]"])
     mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
     mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
     bpmn_gateway_xor -->|"[goedgekeurd]"| bpmn_task_analyse

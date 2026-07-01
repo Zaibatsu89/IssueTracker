@@ -29,7 +29,6 @@ def wrap_text(text, max_width=20):
     current_line = []
     current_length = 0
     for word in words:
-        # Controleer of het toevoegen van het woord de maximale breedte overschrijdt
         if current_length + len(word) + (1 if current_line else 0) <= max_width:
             current_line.append(word)
             current_length += len(word) + (1 if len(current_line) > 1 else 0)
@@ -40,8 +39,7 @@ def wrap_text(text, max_width=20):
             current_length = len(word)
     if current_line:
         lines.append(" ".join(current_line))
-    # Fixed "error on line 1 at column 67812: Opening and ending tag mismatch: br line 1 and p"
-    return "<br />".join(lines)
+    return "\\n".join(lines)
 
 def get_mxgraph_model(xml_path):
     tree = ET.parse(xml_path)
@@ -82,10 +80,8 @@ def parse_elements(root_el):
         if is_vertex:
             shape = 'rectangle'
             
-            # BPMN / Flowchart Gateways en beslissingen
             if 'shape=mxgraph.bpmn.gateway' in style or 'mxgraph.bpmn.gateway2' in style or 'shape=mxgraph.flowchart.decision' in style or 'decision' in style:
                 shape = 'decision'
-                # Automatische gateway-labeling bij ontbrekende tekst
                 if not cleaned_lbl:
                     if 'parallel' in style or 'gwType=parallel' in style or 'gatewayType=parallel' in style:
                         cleaned_lbl = "+"
@@ -149,8 +145,7 @@ def parse_elements(root_el):
 
 def generate_mermaid(nodes, edges, max_width=20):
     lines = [
-        # Activeer HTML-labels om <br> rendering mogelijk te maken
-        "%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%",
+        "%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%",
         "flowchart TD"
     ]
     
@@ -171,7 +166,6 @@ def generate_mermaid(nodes, edges, max_width=20):
         if node_id not in connected_nodes and is_plain_text:
             continue
             
-        # Pas tekstwrapping toe en ontsnap dubbele aanhalingstekens
         wrapped_label = wrap_text(label, max_width)
         label_escaped = wrapped_label.replace('"', '\\"')
         
