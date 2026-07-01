@@ -1,13 +1,13 @@
-%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%
+%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
     bpmn_start_event(["[issue gemeld]"])
-    bpmn_task_intake["Uitvoeren gezamenlijke intake & kick-off"]
+    bpmn_task_intake["Uitvoeren<br>gezamenlijke intake<br>& kick-off"]
     bpmn_gateway_fork{"+"}
-    bpmn_event_notification(("[automatische notificatie verzonden]"))
+    bpmn_event_notification(("[automatische<br>notificatie<br>verzonden]"))
     bpmn_gateway_join{"+"}
-    bpmn_task_beoordeling["Beoordelen voorgestelde aanpak"]
+    bpmn_task_beoordeling["Beoordelen<br>voorgestelde aanpak"]
     bpmn_gateway_xor{"Akkoord?"}
-    bpmn_task_analyse["Starten inhoudelijke analyse"]
+    bpmn_task_analyse["Starten inhoudelijke<br>analyse"]
     bpmn_end_event(["[analyse gestart]"])
     bpmn_gateway_xor -->|"[goedgekeurd]"| bpmn_task_analyse
     bpmn_gateway_xor -->|"[afgekeurd]"| bpmn_task_intake

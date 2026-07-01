@@ -1,9 +1,9 @@
-%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%
+%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
     bpmn_start_event(["[issue geanalyseerd]"])
-    bpmn_task_intake["Uitvoeren gezamenlijke analyse"]
+    bpmn_task_intake["Uitvoeren<br>gezamenlijke analyse"]
     bpmn_gateway_fork{"+"}
-    bpmn_event_notification(("[automatische notificatie verzonden]"))
+    bpmn_event_notification(("[automatische<br>notificatie<br>verzonden]"))
     bpmn_gateway_join{"+"}
     bpmn_task_beoordeling["Beoordelen resultaat"]
     bpmn_task_analyse["Starten ontwerp"]

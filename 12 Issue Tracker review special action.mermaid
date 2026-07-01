@@ -1,13 +1,13 @@
-%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%
+%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
-    bpmn_start_event(["[speciale actie uitgevoerd]"])
-    bpmn_task_intake["Uitvoeren gezamenlijk speciale actie review"]
+    bpmn_start_event(["[speciale actie<br>uitgevoerd]"])
+    bpmn_task_intake["Uitvoeren<br>gezamenlijk speciale<br>actie review"]
     bpmn_gateway_fork{"+"}
-    bpmn_event_notification(("[automatische notificatie verzonden]"))
+    bpmn_event_notification(("[automatische<br>notificatie<br>verzonden]"))
     bpmn_gateway_join{"+"}
     bpmn_task_beoordeling["Beoordelen resultaat"]
-    bpmn_task_analyse["Zet Jira uitvoerder op de baas"]
-    bpmn_end_event(["[speciale actie goedgekeurd]"])
+    bpmn_task_analyse["Zet Jira uitvoerder<br>op de baas"]
+    bpmn_end_event(["[speciale actie<br>goedgekeurd]"])
     mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
     mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
     bpmn_gateway_xor -->|"[goedgekeurd]"| bpmn_task_analyse

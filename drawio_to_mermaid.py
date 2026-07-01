@@ -19,6 +19,29 @@ def clean_label(label):
     label = re.sub(r'\s+', ' ', label)
     return label.strip()
 
+def wrap_text(text, max_width=20):
+    if not text or len(text) <= max_width:
+        return text
+    words = text.split()
+    if not words:
+        return ""
+    lines = []
+    current_line = []
+    current_length = 0
+    for word in words:
+        # Controleer of het toevoegen van het woord de maximale breedte overschrijdt
+        if current_length + len(word) + (1 if current_line else 0) <= max_width:
+            current_line.append(word)
+            current_length += len(word) + (1 if len(current_line) > 1 else 0)
+        else:
+            if current_line:
+                lines.append(" ".join(current_line))
+            current_line = [word]
+            current_length = len(word)
+    if current_line:
+        lines.append(" ".join(current_line))
+    return "<br>".join(lines)
+
 def get_mxgraph_model(xml_path):
     tree = ET.parse(xml_path)
     root = tree.getroot()
@@ -123,10 +146,10 @@ def parse_elements(root_el):
             
     return nodes, edges
 
-def generate_mermaid(nodes, edges):
+def generate_mermaid(nodes, edges, max_width=20):
     lines = [
-        # Schakel HTML-labels uit
-        "%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%",
+        # Activeer HTML-labels om <br> rendering mogelijk te maken
+        "%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%",
         "flowchart TD"
     ]
     
@@ -147,7 +170,9 @@ def generate_mermaid(nodes, edges):
         if node_id not in connected_nodes and is_plain_text:
             continue
             
-        label_escaped = label.replace('"', '\\"')
+        # Pas tekstwrapping toe en ontsnap dubbele aanhalingstekens
+        wrapped_label = wrap_text(label, max_width)
+        label_escaped = wrapped_label.replace('"', '\\"')
         
         if shape == 'decision':
             lines.append(f'    {node_id}{{"{label_escaped}"}}')
@@ -167,7 +192,8 @@ def generate_mermaid(nodes, edges):
         
         if source in nodes and target in nodes:
             if label:
-                label_escaped = label.replace('"', '\\"')
+                wrapped_label = wrap_text(label, max_width)
+                label_escaped = wrapped_label.replace('"', '\\"')
                 lines.append(f'    {source} -->|"{label_escaped}"| {target}')
             else:
                 lines.append(f'    {source} --> {target}')
