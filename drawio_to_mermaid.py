@@ -124,7 +124,11 @@ def parse_elements(root_el):
     return nodes, edges
 
 def generate_mermaid(nodes, edges):
-    lines = ["flowchart TD"]
+    lines = [
+        # Schakel HTML-labels uit
+        "%%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': false}}}%%",
+        "flowchart TD"
+    ]
     
     connected_nodes = set()
     for edge in edges:
