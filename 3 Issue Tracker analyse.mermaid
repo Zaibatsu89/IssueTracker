@@ -1,0 +1,30 @@
+%%{init: {"htmlLabels": false, "theme": "default", "themeVariables": {"fontFamily": "sans-serif"}, "flowchart": {"htmlLabels": false}}}%%
+flowchart TD
+    bpmn_start_event(["[analyse gestart]"])
+    bpmn_gateway_fork{"+"}
+    bpmn_task_intake["Intake verwerken"]
+    bpmn_task_oplossing["Oplossing analyseren"]
+    bpmn_gateway_kwaliteit{"Volledig?"}
+    bpmn_event_etc(("[na 2/3, 100% of\n150% ETC]"))
+    bpmn_task_inschatting["Bepalen resterende\nbenodigde tijd (a:\nm.)"]
+    bpmn_gateway_haalbaarheid{"Haalbaar?"}
+    bpmn_task_verantwoording["Verantwoorden\ntijdsduur (Hoe heeft\nhet zo lang kunnen\nduren?)"]
+    bpmn_gateway_join{"+"}
+    bpmn_gateway_bijzonderheden{"Bijzonderheden?"}
+    bpmn_end_regulier(["[analyse succesvol\nafgerond]"])
+    bpmn_end_bijzonderheden(["[analyse afgerond\nmet melding]"])
+    bpmn_gateway_kwaliteit -->|"[onvolledig]"| bpmn_task_intake
+    bpmn_gateway_kwaliteit -->|"[volledig]"| bpmn_gateway_join
+    bpmn_gateway_haalbaarheid -->|"[haalbaar]"| bpmn_gateway_join
+    bpmn_gateway_haalbaarheid -->|"[onhaalbaar]"| bpmn_task_verantwoording
+    bpmn_gateway_bijzonderheden -->|"[geen\nbijzonderheden]"| bpmn_end_regulier
+    bpmn_gateway_bijzonderheden -->|"[bijzonderheden]"| bpmn_end_bijzonderheden
+    bpmn_start_event --> bpmn_gateway_fork
+    bpmn_gateway_fork --> bpmn_task_intake
+    bpmn_gateway_fork --> bpmn_event_etc
+    bpmn_task_intake --> bpmn_task_oplossing
+    bpmn_task_oplossing --> bpmn_gateway_kwaliteit
+    bpmn_event_etc --> bpmn_task_inschatting
+    bpmn_task_inschatting --> bpmn_gateway_haalbaarheid
+    bpmn_task_verantwoording --> bpmn_gateway_join
+    bpmn_gateway_join --> bpmn_gateway_bijzonderheden
