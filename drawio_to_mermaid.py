@@ -11,7 +11,6 @@ def clean_label(label):
     if not label:
         return ""
     label = unescape(label)
-    # Verwijder HTML-tags en zet regeleinden om naar spaties/br tags
     label = re.sub(r'<br\s*/?>', ' ', label, flags=re.IGNORECASE)
     label = re.sub(r'</?div[^>]*>', ' ', label, flags=re.IGNORECASE)
     label = re.sub(r'</?span[^>]*>', '', label, flags=re.IGNORECASE)
@@ -32,7 +31,6 @@ def get_mxgraph_model(xml_path):
         return root
         
     if len(diagram) == 0 and diagram.text:
-        # Gecomprimeerde XML decoderen
         compressed_data = diagram.text.strip()
         decoded_base64 = base64.b64decode(compressed_data)
         decompressed = zlib.decompress(decoded_base64, -15)
@@ -53,16 +51,19 @@ def parse_elements(root_el):
         is_vertex = cell_elem.get('vertex') == '1'
         is_edge = cell_elem.get('edge') == '1'
         style = cell_elem.get('style', '')
+        outline = cell_elem.get('outline', '') or ''
         
         cleaned_lbl = clean_label(label)
         
         if is_vertex:
             shape = 'rectangle'
-            if 'shape=mxgraph.flowchart.decision' in style or 'decision' in style:
+            
+            # Ondersteuning voor zowel BPMN als standaard flowchartvormen
+            if 'shape=mxgraph.bpmn.gateway' in style or 'shape=mxgraph.flowchart.decision' in style or 'decision' in style:
                 shape = 'decision'
-            elif 'shape=mxgraph.flowchart.terminator' in style or 'terminator' in style:
+            elif ('shape=mxgraph.bpmn.event' in style and ('end' in outline or 'outline=end' in style)) or 'shape=mxgraph.flowchart.terminator' in style or 'terminator' in style:
                 shape = 'terminator'
-            elif 'shape=mxgraph.flowchart.start_2' in style or 'start' in style:
+            elif ('shape=mxgraph.bpmn.event' in style and ('standard' in outline or 'outline=standard' in style)) or 'shape=mxgraph.flowchart.start_2' in style or 'start' in style:
                 shape = 'start'
             elif 'ellipse' in style:
                 shape = 'ellipse'
@@ -85,7 +86,6 @@ def parse_elements(root_el):
                     'label': cleaned_lbl
                 })
 
-    # Verwerk <object> tags (meta-data wrappers)
     for obj in root_el.findall('.//object'):
         obj_id = obj.get('id')
         label = obj.get('label', '')
@@ -93,7 +93,6 @@ def parse_elements(root_el):
         if obj_id and cell_elem is not None:
             process_cell(obj_id, cell_elem, label)
 
-    # Verwerk standaard <mxCell> tags
     for cell in root_el.findall('.//mxCell'):
         cell_id = cell.get('id')
         if not cell_id:
@@ -104,7 +103,6 @@ def parse_elements(root_el):
         label = cell.get('value', '')
         process_cell(cell_id, cell, label)
         
-    # Losse labels koppelen aan edges op basis van parent-ID
     for cell in root_el.findall('.//mxCell'):
         parent_id = cell.get('parent')
         if parent_id and cell.get('value') and cell.get('vertex') != '1' and cell.get('edge') != '1':
@@ -117,15 +115,13 @@ def parse_elements(root_el):
     return nodes, edges
 
 def generate_mermaid(nodes, edges):
-    lines = ["graph TD"]
+    lines = ["flowchart TD"]
     
-    # Identificeer actieve nodes in paden om zwevende labels te filteren
     connected_nodes = set()
     for edge in edges:
         connected_nodes.add(edge['source'])
         connected_nodes.add(edge['target'])
     
-    # Render nodes
     for node_id, data in nodes.items():
         label = data['label']
         shape = data['shape']
@@ -134,7 +130,6 @@ def generate_mermaid(nodes, edges):
         if not label:
             continue
             
-        # Filter zwevende tekst-annotaties zonder connecties uit
         is_plain_text = 'text' in style or ('strokeColor=none' in style and 'fillColor=none' in style)
         if node_id not in connected_nodes and is_plain_text:
             continue
@@ -152,7 +147,6 @@ def generate_mermaid(nodes, edges):
         else:
             lines.append(f'    {node_id}["{label_escaped}"]')
             
-    # Render edges
     for edge in edges:
         source = edge['source']
         target = edge['target']

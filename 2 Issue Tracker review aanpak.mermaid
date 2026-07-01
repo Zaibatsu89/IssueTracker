@@ -1,10 +1,10 @@
-graph TD
-    bpmn_start_event(("[issue gemeld]"))
+flowchart TD
+    bpmn_start_event(["[issue gemeld]"])
     bpmn_task_intake["Uitvoeren gezamenlijke intake & kick-off"]
     bpmn_event_notification(("[automatische notificatie verzonden]"))
     bpmn_task_beoordeling["Beoordelen voorgestelde aanpak"]
     bpmn_task_analyse["Starten inhoudelijke analyse"]
-    bpmn_end_event(("[analyse gestart]"))
+    bpmn_end_event(["[analyse gestart]"])
     mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
     mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
     bpmn_gateway_xor -->|"[goedgekeurd]"| bpmn_task_analyse

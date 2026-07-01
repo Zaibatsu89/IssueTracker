@@ -1,10 +1,10 @@
-graph TD
-    bpmn_start_event(("[issue getest]"))
+flowchart TD
+    bpmn_start_event(["[issue getest]"])
     bpmn_task_intake["Demonstratie van de oplossing geven"]
     bpmn_event_notification(("[automatische notificatie verzonden]"))
     bpmn_task_beoordeling["Review met Jeroen uitvoeren"]
     bpmn_task_analyse["Zet Jira uitvoerder op de baas"]
-    bpmn_end_event(("[issue gesloten]"))
+    bpmn_end_event(["[issue gesloten]"])
     mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
     mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
     bpmn_gateway_xor -->|"[goedgekeurd]"| bpmn_task_analyse

@@ -1,12 +1,12 @@
-graph TD
-    bpmn_start_event(("[analyse gestart]"))
+flowchart TD
+    bpmn_start_event(["[analyse gestart]"])
     bpmn_task_intake["Intake verwerken"]
     bpmn_task_oplossing["Oplossing analyseren"]
     bpmn_event_etc(("[na 2/3, 100% of 150% ETC]"))
     bpmn_task_inschatting["Bepalen resterende benodigde tijd (a: m.)"]
     bpmn_task_verantwoording["Verantwoorden tijdsduur (Hoe heeft het zo lang kunnen duren?)"]
-    bpmn_end_regulier(("[analyse succesvol afgerond]"))
-    bpmn_end_bijzonderheden(("[analyse afgerond met melding]"))
+    bpmn_end_regulier(["[analyse succesvol afgerond]"])
+    bpmn_end_bijzonderheden(["[analyse afgerond met melding]"])
     bpmn_gateway_kwaliteit -->|"[onvolledig]"| bpmn_task_intake
     bpmn_gateway_kwaliteit -->|"[volledig]"| bpmn_gateway_join
     bpmn_gateway_haalbaarheid -->|"[haalbaar]"| bpmn_gateway_join

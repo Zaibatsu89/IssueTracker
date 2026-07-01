@@ -1,5 +1,5 @@
-graph TD
-    bpmn_start_event(("[meldplicht getriggerd]"))
+flowchart TD
+    bpmn_start_event(["[meldplicht getriggerd]"])
     bpmn_task_start_timer["Start timer (5 min)"]
     bpmn_task_stel_plan_op["Stel vervolgplan op"]
     bpmn_task_stop_timer["Stop timer (5 min)"]
@@ -8,7 +8,7 @@ graph TD
     bpmn_task_status["De baas bepaalt volgende status"]
     bpmn_task_effort["De baas verifieert effort per resterende fase"]
     bpmn_task_volg_status["Volg de afgestemde status"]
-    bpmn_end_event(("[meldplicht voltooid]"))
+    bpmn_end_event(["[meldplicht voltooid]"])
     mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
     mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
     bpmn_start_event --> bpmn_task_start_timer
