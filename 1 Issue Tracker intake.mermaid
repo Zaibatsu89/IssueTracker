@@ -1,0 +1,24 @@
+graph TD
+    bpmn_start_event(("[intake gestart]"))
+    bpmn_task_nieuw["Issue [nieuw]"]
+    bpmn_task_start_timer["Start timer (ETC)"]
+    bpmn_task_oplossingsrichting["Oplossingsrichting:"]
+    bpmn_task_deliverables["Deliverable specificatie:"]
+    bpmn_task_planning["Schattingen per fase"]
+    bpmn_task_stop_timer["Stop timer (ETC)"]
+    bpmn_gateway_bijzonderheden["Bijzonderheden gezien?"]
+    bpmn_task_intake_voltooid["Issue [intake voltooid]"]
+    bpmn_end_aanpak(("[volg review aanpak]"))
+    bpmn_task_meldplicht_getriggerd["Issue [meldplicht getriggerd]"]
+    bpmn_end_meldplicht(("[volg meldplicht]"))
+    bpmn_start_event --> bpmn_task_nieuw
+    bpmn_task_nieuw --> bpmn_task_start_timer
+    bpmn_task_start_timer --> bpmn_task_oplossingsrichting
+    bpmn_task_oplossingsrichting --> bpmn_task_deliverables
+    bpmn_task_deliverables --> bpmn_task_planning
+    bpmn_task_planning --> bpmn_task_stop_timer
+    bpmn_task_stop_timer --> bpmn_gateway_bijzonderheden
+    bpmn_gateway_bijzonderheden --> bpmn_task_intake_voltooid
+    bpmn_task_intake_voltooid --> bpmn_end_aanpak
+    bpmn_gateway_bijzonderheden --> bpmn_task_meldplicht_getriggerd
+    bpmn_task_meldplicht_getriggerd --> bpmn_end_meldplicht

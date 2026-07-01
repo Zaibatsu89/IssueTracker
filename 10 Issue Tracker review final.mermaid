@@ -1,0 +1,19 @@
+graph TD
+    bpmn_start_event(("[issue getest]"))
+    bpmn_task_intake["Demonstratie van de oplossing geven"]
+    bpmn_event_notification(("[automatische notificatie verzonden]"))
+    bpmn_task_beoordeling["Review met Jeroen uitvoeren"]
+    bpmn_task_analyse["Zet Jira uitvoerder op de baas"]
+    bpmn_end_event(("[issue gesloten]"))
+    mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
+    mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
+    bpmn_gateway_xor -->|"[goedgekeurd]"| bpmn_task_analyse
+    bpmn_gateway_xor -->|"[afgekeurd]"| bpmn_task_intake
+    bpmn_start_event --> bpmn_task_intake
+    bpmn_task_intake --> bpmn_gateway_fork
+    bpmn_gateway_fork --> bpmn_event_notification
+    bpmn_event_notification --> bpmn_gateway_join
+    bpmn_gateway_fork --> bpmn_gateway_join
+    bpmn_gateway_join --> bpmn_task_beoordeling
+    bpmn_task_beoordeling --> bpmn_gateway_xor
+    bpmn_task_analyse --> bpmn_end_event
