@@ -1,5 +1,5 @@
 flowchart TD
-    bpmn_start_event(("[intake gestart]"))
+    bpmn_start_event(["[intake gestart]"])
     bpmn_task_nieuw["Issue [nieuw]"]
     bpmn_task_start_timer["Start timer (ETC)"]
     bpmn_task_oplossingsrichting["Oplossingsrichting:"]
@@ -8,9 +8,9 @@ flowchart TD
     bpmn_task_stop_timer["Stop timer (ETC)"]
     bpmn_gateway_bijzonderheden{"Bijzonderheden gezien?"}
     bpmn_task_intake_voltooid["Issue [intake voltooid]"]
-    bpmn_end_aanpak(("[volg review aanpak]"))
+    bpmn_end_aanpak(["[volg review aanpak]"])
     bpmn_task_meldplicht_getriggerd["Issue [meldplicht getriggerd]"]
-    bpmn_end_meldplicht(("[volg meldplicht]"))
+    bpmn_end_meldplicht(["[volg meldplicht]"])
     bpmn_start_event --> bpmn_task_nieuw
     bpmn_task_nieuw --> bpmn_task_start_timer
     bpmn_task_start_timer --> bpmn_task_oplossingsrichting
