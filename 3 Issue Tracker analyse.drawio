@@ -1,182 +1,163 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="N1ihbLb1V8zAQBHubTxZ">
-    <mxGraphModel dx="1685" dy="2321" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="855" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="XXgrilK3sBboaJHVpPJj-1" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-35" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Status =&lt;br&gt;analyse" Action="301" id="XXgrilK3sBboaJHVpPJj-2">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-1160" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-3" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-37" value="ja">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-4_nee" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-28" value="nee">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Evalueer of&lt;br&gt;de deliverables&lt;br&gt;correct en&lt;br&gt;volledig zijn&lt;br&gt;afgerond" Action="305" id="XXgrilK3sBboaJHVpPJj-4">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-600" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="Volg de&lt;br&gt;review analyse" Action="307T" id="XXgrilK3sBboaJHVpPJj-5">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="220" y="-100" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-6" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-37">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Significant&lt;br&gt;inzicht&lt;br&gt;gekregen" Action="315" id="XXgrilK3sBboaJHVpPJj-7">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="50" y="-930" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-8" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-11" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Na 2/3 ETC&lt;br&gt;Na 100% ETC&lt;br&gt;Na 150% ETC" Action="308" id="XXgrilK3sBboaJHVpPJj-9">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="680" y="-1150" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-10" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-13" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Start timer&lt;br&gt;(1 min)" Action="309" id="XXgrilK3sBboaJHVpPJj-11">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="-1050" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-12" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-30" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Hoe lang denk je nog nodig te hebben?" Action="310" id="XXgrilK3sBboaJHVpPJj-13">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="-910" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-14" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-18">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-15" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-22">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Haal ik&lt;br&gt;het?" Action="312" id="XXgrilK3sBboaJHVpPJj-16">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="-670" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-17" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-35">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Stop timer&lt;br&gt;(1 min)" Action="312T" id="XXgrilK3sBboaJHVpPJj-18">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="540" y="-1090" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
-          <mxGeometry height="30" width="60" x="640" y="-650" as="geometry" />
-        </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
-          <mxGeometry height="30" width="60" x="720" y="-570" as="geometry" />
-        </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-21" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-24" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Stop timer&lt;br&gt;(1 min)&lt;br&gt;&lt;br&gt;Start timer&lt;br&gt;(4 min)" Action="312F" id="XXgrilK3sBboaJHVpPJj-22">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="-530" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-23" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-32" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Hoe heeft het zo lang kunnen duren?" Action="313" id="XXgrilK3sBboaJHVpPJj-24">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="-390" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-25" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Oplossing analyseren" Action="304" id="XXgrilK3sBboaJHVpPJj-26">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-740" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-27" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="XXgrilK3sBboaJHVpPJj-26">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Intake verwerken" Action="303" id="XXgrilK3sBboaJHVpPJj-28">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-880" as="geometry" />
-          </mxCell>
-        </object>
         <mxCell id="XXgrilK3sBboaJHVpPJj-29" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="60" x="10" y="-1140" as="geometry" />
+          <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
         </mxCell>
-        <object label="a:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;m." Action="311" id="XXgrilK3sBboaJHVpPJj-30">
-          <mxCell parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1">
-            <mxGeometry height="60" width="100" x="680" y="-770" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-31" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="XXgrilK3sBboaJHVpPJj-16">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Stop timer&lt;br&gt;(4 min)" Action="314" id="XXgrilK3sBboaJHVpPJj-32">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="-250" as="geometry" />
-          </mxCell>
-        </object>
         <mxCell id="XXgrilK3sBboaJHVpPJj-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
-          <mxGeometry height="30" width="300" x="10" y="-1080" as="geometry" />
+          <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-34" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-28" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="&lt;font&gt;Start timer (ETC)&lt;/font&gt;" Action="302" id="XXgrilK3sBboaJHVpPJj-35">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-1020" as="geometry" />
+        <object label="[analyse gestart]" id="bpmn_start_event">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="40" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-36" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XXgrilK3sBboaJHVpPJj-39" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Stop timer (ETC)" Action="306" id="XXgrilK3sBboaJHVpPJj-37">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-460" as="geometry" />
+        <object label="" id="bpmn_gateway_fork">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=parallel;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="120" as="geometry" />
           </mxCell>
         </object>
-        <object label="Volg de&lt;br&gt;meldplicht" Action="307F" id="XXgrilK3sBboaJHVpPJj-38">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="500" y="-100" as="geometry" />
+        <object label="Intake verwerken" Action="301" id="bpmn_task_intake">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="60" width="140" x="240" y="200" as="geometry" />
           </mxCell>
         </object>
-        <object label="Bijzonder-&lt;br&gt;heden&lt;br&gt;gezien?" Action="307" id="XXgrilK3sBboaJHVpPJj-39">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="-320" as="geometry" />
+        <object label="Oplossing analyseren" Action="302" id="bpmn_task_oplossing">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="60" width="140" x="240" y="300" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
-          <mxGeometry height="30" width="60" x="300" y="-270" as="geometry" />
-        </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
-          <mxGeometry height="30" width="60" x="460" y="-270" as="geometry" />
-        </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-42" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="XXgrilK3sBboaJHVpPJj-38">
+        <object label="" id="bpmn_gateway_kwaliteit">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="290" y="400" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="[na 2/3, 100% of 150% ETC]" id="bpmn_event_etc">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catch;symbol=timer;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="540" y="200" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Bepalen resterende benodigde tijd (a: m.)" Action="303" id="bpmn_task_inschatting">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="80" width="140" x="490" y="280" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" Action="305" id="bpmn_gateway_haalbaarheid">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="540" y="400" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Verantwoorden tijdsduur (Hoe heeft het zo lang kunnen duren?)" Action="304" id="bpmn_task_verantwoording">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="100" width="140" x="630" y="485" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id="bpmn_gateway_join">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=parallel;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="600" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id="bpmn_gateway_bijzonderheden">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="670" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="[analyse succesvol afgerond]" id="bpmn_end_regulier">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="250" y="740" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="[analyse afgerond met melding]" id="bpmn_end_bijzonderheden">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="530" y="740" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_start_to_fork" edge="1" parent="1" source="bpmn_start_event" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_fork">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-43" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="XXgrilK3sBboaJHVpPJj-38">
+        <mxCell id="edge_fork_to_intake" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_task_intake">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XXgrilK3sBboaJHVpPJj-44" edge="1" parent="1" source="XXgrilK3sBboaJHVpPJj-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="XXgrilK3sBboaJHVpPJj-5">
+        <mxCell id="edge_fork_to_etc" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_event_etc">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="edge_intake_to_oplossing" edge="1" parent="1" source="bpmn_task_intake" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_oplossing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_oplossing_to_kwaliteit" edge="1" parent="1" source="bpmn_task_oplossing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_kwaliteit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="[onvolledig]" id="edge_kwaliteit_onvolledig">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_kwaliteit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="bpmn_task_intake">
+            <mxGeometry relative="1" x="-0.8" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="200" y="420" />
+                <mxPoint x="200" y="230" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="[volledig]" id="edge_kwaliteit_volledig">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_kwaliteit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" target="bpmn_gateway_join">
+            <mxGeometry relative="1" x="-0.5" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <mxCell id="edge_etc_to_inschatting" edge="1" parent="1" source="bpmn_event_etc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_inschatting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_inschatting_to_haalbaarheid" edge="1" parent="1" source="bpmn_task_inschatting" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_haalbaarheid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="[haalbaar]" Action="305T" id="edge_haalbaarheid_haalbaar">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_haalbaarheid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="bpmn_gateway_join">
+            <mxGeometry relative="1" x="-0.5" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="[onhaalbaar]" Action="305F" id="edge_haalbaarheid_onhaalbaar">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_haalbaarheid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_verantwoording">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_verantwoording_to_join" edge="1" parent="1" source="bpmn_task_verantwoording" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="bpmn_gateway_join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_join_to_bijzonderheden" edge="1" parent="1" source="bpmn_gateway_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_bijzonderheden">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="[geen bijzonderheden]" id="edge_bijzonderheden_geen">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_bijzonderheden" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_end_regulier">
+            <mxGeometry relative="1" x="-0.3" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="270" y="690" />
+                <mxPoint x="270" y="740" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="[bijzonderheden]" id="edge_bijzonderheden_wel">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_bijzonderheden" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_end_bijzonderheden">
+            <mxGeometry relative="1" x="-0.3" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="550" y="690" />
+                <mxPoint x="550" y="740" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
       </root>
     </mxGraphModel>
   </diagram>

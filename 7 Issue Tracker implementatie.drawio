@@ -1,182 +1,177 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
-  <diagram name="Page-1" id="QgKZZ4xON_rEodREX1VK">
-    <mxGraphModel dx="842" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="Page-1" id="ijDkrDuIP-wPQttzgr_I-1">
+    <mxGraphModel dx="969" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-1" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-36" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Status =&lt;br&gt;implementatie" Action="701" id="ijDkrDuIP-wPQttzgr_I-2">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="10" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-3" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-38" value="ja">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-4_nee" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-29" value="nee">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Evalueer of&lt;br&gt;de deliverables&lt;br&gt;correct en&lt;br&gt;volledig zijn&lt;br&gt;afgerond" Action="705" id="ijDkrDuIP-wPQttzgr_I-4">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="570" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="Volg de&lt;br&gt;test" Action="707F" id="ijDkrDuIP-wPQttzgr_I-5">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="220" y="1070" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-6" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-29">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Significant&lt;br&gt;inzicht&lt;br&gt;gekregen" Action="715" id="ijDkrDuIP-wPQttzgr_I-7">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="50" y="240" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-8" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-11" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Na 2/3 ETC&lt;br&gt;Na 100% ETC&lt;br&gt;Na 150% ETC" Action="708" id="ijDkrDuIP-wPQttzgr_I-9">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="680" y="20" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-10" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-13" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Start timer&lt;br&gt;(1 min)" Action="709" id="ijDkrDuIP-wPQttzgr_I-11">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="120" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-12" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-32" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Hoe lang denk je nog nodig te hebben?" Action="710" id="ijDkrDuIP-wPQttzgr_I-13">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="260" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-14" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-18">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-15" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-22">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Haal ik&lt;br&gt;het?" Action="712" id="ijDkrDuIP-wPQttzgr_I-16">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="500" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-17" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-36">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Stop timer&lt;br&gt;(1 min)" Action="712T" id="ijDkrDuIP-wPQttzgr_I-18">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="540" y="80" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
-          <mxGeometry height="30" width="60" x="640" y="520" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
-          <mxGeometry height="30" width="60" x="720" y="600" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-21" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-24" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Stop timer&lt;br&gt;(1 min)&lt;br&gt;&lt;br&gt;Start timer&lt;br&gt;(4 min)" Action="712F" id="ijDkrDuIP-wPQttzgr_I-22">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="640" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-23" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-31" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Hoe heeft het zo lang kunnen duren?" Action="713" id="ijDkrDuIP-wPQttzgr_I-24">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="780" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="Volg de&lt;br&gt;meldplicht" Action="707T" id="ijDkrDuIP-wPQttzgr_I-25">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="60" width="100" x="500" y="1070" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-26" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Oplossing implementeren" Action="704" id="ijDkrDuIP-wPQttzgr_I-27">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="430" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-28" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-27" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="Ontwerp verwerken" Action="703" id="ijDkrDuIP-wPQttzgr_I-29">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="290" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-30" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
+        <mxCell id="z5xtCpzYsnNJJag9wdNT-40" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
         </mxCell>
-        <object label="Stop timer&lt;br&gt;(4 min)" Action="714" id="ijDkrDuIP-wPQttzgr_I-31">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="680" y="920" as="geometry" />
-          </mxCell>
-        </object>
-        <object label="im:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; m." Action="711" id="ijDkrDuIP-wPQttzgr_I-32">
-          <mxCell parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1">
-            <mxGeometry height="60" width="100" x="680" y="400" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-33" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="ijDkrDuIP-wPQttzgr_I-16">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
+        <mxCell id="z5xtCpzYsnNJJag9wdNT-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="In ieder blokje de actielijst afvinken voordat je doorgaat" vertex="1">
           <mxGeometry height="30" width="300" x="10" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-35" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ijDkrDuIP-wPQttzgr_I-29">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="&lt;font&gt;Start timer (ETC)&lt;/font&gt;" Action="702" id="ijDkrDuIP-wPQttzgr_I-36">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="150" as="geometry" />
+
+        <object label="[ontwerp goedgekeurd]" Action="701" id="bpmn_start_event">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="40" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-37" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ijDkrDuIP-wPQttzgr_I-39" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <object label="&lt;font&gt;Stop timer (ETC)&lt;/font&gt;" Action="706" id="ijDkrDuIP-wPQttzgr_I-38">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="710" as="geometry" />
+
+        <object label="" id="bpmn_gateway_fork">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=parallel;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="120" as="geometry" />
           </mxCell>
         </object>
-        <object label="Bijzonder-&lt;br&gt;heden&lt;br&gt;gezien?" Action="707" id="ijDkrDuIP-wPQttzgr_I-39">
-          <mxCell parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1">
-            <mxGeometry height="100" width="100" x="360" y="850" as="geometry" />
+
+        <object label="Ontwerp verwerken" Action="703" id="bpmn_task_intake">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="60" width="140" x="240" y="200" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nee" vertex="1">
-          <mxGeometry height="30" width="60" x="300" y="900" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ja" vertex="1">
-          <mxGeometry height="30" width="60" x="460" y="900" as="geometry" />
-        </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-42" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="ijDkrDuIP-wPQttzgr_I-25">
+
+        <object label="Oplossing implementeren" Action="704" id="bpmn_task_oplossing">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="60" width="140" x="240" y="300" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="" id="bpmn_gateway_kwaliteit">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="290" y="400" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="[na 2/3, 100% of 150% ETC]" Action="708" id="bpmn_event_etc">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catch;symbol=timer;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="540" y="200" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="Hoe lang denk je nog nodig te hebben?" Action="710" id="bpmn_task_inschatting">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="80" width="140" x="490" y="280" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="" Action="712" id="bpmn_gateway_haalbaarheid">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="540" y="400" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="Hoe heeft het zo lang kunnen duren?" Action="713" id="bpmn_task_verantwoording">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.task;html=1;verticalAlign=middle;align=center;whiteSpace=wrap;taskMarker=user;strokeWidth=2;" vertex="1">
+            <mxGeometry height="100" width="140" x="630" y="485" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="" id="bpmn_gateway_join">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=parallel;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="600" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="" id="bpmn_gateway_bijzonderheden">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="390" y="670" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="[volg de test]" Action="707F" id="bpmn_end_regulier">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="250" y="740" as="geometry" />
+          </mxCell>
+        </object>
+
+        <object label="[volg de meldplicht]" Action="707T" id="bpmn_end_bijzonderheden">
+          <mxCell parent="1" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;strokeWidth=2;" vertex="1">
+            <mxGeometry height="40" width="40" x="530" y="740" as="geometry" />
+          </mxCell>
+        </object>
+
+        <mxCell id="edge_start_to_fork" edge="1" parent="1" source="bpmn_start_event" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_fork">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-43" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="ijDkrDuIP-wPQttzgr_I-5">
+        <mxCell id="edge_fork_to_intake" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_task_intake">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ijDkrDuIP-wPQttzgr_I-44" edge="1" parent="1" source="ijDkrDuIP-wPQttzgr_I-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="ijDkrDuIP-wPQttzgr_I-25">
+        <mxCell id="edge_fork_to_etc" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_event_etc">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="edge_intake_to_oplossing" edge="1" parent="1" source="bpmn_task_intake" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_oplossing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_oplossing_to_kwaliteit" edge="1" parent="1" source="bpmn_task_oplossing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_kwaliteit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="[onvolledig]" id="edge_kwaliteit_onvolledig">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_kwaliteit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="bpmn_task_intake">
+            <mxGeometry relative="1" x="-0.8" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="200" y="420" />
+                <mxPoint x="200" y="230" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="[volledig]" id="edge_kwaliteit_volledig">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_kwaliteit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" target="bpmn_gateway_join">
+            <mxGeometry relative="1" x="-0.5" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <mxCell id="edge_etc_to_inschatting" edge="1" parent="1" source="bpmn_event_etc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_inschatting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_inschatting_to_haalbaarheid" edge="1" parent="1" source="bpmn_task_inschatting" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_haalbaarheid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="[haalbaar]" Action="712T" id="edge_haalbaarheid_haalbaar">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_haalbaarheid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="bpmn_gateway_join">
+            <mxGeometry relative="1" x="-0.5" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="[onhaalbaar]" Action="712F" id="edge_haalbaarheid_onhaalbaar">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_haalbaarheid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_task_verantwoording">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_verantwoording_to_join" edge="1" parent="1" source="bpmn_task_verantwoording" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="bpmn_gateway_join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_join_to_bijzonderheden" edge="1" parent="1" source="bpmn_gateway_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_bijzonderheden">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="[geen bijzonderheden]" id="edge_bijzonderheden_geen">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_bijzonderheden" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_end_regulier">
+            <mxGeometry relative="1" x="-0.3" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="270" y="690" />
+                <mxPoint x="270" y="740" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="[bijzonderheden]" id="edge_bijzonderheden_wel">
+          <mxCell edge="1" parent="1" source="bpmn_gateway_bijzonderheden" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_end_bijzonderheden">
+            <mxGeometry relative="1" x="-0.3" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="550" y="690" />
+                <mxPoint x="550" y="740" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
       </root>
     </mxGraphModel>
   </diagram>

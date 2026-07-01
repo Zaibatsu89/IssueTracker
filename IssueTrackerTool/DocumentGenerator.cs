@@ -14,7 +14,8 @@ namespace IssueTrackerTool
 {
     public static class DocumentGenerator
     {
-        private static readonly string[] Emojis = { "⏱️", "🫱🏻‍🫲🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
+        private static readonly string[] Emojis = { "⏱️", "🤝🏻", "🔬", "✏️", "⌨️", "🔎", "⚠️", "⚙️" };
+        private const string VariationSelector = "\uFE0F";
 
         public class PhaseInfo
         {
@@ -41,17 +42,17 @@ namespace IssueTrackerTool
         private static readonly List<PhaseInfo> Phases = new List<PhaseInfo>
         {
             new PhaseInfo { Number = 1, Name = "Intake", DrawioFilename = "1 Issue Tracker intake.drawio", Emoji = "⏱️", SectionKeyword = "intake" },
-            new PhaseInfo { Number = 2, Name = "Review aanpak", DrawioFilename = "2 Issue Tracker review aanpak.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review aanpak" },
+            new PhaseInfo { Number = 2, Name = "Review aanpak", DrawioFilename = "2 Issue Tracker review aanpak.drawio", Emoji = "🤝🏻", SectionKeyword = "review aanpak" },
             new PhaseInfo { Number = 3, Name = "Analyse", DrawioFilename = "3 Issue Tracker analyse.drawio", Emoji = "🔬", SectionKeyword = "analyse" },
-            new PhaseInfo { Number = 4, Name = "Review analyse", DrawioFilename = "4 Issue Tracker review analyse.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review analyse" },
+            new PhaseInfo { Number = 4, Name = "Review analyse", DrawioFilename = "4 Issue Tracker review analyse.drawio", Emoji = "🤝🏻", SectionKeyword = "review analyse" },
             new PhaseInfo { Number = 5, Name = "Ontwerp", DrawioFilename = "5 Issue Tracker ontwerp.drawio", Emoji = "✏️", SectionKeyword = "Ontwerp" },
-            new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review ontwerp" },
+            new PhaseInfo { Number = 6, Name = "Review ontwerp", DrawioFilename = "6 Issue Tracker review ontwerp.drawio", Emoji = "🤝🏻", SectionKeyword = "review ontwerp" },
             new PhaseInfo { Number = 7, Name = "Implementatie", DrawioFilename = "7 Issue Tracker implementatie.drawio", Emoji = "⌨️", SectionKeyword = "Implementatie" },
             new PhaseInfo { Number = 8, Name = "Test", DrawioFilename = "8 Issue Tracker test.drawio", Emoji = "🔎", SectionKeyword = "Test" },
-            new PhaseInfo { Number = 9, Name = "Meldplicht", DrawioFilename = "9 Issje Tracker meldplicht.drawio", Emoji = "⚠️", SectionKeyword = "meldplicht" },
-            new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "Review Final" },
+            new PhaseInfo { Number = 9, Name = "Meldplicht", DrawioFilename = "9 Issue Tracker meldplicht.drawio", Emoji = "⚠️", SectionKeyword = "meldplicht" },
+            new PhaseInfo { Number = 10, Name = "Review final", DrawioFilename = "10 Issue Tracker review final.drawio", Emoji = "🤝🏻", SectionKeyword = "Review Final" },
             new PhaseInfo { Number = 11, Name = "Special action", DrawioFilename = "11 Issue Tracker special action.drawio", Emoji = "⚙️", SectionKeyword = "special action" },
-            new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🫱🏻‍🫲🏻", SectionKeyword = "review special action" }
+            new PhaseInfo { Number = 12, Name = "Review special action", DrawioFilename = "12 Issue Tracker review special action.drawio", Emoji = "🤝🏻", SectionKeyword = "review special action" }
         };
 
         public static void Generate(string jiraIssue, string outputPath)
@@ -143,54 +144,23 @@ namespace IssueTrackerTool
                         }
                     }
 
-                    // Re-use standard review template if specific review isn't found
-                    if (matchingSection == null && phase.Emoji == "🫱🏻‍🫲🏻")
-                    {
-                        foreach (var s in actieSections)
-                        {
-                            if (s.Heading.ToLowerInvariant().Contains("review") && !s.Heading.ToLowerInvariant().Contains("final"))
-                            {
-                                matchingSection = s;
-                                break;
-                            }
-                        }
-                    }
-
                     if (matchingSection != null)
                     {
-                                                bool isFallback = !matchingSection.Heading.Contains(phase.Number.ToString() + "0") && 
-                                           !matchingSection.Heading.Contains(phase.Number.ToString());
-                         
                         string headingToUse = matchingSection.Heading;
-                        if (isFallback)
+                        if (!string.IsNullOrEmpty(headingToUse))
                         {
-                            string oldPrefix = matchingSection.Heading.Contains("201") ? "20" : 
-                                               matchingSection.Heading.Contains("401") ? "40" : "60";
-                            string newPrefix = phase.Number.ToString() + "0";
-                             
-                            headingToUse = headingToUse.Replace(oldPrefix, newPrefix)
-                                                      .Replace("review aanpak", phase.SectionKeyword.ToLowerInvariant())
-                                                      .Replace("review analyse", phase.SectionKeyword.ToLowerInvariant())
-                                                      .Replace("review ontwerp", phase.SectionKeyword.ToLowerInvariant());
+                            headingToUse = char.ToUpper(headingToUse[0]) + headingToUse.Substring(1);
                         }
-
                         AddHeading2(body, headingToUse, "2E75B6");
 
                         foreach (var action in matchingSection.Actions)
                         {
-                            string actionToUse = action;
-                            if (isFallback)
-                            {
-                                string oldPrefix = matchingSection.Heading.Contains("201") ? "20" : 
-                                                   matchingSection.Heading.Contains("401") ? "40" : "60";
-                                string newPrefix = phase.Number.ToString() + "0";
-                                actionToUse = actionToUse.Replace(oldPrefix, newPrefix);
-                            }
-
                             bool isSubHeader = false;
+                            string actionNorm = action.Replace(VariationSelector, "").TrimStart();
                             foreach (var em in Emojis)
                             {
-                                if (actionToUse.StartsWith(em, StringComparison.Ordinal))
+                                string emNorm = em.Replace(VariationSelector, "");
+                                if (actionNorm.StartsWith(emNorm, StringComparison.Ordinal))
                                 {
                                     isSubHeader = true;
                                     break;
@@ -199,9 +169,9 @@ namespace IssueTrackerTool
 
                             if (isSubHeader)
                             {
-                                AddParagraph(body, actionToUse, bold: true, colorHex: "1F497D", leftIndent: 180);
+                                AddParagraph(body, action, bold: true, colorHex: "1F497D", leftIndent: 180);
 
-                                var checks = FindChecksForAction(actionToUse, checkGroups, phase.Emoji, phase.SectionKeyword);
+                                var checks = FindChecksForAction(action, checkGroups, phase.Emoji, phase.SectionKeyword);
                                 if (checks.Count > 0)
                                 {
                                     foreach (var check in checks)
@@ -212,9 +182,9 @@ namespace IssueTrackerTool
                             }
                             else
                             {
-                                AddParagraph(body, actionToUse, leftIndent: 360);
+                                AddParagraph(body, action, leftIndent: 360);
 
-                                var checks = FindChecksForAction(actionToUse, checkGroups, phase.Emoji, phase.SectionKeyword);
+                                var checks = FindChecksForAction(action, checkGroups, phase.Emoji, phase.SectionKeyword);
                                 if (checks.Count > 0)
                                 {
                                     foreach (var check in checks)
@@ -283,29 +253,53 @@ namespace IssueTrackerTool
         {
             var sections = new List<PhaseSection>();
             PhaseSection currentSection = null;
+            string currentSectionKeyword = null;
 
             foreach (var p in paragraphs)
             {
-                bool isHeading = false;
+                bool hasEmoji = false;
+                string pNorm = p.Replace(VariationSelector, "").TrimStart();
+                string pEmoji = "";
                 foreach (var em in Emojis)
                 {
-                    if (p.StartsWith(em, StringComparison.Ordinal))
+                    string emNorm = em.Replace(VariationSelector, "");
+                    if (pNorm.StartsWith(emNorm, StringComparison.Ordinal))
                     {
-                        if (p.Contains("Status =") || p == "✏️ Ontwerp" || p == "⌨️ Implementatie" || p == "🔎 Test" || p == "🫱🏻‍🫲🏻 Review Final" || p == "⚠️ Meldplicht" || p == "⚙️ Special action")
+                        hasEmoji = true;
+                        pEmoji = emNorm;
+                        pNorm = pNorm.Substring(emNorm.Length).TrimStart();
+                        break;
+                    }
+                }
+
+                bool isHeading = false;
+                if (hasEmoji)
+                {
+                    var match = Regex.Match(pNorm, @"^(\d+)");
+                    if (match.Success)
+                    {
+                        int num = int.Parse(match.Groups[1].Value);
+                        if (num % 100 == 1)
                         {
                             isHeading = true;
-                            break;
+                            int phaseNum = num / 100;
+                            var matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum);
+                            if (matchedPhase != null && matchedPhase.SectionKeyword != currentSectionKeyword)
+                            {
+                                currentSectionKeyword = matchedPhase.SectionKeyword;
+                                currentSection = new PhaseSection { Heading = currentSectionKeyword };
+                                sections.Add(currentSection);
+                            }
                         }
                     }
                 }
 
-                if (isHeading)
+                if (currentSection != null && !isHeading)
                 {
-                    currentSection = new PhaseSection { Heading = p };
-                    sections.Add(currentSection);
-                }
-                else if (currentSection != null)
-                {
+                    if (p.ToLowerInvariant().Contains("status ="))
+                    {
+                        continue;
+                    }
                     currentSection.Actions.Add(p);
                 }
             }
@@ -333,27 +327,33 @@ namespace IssueTrackerTool
                 if (isActionRef)
                 {
                     // Dynamically track the review sub-phase based on action codes or action heading text!
-                    if (p.Contains("40") || p.ToLowerInvariant().Contains("review analyse"))
+                    string lowerP = p.ToLowerInvariant();
+                    PhaseInfo matchedPhase = null;
+                    var codeMatch = Regex.Match(p, @"\b\d{3,4}\b");
+                    if (codeMatch.Success)
                     {
-                        currentSubPhase = "review analyse";
+                        int phaseNum = int.Parse(codeMatch.Value) / 100;
+                        matchedPhase = Phases.FirstOrDefault(ph => ph.Number == phaseNum && ph.Emoji == "🤝🏻");
                     }
-                    else if (p.Contains("60") || p.ToLowerInvariant().Contains("review ontwerp"))
+
+                    if (matchedPhase == null)
                     {
-                        currentSubPhase = "review ontwerp";
+                        matchedPhase = Phases.FirstOrDefault(ph => 
+                            ph.Emoji == "🤝🏻" && lowerP.Contains(ph.Name.ToLowerInvariant())
+                        );
                     }
-                    else if (p.Contains("100") || p.ToLowerInvariant().Contains("review final"))
+
+                    if (matchedPhase != null)
                     {
-                        currentSubPhase = "review final";
+                        currentSubPhase = matchedPhase.SectionKeyword;
                     }
-                    else if (p.Contains("20") || p.ToLowerInvariant().Contains("review aanpak"))
-                    {
-                        currentSubPhase = "review aanpak";
-                    }
+
+                    bool isHandshake = p.StartsWith("🤝🏻", StringComparison.Ordinal);
 
                     currentGroup = new CheckGroup
                     {
                         Heading = p,
-                        SubPhase = p.StartsWith("🫱🏻‍🫲🏻", StringComparison.Ordinal) ? currentSubPhase : string.Empty
+                        SubPhase = isHandshake ? currentSubPhase : string.Empty
                     };
                     list.Add(currentGroup);
                 }
@@ -385,18 +385,37 @@ namespace IssueTrackerTool
             return sb.ToString();
         }
 
+        private static bool IsEmojiMatch(string heading, string phaseEmoji)
+        {
+            if (heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) return true;
+
+            bool isHeadingHandshake = heading.StartsWith("🤝🏻", StringComparison.Ordinal);
+            bool isPhaseHandshake = phaseEmoji == "🤝🏻";
+
+            return isHeadingHandshake && isPhaseHandshake;
+        }
+
         private static List<string> FindChecksForAction(string action, List<CheckGroup> checkGroups, string phaseEmoji, string sectionKeyword)
         {
             string normAction = Normalize(action);
             if (string.IsNullOrEmpty(normAction)) return new List<string>();
 
+            if (normAction == "ontwerpverwerken")
+            {
+                return new List<string>
+                {
+                    "Stappenplan op basis van de opdrachtbeschrijving opstellen",
+                    "Verifiëren of de stappen onderdeel van de opdracht zijn"
+                };
+            }
+
             foreach (var cg in checkGroups)
             {
                 // 1. Must match the phase emoji prefix
-                if (!cg.Heading.StartsWith(phaseEmoji, StringComparison.Ordinal)) continue;
+                if (!IsEmojiMatch(cg.Heading, phaseEmoji)) continue;
 
                 // 2. If it's a review phase, must match the specific review sub-phase keyword!
-                if (phaseEmoji == "🫱🏻‍🫲🏻")
+                if (phaseEmoji == "🤝🏻")
                 {
                     if (!string.IsNullOrEmpty(cg.SubPhase) && 
                         !string.IsNullOrEmpty(sectionKeyword) && 
@@ -458,6 +477,19 @@ namespace IssueTrackerTool
                 {
                     string action = (string)obj.Attribute("Action");
                     string label = (string)obj.Attribute("label");
+
+                    if (!string.IsNullOrEmpty(action))
+                    {
+                        string trimmedAction = action.Trim();
+                        if (trimmedAction.Length > 0)
+                        {
+                            char lastChar = trimmedAction[trimmedAction.Length - 1];
+                            if (char.IsLetter(lastChar) && lastChar != 'T' && lastChar != 'F')
+                            {
+                                Console.WriteLine($"[VALIDATIE WAARSCHUWING] Overtreding bedrijfsregel in '{Path.GetFileName(filePath)}': Action ID '{action}' eindigt met een ongeldige letter. Alleen T of F is toegestaan.");
+                            }
+                        }
+                    }
 
                     if (!string.IsNullOrEmpty(action) && !string.IsNullOrEmpty(label))
                     {
@@ -635,393 +667,6 @@ namespace IssueTrackerTool
             );
             textRun.AppendChild(textPr);
             textRun.AppendChild(new Text(text));
-        }
-
-        public static void PatchSourceDocuments()
-        {
-            string projectRoot = GetProjectRoot();
-            string actielijstPath = Path.Combine(projectRoot, "Actielijst.docx");
-            string checklijstPath = Path.Combine(projectRoot, "Checklijst.docx");
-
-            // Copy pristine files from template files in the project root to ensure clean state
-            string templateActielijst = Path.Combine(projectRoot, "Actielijst_Template.docx");
-            string templateChecklijst = Path.Combine(projectRoot, "Checklijst_Template.docx");
-            if (File.Exists(templateActielijst)) File.Copy(templateActielijst, actielijstPath, true);
-            if (File.Exists(templateChecklijst)) File.Copy(templateChecklijst, checklijstPath, true);
-
-            var phase2Mappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 A. Status = review aanpak", "🫱🏻‍🫲🏻 201. Status = review aanpak" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 202T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Bespreek oplossingsrichting, deliverables en ETC’s", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
-                { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 206F. De baas bepaald volgende status" },
-                { "🫱🏻‍🫲🏻 H. Volg de analyse", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
-            };
-
-            var phase3Mappings = new Dictionary<string, string>
-            {
-                { "🔬 A. Status = analyse", "🔬 301. Status = analyse" },
-                { "A. Aanleiding of probleem (BUGS) helder?", "🔬 302. Start timer (ETC)" },
-                { "B. Is het issue een Bug? (Bug(s) reproduceren!)", "🔬 303. Intake verwerken" },
-                { "C. Mogelijke oplossingen bedenken (minimaal 2, bestaande templates gebruiken!)", "🔬 304. Oplossing analyseren" },
-                { "D. Beste oplossing kiezen (KISS), onderbouwen waarom deze de voorkeur heeft", "🔬 305. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "E. Evaluatie eerste acties:", "🔬 306. Stop timer (ETC)" },
-                { "a. Hoe lang denk je nog nodig te hebben?", "🔬 307. Bijzonderheden gezien?" },
-                { "b. Past het binnen de 150%? Past het binnen de tijdtrigger? Zo ja, ga door", "🔬 307T. Volg de review analyse" },
-                { "F. Evaluatie laatste acties:", "🔬 312. Haal ik het?" },
-                { "a. Hoe heeft het zo lang kunnen duren?", "🔬 313. Hoe heeft het zo lang kunnen duren?" },
-                { "b. Zijn er snellere methodieken mogelijk?", "🔬 314. Stop timer (4 min)" },
-                { "c. Heb ik mijn antwoorden getest voordat ik JW spreek?", "🔬 315. Significant inzicht gekregen" },
-                { "🔬 308. Na 2/3 ETC Na 100% ETC Na 150% ETC", "🔬 313. Hoe heeft het zo lang kunnen duren?" },
-                { "🔬 309. Start timer (1 min)", "🔬 314. Stop timer (4 min)" },
-                { "🔬 310. Hoe lang denk je nog nodig te hebben?", "🔬 315. Significant inzicht gekregen" }
-            };
-
-            var phase4Mappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 A. Status = review analyse", "🫱🏻‍🫲🏻 401. Status = review analyse" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 402. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 402F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 402T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 404. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 406. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 406F. De baas bepaald volgende status en verifieert effort per resterende fase" },
-                { "🫱🏻‍🫲🏻 H. Volg het ontwerp", "🫱🏻‍🫲🏻 406T. Volg het ontwerp" }
-            };
-
-            var phase5Mappings = new Dictionary<string, string>
-            {
-                { "✏️ Ontwerp", "✏️ 501. Status = ontwerp" },
-                { "A. Concept gekozen, eventueel met pseudocode of direct implementatie", "✏️ 502. Start timer (ETC)" },
-                { "B. Implementatie van het gekozen template (op de kop af?)", "✏️ 503. Analyse verwerken" },
-                { "C. Confidence level vastgesteld", "✏️ 504. Oplossing ontwerpen" },
-                { "D. Is de pseudocode juist?", "✏️ 505. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "E. Zit alles op de juiste plek? Zo niet, bespreken en terug!", "✏️ 506. Stop timer (ETC)" },
-                { "F. Testplan voorgesteld", "✏️ 507. Bijzonderheden gezien?" },
-                { "G. Evaluatie eerste acties:", "✏️ 508. Na 2/3 ETC Na 100% ETC Na 150% ETC" },
-                { "a. Hoe lang denk je nog nodig te hebben?", "✏️ 509. Start timer (1 min)" },
-                { "b. Past het binnen de 150%? Tijdtrigger gehaald? Zo ja, verder", "✏️ 510. Hoe lang denk je nog nodig te hebben?" },
-                { "H. Evaluatie laatste acties:", "✏️ 512. Haal ik het?" },
-                { "a. Hoe heeft het zo lang kunnen duren?", "✏️ 513. Hoe heeft het zo lang kunnen duren?" },
-                { "b. Snellere methodieken mogelijk?", "✏️ 514. Stop timer (4 min)" },
-                { "c. Heb ik mijn antwoorden getest voordat ik JW spreek?", "✏️ 515. Significant inzicht gekregen" }
-            };
-
-            var phase6Mappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 A. Status = review ontwerp", "🫱🏻‍🫲🏻 601. Status = review ontwerp" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 602. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 602F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 602T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 F. Goedkeuring?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 G. De baas bepaald volgende status", "🫱🏻‍🫲🏻 606F. De baas bepaald volgende status en verifieert effort per resterende fase" },
-                { "🫱🏻‍🫲🏻 H. Volg de implementatie", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
-            };
-
-            var phase7Mappings = new Dictionary<string, string>
-            {
-                { "⌨️ Implementatie", "⌨️ 701. Status = implementatie" },
-                { "A. Na afronding van elke functie testen (steppend debuggen, check op werking en dekking)", "⌨️ 702. Start timer (ETC)" },
-                { "B. Houd ik me aan de eenvoudigste oplossing?", "⌨️ 703. Ontwerp verwerken" },
-                { "C. Houd ik me aan de code conventie?", "⌨️ 704. Oplossing implementeren" },
-                { "D. Alle IF en ELSE paden getest?", "⌨️ 705. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "E. Confidence level vastgesteld", "⌨️ 706. Stop timer (ETC)" },
-                { "F. Vragen stellen bij onduidelijkheden!", "⌨️ 707. Bijzonderheden gezien?" },
-                { "G. Evaluatie eerste acties:", "⌨️ 708. Na 2/3 ETC Na 100% ETC Na 150% ETC" },
-                { "a. Hoe lang denk je nog nodig te hebben?", "⌨️ 709. Start timer (1 min)" },
-                { "b. Past het binnen de 150%? Tijdtrigger gehaald? Zo ja, verder", "⌨️ 710. Hoe lang denk je nog nodig te hebben?" },
-                { "H. Evaluatie laatste acties:", "⌨️ 712. Haal ik het?" },
-                { "a. Hoe heeft het zo lang kunnen duren?", "⌨️ 713. Hoe heeft het zo lang kunnen duren?" },
-                { "b. Snellere methodieken mogelijk?", "⌨️ 714. Stop timer (4 min)" },
-                { "c. Heb ik mijn antwoorden getest voordat ik JW spreek?", "⌨️ 715. Significant inzicht gekregen" }
-            };
-
-            var phase8Mappings = new Dictionary<string, string>
-            {
-                { "🔎 Test", "🔎 801. Status = test" },
-                { "A. Functioneel testen voor ieder soort haard (indien beschikbaar)", "🔎 802. Start timer (ETC)" },
-                { "B. Test compleet uitgevoerd?", "🔎 803. Implementatie verwerken" },
-                { "C. Code review van eigen code", "🔎 804. Oplossing testen" },
-                { "D. Eigen review/ontwerp review", "🔎 805. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "E. Rekening gehouden met oudere systemen?", "🔎 806. Stop timer (ETC)" },
-                { "F. Heeft elke IF een ELSE?", "🔎 807. Bijzonderheden gezien?" },
-                { "a. Hoe lang denk je nog nodig te hebben?", "🔎 809. Start timer (1 min)" },
-                { "b. Past het binnen de 150%? Tijdtrigger gehaald? Zo ja, verder", "🔎 810. Hoe lang denk je nog nodig te hebben?" },
-                { "K. Evaluatie laatste acties:", "🔎 812. Haal ik het?" },
-                { "a. Hoe heeft het zo lang kunnen duren?", "🔎 813. Hoe heeft het zo lang kunnen duren?" },
-                { "b. Snellere methodieken mogelijk?", "🔎 814. Stop timer (4 min)" },
-                { "c. Heb ik mijn antwoorden getest voordat ik JW spreek?", "🔎 815. Significant inzicht gekregen" }
-            };
-
-            var phase9Mappings = new Dictionary<string, string>
-            {
-                { "⚠️ Meldplicht", "⚠️ 901. Status = meldplicht" },
-                { "⚠️ Status = meldplicht", "⚠️ 901. Status = meldplicht" },
-                { "A. Start timer (1 min)", "⚠️ 902. Start timer (1 min)" },
-                { "B. Stel vervolgplan op", "⚠️ 903. Stel vervolgplan op" },
-                { "C. Stop timer (1 min)", "⚠️ 904. Stop timer (1 min)" },
-                { "D. Is de baas aanwezig?", "⚠️ 905. Is de baas aanwezig?" },
-                { "E. Meteen meldplicht wanneer de baas aanwezig is", "⚠️ 905F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "F. Na dat de baas weer aanwezig is", "⚠️ 905T. Na dat de baas weer aanwezig is" },
-                { "G. Overleg vervolgplan", "⚠️ 906. Overleg vervolgplan" },
-                { "H. De baas bepaald volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaald volgende status en verifieert effort per resterende fase" }
-            };
-
-            var phase10Mappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 Review Final", "🫱🏻‍🫲🏻 1001. Status = review final" },
-                { "A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1004. Demonstratie van de oplossing geven" },
-                { "B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" }
-            };
-
-            var phase11Mappings = new Dictionary<string, string>
-            {
-                { "⚙️ Special action", "⚙️ 1101. Status = special action" },
-                { "⚙️ Status = special action", "⚙️ 1101. Status = special action" },
-                { "A. Start timer (ETC)", "⚙️ 1102. Start timer (ETC)" },
-                { "B. Intake verwerken", "⚙️ 1103. Intake verwerken" },
-                { "C. Oplossing implementeren", "⚙️ 1104. Oplossing implementeren" },
-                { "D. Evalueer of de deliverables correct en volledig zijn afgerond", "⚙️ 1105. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "E. Stop timer (ETC)", "⚙️ 1106. Stop timer (ETC)" },
-                { "F. Bijzonderheden gezien?", "⚙️ 1107. Bijzonderheden gezien?" },
-                { "G. Volg de meldplicht", "⚙️ 1107T. Volg de meldplicht" },
-                { "H. Volg de review special action", "⚙️ 1107F. Volg de review special action" },
-                { "I. Na 2/3 ETC Na 100% ETC Na 150% ETC", "⚙️ 1108. Na 2/3 ETC Na 100% ETC Na 150% ETC" },
-                { "J. Start timer (1 min)", "⚙️ 1109. Start timer (1 min)" },
-                { "K. Hoe lang denk je nog nodig te hebben?", "⚙️ 1110. Hoe lang denk je nog nodig te hebben?" },
-                { "L. sa: m.", "⚙️ 1111. sa: m." },
-                { "M. Haal ik het?", "⚙️ 1112. Haal ik het?" },
-                { "N. Stop timer (1 min)", "⚙️ 1112T. Stop timer (1 min)" },
-                { "O. Stop timer (1 min) Start timer (4 min)", "⚙️ 1112F. Stop timer (1 min) Start timer (4 min)" },
-                { "P. Hoe heeft het zo lang kunnen duren?", "⚙️ 1113. Hoe heeft het zo lang kunnen duren?" },
-                { "Q. Stop timer (4 min)", "⚙️ 1114. Stop timer (4 min)" },
-                { "R. Significant inzicht gekregen", "⚙️ 1115. Significant inzicht gekregen" }
-            };
-
-            var phase12Mappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 A. Status = review special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
-                { "🫱🏻‍🫲🏻 B. Is de baas aanwezig?", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 C. Meteen meldplicht wanneer de baas aanwezig is", "🫱🏻‍🫲🏻 1202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 D. Na dat de baas weer aanwezig is", "🫱🏻‍🫲🏻 1202T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 E. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 F. De baas bepaald volgende status", "🫱🏻‍🫲🏻 1206. De baas bepaald volgende status en verifieert effort per resterende phase" }
-            };
-
-            var phase1CheckMappings = new Dictionary<string, string>
-            {
-                { "⏱️ 1. Jira-uitvoerder is medewerker", "⏱️ 101. Status = intake" },
-                { "⏱️ 2. Jira-status is Toegewezen", "⏱️ 101. Status = intake" },
-                { "⏱️ 3. Jira-status wordt Intake", "⏱️ 101. Status = intake" },
-                { "⏱️ 4. Start > Klok > menu > Timer", "⏱️ 102. Start timer" },
-                { "⏱️ 5. Start 5 min. > Op voorgrond behouden", "⏱️ 102. Start timer" },
-                { "⏱️ 6. Jira-stopwatch wordt gestart", "⏱️ 102. Start timer" },
-                { "⏱️ 7. Ik heb de oplossingsrichting geschreven", "⏱️ 103. Oplossingsrichting:" },
-                { "⏱️ 8. Ik heb de deliverable specificatie geschreven", "⏱️ 104. Deliverable specificatie:" },
-                { "⏱️ 9. Ik heb de initiële schatting geschreven", "⏱️ 105. Initiële schatting:" },
-                { "⏱️ 10. Tijdtrigger na 5 minuten opvolgen", "⏱️ 106. Stop timer" },
-                { "⏱️ 11. Pauze > Opnieuw instellen > Terug naar volledige weergave", "⏱️ 106. Stop timer" },
-                { "⏱️ 12. Klok minimaliseren", "⏱️ 106. Stop timer" },
-                { "⏱️ 13. Naar volgende flowchartpagina navigeren", "⏱️ 107. Bijzonderheden gezien?" }
-            };
-
-            var phase2CheckMappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker", "🫱🏻‍🫲🏻 201. Status = review aanpak" },
-                { "🫱🏻‍🫲🏻 2. Jira-status is Intake", "🫱🏻‍🫲🏻 201. Status = review aanpak" },
-                { "🫱🏻‍🫲🏻 3. Jira-status wordt Review aanpak", "🫱🏻‍🫲🏻 201. Status = review aanpak" },
-                { "🫱🏻‍🫲🏻 4. Baas is mondeling beschikbaar?", "🫱🏻‍🫲🏻 202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 5. Baas is schriftelijk beschikbaar", "🫱🏻‍🫲🏻 202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 6. Aanwezigheid monitoren", "🫱🏻‍🫲🏻 202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 202T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeurig vervolg", "🫱🏻‍🫲🏻 204. Bespreek oplossingsrichting, deliverables en ETC’s" },
-                { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 206. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 206F. De baas bepaald volgende status" },
-                { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 206T. Volg de analyse" }
-            };
-
-            var phase3CheckMappings = new Dictionary<string, string>
-            {
-                { "🔬 A. Aanleiding of probleem (BUGS) helder?", "🔬 302. Start timer (ETC)" },
-                { "🔬 B. Is het issue een Bug? (Bug(s) reproduceren!)", "🔬 303. Intake verwerken" },
-                { "🔬 C. Mogelijke oplossingen bedenken (minimaal 2, bestaande templates gebruiken!)", "🔬 304. Oplossing analyseren" },
-                { "🔬 D. Beste oplossing kiezen (KISS), onderbouwen waarom deze de voorkeur heeft", "🔬 305. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "🔬 E. Evaluatie eerste acties:", "🔬 310. Hoe lang denk je nog nodig te hebben?" },
-                { "🔬 F. Evaluatie laatste acties:", "🔬 313. Hoe heeft het zo lang kunnen duren?" }
-            };
-
-            var phase5CheckMappings = new Dictionary<string, string>
-            {
-                { "✏️ A. Concept gekozen, eventueel met pseudocode of direct implementatie", "✏️ 502. Start timer (ETC)" },
-                { "✏️ B. Implementatie van het gekozen template (op de kop af?)", "✏️ 503. Analyse verwerken" },
-                { "✏️ C. Confidence level vastgesteld", "✏️ 504. Oplossing ontwerpen" },
-                { "✏️ D. Is de pseudocode juist?", "✏️ 505. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "✏️ E. Zit alles op de juiste plek? Zo niet, bespreken og terug!", "✏️ 506. Stop timer (ETC)" },
-                { "✏️ E. Zit alles op de juiste plek? Zo niet, bespreken en terug!", "✏️ 506. Stop timer (ETC)" },
-                { "✏️ G. Evaluatie eerste acties:", "✏️ 510. Hoe lang denk je nog nodig te hebben?" },
-                { "✏️ H. Evaluatie laatste acties:", "✏️ 513. Hoe heeft het zo lang kunnen duren?" }
-            };
-
-            var phase6CheckMappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker", "🫱🏻‍🫲🏻 601. Status = review ontwerp" },
-                { "🫱🏻‍🫲🏻 2. Jira-status is Ontwerp", "🫱🏻‍🫲🏻 601. Status = review ontwerp" },
-                { "🫱🏻‍🫲🏻 3. Jira-status wordt Review ontwerp", "🫱🏻‍🫲🏻 601. Status = review ontwerp" },
-                { "🫱🏻‍🫲🏻 4. Baas is mondeling beschikbaar?", "🫱🏻‍🫲🏻 602. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 5. Baas is schriftelijk beschikbaar", "🫱🏻‍🫲🏻 602F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 6. Aanwezigheid monitoren", "🫱🏻‍🫲🏻 602F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 602T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 8. Ik mail naar baas", "🫱🏻‍🫲🏻 604. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 9. Resultaten zijn goedgekeurd?", "🫱🏻‍🫲🏻 606. Goedkeuring?" },
-                { "🫱🏻‍🫲🏻 10. Terug naar vorige flowchartpagina navigeren", "🫱🏻‍🫲🏻 606F. De baas bepaald volgende status en verifieert effort per resterende fase" },
-                { "🫱🏻‍🫲🏻 11. Naar volgende flowchartpagina navigeren", "🫱🏻‍🫲🏻 606T. Volg de implementatie" }
-            };
-
-            var phase7CheckMappings = new Dictionary<string, string>
-            {
-                { "⌨️ A. Na afronding van elke functie testen (steppend debuggen, check op werking en dekking)", "⌨️ 702. Start timer (ETC)" },
-                { "⌨️ B. Houd ik me aan de eenvoudigste oplossing?", "⌨️ 703. Ontwerp verwerken" },
-                { "⌨️ C. Houd ik me aan de code conventie?", "⌨️ 704. Oplossing implementeren" },
-                { "⌨️ D. Alle IF en ELSE paden getest?", "⌨️ 705. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "⌨️ E. Confidence level vastgesteld", "⌨️ 706. Stop timer (ETC)" },
-                { "⌨️ F. Vragen stellen bij onduidelijkheden!", "⌨️ 707. Bijzonderheden gezien?" },
-                { "⌨️ G. Evaluatie eerste acties:", "⌨️ 710. Hoe lang denk je nog nodig te hebben?" },
-                { "⌨️ H. Evaluatie laatste acties:", "⌨️ 713. Hoe heeft het zo lang kunnen duren?" }
-            };
-
-            var phase8CheckMappings = new Dictionary<string, string>
-            {
-                { "🔎 A. Functioneel testen voor ieder soort haard (indien beschikbaar)", "🔎 802. Start timer (ETC)" },
-                { "🔎 B. Test compleet uitgevoerd?", "🔎 803. Implementatie verwerken" },
-                { "🔎 C. Code review van eigen code", "🔎 804. Oplossing testen" },
-                { "🔎 D. Eigen review/ontwerp review", "🔎 805. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "🔎 E. Rekening gehouden met oudere systemen?", "🔎 806. Stop timer (ETC)" },
-                { "🔎 F. Heeft elke IF een ELSE?", "🔎 807. Bijzonderheden gezien?" },
-                { "🔎 K. Evaluatie laatste acties:", "🔎 813. Hoe heeft het zo lang kunnen duren?" }
-            };
-
-            var phase9CheckMappings = new Dictionary<string, string>
-            {
-                { "⚠️ A. Is de baas aanwezig?", "⚠️ 905. Is de baas aanwezig?" },
-                { "⚠️ B. Meteen meldplicht wanneer de baas aanwezig is", "⚠️ 905F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "⚠️ C. Na dat de baas weer aanwezig is", "⚠️ 905T. Na dat de baas weer aanwezig is" },
-                { "⚠️ D. Overleg vervolgplan", "⚠️ 906. Overleg vervolgplan" },
-                { "⚠️ E. De baas bepaald volgende status en verifieert effort per resterende fase", "⚠️ 907. De baas bepaald volgende status en verifieert effort per resterende fase" }
-            };
-
-            var phase10CheckMappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 A. Demonstratie van de oplossing geven", "🫱🏻‍🫲🏻 1004. Demonstratie van de oplossing geven" },
-                { "🫱🏻‍🫲🏻 B. Review met Jeroen uitvoeren", "🫱🏻‍🫲🏻 1005. Review met Jeroen uitvoeren" }
-            };
-
-            var phase11CheckMappings = new Dictionary<string, string>
-            {
-                { "⚙️ A. Start timer (ETC)", "⚙️ 1102. Start timer (ETC)" },
-                { "⚙️ B. Intake verwerken", "⚙️ 1103. Intake verwerken" },
-                { "⚙️ C. Oplossing implementeren", "⚙️ 1104. Oplossing implementeren" },
-                { "⚙️ D. Evalueer of de deliverables correct en volledig zijn afgerond", "⚙️ 1105. Evalueer of de deliverables correct en volledig zijn afgerond" },
-                { "⚙️ E. Stop timer (ETC)", "⚙️ 1106. Stop timer (ETC)" },
-                { "⚙️ F. Bijzonderheden gezien?", "⚙️ 1107. Bijzonderheden gezien?" },
-                { "⚙️ I. Na 2/3 ETC Na 100% ETC Na 150% ETC", "⚙️ 1108. Na 2/3 ETC Na 100% ETC Na 150% ETC" },
-                { "⚙️ K. Hoe lang denk je nog nodig te hebben?", "⚙️ 1110. Hoe lang denk je nog nodig te hebben?" },
-                { "⚙️ P. Hoe heeft het zo lang kunnen duren?", "⚙️ 1113. Hoe heeft het zo lang kunnen duren?" }
-            };
-
-            var phase12CheckMappings = new Dictionary<string, string>
-            {
-                { "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker", "🫱🏻‍🫲🏻 1201. Status = review special action" },
-                { "🫱🏻‍🫲🏻 2. Jira-status is Special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
-                { "🫱🏻‍🫲🏻 3. Jira-status wordt Review special action", "🫱🏻‍🫲🏻 1201. Status = review special action" },
-                { "🫱🏻‍🫲🏻 4. Baas is mondeling beschikbaar?", "🫱🏻‍🫲🏻 1202. Is de baas aanwezig?" },
-                { "🫱🏻‍🫲🏻 5. Baas is schriftelijk beschikbaar", "🫱🏻‍🫲🏻 1202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 6. Aanwezigheid monitoren", "🫱🏻‍🫲🏻 1202F. Meteen meldplicht wanneer de baas aanwezig is" },
-                { "🫱🏻‍🫲🏻 7. Baas is mondeling beschikbaar", "🫱🏻‍🫲🏻 1202T. Na dat de baas weer aanwezig is" },
-                { "🫱🏻‍🫲🏻 8. Overleg resultaten voor goedkeuring vervolg", "🫱🏻‍🫲🏻 1204. Overleg resultaten voor goedkeuring vervolg" },
-                { "🫱🏻‍🫲🏻 10. De baas bepaald volgende status en verifieert effort per resterende fase", "🫱🏻‍🫲🏻 1206. De baas bepaald volgende status en verifieert effort per resterende phase" }
-            };
-
-            PatchFileHeadings(actielijstPath, phase2Mappings, "🫱🏻‍🫲🏻 A. Status = review aanpak");
-            PatchFileHeadings(actielijstPath, phase3Mappings, "🔬 A. Status = analyse");
-            PatchFileHeadings(actielijstPath, phase4Mappings, "🫱🏻‍🫲🏻 A. Status = review analyse");
-            PatchFileHeadings(actielijstPath, phase5Mappings, "✏️ Ontwerp");
-            PatchFileHeadings(actielijstPath, phase6Mappings, "🫱🏻‍🫲🏻 A. Status = review ontwerp");
-            PatchFileHeadings(actielijstPath, phase7Mappings, "⌨️ Implementatie");
-            PatchFileHeadings(actielijstPath, phase8Mappings, "🔎 Test");
-            PatchFileHeadings(actielijstPath, phase9Mappings, "⚠️ Meldplicht");
-            PatchFileHeadings(actielijstPath, phase10Mappings, "🫱🏻‍🫲🏻 Review Final");
-            PatchFileHeadings(actielijstPath, phase11Mappings, "⚙️ Special action");
-            PatchFileHeadings(actielijstPath, phase12Mappings, "🫱🏻‍🫲🏻 A. Status = review special action");
-            PatchFileHeadings(checklijstPath, phase1CheckMappings, "⏱️ 1. Jira-uitvoerder is medewerker");
-            PatchFileHeadings(checklijstPath, phase2CheckMappings, "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker");
-            PatchFileHeadings(checklijstPath, phase3CheckMappings, "🔬 A. Aanleiding of probleem (BUGS) helder?");
-            PatchFileHeadings(checklijstPath, phase5CheckMappings, "✏️ A. Concept gekozen, eventueel met pseudocode of direct implementatie");
-            PatchFileHeadings(checklijstPath, phase6CheckMappings, "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker");
-            PatchFileHeadings(checklijstPath, phase7CheckMappings, "⌨️ A. Na afronding van elke functie testen (steppend debuggen, check op werking en dekking)");
-            PatchFileHeadings(checklijstPath, phase8CheckMappings, "🔎 A. Functioneel testen voor ieder soort haard (indien beschikbaar)");
-            PatchFileHeadings(checklijstPath, phase9CheckMappings, "⚠️ A. Is de baas aanwezig?");
-            PatchFileHeadings(checklijstPath, phase10CheckMappings, "🫱🏻‍🫲🏻 A. Demonstratie van de oplossing geven");
-            PatchFileHeadings(checklijstPath, phase11CheckMappings, "⚙️ A. Start timer (ETC)");
-            PatchFileHeadings(checklijstPath, phase12CheckMappings, "🫱🏻‍🫲🏻 1. Jira-uitvoerder is medewerker");
-        }
-
-        private static void PatchFileHeadings(string filePath, Dictionary<string, string> mappings, string startMarker)
-        {
-            if (!File.Exists(filePath)) return;
-
-            using (WordprocessingDocument doc = WordprocessingDocument.Open(filePath, true))
-            {
-                var body = doc.MainDocumentPart.Document.Body;
-                bool inPhase = false;
-
-                foreach (var p in body.Descendants<Paragraph>())
-                {
-                    var sb = new StringBuilder();
-                    var textElements = p.Descendants<Text>().ToList();
-                    foreach (var t in textElements)
-                    {
-                        sb.Append(t.Text);
-                    }
-                    string txt = sb.ToString().Trim();
-
-                    if (string.IsNullOrEmpty(txt)) continue;
-
-                    if (txt.Contains(startMarker) || (startMarker == "🔬" && txt.StartsWith("🔬")))
-                    {
-                        inPhase = true;
-                    }
-                    else if (inPhase)
-                    {
-                        foreach (var em in Emojis)
-                        {
-                            if (em != "🔬" && txt.StartsWith(em, StringComparison.Ordinal) && (txt.Contains("Status =") || txt.Contains("Ontwerp") || txt.Contains("Test") || txt.Contains("Review Final")) && !txt.Contains(startMarker))
-                            {
-                                inPhase = false;
-                                break;
-                            }
-                        }
-                    }
-
-                    if (inPhase && mappings.ContainsKey(txt))
-                    {
-                        string newText = mappings[txt];
-                        if (textElements.Count > 0)
-                        {
-                            Console.WriteLine("C# Patching {0} -> {1}", txt, newText);
-                            textElements[0].Text = newText;
-                            for (int i = 1; i < textElements.Count; i++)
-                            {
-                                textElements[i].Text = string.Empty;
-                            }
-                        }
-                    }
-                }
-                doc.MainDocumentPart.Document.Save();
-            }
         }
     }
 }
