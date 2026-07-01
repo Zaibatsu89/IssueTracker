@@ -40,7 +40,8 @@ def wrap_text(text, max_width=20):
             current_length = len(word)
     if current_line:
         lines.append(" ".join(current_line))
-    return "<br>".join(lines)
+    # Fixed "error on line 1 at column 67812: Opening and ending tag mismatch: br line 1 and p"
+    return "<br />".join(lines)
 
 def get_mxgraph_model(xml_path):
     tree = ET.parse(xml_path)

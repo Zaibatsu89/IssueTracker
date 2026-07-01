@@ -1,15 +1,15 @@
 %%{init: {'theme': 'default', 'themeVariables': {'fontFamily': 'sans-serif'}, 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
-    bpmn_start_event(["[meldplicht<br>getriggerd]"])
+    bpmn_start_event(["[meldplicht<br />getriggerd]"])
     bpmn_task_start_timer["Start timer (5 min)"]
     bpmn_task_stel_plan_op["Stel vervolgplan op"]
     bpmn_task_stop_timer["Stop timer (5 min)"]
-    bpmn_task_baas_aanwezig["Is de baas aanwezig?<br>(indien niet<br>aanwezig: wachten)"]
+    bpmn_task_baas_aanwezig["Is de baas aanwezig?<br />(indien niet<br />aanwezig: wachten)"]
     bpmn_task_overleg["Overleg vervolgplan"]
-    bpmn_task_status["De baas bepaalt<br>volgende status"]
-    bpmn_task_effort["De baas verifieert<br>effort per<br>resterende fase"]
-    bpmn_task_volg_status["Volg de afgestemde<br>status"]
-    bpmn_end_event(["[meldplicht<br>voltooid]"])
+    bpmn_task_status["De baas bepaalt<br />volgende status"]
+    bpmn_task_effort["De baas verifieert<br />effort per<br />resterende fase"]
+    bpmn_task_volg_status["Volg de afgestemde<br />status"]
+    bpmn_end_event(["[meldplicht<br />voltooid]"])
     mIc6XLMKuAxiAPNymMe0-20["Medewerker"]
     mIc6XLMKuAxiAPNymMe0-21["Opdrachtgever"]
     bpmn_start_event --> bpmn_task_start_timer

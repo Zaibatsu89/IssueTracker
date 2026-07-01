@@ -4,17 +4,17 @@ flowchart TD
     bpmn_gateway_fork{"+"}
     bpmn_task_intake["Intake verwerken"]
     bpmn_task_oplossing["Oplossing analyseren"]
-    bpmn_event_etc(("[na 2/3, 100% of<br>150% ETC]"))
-    bpmn_task_inschatting["Bepalen resterende<br>benodigde tijd (a:<br>m.)"]
-    bpmn_task_verantwoording["Verantwoorden<br>tijdsduur (Hoe heeft<br>het zo lang kunnen<br>duren?)"]
+    bpmn_event_etc(("[na 2/3, 100% of<br />150% ETC]"))
+    bpmn_task_inschatting["Bepalen resterende<br />benodigde tijd (a:<br />m.)"]
+    bpmn_task_verantwoording["Verantwoorden<br />tijdsduur (Hoe heeft<br />het zo lang kunnen<br />duren?)"]
     bpmn_gateway_join{"+"}
-    bpmn_end_regulier(["[analyse succesvol<br>afgerond]"])
-    bpmn_end_bijzonderheden(["[analyse afgerond<br>met melding]"])
+    bpmn_end_regulier(["[analyse succesvol<br />afgerond]"])
+    bpmn_end_bijzonderheden(["[analyse afgerond<br />met melding]"])
     bpmn_gateway_kwaliteit -->|"[onvolledig]"| bpmn_task_intake
     bpmn_gateway_kwaliteit -->|"[volledig]"| bpmn_gateway_join
     bpmn_gateway_haalbaarheid -->|"[haalbaar]"| bpmn_gateway_join
     bpmn_gateway_haalbaarheid -->|"[onhaalbaar]"| bpmn_task_verantwoording
-    bpmn_gateway_bijzonderheden -->|"[geen<br>bijzonderheden]"| bpmn_end_regulier
+    bpmn_gateway_bijzonderheden -->|"[geen<br />bijzonderheden]"| bpmn_end_regulier
     bpmn_gateway_bijzonderheden -->|"[bijzonderheden]"| bpmn_end_bijzonderheden
     bpmn_start_event --> bpmn_gateway_fork
     bpmn_gateway_fork --> bpmn_task_intake
