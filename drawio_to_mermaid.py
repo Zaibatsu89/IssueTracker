@@ -58,9 +58,18 @@ def parse_elements(root_el):
         if is_vertex:
             shape = 'rectangle'
             
-            # Ondersteuning voor zowel BPMN als standaard flowchartvormen
-            if 'shape=mxgraph.bpmn.gateway' in style or 'shape=mxgraph.flowchart.decision' in style or 'decision' in style:
+            # BPMN / Flowchart Gateways en beslissingen
+            if 'shape=mxgraph.bpmn.gateway' in style or 'mxgraph.bpmn.gateway2' in style or 'shape=mxgraph.flowchart.decision' in style or 'decision' in style:
                 shape = 'decision'
+                # Automatische gateway-labeling bij ontbrekende tekst
+                if not cleaned_lbl:
+                    if 'parallel' in style or 'gwType=parallel' in style or 'gatewayType=parallel' in style:
+                        cleaned_lbl = "+"
+                    elif 'inclusive' in style or 'gwType=inclusive' in style or 'gatewayType=inclusive' in style:
+                        cleaned_lbl = "o"
+                    elif 'exclusive' in style or 'gwType=exclusive' in style or 'gatewayType=exclusive' in style:
+                        if 'exclusiveMarked' in style:
+                            cleaned_lbl = "x"
             elif ('shape=mxgraph.bpmn.event' in style and ('end' in outline or 'outline=end' in style)) or 'shape=mxgraph.flowchart.terminator' in style or 'terminator' in style:
                 shape = 'terminator'
             elif ('shape=mxgraph.bpmn.event' in style and ('standard' in outline or 'outline=standard' in style)) or 'shape=mxgraph.flowchart.start_2' in style or 'start' in style:

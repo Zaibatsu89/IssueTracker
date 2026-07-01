@@ -1,10 +1,12 @@
 flowchart TD
     bpmn_start_event(["[ontwerp goedgekeurd]"])
+    bpmn_gateway_fork{"+"}
     bpmn_task_intake["Ontwerp verwerken"]
     bpmn_task_oplossing["Oplossing implementeren"]
     bpmn_event_etc(("[na 2/3, 100% of 150% ETC]"))
     bpmn_task_inschatting["Hoe lang denk je nog nodig te hebben?"]
     bpmn_task_verantwoording["Hoe heeft het zo lang kunnen duren?"]
+    bpmn_gateway_join{"+"}
     bpmn_end_regulier(["[volg de test]"])
     bpmn_end_bijzonderheden(["[volg de meldplicht]"])
     bpmn_gateway_kwaliteit -->|"[onvolledig]"| bpmn_task_intake

@@ -1,7 +1,9 @@
 flowchart TD
     bpmn_start_event(["[issue geanalyseerd]"])
     bpmn_task_intake["Uitvoeren gezamenlijke analyse"]
+    bpmn_gateway_fork{"+"}
     bpmn_event_notification(("[automatische notificatie verzonden]"))
+    bpmn_gateway_join{"+"}
     bpmn_task_beoordeling["Beoordelen resultaat"]
     bpmn_task_analyse["Starten ontwerp"]
     bpmn_end_event(["[ontwerp gestart]"])

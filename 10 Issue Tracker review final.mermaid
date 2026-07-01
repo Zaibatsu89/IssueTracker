@@ -1,7 +1,9 @@
 flowchart TD
     bpmn_start_event(["[issue getest]"])
     bpmn_task_intake["Demonstratie van de oplossing geven"]
+    bpmn_gateway_fork{"+"}
     bpmn_event_notification(("[automatische notificatie verzonden]"))
+    bpmn_gateway_join{"+"}
     bpmn_task_beoordeling["Review met Jeroen uitvoeren"]
     bpmn_task_analyse["Zet Jira uitvoerder op de baas"]
     bpmn_end_event(["[issue gesloten]"])
