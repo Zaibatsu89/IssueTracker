@@ -4,10 +4,13 @@ flowchart TD
     bpmn_gateway_fork{"+"}
     bpmn_task_intake["Intake verwerken"]
     bpmn_task_oplossing["Oplossing analyseren"]
+    bpmn_gateway_kwaliteit{"Volledig?"}
     bpmn_event_etc(("[na 2/3, 100% of\n150% ETC]"))
     bpmn_task_inschatting["Bepalen resterende\nbenodigde tijd (a:\nm.)"]
+    bpmn_gateway_haalbaarheid{"Haalbaar?"}
     bpmn_task_verantwoording["Verantwoorden\ntijdsduur (Hoe heeft\nhet zo lang kunnen\nduren?)"]
     bpmn_gateway_join{"+"}
+    bpmn_gateway_bijzonderheden{"Bijzonder- heden?"}
     bpmn_end_regulier(["[analyse succesvol\nafgerond]"])
     bpmn_end_bijzonderheden(["[analyse afgerond\nmet melding]"])
     bpmn_gateway_kwaliteit -->|"[onvolledig]"| bpmn_task_intake
