@@ -145,8 +145,8 @@ def parse_elements(root_el):
 
 def generate_mermaid(nodes, edges, max_width=20):
     lines = [
-        # Gebruik dubbele aanhalingstekens binnen de directive
-        '%%{init: {"theme": "default", "themeVariables": {"fontFamily": "sans-serif"}, "flowchart": {"htmlLabels": false}}}%%',
+        # Configureer htmlLabels op zowel root-niveau als flowchart-niveau voor maximale parser-compatibiliteit
+        '%%{init: {"htmlLabels": false, "theme": "default", "themeVariables": {"fontFamily": "sans-serif"}, "flowchart": {"htmlLabels": false}}}%%',
         "flowchart TD"
     ]
     
