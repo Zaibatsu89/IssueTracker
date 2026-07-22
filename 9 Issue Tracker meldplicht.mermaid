@@ -4,7 +4,8 @@ flowchart TD
     bpmn_task_start_timer["Start timer (5 min)"]
     bpmn_task_stel_plan_op["Stel vervolgplan op"]
     bpmn_task_stop_timer["Stop timer (5 min)"]
-    bpmn_task_baas_aanwezig["Is de baas aanwezig?\n(indien niet\naanwezig: wachten)"]
+    bpmn_gateway_baas_aanwezig{"Is de baas aanwezig?"}
+    bpmn_task_wachten["Wachten"]
     bpmn_task_overleg["Overleg vervolgplan"]
     bpmn_task_status["De baas bepaalt\nvolgende status"]
     bpmn_task_effort["De baas verifieert\neffort per\nresterende fase"]
@@ -15,8 +16,10 @@ flowchart TD
     bpmn_start_event --> bpmn_task_start_timer
     bpmn_task_start_timer --> bpmn_task_stel_plan_op
     bpmn_task_stel_plan_op --> bpmn_task_stop_timer
-    bpmn_task_stop_timer --> bpmn_task_baas_aanwezig
-    bpmn_task_baas_aanwezig --> bpmn_task_overleg
+    bpmn_task_stop_timer --> bpmn_gateway_baas_aanwezig
+    bpmn_gateway_baas_aanwezig -->|ja| bpmn_task_overleg
+    bpmn_gateway_baas_aanwezig -->|nee| bpmn_task_wachten
+    bpmn_task_wachten --> bpmn_gateway_baas_aanwezig
     bpmn_task_overleg --> bpmn_task_status
     bpmn_task_status --> bpmn_task_effort
     bpmn_task_effort --> bpmn_task_volg_status
