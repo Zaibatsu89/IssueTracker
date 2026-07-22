@@ -169,9 +169,8 @@ def generate_mermaid(nodes, edges, max_width=20):
         if node_id not in connected_nodes and is_plain_text:
             continue
             
-        label_escaped = label.replace('\\', '\\\\').replace('"', '\\"') if label else " "
-            
-        wrapped_label = wrap_text(label, max_width)
+        label_for_wrap = label.replace('\\', '\\\\') if label else " "
+        wrapped_label = wrap_text(label_for_wrap, max_width)
         label_escaped = wrapped_label.replace('"', '\\"')
         
         if shape == 'decision':
@@ -192,7 +191,7 @@ def generate_mermaid(nodes, edges, max_width=20):
         
         if source in nodes and target in nodes:
             if label:
-                wrapped_label = wrap_text(label, max_width)
+                wrapped_label = wrap_text(label.replace('\\', '\\\\'), max_width)
                 label_escaped = wrapped_label.replace('"', '\\"')
                 lines.append(f'    {source} -->|"{label_escaped}"| {target}')
             else:
