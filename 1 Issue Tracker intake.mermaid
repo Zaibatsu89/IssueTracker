@@ -19,7 +19,7 @@ flowchart TD
     bpmn_task_deliverables --> bpmn_task_planning
     bpmn_task_planning --> bpmn_task_stop_timer
     bpmn_task_stop_timer --> bpmn_gateway_bijzonderheden
-    bpmn_gateway_bijzonderheden --> bpmn_task_intake_voltooid
+    bpmn_gateway_bijzonderheden -- Nee --> bpmn_task_intake_voltooid
     bpmn_task_intake_voltooid --> bpmn_end_aanpak
-    bpmn_gateway_bijzonderheden --> bpmn_task_meldplicht_getriggerd
+    bpmn_gateway_bijzonderheden -- Ja --> bpmn_task_meldplicht_getriggerd
     bpmn_task_meldplicht_getriggerd --> bpmn_end_meldplicht
