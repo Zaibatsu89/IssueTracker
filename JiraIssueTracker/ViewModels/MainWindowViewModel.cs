@@ -16,6 +16,7 @@ public sealed class MainWindowViewModel : BindableBase
     private readonly Models.Issue issue;
     private readonly RelayCommand nextCheckCommand;
     private readonly RelayCommand saveResultCommand;
+    private readonly RelayCommand backToQueueCommand;
     private string activityMessage = string.Empty;
     private CheckItemViewModel? selectedCheck;
 
@@ -35,6 +36,7 @@ public sealed class MainWindowViewModel : BindableBase
 
         nextCheckCommand = new RelayCommand(SelectNextCheck, CanSelectNextCheck);
         saveResultCommand = new RelayCommand(SaveResult, CanSaveResult);
+        backToQueueCommand = new RelayCommand(BackToQueue);
 
         SelectedCheck = Checks.FirstOrDefault();
         UpdateDerivedState();
@@ -90,6 +92,7 @@ public sealed class MainWindowViewModel : BindableBase
     public ICommand NextCheckCommand => nextCheckCommand;
 
     public ICommand SaveResultCommand => saveResultCommand;
+    public ICommand BackToQueueCommand => backToQueueCommand;
 
     private void OnCheckPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
@@ -158,6 +161,11 @@ public sealed class MainWindowViewModel : BindableBase
         ActivityMessage =
             $"{SelectedCheck.ResultLabel} saved for '{SelectedCheck.Name}' in {SelectedCheck.ActionName} at {SelectedCheck.LastSavedAt:HH:mm}.";
         saveResultCommand.RaiseCanExecuteChanged();
+    }
+
+    private void BackToQueue()
+    {
+        ActivityMessage = "Navigating to issue queue.";
     }
 }
 

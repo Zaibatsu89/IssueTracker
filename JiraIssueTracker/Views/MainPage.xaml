@@ -72,6 +72,7 @@
                     HorizontalAlignment="Left"
                     Background="Transparent"
                     BorderThickness="0"
+                    Command="{Binding BackToQueueCommand}"
                     Foreground="{StaticResource MutedTextBrush}">
                     <StackPanel Orientation="Horizontal" Spacing="8">
                         <FontIcon FontSize="14" Glyph="&#xE72B;" />
@@ -82,7 +83,6 @@
                             Text="BACK TO QUEUE" />
                     </StackPanel>
                 </Button>
-
                 <StackPanel
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
