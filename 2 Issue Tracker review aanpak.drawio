@@ -1,38 +1,9 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="XNishPgJ8gbamc2b0VwM">
-    <mxGraphModel dx="2087" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1768" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-18" parent="1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;" value="" vertex="1">
-          <mxGeometry height="961" width="480" x="320" y="20" as="geometry" />
-        </mxCell>
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-19" parent="mIc6XLMKuAxiAPNymMe0-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
-          <mxGeometry height="40" width="480" as="geometry" />
-        </mxCell>
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-20" parent="mIc6XLMKuAxiAPNymMe0-19" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="&lt;b&gt;Medewerker&lt;/b&gt;" vertex="1">
-          <mxGeometry height="40" width="240" as="geometry">
-            <mxRectangle height="40" width="240" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-21" parent="mIc6XLMKuAxiAPNymMe0-19" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="&lt;b&gt;Opdrachtgever&lt;/b&gt;" vertex="1">
-          <mxGeometry height="40" width="240" x="240" as="geometry">
-            <mxRectangle height="40" width="240" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-22" parent="mIc6XLMKuAxiAPNymMe0-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
-          <mxGeometry height="921" width="480" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-23" parent="mIc6XLMKuAxiAPNymMe0-22" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="" vertex="1">
-          <mxGeometry height="921" width="240" as="geometry">
-            <mxRectangle height="921" width="240" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mIc6XLMKuAxiAPNymMe0-24" parent="mIc6XLMKuAxiAPNymMe0-22" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" value="" vertex="1">
-          <mxGeometry height="921" width="240" x="240" as="geometry">
-            <mxRectangle height="921" width="240" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="XehhIzECJeRqZ1Lm04T6-9" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Issue:&amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;Starttijd:&lt;br&gt;&lt;br&gt;Iteratie:&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
         </mxCell>
@@ -51,7 +22,7 @@
         </object>
         <object label="" id="bpmn_gateway_fork">
           <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=parallel;strokeWidth=2;" vertex="1">
-            <mxGeometry height="40" width="40" x="420" y="260" as="geometry" />
+            <mxGeometry height="40" width="40" x="420" y="270" as="geometry" />
           </mxCell>
         </object>
         <object label="[automatische notificatie verzonden]" Action="202" id="bpmn_event_notification">
@@ -69,9 +40,9 @@
             <mxGeometry height="70" width="140" x="610" y="500" as="geometry" />
           </mxCell>
         </object>
-        <object label="" id="bpmn_gateway_xor">
+        <object label="Akkoord?" id="bpmn_gateway_xor">
           <mxCell parent="1" style="shape=mxgraph.bpmn.gateway;html=1;align=center;verticalAlign=middle;perimeter=rhombusPerimeter;outlineConnect=0;gatewaySymbol=exclusive;strokeWidth=2;" vertex="1">
-            <mxGeometry height="40" width="40" x="660" y="600" as="geometry" />
+            <mxGeometry height="90" width="90" x="635" y="610" as="geometry" />
           </mxCell>
         </object>
         <object label="Starten inhoudelijke analyse" Action="204" id="bpmn_task_analyse">
@@ -90,17 +61,18 @@
         <mxCell id="edge_intake_to_fork" edge="1" parent="1" source="bpmn_task_intake" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bpmn_gateway_fork">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge_fork_to_notification" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_event_notification">
+        <mxCell id="edge_fork_to_notification" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="bpmn_event_notification" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="edge_notification_to_join" edge="1" parent="1" source="bpmn_event_notification" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" target="bpmn_gateway_join">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge_fork_to_join_direct" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="bpmn_gateway_join">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="edge_fork_to_join_direct" edge="1" parent="1" source="bpmn_gateway_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="bpmn_gateway_join" value="">
+          <mxGeometry relative="1" x="-0.0028" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="480" y="280" />
-              <mxPoint x="480" y="440" />
+              <mxPoint x="520" y="290" />
+              <mxPoint x="520" y="440" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -122,7 +94,7 @@
             <mxGeometry relative="1" x="-0.7994" as="geometry">
               <mxPoint as="offset" />
               <Array as="points">
-                <mxPoint x="780" y="620" />
+                <mxPoint x="780" y="655" />
                 <mxPoint x="780" y="189" />
               </Array>
               <mxPoint x="540" y="190" as="targetPoint" />
