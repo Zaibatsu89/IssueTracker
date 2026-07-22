@@ -122,11 +122,12 @@ def parse_elements(root_el):
         if obj_id and cell_elem is not None:
             process_cell(obj_id, cell_elem, label)
 
+    edge_ids = {e['id'] for e in edges}
     for cell in root_el.findall('.//mxCell'):
         cell_id = cell.get('id')
         if not cell_id:
             continue
-        if cell_id in nodes or any(e['id'] == cell_id for e in edges):
+        if cell_id in nodes or cell_id in edge_ids:
             continue
         
         label = cell.get('value', '')
