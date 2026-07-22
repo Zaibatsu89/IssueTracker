@@ -308,7 +308,7 @@
                                         FontFamily="Consolas"
                                         FontSize="11"
                                         Foreground="{StaticResource MutedTextBrush}"
-                                        Text="Result is verplicht. Remark alleen tonen en eisen bij NOK." />
+                                        Text="Result is required. Show and require Remark only when NOK." />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1" Spacing="10">
