@@ -25,10 +25,17 @@ def wrap_text(text, max_width=20):
     words = text.split()
     if not words:
         return ""
+    expanded_words = []
+    for word in words:
+        if max_width > 0 and len(word) > max_width:
+            for i in range(0, len(word), max_width):
+                expanded_words.append(word[i:i + max_width])
+        else:
+            expanded_words.append(word)
     lines = []
     current_line = []
     current_length = 0
-    for word in words:
+    for word in expanded_words:
         if current_length + len(word) + (1 if current_line else 0) <= max_width:
             current_line.append(word)
             current_length += len(word) + (1 if len(current_line) > 1 else 0)
