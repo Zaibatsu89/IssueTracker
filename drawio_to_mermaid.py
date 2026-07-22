@@ -159,13 +159,16 @@ def generate_mermaid(nodes, edges, max_width=20):
         label = data['label']
         shape = data['shape']
         style = data.get('style', '')
-        
-        if not label:
+        # Filter nodes without labels only if they are not connected
+        if not label and node_id not in connected_nodes:
             continue
             
+        # Filter zwevende tekst-annotaties zonder connecties uit
         is_plain_text = 'text' in style or ('strokeColor=none' in style and 'fillColor=none' in style)
         if node_id not in connected_nodes and is_plain_text:
             continue
+            
+        label_escaped = label.replace('\\', '\\\\').replace('"', '\\"') if label else " "
             
         wrapped_label = wrap_text(label, max_width)
         label_escaped = wrapped_label.replace('"', '\\"')
