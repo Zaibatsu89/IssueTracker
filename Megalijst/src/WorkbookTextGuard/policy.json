@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "unicodeVersion": "15.1",
+  "emoticonProfile": "plain",
+  "emojiMappings": [
+    {
+      "sequence": "🔴",
+      "replacement": "Geblokkeerd",
+      "condition": "Bevestigd als statusindicator"
+    },
+    {
+      "sequence": "🟡",
+      "replacement": "In behandeling",
+      "condition": "Bevestigd als statusindicator"
+    },
+    {
+      "sequence": "🟢",
+      "replacement": "Gereed",
+      "condition": "Bevestigd als statusindicator"
+    },
+    {
+      "sequence": "⚠️",
+      "replacement": "Aandachtspunt",
+      "condition": "Betekenis bevestigd"
+    },
+    {
+      "sequence": "⏱️",
+      "replacement": "",
+      "condition": "Decoratief — timer-icoon"
+    },
+    {
+      "sequence": "⏱",
+      "replacement": "",
+      "condition": "Decoratief — timer-icoon zonder variatieselector"
+    },
+    {
+      "sequence": "🤝🏻",
+      "replacement": "",
+      "condition": "Decoratief — review/overleg-icoon"
+    },
+    {
+      "sequence": "🤝",
+      "replacement": "",
+      "condition": "Decoratief — review/overleg-icoon"
+    },
+    {
+      "sequence": "🔬",
+      "replacement": "",
+      "condition": "Decoratief — analyse-icoon"
+    },
+    {
+      "sequence": "✏️",
+      "replacement": "",
+      "condition": "Decoratief — ontwerp-icoon"
+    },
+    {
+      "sequence": "✏",
+      "replacement": "",
+      "condition": "Decoratief — ontwerp-icoon zonder variatieselector"
+    },
+    {
+      "sequence": "⌨️",
+      "replacement": "",
+      "condition": "Decoratief — implementatie-icoon"
+    },
+    {
+      "sequence": "⌨",
+      "replacement": "",
+      "condition": "Decoratief — implementatie-icoon zonder variatieselector"
+    },
+    {
+      "sequence": "🔎",
+      "replacement": "",
+      "condition": "Decoratief — test-icoon"
+    },
+    {
+      "sequence": "⚠",
+      "replacement": "Aandachtspunt",
+      "condition": "Meldplicht-icoon zonder variatieselector"
+    },
+    {
+      "sequence": "⚙️",
+      "replacement": "",
+      "condition": "Decoratief — speciale actie-icoon"
+    },
+    {
+      "sequence": "⚙",
+      "replacement": "",
+      "condition": "Decoratief — speciale actie-icoon zonder variatieselector"
+    }
+  ],
+  "emoticonMappings": [],
+  "decorativeSequences": []
+}
