@@ -7,7 +7,7 @@ The compiled manifest implements exactly the approved 43 cell changes + 2 worksh
 ## Contents / reproducibility
 
 - `rust/approved-delta.json`: exact old refs/text, ABSENT as null, styles, all 16 source hashes, relationship bindings, exclusions, metadata and source identities. JSON-equivalence to the compiled copy is required. Not a configurable allowlist. Editing it is a new approval/code-review requirement.
-- `rust/src/`: Rust console/library and synthetic-only tests. zip 2.4.2 `raw_copy_file`, quick-xml 0.37.5; no workbook roundtrip.
+- `rust/src/`: Rust console/library and RAM-only synthetic tests. Bounded classic ZIP local/central-record passthrough; zip 2.4.2 compresses only the four target XML entries, quick-xml 0.37.5; no workbook roundtrip or protected `raw_copy_file`.
 - `rust/Cargo.lock`: generated/locked transitive dependencies; Rust 1.98.1 pinned.
 - `validator/`: independent read-only OpenXmlValidator console, DocumentFormat.OpenXml 3.3.0, explicitly Office2019. Schema errors on either original or candidate fail; no baseline exemptions. This Office target is the tooling's explicit choice: operator must confirm it is the agreed target before accepting evidence; another target requires an explicit tooling revision.
 - `validator-tests/`: xUnit synthetic schema-pass/schema-fail/read-only/corrupt-package/CLI tests. NuGet lockfiles and .NET SDK 10.0.401 pinned.
@@ -28,7 +28,7 @@ dotnet build validator/Validator.csproj -c Release --no-restore
 dotnet test validator-tests/Validator.Tests.csproj --no-restore
 ```
 
-Recorded final results: Rust 17 passed / 0 failed, release build exit 0; .NET 4 passed / 0 failed, release build and locked restore exit 0. Tests create only synthetic in-memory and temporary fixtures. No tests consume a real workbook.
+Runtime repair results: Rust 20 passed / 0 failed, release build exit 0, no compiler warnings observed. Every Rust regression is RAM-only: no filesystem workbook/candidate/temp fixtures, and no automated real-source fixture. No-clobber preflight/race decision is tested via a pure abstraction; production `persist_noclobber` remains unchanged, not filesystem-exercised in this repair. Historical .NET results were 4 passed / 0 failed; validator was not changed or rerun for runtime repair. Toolchain installation remains prohibited: set `RUSTUP_AUTO_INSTALL=0` before every cargo invocation.
 
 ## Read-only preflight
 
@@ -38,7 +38,13 @@ From `rust` (use full executable paths if not on Windows):
 target/release/issuetracker-phase3.exe dry-run C:/Zaibatsu89/IssueTracker approved-delta.json
 ```
 
-JSON stdout; exit 0 means preflight passed, exit 1 means BLOCKED (stderr JSON). Dry-run reads and rechecks all sources, parses source entries and computes selective changes **in memory only**. It creates no candidate/temp ZIP or report file. Counts in this mode are prospective, not a measured candidate. Candidate hash is null; status is `DRY_RUN_READ_ONLY_NO_CANDIDATE`. The eight raw-entry hashes are source/in-memory projection evidence, not evidence of candidate compression preservation.
+JSON stdout; exit 0 means RAM preflight passed, exit 1 means BLOCKED (stderr JSON). Dry-run reads and rechecks all 16 sources, computes the unchanged approved selective XML patches, **serializes a ZIP in `Cursor<Vec<u8>>` and reopens it** through the same generic writer used by the physical path. It creates no disk candidate/temp ZIP or report file. This is actual RAM-container preservation proof, not metadata cloning and not a physically new workbook. Counts remain dry-run projection, candidate hash stays null; status is `DRY_RUN_RAM_SERIALIZED_REOPENED_NO_DISK_CANDIDATE`. Eight-field equality plus exact local spans and central records (mask only offset bytes 42..46) are checked for all eight protected entries. Proof includes their raw-local and masked-central hashes.
+
+### Runtime repair scope and operator STOP
+
+Only classic single-disk ZIP, Stored/Deflated, contiguous local records starting at offset zero in central order are supported. Checked bounds/arithmetic derive compressed payload intervals from local name/extra lengths and central sizes; no payload signature scanning. Local/central name, version, method, flags, timestamp, CRC and sizes are validated. Signed 16-byte / unsigned 12-byte classic descriptors must match exact values and boundary; signature-valued CRC ambiguity is rejected. ZIP64 ID 0x0001 in either extra, sentinels, 20/24-byte descriptors, encryption, multidisk, duplicate/shared offsets, overlap, nonmonotonic ordering, padding/gaps, trailing or ambiguous EOCD/layout fail closed. Made-by version 45 alone is allowed. EOCD comment and counts are preserved; directory length/offset and relocated central local-offset fields may change. Diagnostics name failed `data`, `raw`, `method`, `crc`, `time`, `unix`, `extra`, `comment`, `local_record`, `central_record_except_offset` without weakening equality.
+
+**STOP: physical operator generation is still BLOCKED pending separate operator GO.** Repair build/probe does not authorize the candidate command below. Release binary SHA-256: `d2109c45a375bc80180c0a38a3f4c0f6a897df8722a3837e7993d76eb6c9d1f2`; Rust 1.98.1, locked zip 2.4.2 and quick-xml 0.37.5. Rehash your binary before any separately approved operator execution; compare the current repair evidence artifact. No independent real original/candidate OpenXML or visual acceptance is implied.
 
 ## Operator-only candidate generation
 
@@ -58,7 +64,7 @@ Checks before publication:
 - zero cell `<f>` and no calcChain, valid coordinates/order, style indices and shared refs;
 - 1260→1270 cells, 1163→1173 shared refs, 490→533 si, all original 490 si byte-identical;
 - each existing target old type/style/ref/text exact, each new F/G absent; style 1 header / 3 data;
-- only four targeted parts changed, no added/removed part, all other parts including styles and unknown parts raw-copy with compressed bytes, payload, compression, CRC, timestamp, Unix mode, extra field and comment compared;
+- only four targeted parts changed, no added/removed part, all other parts including styles and unknown parts bounded local-record passthrough with compressed bytes, payload, compression, CRC, timestamp, Unix mode, central extra and comment compared, plus exact local-record bytes and central-record bytes except offset;
 - source XML byte spans outside 33 `<v>` replacements, 10 cell insertions, 43 si insertions, SST counter values and two metadata attribute values are copied verbatim; declarations, quotes, namespaces, opaque extensions and rich text remain. New plaintext si uses escaped XML and xml:space=preserve, never edits old runs.
 - all 12 CF rules/formulas/dxf/priorities byte-preserved; one approved sqref A2:E110→A2:G110, dimension A1:E110→A1:G110. Snapshot has exactly one relevant CF element; another shape fails closed.
 
