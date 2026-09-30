@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "DocumentFormat.OpenXml": {
+        "type": "Direct",
+        "requested": "[3.3.0, 3.3.0]",
+        "resolved": "3.3.0",
+        "contentHash": "JogRPJNiE6kKvbuCqVRX691pPWeGMqdQgjrUwRYkdpfkMmtElfqAgcRR73geYj7OtBeEpstldZXXzJw27LUI9w==",
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.3.0"
+        }
+      },
+      "DocumentFormat.OpenXml.Framework": {
+        "type": "Transitive",
+        "resolved": "3.3.0",
+        "contentHash": "R5CLzEoeyr7XDB7g3NTxRobcU19agaxVAhGZm+fZUShJGiU4bw8oUgnA2BNFepigJckfFMayOBMAbV3kDXNInA==",
+        "dependencies": {
+          "System.IO.Packaging": "8.0.1"
+        }
+      },
+      "System.IO.Packaging": {
+        "type": "Transitive",
+        "resolved": "8.0.1",
+        "contentHash": "KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw=="
+      }
+    }
+  }
+}
