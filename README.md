@@ -23,6 +23,9 @@ werkboektooling en een Draw.io-naar-Mermaid-converter.
   operator-tooling met afzonderlijke goedkeurings- en verificatiegrenzen.
 - **[drawio_to_mermaid.py](drawio_to_mermaid.py):** Python 3-helper die een
   Draw.io-bestand omzet naar Mermaid op standaarduitvoer.
+- **[sdlc_flowchart.html](sdlc_flowchart.html):** interactieve SDLC-flowchart
+  (Analyse t/m Review) met fasedetails en checklists; open in een browser
+  (Tailwind via CDN, internet vereist).
 
 ## IssueTrackerTool: bouwen en starten
 
