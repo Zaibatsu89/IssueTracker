@@ -17,6 +17,9 @@ werkboektooling en een Draw.io-naar-Mermaid-converter.
   via OpenXML 2.20.0.
 - **[JiraIssueTracker](JiraIssueTracker/JiraIssueTracker.csproj):**
   WinUI/MSIX-prototype op .NET 10 met sampledata; geen live Jira-client.
+- **[EfficiencyTool](EfficiencyTool/EfficiencyTool.csproj):** .NET 10-consoleapp
+  met `Programmeren(double)` en de efficiëntiefactor; zie
+  [EfficiencyTool](#efficiencytool-efficiëntiefactor).
 - **[Megalijst](Megalijst/README.md):** `WorkbookTextGuard` voor inventarisatie,
   controle, opschoning en herberekening van `.xlsx`-werkboeken.
 - **[Fase-3-tooling](Megalijst/phase3-tooling/README.md):** snapshotgebonden
@@ -172,6 +175,26 @@ werkt een tijdstempel en UI-melding bij; **Back to Queue** verandert een melding
 Er is geen live Jira-koppeling of persistente resultaatopslag geïmplementeerd in
 het huidige ViewModel. Deze beschrijving is geen bevestiging van een geslaagde
 build, deployment of productiegeschiktheid.
+
+## EfficiencyTool: efficiëntiefactor
+
+Console-app (.NET 10) die beoordeelt of werk "Programmeur" of "Lopende band werk"
+is, ten opzichte van de gemiddelde programmeur.
+
+- **Invoer:** eerste schatting en werkelijke effort (alle iteraties tot
+  check-in), in dezelfde eenheid.
+- **Werkelijke effort vs. schatting factor** = werkelijke effort / schatting
+  (gemiddelde programmeur = 1,67).
+- **Efficiëntiefactor** = (schatting × 5/3) / werkelijke effort, afgerond op
+  5 decimalen.
+- **Drempel:** `Programmeren(double)` geeft "Programmeur" bij factor ≥ 0,33333
+  (maximaal 5× de eigen schatting), anders "Lopende band werk".
+
+```bash
+dotnet run --project EfficiencyTool                  # interactief
+dotnet run --project EfficiencyTool -- --docx [pad]  # Word-opdracht genereren
+dotnet test EfficiencyTool.slnx
+```
 
 ## Draw.io naar Mermaid
 
