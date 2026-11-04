@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="EfficiencyTool.Tests/EfficiencyTool.Tests.csproj" />
+  <Project Path="EfficiencyTool/EfficiencyTool.csproj" />
+</Solution>
