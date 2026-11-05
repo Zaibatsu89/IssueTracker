@@ -23,10 +23,31 @@ try
         Console.WriteLine($"Werkelijke effort vs. schatting factor: {effortFactor.ToString("0.00", CultureInfo.InvariantCulture)}");
     }
     Console.WriteLine($"Efficiëntiefactor: {factor.ToString("0.#####", CultureInfo.InvariantCulture)} ({Efficiency.Programmeren(factor)})");
+
+    DateTime invoermoment = LeesInvoermoment();
+    var overzicht = Werkrooster.BerekenWeekoverzicht(invoermoment, werkelijkeEffort);
+    Console.WriteLine($"Theoretisch startpunt (100% roosterallocatie, incl. pauze 12:30-13:00, excl. overhead; effort in uren): {overzicht[0].Start:yyyy-MM-dd HH:mm:ss}");
+    Console.WriteLine("Weekoverzicht:");
+    foreach (WerkTijdvak tijdvak in overzicht)
+        Console.WriteLine($"  {tijdvak.Start:ddd yyyy-MM-dd HH:mm:ss} - {tijdvak.Eind:HH:mm:ss} ({tijdvak.Duur.TotalHours.ToString("0.00", CultureInfo.InvariantCulture)} u)");
 }
 catch (ArgumentOutOfRangeException ex)
 {
     Console.WriteLine($"Ongeldige invoer: {ex.Message}");
+}
+
+static DateTime LeesInvoermoment()
+{
+    while (true)
+    {
+        Console.Write("Invoermoment (leeg = nu, yyyy-MM-dd HH:mm): ");
+        string? invoer = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(invoer))
+            return DateTime.Now;
+        if (DateTime.TryParseExact(invoer.Trim(), "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime moment))
+            return moment;
+        Console.WriteLine("Ongeldige invoer. Gebruik yyyy-MM-dd HH:mm.");
+    }
 }
 
 static double LeesGetal(string prompt, bool striktPositief = false)
