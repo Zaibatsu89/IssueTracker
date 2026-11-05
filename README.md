@@ -189,12 +189,34 @@ is, ten opzichte van de gemiddelde programmeur.
   5 decimalen.
 - **Drempel:** `Programmeren(double)` geeft "Programmeur" bij factor ≥ 0,33333
   (maximaal 5× de eigen schatting), anders "Lopende band werk".
+- **Weekoverzicht en startpunt:** na de factor vraagt de tool het invoermoment
+  (leeg = nu, `yyyy-MM-dd HH:mm`) en rekent het startpunt terug over het
+  werkrooster in `Werkrooster.cs`: maandag, dinsdag, donderdag en vrijdag,
+  09:00-15:30 met pauze 12:30-13:00 (6,0 uur netto per dag, 24 contracturen per
+  week). Woensdag, weekend en feestdagen tellen niet mee. Aannames: de werkelijke effort is in **uren**, tijden zijn lokale
+  kloktijd, en een invoermoment buiten werktijd of in de pauze telt vanaf het
+  vorige werkeinde. Het startpunt is **theoretisch**: aaneengesloten werk aan
+  één item, zonder reviews of meetings.
+  Voorbeeld: vrijdag 15:30 met 6 uur effort geeft vrijdag 09:00.
 
 ```bash
 dotnet run --project EfficiencyTool                  # interactief
 dotnet run --project EfficiencyTool -- --docx [pad]  # Word-opdracht genereren
 dotnet test EfficiencyTool.slnx
 ```
+
+### Handmatige test tegen Jira TimeTracker
+
+1. Kies een afgeronde issue met geregistreerde tijd; noteer het invoermoment en
+   de werkelijke effort (uren).
+2. Draai `dotnet run --project EfficiencyTool` en noteer startpunt en
+   weekoverzicht.
+3. Vergelijk met de worklogs in Jira TimeTracker, bij voorkeur over een hele
+   werkweek (24 roosteruren): tel de geboekte uren van die week op.
+4. Leg het verschil vast als niet-ticketgebonden tijd (stand-ups, reviews,
+   ondersteuning, contextwissels, extra pauzes; de lunchpauze 12:30-13:00 zit
+   al buiten het rooster) en noteer afwijkingen (woensdag
+   gewerkt, feestdag).
 
 ## Draw.io naar Mermaid
 
