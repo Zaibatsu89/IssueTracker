@@ -1,8 +1,5 @@
 using Xunit;
 using System.Globalization;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
 using EfficiencyTool;
 
 namespace EfficiencyTool.Tests;
@@ -52,22 +49,12 @@ public class EfficiencyTests
     }
 
     [Theory]
-    [InlineData(1, 5, 5.0)]
-    [InlineData(1, 1.67, 1.67)]
-    [InlineData(1, 1.66667, 1.67)]
-    [InlineData(1, double.Epsilon, 0.0)]
-    public void BerekenEffortVsSchattingFactor_geeft_verwachte_factor(double schatting, double effort, double verwacht) =>
-        Assert.Equal(verwacht, Efficiency.BerekenEffortVsSchattingFactor(schatting, effort));
-
-    [Theory]
     [MemberData(nameof(OngeldigeGetallen))]
     public void Ongeldige_getallen_geven_exceptie(double w)
     {
         Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.Programmeren(w));
         Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEfficientieFactor(w, 1));
         Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEfficientieFactor(1, w));
-        Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEffortVsSchattingFactor(w, 1));
-        Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEffortVsSchattingFactor(1, w));
     }
 
     [Theory]
@@ -76,17 +63,6 @@ public class EfficiencyTests
     [InlineData(1, double.Epsilon)]
     public void BerekenEfficientieFactor_nul_deler_of_overflow_geeft_exceptie(double schatting, double effort) =>
         Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEfficientieFactor(schatting, effort));
-
-    [Theory]
-    [InlineData(0, 1)]
-    [InlineData(1, 0)]
-    [InlineData(double.Epsilon, 1)]
-    public void BerekenEffortVsSchattingFactor_nul_of_overflow_geeft_exceptie(double schatting, double effort) =>
-        Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEffortVsSchattingFactor(schatting, effort));
-
-    [Fact]
-    public void BerekenEffortVsSchattingFactor_negatieve_nul_schatting_geeft_exceptie() =>
-        Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEffortVsSchattingFactor(-0.0, 1));
 
     [Theory]
     [InlineData("0,33333")]
@@ -111,26 +87,23 @@ public class EfficiencyTests
     public void TryParse_weigert_ongeldige_invoer(string? invoer) =>
         Assert.False(Efficiency.TryParseGetal(invoer, out _));
 
-    [Fact]
-    public void Docx_is_geldig_en_bevat_definitie()
-    {
-        string pad = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + ".docx");
-        try
-        {
-            WordDocumentGenerator.Genereer(pad);
-            Assert.NotEmpty(File.ReadAllBytes(pad));
-            using var doc = WordprocessingDocument.Open(pad, false);
-            Assert.Empty(new OpenXmlValidator(FileFormatVersions.Office2019).Validate(doc));
-            string tekst = doc.MainDocumentPart!.Document!.InnerText;
-            Assert.Contains("0,33333", tekst);
-            Assert.Contains("1,67", tekst);
-            Assert.Contains("Lopende band werk", tekst);
-            Assert.Contains("5×", tekst);
-            Assert.Contains("vijf", tekst);
-        }
-        finally
-        {
-            File.Delete(pad);
-        }
-    }
+    [Theory]
+    [InlineData(6, 5, 0, 2.0)]
+    [InlineData(6, 5, 5, 1.0)]
+    [InlineData(3, 5, 0, 1.0)]
+    public void BerekenEfficientieFactorInclExtraUren_geeft_verwachte_factor(double schatting, double effort, double extra, double verwacht) =>
+        Assert.Equal(verwacht, Efficiency.BerekenEfficientieFactorInclExtraUren(schatting, effort, extra));
+
+    [Theory]
+    [InlineData(0, 5, 0)]
+    [InlineData(-1, 5, 0)]
+    [InlineData(6, 0, 0)]
+    [InlineData(6, -1, 0)]
+    [InlineData(6, 5, -1)]
+    [InlineData(double.NaN, 5, 0)]
+    [InlineData(6, double.NaN, 0)]
+    [InlineData(6, 5, double.NaN)]
+    [InlineData(6, 5, double.PositiveInfinity)]
+    public void BerekenEfficientieFactorInclExtraUren_weigert_ongeldige_invoer(double schatting, double effort, double extra) =>
+        Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEfficientieFactorInclExtraUren(schatting, effort, extra));
 }

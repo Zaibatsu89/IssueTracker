@@ -1,13 +1,7 @@
 namespace EfficiencyTool;
 
-/// <summary>Aaneengesloten gewerkt tijdvak op één werkdag.</summary>
-/// <param name="Start">Startmoment van het tijdvak.</param>
-/// <param name="Eind">Eindmoment van het tijdvak.</param>
-/// <param name="Duur">Netto duur van het tijdvak.</param>
-public readonly record struct WerkTijdvak(DateTime Start, DateTime Eind, TimeSpan Duur);
-
 /// <summary>
-/// Rekent een startpunt terug vanaf het invoermoment over het werkrooster
+/// Berekening van gewerkte roosteruren over het werkrooster
 /// (maandag, dinsdag, donderdag, vrijdag, 09:00-15:30 met pauze 12:30-13:00; 6,0 uur/dag, 24 uur/week).
 /// Lokale kloktijd, zonder feestdagen.
 /// </summary>
@@ -25,86 +19,39 @@ public static class Werkrooster
     /// <summary>Einde van een werkdag (15:30).</summary>
     public static readonly TimeOnly WerkdagEind = new(15, 30);
 
-    /// <summary>Maximale effort in uren (voorkomt overflow en extreem lange lussen).</summary>
-    public const double MaximaleEffortUren = 100_000.0;
-
     /// <summary>Geeft aan of de dag een roosterwerkdag is (ma, di, do, vr).</summary>
     public static bool IsWerkdag(DayOfWeek dag) =>
         dag is DayOfWeek.Monday or DayOfWeek.Tuesday or DayOfWeek.Thursday or DayOfWeek.Friday;
 
-    /// <summary>Theoretisch startpunt: begin van het eerste tijdvak uit <see cref="BerekenWeekoverzicht"/>.</summary>
-    public static DateTime BerekenStartpunt(DateTime invoermoment, double effortUren) =>
-        BerekenWeekoverzicht(invoermoment, effortUren)[0].Start;
-
-    /// <summary>Chronologische tijdvakken tussen het teruggerekende startpunt en het invoermoment.</summary>
-    public static IReadOnlyList<WerkTijdvak> BerekenWeekoverzicht(DateTime invoermoment, double effortUren)
+    /// <summary>
+    /// Roosteruren tussen <paramref name="start"/> en <paramref name="eind"/> (lokale kloktijd, geen tijdzone):
+    /// intersectie met de werkblokken 09:00-12:30 en 13:00-15:30 op ma/di/do/vr.
+    /// </summary>
+    /// <exception cref="ArgumentException">Als <paramref name="eind"/> niet na <paramref name="start"/> ligt.</exception>
+    public static double BerekenRoosterUren(DateTime start, DateTime eind)
     {
-        if (!double.IsFinite(effortUren))
-            throw new ArgumentOutOfRangeException(nameof(effortUren), effortUren, "Effort moet een eindig getal zijn.");
-        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(effortUren);
-        ArgumentOutOfRangeException.ThrowIfGreaterThan(effortUren, MaximaleEffortUren);
+        if (eind <= start)
+            throw new ArgumentException("Eindtijd moet na de starttijd liggen.", nameof(eind));
 
-        double seconden = Math.Round(effortUren * 3600.0, MidpointRounding.AwayFromZero);
-        if (seconden < 1.0)
-            throw new ArgumentOutOfRangeException(nameof(effortUren), effortUren, "Effort moet na afronding minimaal 1 seconde zijn.");
-
-        TimeSpan resterend = TimeSpan.FromSeconds((long)seconden);
-        DateTime cursor = NormaliseerStartCursor(invoermoment);
-        var tijdvakken = new List<WerkTijdvak>();
-
-        while (resterend > TimeSpan.Zero)
+        double minuten = 0.0;
+        for (DateTime dag = start.Date; ; dag = dag.AddDays(1))
         {
-            DateOnly datum = DateOnly.FromDateTime(cursor);
-            TimeOnly tijd = TimeOnly.FromDateTime(cursor);
-            bool inMiddagblok = tijd > PauzeEind;
-
-            DateTime blokStart = datum.ToDateTime(inMiddagblok ? PauzeEind : WerkdagStart);
-            TimeSpan beschikbaar = cursor - blokStart;
-
-            if (resterend <= beschikbaar)
+            if (IsWerkdag(dag.DayOfWeek))
             {
-                tijdvakken.Add(new WerkTijdvak(cursor - resterend, cursor, resterend));
-                resterend = TimeSpan.Zero;
+                minuten += BerekenOverlapMinuten(start, eind, dag + WerkdagStart.ToTimeSpan(), dag + PauzeStart.ToTimeSpan());
+                minuten += BerekenOverlapMinuten(start, eind, dag + PauzeEind.ToTimeSpan(), dag + WerkdagEind.ToTimeSpan());
             }
-            else
-            {
-                tijdvakken.Add(new WerkTijdvak(blokStart, cursor, beschikbaar));
-                resterend -= beschikbaar;
-                cursor = inMiddagblok ? datum.ToDateTime(PauzeStart) : VorigeWerkdagEind(datum);
-            }
+            if (dag >= eind.Date)
+                break;
         }
 
-        tijdvakken.Reverse();
-        return tijdvakken;
+        return Math.Round(minuten / 60.0, 5, MidpointRounding.AwayFromZero);
     }
 
-    private static DateTime NormaliseerStartCursor(DateTime moment)
+    private static double BerekenOverlapMinuten(DateTime start, DateTime eind, DateTime blokStart, DateTime blokEind)
     {
-        // Eerst sub-seconden afkappen (DateTime.Now heeft tick-precisie), vóór de grenscontroles.
-        moment = moment.AddTicks(-(moment.Ticks % TimeSpan.TicksPerSecond));
-        DateOnly datum = DateOnly.FromDateTime(moment);
-        TimeOnly tijd = TimeOnly.FromDateTime(moment);
-
-        if (!IsWerkdag(moment.DayOfWeek) || tijd <= WerkdagStart)
-            return VorigeWerkdagEind(datum);
-
-        if (tijd > PauzeStart && tijd <= PauzeEind)
-            return datum.ToDateTime(PauzeStart);
-
-        return tijd > WerkdagEind ? datum.ToDateTime(WerkdagEind) : moment;
-    }
-
-    private static DateTime VorigeWerkdagEind(DateOnly vanafDatum)
-    {
-        DateOnly dag = vanafDatum;
-        do
-        {
-            if (dag == DateOnly.MinValue)
-                throw new ArgumentOutOfRangeException(nameof(vanafDatum), "Datumbereik overschreden bij terugrekenen.");
-            dag = dag.AddDays(-1);
-        }
-        while (!IsWerkdag(dag.DayOfWeek));
-
-        return dag.ToDateTime(WerkdagEind);
+        DateTime van = start > blokStart ? start : blokStart;
+        DateTime tot = eind < blokEind ? eind : blokEind;
+        return tot > van ? (tot - van).TotalMinutes : 0.0;
     }
 }

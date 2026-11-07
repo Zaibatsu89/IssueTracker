@@ -30,15 +30,26 @@ public static class Efficiency
         return Math.Round(factor, 5, MidpointRounding.AwayFromZero) + 0.0;
     }
 
-    /// <summary>Factor van Jeroen = werkelijke effort / eerste schatting (gemiddelde programmeur 1,67; grens 5,00).</summary>
-    public static double BerekenEffortVsSchattingFactor(double schatting, double werkelijkeEffort)
+    /// <summary>
+    /// Tweede efficiëntiefactor: (schatting × 5/3) / (effort + extra uren). Alle waarden in uren.
+    /// Extra uren zijn uren boven 6 per werkdag die BOVENOP de effort komen (niet al in de effort meegeteld).
+    /// Strikter dan factor 1: schatting moet &gt; 0 zijn.
+    /// </summary>
+    public static double BerekenEfficientieFactorInclExtraUren(double schattingUren, double effortUren, double extraUren)
     {
-        ValideerPositiefEindig(schatting);
-        ValideerPositiefEindig(werkelijkeEffort);
+        ValideerPositiefEindig(schattingUren);
+        ValideerPositiefEindig(effortUren);
+        ValideerNietNegatiefEindig(extraUren);
 
-        double factor = werkelijkeEffort / schatting;
-        ValideerNietNegatiefEindig(factor);
-        return Math.Round(factor, 2, MidpointRounding.AwayFromZero) + 0.0;
+        double totaleEffort = effortUren + extraUren;
+        if (!double.IsFinite(totaleEffort))
+            throw new OverflowException("Totale effort is niet eindig.");
+        ValideerPositiefEindig(totaleEffort);
+
+        double factor = schattingUren * GemiddeldeProgrammeurFactor / totaleEffort;
+        if (!double.IsFinite(factor))
+            throw new OverflowException("Efficiëntiefactor is niet eindig.");
+        return Math.Round(factor, 5, MidpointRounding.AwayFromZero) + 0.0;
     }
 
     public static bool TryParseGetal(string? invoer, out double waarde)

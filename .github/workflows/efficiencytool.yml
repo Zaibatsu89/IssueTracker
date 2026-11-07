@@ -1,0 +1,81 @@
+name: EfficiencyTool CI
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+    paths:
+      - 'EfficiencyTool/**'
+      - 'EfficiencyTool.Tests/**'
+      - 'EfficiencyTool.slnx'
+      - '.github/workflows/efficiencytool.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'EfficiencyTool/**'
+      - 'EfficiencyTool.Tests/**'
+      - 'EfficiencyTool.slnx'
+      - '.github/workflows/efficiencytool.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    name: Build & Test (Release)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore EfficiencyTool.slnx
+
+      - name: Build Release
+        run: dotnet build EfficiencyTool.slnx -c Release --no-restore
+
+      - name: Run unit tests (xUnit v3 executable)
+        run: ./EfficiencyTool.Tests/bin/Release/net10.0/EfficiencyTool.Tests.exe
+
+  publish:
+    name: Publish & Release (win-x64)
+    needs: build-test
+    if: github.event_name != 'pull_request'
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Publish (win-x64 single-file)
+        run: dotnet publish EfficiencyTool/EfficiencyTool.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishReadyToRun=false -p:PublishTrimmed=false -p:PublishDir=bin/Release/net10.0/publish/win-x64/
+
+      - name: Upload artifact EfficiencyTool-win-x64
+        uses: actions/upload-artifact@v4
+        with:
+          name: EfficiencyTool-win-x64
+          path: EfficiencyTool/bin/Release/net10.0/publish/win-x64/
+          if-no-files-found: error
+
+      - name: Create GitHub Release on tag v*
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          Compress-Archive -Path "EfficiencyTool/bin/Release/net10.0/publish/win-x64/*" -DestinationPath "EfficiencyTool-win-x64.zip" -Force
+          gh release create "$env:GITHUB_REF_NAME" "EfficiencyTool-win-x64.zip" --generate-notes
