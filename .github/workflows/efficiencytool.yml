@@ -72,10 +72,15 @@ jobs:
           path: EfficiencyTool/bin/Release/net10.0/publish/win-x64/
           if-no-files-found: error
 
-      - name: Create GitHub Release on tag v*
+      - name: Create or update GitHub Release on tag v*
         if: startsWith(github.ref, 'refs/tags/v')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           Compress-Archive -Path "EfficiencyTool/bin/Release/net10.0/publish/win-x64/*" -DestinationPath "EfficiencyTool-win-x64.zip" -Force
-          gh release create "$env:GITHUB_REF_NAME" "EfficiencyTool-win-x64.zip" --generate-notes
+          gh release view "$env:GITHUB_REF_NAME" *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload "$env:GITHUB_REF_NAME" "EfficiencyTool-win-x64.zip" --clobber
+          } else {
+            gh release create "$env:GITHUB_REF_NAME" "EfficiencyTool-win-x64.zip" --generate-notes
+          }

@@ -248,7 +248,7 @@ dotnet build EfficiencyTool.slnx
 
 ### CI / Publish
 
-De GitHub Actions-workflow `.github/workflows/efficiencytool.yml` (`EfficiencyTool CI`) bouwt de solution in `Release`-configuratie (met `TreatWarningsAsErrors`), draait alle unit tests en publiceert op `main`, handmatige runs (`workflow_dispatch`) en `v*`-tags een self-contained `win-x64` single-file executable als workflow-artifact `EfficiencyTool-win-x64` (en als GitHub Release bij een `v*`-tag).
+De GitHub Actions-workflow `.github/workflows/efficiencytool.yml` (`EfficiencyTool CI`) bouwt de solution in `Release`-configuratie (met `TreatWarningsAsErrors`), draait alle unit tests en publiceert op `main`, handmatige runs (`workflow_dispatch`) en `v*`-tags een self-contained `win-x64` single-file executable als workflow-artifact `EfficiencyTool-win-x64`. Bij een `v*`-tag maakt de workflow een GitHub Release met `EfficiencyTool-win-x64.zip` aan, of voegt het zip-bestand toe aan de bestaande release als die vooraf handmatig is aangemaakt.
 
 ## Draw.io naar Mermaid
 
