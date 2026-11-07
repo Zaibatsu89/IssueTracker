@@ -11,7 +11,7 @@ namespace EfficiencyTool;
 /// <param name="Start">Starttijdstip.</param>
 /// <param name="Eind">Afmeldtijdstip na alle iteraties; null = nog openstaand.</param>
 /// <param name="RoosterUren">Door de domeinlaag berekende roosteruren tussen start en afmelding.</param>
-/// <param name="WerkelijkeEffortUren">Definitieve effort in uren (roosteruren of handmatig overschreven).</param>
+/// <param name="WerkelijkeEffortUren">Definitieve effort in uren (gelijk aan de berekende roosteruren, &gt; 0).</param>
 /// <param name="ExtraUren">Uren boven 6 per werkdag, BOVENOP de effort (niet al in de effort meegeteld).</param>
 /// <param name="EfficientieFactor">Factor 1 (afgerond op 5 decimalen).</param>
 /// <param name="EfficientieFactorInclExtraUren">Factor 2 inclusief extra uren (afgerond op 5 decimalen).</param>
@@ -195,7 +195,7 @@ public static class ItemRegistratie
     /// </summary>
     /// <exception cref="InvalidOperationException">Onbekend of al afgerond item.</exception>
     /// <exception cref="ArgumentException">Eind niet na start.</exception>
-    /// <exception cref="ArgumentOutOfRangeException">Effort &lt;= 0, extra &lt; 0, of niet-eindig.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">Effort wijkt af van de berekende roosteruren, effort &lt;= 0, extra &lt; 0, of niet-eindig.</exception>
     public static WerkItem RegistreerAfmelding(string pad, string key, DateTime eind, double werkelijkeEffortUren, double extraUren)
     {
         string volledigPad = NormaliseerPad(pad);
@@ -207,6 +207,9 @@ public static class ItemRegistratie
 
         eind = NormaliseerKloktijd(eind);
         double roosterUren = Werkrooster.BerekenRoosterUren(open.Start, eind);
+
+        if (!(Math.Abs(werkelijkeEffortUren - roosterUren) <= 1e-9))
+            throw new ArgumentOutOfRangeException(nameof(werkelijkeEffortUren), werkelijkeEffortUren, $"Effort moet gelijk zijn aan de berekende roosteruren ({roosterUren}).");
 
         double factor = Efficiency.BerekenEfficientieFactor(open.SchattingUren, werkelijkeEffortUren);
         double factorExtra = Efficiency.BerekenEfficientieFactorInclExtraUren(open.SchattingUren, werkelijkeEffortUren, extraUren);

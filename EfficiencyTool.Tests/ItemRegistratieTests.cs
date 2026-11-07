@@ -34,7 +34,7 @@ public class ItemRegistratieTests : IDisposable
     public void Start_en_afmelding_roundtrip_berekent_roosteruren_intern_en_behoudt_historie()
     {
         ItemRegistratie.RegistreerStart(Pad, "  ABC-1  ", 6, Maandag0900);
-        WerkItem klaar = ItemRegistratie.RegistreerAfmelding(Pad, "abc-1", Maandag1530, 5, 5);
+        WerkItem klaar = ItemRegistratie.RegistreerAfmelding(Pad, "abc-1", Maandag1530, 6, 4);
 
         double verwachteRoosterUren = Werkrooster.BerekenRoosterUren(Maandag0900, Maandag1530);
         WerkItem geladen = Assert.Single(ItemRegistratie.LaadAlles(Pad));
@@ -43,7 +43,8 @@ public class ItemRegistratieTests : IDisposable
         Assert.Equal("ABC-1", geladen.Key);
         Assert.Equal(verwachteRoosterUren, geladen.RoosterUren);
         Assert.Equal(6.0, geladen.RoosterUren);
-        Assert.Equal(2.0, geladen.EfficientieFactor);
+        Assert.Equal(6.0, geladen.WerkelijkeEffortUren);
+        Assert.Equal(1.66667, geladen.EfficientieFactor);
         Assert.Equal(1.0, geladen.EfficientieFactorInclExtraUren);
         Assert.Equal(ItemRegistratie.HuidigeBerekeningsVersie, geladen.BerekeningsVersie);
         Assert.Equal(DateTimeKind.Unspecified, geladen.Start.Kind);
@@ -86,19 +87,30 @@ public class ItemRegistratieTests : IDisposable
     [Fact]
     public void Afmelden_onbekend_of_afgerond_item_geeft_fout()
     {
-        Assert.Throws<InvalidOperationException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "X-1", Maandag1530, 5, 0));
+        Assert.Throws<InvalidOperationException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "X-1", Maandag1530, 6, 0));
         ItemRegistratie.RegistreerStart(Pad, "ABC-1", 6, Maandag0900);
-        ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 5, 0);
-        Assert.Throws<InvalidOperationException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 5, 0));
+        ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 6, 0);
+        Assert.Throws<InvalidOperationException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 6, 0));
     }
 
     [Fact]
     public void Afmelden_met_ongeldige_waarden_laat_item_open()
     {
         ItemRegistratie.RegistreerStart(Pad, "ABC-1", 6, Maandag0900);
-        Assert.Throws<ArgumentException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag0900.AddHours(-1), 5, 0));
+        Assert.Throws<ArgumentException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag0900.AddHours(-1), 6, 0));
         Assert.Throws<ArgumentOutOfRangeException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 0, 0));
-        Assert.Throws<ArgumentOutOfRangeException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 5, double.NaN));
+        Assert.Throws<ArgumentOutOfRangeException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 6, double.NaN));
+        Assert.Single(ItemRegistratie.LaadOpenstaand(Pad));
+    }
+
+    [Fact]
+    public void Afmelden_met_effort_ongelijk_aan_roosteruren_gooit_ArgumentOutOfRangeException_en_laat_item_open()
+    {
+        ItemRegistratie.RegistreerStart(Pad, "ABC-1", 6, Maandag0900);
+
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
+            ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 5, 0));
+
         Assert.Single(ItemRegistratie.LaadOpenstaand(Pad));
     }
 
@@ -112,7 +124,7 @@ public class ItemRegistratieTests : IDisposable
         Assert.ThrowsAny<JsonException>(() => ItemRegistratie.RegistreerStart(Pad, "ABC-1", 6, Maandag0900));
         Assert.Equal(corrupteBytes, File.ReadAllBytes(Pad));
 
-        Assert.ThrowsAny<JsonException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 5, 0));
+        Assert.ThrowsAny<JsonException>(() => ItemRegistratie.RegistreerAfmelding(Pad, "ABC-1", Maandag1530, 6, 0));
         Assert.Equal(corrupteBytes, File.ReadAllBytes(Pad));
 
         Assert.ThrowsAny<JsonException>(() => ItemRegistratie.LaadOpenstaand(Pad));
@@ -227,9 +239,9 @@ public class ItemRegistratieTests : IDisposable
             ItemRegistratie.RegistreerStart(Pad, key, 6, Maandag0900);
 
             Task<Exception?> t1 = Task.Run(() => Record.Exception(() =>
-                ItemRegistratie.RegistreerAfmelding(Pad, key, Maandag1530, 5, 0)), ct);
+                ItemRegistratie.RegistreerAfmelding(Pad, key, Maandag1530, 6, 0)), ct);
             Task<Exception?> t2 = Task.Run(() => Record.Exception(() =>
-                ItemRegistratie.RegistreerAfmelding(Pad, key, Maandag1530, 5, 0)), ct);
+                ItemRegistratie.RegistreerAfmelding(Pad, key, Maandag1530, 6, 0)), ct);
 
             Exception?[] fouten = await Task.WhenAll(t1, t2);
 

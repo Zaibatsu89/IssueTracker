@@ -227,7 +227,10 @@ is, ten opzichte van de gemiddelde programmeur.
 dotnet run --project EfficiencyTool -- start         # item starten
 dotnet run --project EfficiencyTool -- afmelden ABC-123
 dotnet run --project EfficiencyTool -- lijst
-dotnet test EfficiencyTool.slnx
+
+# Bouwen en testen (rechtstreeks via de xUnit v3-executable; 'dotnet test' faalt lokaal onder preview-SDK 11)
+dotnet build EfficiencyTool.slnx
+./EfficiencyTool.Tests/bin/Debug/net10.0/EfficiencyTool.Tests.exe
 ```
 
 ### Handmatige test tegen Jira TimeTracker

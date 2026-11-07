@@ -10,7 +10,7 @@
 - Testen: voer de xUnit v3-testexecutable rechtstreeks uit:
   `./EfficiencyTool.Tests/bin/Debug/net10.0/EfficiencyTool.Tests.exe`
   *(Gebruik niet `dotnet test`; dat faalt lokaal onder de geïnstalleerde preview-SDK 11 door VSTest-modus.)*
-- CI (`.github/workflows/efficiencytool.yml`) voert dezelfde stappen uit in `Release`-configuratie en publiceert via `-p:PublishProfile=FolderProfile`.
+- CI (`.github/workflows/efficiencytool.yml`) voert dezelfde stappen uit in `Release`-configuratie en publiceert self-contained (`win-x64`, `PublishSingleFile=true`) naar `EfficiencyTool/bin/Release/net10.0/publish/win-x64/`.
 
 ## 3. Domeinregels (`EfficiencyTool`)
 - **Eenheid en tijd:** Alle hoeveelheden zijn in **uren**. Tijdstippen zijn lokale Nederlandse kloktijd zonder tijdzone (`DateTimeKind.Unspecified`).
