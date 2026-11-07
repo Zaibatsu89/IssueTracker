@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactieve SDLC Flowchart</title>
+    <!-- Tailwind CSS voor een modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Aangepaste animaties voor de actieve fasen en stroomlijnen */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); border-color: #3b82f6; }
+            50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); border-color: #60a5fa; }
+        }
+        .active-node {
+            animation: pulseGlow 2s infinite;
+            background-color: rgba(30, 41, 59, 0.9) !important;
+        }
+        .connector-line {
+
+            transition: all 0.5s ease;
+        }
+        .active-line {
+            stroke: #3b82f6;
+            stroke-dasharray: 8;
+            animation: dash 30s linear infinite;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -1000;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-blue-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur px-6 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+
+            <div>
+                <h1 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                    <svg class="w-6 height-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.253 8H18"></path></svg>
+                    Software Development Life Cycle (SDLC)
+                </h1>
+                <p class="text-xs text-slate-400 mt-0.5">Interactieve flowchart van Analyse tot Review. Klik op een fase voor details.</p>
+            </div>
+            <!-- Besturingselementen -->
+            <div class="flex items-center gap-3">
+                <button id="btn-animate" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white text-sm font-medium rounded-lg transition shadow-lg shadow-blue-600/20 flex items-center gap-2">
+                    <svg id="icon-play" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    <span id="text-animate">Simuleer Cyclus</span>
+                </button>
+                <button id="btn-reset" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium rounded-lg transition border border-slate-700">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- Linkerkolom: De Visuele Flowchart -->
+        <div class="lg:col-span-2 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between items-center relative overflow-hidden min-h-[500px]">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.03),transparent)] pointer-events-none"></div>
+
+            <span class="text-xs font-semibold tracking-wider text-slate-500 uppercase self-start mb-4">Flowchart Schema</span>
+
+            <!-- Flowchart grid/flex layout die switcht tussen verticaal op mobiel en een overzichtelijke loop op desktop -->
+            <div class="w-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-2 my-auto relative z-10">
+
+                <!-- FASE 1: Analyse -->
+                <div id="node-analyse" onclick="selectPhase('analyse')" class="w-full md:w-36 p-4 rounded-xl border border-slate-800 bg-slate-900 hover:border-slate-700 transition cursor-pointer text-center group relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-900/50 text-blue-400 border border-blue-800 text-[10px] px-2 py-0.5 rounded-full font-mono">01</div>
+                    <div class="text-blue-400 font-bold text-sm mb-1 group-hover:text-blue-300 transition uppercase tracking-wide">Analyse</div>
+                    <p class="text-[11px] text-slate-400 line-clamp-2">Eisen & Scope</p>
+                </div>
+
+
+                <!-- Pijl 1 naar 2 -->
+                <div class="flex items-center justify-center rotate-90 md:rotate-0 text-slate-700 py-1" id="arrow-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+
+                <!-- FASE 2: Ontwerp -->
+                <div id="node-ontwerp" onclick="selectPhase('ontwerp')" class="w-full md:w-36 p-4 rounded-xl border border-slate-800 bg-slate-900 hover:border-slate-700 transition cursor-pointer text-center group relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-900/50 text-purple-400 border border-purple-800 text-[10px] px-2 py-0.5 rounded-full font-mono">02</div>
+                    <div class="text-purple-400 font-bold text-sm mb-1 group-hover:text-purple-300 transition uppercase tracking-wide">Ontwerp</div>
+                    <p class="text-[11px] text-slate-400 line-clamp-2">Architectuur & UI</p>
+                </div>
+
+                <!-- Pijl 2 naar 3 -->
+                <div class="flex items-center justify-center rotate-90 md:rotate-0 text-slate-700 py-1" id="arrow-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+
+                <!-- FASE 3: Implementatie -->
+                <div id="node-implementatie" onclick="selectPhase('implementatie')" class="w-full md:w-36 p-4 rounded-xl border border-slate-800 bg-slate-900 hover:border-slate-700 transition cursor-pointer text-center group relative">
+
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-900/50 text-amber-400 border border-amber-800 text-[10px] px-2 py-0.5 rounded-full font-mono">03</div>
+                    <div class="text-amber-400 font-bold text-sm mb-1 group-hover:text-amber-300 transition uppercase tracking-wide">Implementatie</div>
+                    <p class="text-[11px] text-slate-400 line-clamp-2">Code & Ontwikkeling</p>
+                </div>
+
+                <!-- Pijl 3 naar 4 -->
+                <div class="flex items-center justify-center rotate-90 md:rotate-0 text-slate-700 py-1" id="arrow-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+
+                <!-- FASE 4: Test -->
+                <div id="node-test" onclick="selectPhase('test')" class="w-full md:w-36 p-4 rounded-xl border border-slate-800 bg-slate-900 hover:border-slate-700 transition cursor-pointer text-center group relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-900/50 text-emerald-400 border border-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-mono">04</div>
+                    <div class="text-emerald-400 font-bold text-sm mb-1 group-hover:text-emerald-300 transition uppercase tracking-wide">Test</div>
+                    <p class="text-[11px] text-slate-400 line-clamp-2">Kwaliteitsborging</p>
+                </div>
+
+                <!-- Pijl 4 naar 5 -->
+                <div class="flex items-center justify-center rotate-90 md:rotate-0 text-slate-700 py-1" id="arrow-4">
+
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+
+                <!-- FASE 5: Review -->
+                <div id="node-review" onclick="selectPhase('review')" class="w-full md:w-36 p-4 rounded-xl border border-slate-800 bg-slate-900 hover:border-slate-700 transition cursor-pointer text-center group relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-rose-900/50 text-rose-400 border border-rose-800 text-[10px] px-2 py-0.5 rounded-full font-mono">05</div>
+                    <div class="text-rose-400 font-bold text-sm mb-1 group-hover:text-rose-300 transition uppercase tracking-wide">Review</div>
+                    <p class="text-[11px] text-slate-400 line-clamp-2">Evaluatie & Feedback</p>
+                </div>
+
+            </div>
+
+            <!-- Iteratieve Feedback Loop (Terug naar Analyse) -->
+            <div class="w-full mt-6 border-t border-dashed border-slate-800 pt-4 flex flex-col items-center justify-center">
+                <span class="text-[10px] text-slate-500 font-mono mb-1 uppercase tracking-widest">Iteratieve Feedback Loop (Agile / Continuous Improvement)</span>
+                <div class="flex items-center gap-2 text-slate-400 text-xs bg-slate-900 px-3 py-1.5 rounded-full border border-slate-800">
+                    <svg class="w-3.5 h-3.5 animate-spin text-blue-500" style="animation-duration: 6s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.253 8H18"></path></svg>
+                    Na de Review start de volgende iteratie/sprint opnieuw bij de <strong class="text-blue-400 cursor-pointer" onclick="selectPhase('analyse')">Analyse</strong>.
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Rechterkolom: Dynamisch Detailpaneel -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+            <div id="detail-content">
+                <!-- Header van geselecteerde fase -->
+                <div class="flex items-start justify-between border-b border-slate-800 pb-4 mb-4">
+                    <div>
+                        <span id="phase-number" class="text-xs font-mono px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-400 rounded-md uppercase">Fase --</span>
+                        <h2 id="phase-title" class="text-xl font-bold text-white mt-1.5 capitalize">Selecteer een fase</h2>
+                    </div>
+                    <div id="phase-badge" class="w-3 h-3 rounded-full bg-slate-700 mt-2"></div>
+                </div>
+
+                <!-- Beschrijving -->
+                <div class="mb-5">
+                    <h3 class="text-xs font-semibold tracking-wider text-slate-400 uppercase mb-1">Beschrijving</h3>
+                    <p id="phase-description" class="text-sm text-slate-300 leading-relaxed">Klik op een van de processtappen in de flowchart om de specifieke doelen, deliverables en een interactieve checklist te bekijken.</p>
+
+                </div>
+
+                <!-- Doelen -->
+                <div class="mb-5">
+                    <h3 class="text-xs font-semibold tracking-wider text-slate-400 uppercase mb-1.5">Kern-doelen</h3>
+                    <ul id="phase-goals" class="space-y-1 text-sm text-slate-300 list-none pl-0">
+                        <li class="text-slate-500 italic text-xs">Geen fase geselecteerd</li>
+                    </ul>
+                </div>
+
+                <!-- Deliverables / Resultaten -->
+                <div class="mb-5">
+                    <h3 class="text-xs font-semibold tracking-wider text-slate-400 uppercase mb-1.5">Belangrijkste Deliverables</h3>
+                    <div id="phase-deliverables" class="flex flex-wrap gap-1.5">
+                        <span class="text-xs bg-slate-800 border border-slate-700 text-slate-400 px-2 py-1 rounded">Geen</span>
+                    </div>
+                </div>
+
+                <!-- Interactieve Checklist -->
+
+                <div>
+                    <h3 class="text-xs font-semibold tracking-wider text-slate-400 uppercase mb-2 flex items-center justify-between">
+                        <span>Fase Checklist</span>
+                        <span id="progress-text" class="text-[11px] font-mono text-blue-400 lowercase">0% voltooid</span>
+                    </h3>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mb-3 overflow-hidden">
+                        <div id="progress-bar" class="bg-blue-500 h-1.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+
+                    <div id="phase-checklist" class="space-y-2 max-height-[180px] overflow-y-auto pr-1">
+                        <p class="text-xs text-slate-500 italic">Selecteer een stap om de checklist te activeren.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voetnoot/Tip info -->
+            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500 flex items-center gap-1.5">
+
+                <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Alle stappen zijn onlosmakelijk verbonden in een gezonde engineering workflow.</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 px-6 py-3 text-center text-xs text-slate-600">
+        SDLC Flowchart Applicatie &copy; 2026 — Gebouwd voor structuur, overzicht en kwaliteit.
+    </footer>
+
+    <!-- JavaScript Logica -->
+    <script>
+        // Data-architectuur voor alle SDLC-fasen
+        const sdlcData = {
+            analyse: {
+                title: "Analyse",
+                number: "Fase 01",
+
+                color: "bg-blue-500",
+                description: "In deze initiële fase worden de functionele en niet-functionele eisen (requirements) van belanghebbenden verzameld en geanalyseerd om de exacte omvang (scope) van het project te bepalen.",
+                goals: [
+                    "Begrijpen van de specifieke behoeften van de eindgebruiker.",
+                    "Vaststellen van technische, operationele en financiële haalbaarheid.",
+                    "Definiëren van duidelijke project- en systeemgrenzen."
+                ],
+                deliverables: ["Product Backlog", "User Stories", "Requirements Specification (SRS)", "MoSCoW Prioritering"],
+                checklist: [
+                    "Stakeholders geïdentificeerd en geïnterviewd",
+                    "Functionele en niet-functionele eisen gedocumenteerd",
+                    "Randvoorwaarden en risico's in kaart gebracht",
+                    "Goedkeuring op de projectscope verkregen van product owner"
+                ]
+            },
+            ontwerp: {
+                title: "Ontwerp (Design)",
+                number: "Fase 02",
+                color: "bg-purple-500",
+
+                description: "De requirements uit de analysefase worden vertaald naar een blauwdruk voor de uiteindelijke applicatie. Dit omvat zowel het visuele aspect als de onderliggende technische architectuur.",
+                goals: [
+                    "Ontwerpen van een schaalbare en veilige systeemarchitectuur.",
+                    "Uittekenen van intuïtieve gebruikersinterfaces (UI/UX).",
+                    "Definiëren van datastructuren en API-koppelingen."
+                ],
+                deliverables: ["Technisch Ontwerp (TO)", "UI/UX Wireframes / Figma prototypes", "Entity Relationship Diagram (ERD)", "API Contracten"],
+                checklist: [
+                    "Systeem- en softwarearchitectuur gedefinieerd",
+                    "Database schema / datamodel ontworpen",
+                    "UI/UX wireframes en user flows goedgekeurd",
+                    "Technologie-stack en bibliotheken definitief gekozen"
+                ]
+            },
+            implementatie: {
+                title: "Implementatie (Coding)",
+                number: "Fase 03",
+                color: "bg-amber-500",
+                description: "Dit is de daadwerkelijke bouwfase waarin ontwikkelaars de code schrijven op basis van de ontwerpspecificaties en afgesproken codeerstandaarden.",
+
+                goals: [
+                    "Schrijven van schone, modulaire en goed gedocumenteerde code.",
+                    "Opzetten van de database infrastructuren en integraties.",
+                    "Regelmatig integreren van code via versiebeheer."
+                ],
+                deliverables: ["Broncode in Git", "Werkend software prototype", "Gezonken API-implementaties", "In-line Code Documentatie"],
+                checklist: [
+                    "Ontwikkelomgeving en Git repository correct ingericht",
+                    "Code geschreven conform de team-standaarden",
+                    "Code reviews / Peer reviews succesvol uitgevoerd",
+                    "Applicatie bouwt zonder fouten (Green Build)"
+                ]
+            },
+            test: {
+                title: "Testen (QA)",
+                number: "Fase 04",
+                color: "bg-emerald-500",
+                description: "Kwaliteitsborging is essentieel. De software wordt grondig getest op bugs, beveiligingsrisico's en het voldoen aan de oorspronkelijke kwaliteitseisen uit de analysefase.",
+                goals: [
+
+                    "Vroegtijdig opsporen en oplossen van regressies en bugs.",
+                    "Controleren of alle user stories voldoen aan de Acceptatiecriteria.",
+                    "Valideren van systeemprestaties en applicatieveiligheid."
+                ],
+                deliverables: ["Testrapporten", "Bug-logbestanden", "Automated Test Scripts", "Gebruikersacceptatietest (GAT) Goedkeuring"],
+                checklist: [
+                    "Unit tests en integratietests succesvol gedraaid",
+                    "Handmatige en geautomatiseerde regressietests uitgevoerd",
+                    "Gevonden kritieke bugs opgelost en hergetest",
+                    "Gebruikersacceptatietest (UAT) door klant ondertekend"
+                ]
+            },
+            review: {
+                title: "Review & Evaluatie",
+                number: "Fase 05",
+                color: "bg-rose-500",
+                description: "Tijdens de review wordt het opgeleverde resultaat geëvalueerd met stakeholders. Tevens kijkt het team tijdens een retrospective terug op het proces om toekomstige iteraties te verbeteren.",
+                goals: [
+                    "Presenteren van het werkende product aan stakeholders voor finale feedback.",
+
+                    "Evalueren van de samenwerking en het ontwikkelproces.",
+                    "Officieel releasen of overdragen van de software naar productie."
+                ],
+                deliverables: ["Release Notes", "Live Productieomgeving Deployment", "Retrospective Actiepunten", "Volgende Sprint Planning"],
+                checklist: [
+                    "Productsucces gedemonstreerd aan stakeholders (Sprint Review)",
+                    "Software veilig gedeployed naar productie/live omgeving",
+                    "Procesevaluatie afgerond (Retrospective)",
+                    "Geleerde lessen verwerkt in de backlog voor de volgende cyclus"
+                ]
+            }
+        };
+
+        let currentPhaseKey = null;
+        let animationInterval = null;
+        let animationStep = 0;
+        const phasesSequence = ['analyse', 'ontwerp', 'implementatie', 'test', 'review'];
+
+        // Functie om een specifieke fase te selecteren en weer te geven
+
+        function selectPhase(phaseKey) {
+            currentPhaseKey = phaseKey;
+            const data = sdlcData[phaseKey];
+
+            // Update alle actieve klassen in de visuele flowchart nodes
+            phasesSequence.forEach(key => {
+                const node = document.getElementById(`node-${key}`);
+                if (key === phaseKey) {
+                    node.classList.add('active-node');
+                } else {
+                    node.classList.remove('active-node');
+                }
+            });
+
+            // Update pijlkleuren om de actieve stroom te visualiseren
+            updateArrows(phaseKey);
+
+            // Update het detailpaneel aan de rechterkant
+            document.getElementById('phase-number').className = `text-xs font-mono px-2 py-0.5 border text-white rounded-md uppercase ${data.color} border-transparent`;
+
+            document.getElementById('phase-number').innerText = data.number;
+            document.getElementById('phase-title').innerText = data.title;
+            document.getElementById('phase-description').innerText = data.description;
+
+            // Badge kleur aanpassen
+            const badge = document.getElementById('phase-badge');
+            badge.className = `w-3 h-3 rounded-full ${data.color}`;
+
+            // Doelen genereren
+            const goalsList = document.getElementById('phase-goals');
+            goalsList.innerHTML = '';
+            data.goals.forEach(goal => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start gap-2 mt-1';
+                li.innerHTML = `<span class="text-blue-500 mt-0.5">&bull;</span> <span>${goal}</span>`;
+                goalsList.appendChild(li);
+            });
+
+            // Deliverables badges genereren
+
+            const deliverablesDiv = document.getElementById('phase-deliverables');
+            deliverablesDiv.innerHTML = '';
+            data.deliverables.forEach(del => {
+                const span = document.createElement('span');
+                span.className = 'text-xs bg-slate-800 border border-slate-700 text-slate-300 px-2 py-1 rounded transition hover:bg-slate-700';
+                span.innerText = del;
+                deliverablesDiv.appendChild(span);
+            });
+
+            // Checklist genereren
+            const checklistDiv = document.getElementById('phase-checklist');
+            checklistDiv.innerHTML = '';
+            data.checklist.forEach((item, index) => {
+                const label = document.createElement('label');
+                label.className = 'flex items-center gap-2.5 p-2 bg-slate-800/40 border border-slate-800 rounded-lg hover:bg-slate-800/80 transition cursor-pointer text-xs text-slate-300';
+                label.innerHTML = `
+                    <input type="checkbox" name="chk-${phaseKey}" onchange="calculateProgress()" class="rounded bg-slate-900 border-slate-700 text-blue-500 focus:ring-blue-500 focus:ring-offset-slate-900 w-4 h-4">
+                    <span>${item}</span>
+                `;
+
+                checklistDiv.appendChild(label);
+            });
+
+            // Reset progress bar voor de nieuwe fase
+            calculateProgress();
+        }
+
+        // Bereken en update de voortgang van de actieve checklist
+        function calculateProgress() {
+            if (!currentPhaseKey) return;
+            const checkboxes = document.querySelectorAll(`input[name="chk-${currentPhaseKey}"]`);
+            const checked = document.querySelectorAll(`input[name="chk-${currentPhaseKey}"]:checked`);
+
+            let percentage = 0;
+            if (checkboxes.length > 0) {
+                percentage = Math.round((checked.length / checkboxes.length) * 100);
+            }
+
+            document.getElementById('progress-bar').style.width = `${percentage}%`;
+
+            document.getElementById('progress-text').innerText = `${percentage}% voltooid`;
+        }
+
+        // Kleuren van de pijlen aanpassen op basis van het huidige procesverloop
+        function updateArrows(phaseKey) {
+            const index = phasesSequence.indexOf(phaseKey);
+
+            for (let i = 1; i <= 4; i++) {
+                const arrow = document.getElementById(`arrow-${i}`);
+                if (i <= index) {
+                    arrow.classList.remove('text-slate-700');
+                    arrow.classList.add('text-blue-500');
+                } else {
+                    arrow.classList.remove('text-blue-500');
+                    arrow.classList.add('text-slate-700');
+                }
+            }
+        }
+
+
+        // Schakel automatische cyclus animatie in of uit
+        function toggleAnimation() {
+            const btn = document.getElementById('btn-animate');
+            const icon = document.getElementById('icon-play');
+            const text = document.getElementById('text-animate');
+
+            if (animationInterval) {
+                // Stop animatie
+                clearInterval(animationInterval);
+                animationInterval = null;
+                text.innerText = "Simuleer Cyclus";
+                icon.innerHTML = `<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>`;
+                btn.className = "px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition shadow-lg flex items-center gap-2";
+            } else {
+                // Start animatie
+                text.innerText = "Pauzeer";
+                icon.innerHTML = `<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>`;
+                btn.className = "px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium rounded-lg transition shadow-lg flex items-center gap-2";
+
+
+                // Voer direct de volgende stap uit
+                if (!currentPhaseKey || currentPhaseKey === 'review') {
+                    animationStep = 0;
+                } else {
+                    animationStep = phasesSequence.indexOf(currentPhaseKey) + 1;
+                }
+
+                selectPhase(phasesSequence[animationStep]);
+
+                animationInterval = setInterval(() => {
+                    animationStep = (animationStep + 1) % phasesSequence.length;
+                    selectPhase(phasesSequence[animationStep]);
+                }, 3500); // Verspring elke 3,5 seconden naar de volgende fase
+            }
+        }
+
+        // Reset de gehele applicatie naar de beginstand
+        function resetApp() {
+            if (animationInterval) {
+
+                toggleAnimation();
+            }
+            currentPhaseKey = null;
+            animationStep = 0;
+
+            // Reset flowchart nodes
+            phasesSequence.forEach(key => {
+                document.getElementById(`node-${key}`).classList.remove('active-node');
+            });
+
+            // Reset pijlen
+            for (let i = 1; i <= 4; i++) {
+                const arrow = document.getElementById(`arrow-${i}`);
+                arrow.className = "flex items-center justify-center rotate-90 md:rotate-0 text-slate-700 py-1";
+            }
+
+            // Reset detail paneel content naar standaard tekst
+            document.getElementById('phase-number').className = "text-xs font-mono px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-400 rounded-md uppercase";
+            document.getElementById('phase-number').innerText = "Fase --";
+
+            document.getElementById('phase-title').innerText = "Selecteer een fase";
+            document.getElementById('phase-description').innerText = "Klik op een van de processtappen in de flowchart om de specifieke doelen, deliverables en een interactieve checklist te bekijken.";
+            document.getElementById('phase-badge').className = "w-3 h-3 rounded-full bg-slate-700 mt-2";
+            document.getElementById('phase-goals').innerHTML = '<li class="text-slate-500 italic text-xs">Geen fase geselecteerd</li>';
+            document.getElementById('phase-deliverables').innerHTML = '<span class="text-xs bg-slate-800 border border-slate-700 text-slate-400 px-2 py-1 rounded">Geen</span>';
+            document.getElementById('phase-checklist').innerHTML = '<p class="text-xs text-slate-500 italic">Selecteer een stap om de checklist te activeren.</p>';
+            document.getElementById('progress-bar').style.width = '0%';
+            document.getElementById('progress-text').innerText = '0% voltooid';
+        }
+
+        // Event listeners koppelen aan de knoppen
+        document.getElementById('btn-animate').addEventListener('click', toggleAnimation);
+        document.getElementById('btn-reset').addEventListener('click', resetApp);
+
+        // Bij het laden automatisch de eerste fase selecteren om direct waarde te tonen
+        window.onload = function() {
+            selectPhase('analyse');
+        };
+    </script>
+</body>
+</html>
