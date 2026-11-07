@@ -18,7 +18,7 @@ werkboektooling en een Draw.io-naar-Mermaid-converter.
 - **[JiraIssueTracker](JiraIssueTracker/JiraIssueTracker.csproj):**
   WinUI/MSIX-prototype op .NET 10 met sampledata; geen live Jira-client.
 - **[EfficiencyTool](EfficiencyTool/EfficiencyTool.csproj):** .NET 10-consoleapp
-  met `Programmeren(double)` en de efficiëntiefactor; zie
+  voor `start`, `lijst` en `afmelden` van werkitems met twee efficiëntiefactoren; zie
   [EfficiencyTool](#efficiencytool-efficiëntiefactor).
 - **[Megalijst](Megalijst/README.md):** `WorkbookTextGuard` voor inventarisatie,
   controle, opschoning en herberekening van `.xlsx`-werkboeken.
@@ -181,23 +181,15 @@ build, deployment of productiegeschiktheid.
 Console-app (.NET 10) die beoordeelt of werk "Programmeur" of "Lopende band werk"
 is, ten opzichte van de gemiddelde programmeur.
 
-- **Invoer:** eerste schatting en werkelijke effort (alle iteraties tot
-  check-in), in dezelfde eenheid.
-- **Werkelijke effort vs. schatting factor** = werkelijke effort / schatting
-  (gemiddelde programmeur = 1,67).
 - **Efficiëntiefactor** = (schatting × 5/3) / werkelijke effort, afgerond op
   5 decimalen.
 - **Drempel:** `Programmeren(double)` geeft "Programmeur" bij factor ≥ 0,33333
   (maximaal 5× de eigen schatting), anders "Lopende band werk".
-- **Weekoverzicht en startpunt:** na de factor vraagt de tool het invoermoment
-  (leeg = nu, `yyyy-MM-dd HH:mm`) en rekent het startpunt terug over het
-  werkrooster in `Werkrooster.cs`: maandag, dinsdag, donderdag en vrijdag,
-  09:00-15:30 met pauze 12:30-13:00 (6,0 uur netto per dag, 24 contracturen per
-  week). Woensdag, weekend en feestdagen tellen niet mee. Aannames: de werkelijke effort is in **uren**, tijden zijn lokale
-  kloktijd, en een invoermoment buiten werktijd of in de pauze telt vanaf het
-  vorige werkeinde. Het startpunt is **theoretisch**: aaneengesloten werk aan
-  één item, zonder reviews of meetings.
-  Voorbeeld: vrijdag 15:30 met 6 uur effort geeft vrijdag 09:00.
+- **Werkrooster:** `Werkrooster.BerekenRoosterUren` telt de uren tussen start en
+  afmelding op maandag, dinsdag, donderdag en vrijdag, 09:00-12:30 en
+  13:00-15:30 (pauze 12:30-13:00; 6,0 uur netto per dag, 24 per week).
+  Woensdag, weekend en feestdagen tellen niet mee. Tijden zijn lokale kloktijd.
+  Zonder subcommando toont de tool een gebruiksaanwijzing met exitcode 1.
 
 ### Start/afmelden-flow (alle hoeveelheden in **uren**, niet minuten)
 
@@ -206,8 +198,8 @@ is, ten opzichte van de gemiddelde programmeur.
    hoofdletters) wordt geweigerd.
 2. `afmelden [key]`: afmeldtijd na alle iteraties (leeg = nu). De tool berekent
    de **roosteruren** tussen start en afmelding (`Werkrooster.BerekenRoosterUren`);
-   Enter neemt die over als effort, of voer handmatig de echte effort in
-   (verplicht bij 0 roosteruren). Daarna vraagt de tool de **extra uren**.
+   deze worden direct als effort gebruikt; bij 0 roosteruren wordt afmelden
+   geweigerd en blijft het item open. Daarna vraagt de tool de **extra uren**.
 3. `lijst`: toont openstaande items.
 
 - **Factor 1** = (schatting × 5/3) / effort.
@@ -232,26 +224,28 @@ is, ten opzichte van de gemiddelde programmeur.
   gewerkte uren.
 
 ```bash
-dotnet run --project EfficiencyTool                  # interactief
 dotnet run --project EfficiencyTool -- start         # item starten
 dotnet run --project EfficiencyTool -- afmelden ABC-123
 dotnet run --project EfficiencyTool -- lijst
-dotnet run --project EfficiencyTool -- --docx [pad]  # Word-opdracht genereren
 dotnet test EfficiencyTool.slnx
 ```
 
 ### Handmatige test tegen Jira TimeTracker
 
-1. Kies een afgeronde issue met geregistreerde tijd; noteer het invoermoment en
-   de werkelijke effort (uren).
-2. Draai `dotnet run --project EfficiencyTool` en noteer startpunt en
-   weekoverzicht.
-3. Vergelijk met de worklogs in Jira TimeTracker, bij voorkeur over een hele
-   werkweek (24 roosteruren): tel de geboekte uren van die week op.
+1. Kies een afgeronde issue met geregistreerde tijd; noteer de eerste schatting
+   (uren), het startmoment, het afmeldmoment en de gelogde uren.
+2. Start en meld af met een tijdelijk opslagbestand:
+   `dotnet run --project EfficiencyTool -- --bestand ./jira-check.json start`
+   en daarna `... afmelden`.
+3. Vergelijk de berekende roosteruren met de worklogs in Jira TimeTracker, bij
+   voorkeur over een hele werkweek (24 roosteruren).
 4. Leg het verschil vast als niet-ticketgebonden tijd (stand-ups, reviews,
    ondersteuning, contextwissels, extra pauzes; de lunchpauze 12:30-13:00 zit
-   al buiten het rooster) en noteer afwijkingen (woensdag
-   gewerkt, feestdag).
+   al buiten het rooster) en noteer afwijkingen (woensdag gewerkt, feestdag).
+
+### CI / Publish
+
+De GitHub Actions-workflow `.github/workflows/efficiencytool.yml` (`EfficiencyTool CI`) bouwt de solution in `Release`-configuratie (met `TreatWarningsAsErrors`), draait alle unit tests en publiceert op `main`, handmatige runs (`workflow_dispatch`) en `v*`-tags een self-contained `win-x64` single-file executable als workflow-artifact `EfficiencyTool-win-x64` (en als GitHub Release bij een `v*`-tag).
 
 ## Draw.io naar Mermaid
 

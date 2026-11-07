@@ -30,17 +30,6 @@ public static class Efficiency
         return Math.Round(factor, 5, MidpointRounding.AwayFromZero) + 0.0;
     }
 
-    /// <summary>Factor van Jeroen = werkelijke effort / eerste schatting (gemiddelde programmeur 1,67; grens 5,00).</summary>
-    public static double BerekenEffortVsSchattingFactor(double schatting, double werkelijkeEffort)
-    {
-        ValideerPositiefEindig(schatting);
-        ValideerPositiefEindig(werkelijkeEffort);
-
-        double factor = werkelijkeEffort / schatting;
-        ValideerNietNegatiefEindig(factor);
-        return Math.Round(factor, 2, MidpointRounding.AwayFromZero) + 0.0;
-    }
-
     /// <summary>
     /// Tweede efficiëntiefactor: (schatting × 5/3) / (effort + extra uren). Alle waarden in uren.
     /// Extra uren zijn uren boven 6 per werkdag die BOVENOP de effort komen (niet al in de effort meegeteld).

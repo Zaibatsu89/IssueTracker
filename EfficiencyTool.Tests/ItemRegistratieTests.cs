@@ -265,16 +265,12 @@ public class ItemRegistratieTests : IDisposable
 
         a = CliArgumenten.Parse(["LIJST"], "std");
         Assert.Equal(("std", "lijst"), (a.OpslagPad, a.Commando));
-
-        a = CliArgumenten.Parse(["--bestand", "x.json", "--docx", "o.docx"], "std");
-        Assert.Null(a.Commando);
-        Assert.Equal(["--docx", "o.docx"], a.RestArgs);
     }
 
     public static TheoryData<string[]> OngeldigeCliArgumenten => new()
     {
         new[] { "start", "--bestand" },
-        new[] { "--bestand", "--docx" },
+        new[] { "--bestand", "--x" },
         new[] { "--onbekend", "start" },
         new[] { "start", "--onbekend" },
         new[] { "start", "extra" },
@@ -282,7 +278,7 @@ public class ItemRegistratieTests : IDisposable
         new[] { "afmelden", "A", "B" },
         new[] { "afmelden", "--onbekend" },
         new[] { "onbekendwoord" },
-        new[] { "--docx", "a.docx", "b.docx" },
+        new[] { "--docx" },
     };
 
     [Theory]

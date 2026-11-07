@@ -2,8 +2,8 @@ namespace EfficiencyTool;
 
 /// <summary>Resultaat van het parsen van de commandoregel.</summary>
 /// <param name="OpslagPad">Pad van het JSON-opslagbestand.</param>
-/// <param name="Commando">Kleine letters: start, afmelden, lijst, of null als er geen subcommando is (interactief of --docx).</param>
-/// <param name="RestArgs">Argumenten na het commando (afmelden: de key) of de --docx-argumenten.</param>
+/// <param name="Commando">Kleine letters: start, afmelden, lijst, of null als er geen subcommando is.</param>
+/// <param name="RestArgs">Argumenten na het commando (bij afmelden: de optionele Jira-key).</param>
 public sealed record GeparseerdeArgumenten(string OpslagPad, string? Commando, IReadOnlyList<string> RestArgs);
 
 /// <summary>Strikte, testbare routing van de commandoregel: globale <c>--bestand &lt;pad&gt;</c> op elke positie, daarna het commando.</summary>
@@ -35,13 +35,6 @@ public static class CliArgumenten
             return new GeparseerdeArgumenten(opslagPad, null, []);
 
         string eerste = overig[0];
-
-        if (string.Equals(eerste, "--docx", StringComparison.Ordinal))
-        {
-            if (overig.Count > 2 || (overig.Count == 2 && overig[1].StartsWith("--", StringComparison.Ordinal)))
-                throw new ArgumentException("--docx accepteert hooguit één uitvoerpad.");
-            return new GeparseerdeArgumenten(opslagPad, null, overig);
-        }
 
         if (string.Equals(eerste, "start", StringComparison.OrdinalIgnoreCase) || string.Equals(eerste, "lijst", StringComparison.OrdinalIgnoreCase))
         {
