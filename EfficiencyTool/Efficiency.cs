@@ -41,6 +41,28 @@ public static class Efficiency
         return Math.Round(factor, 2, MidpointRounding.AwayFromZero) + 0.0;
     }
 
+    /// <summary>
+    /// Tweede efficiëntiefactor: (schatting × 5/3) / (effort + extra uren). Alle waarden in uren.
+    /// Extra uren zijn uren boven 6 per werkdag die BOVENOP de effort komen (niet al in de effort meegeteld).
+    /// Strikter dan factor 1: schatting moet &gt; 0 zijn.
+    /// </summary>
+    public static double BerekenEfficientieFactorInclExtraUren(double schattingUren, double effortUren, double extraUren)
+    {
+        ValideerPositiefEindig(schattingUren);
+        ValideerPositiefEindig(effortUren);
+        ValideerNietNegatiefEindig(extraUren);
+
+        double totaleEffort = effortUren + extraUren;
+        if (!double.IsFinite(totaleEffort))
+            throw new OverflowException("Totale effort is niet eindig.");
+        ValideerPositiefEindig(totaleEffort);
+
+        double factor = schattingUren * GemiddeldeProgrammeurFactor / totaleEffort;
+        if (!double.IsFinite(factor))
+            throw new OverflowException("Efficiëntiefactor is niet eindig.");
+        return Math.Round(factor, 5, MidpointRounding.AwayFromZero) + 0.0;
+    }
+
     public static bool TryParseGetal(string? invoer, out double waarde)
     {
         return double.TryParse(invoer?.Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out waarde)

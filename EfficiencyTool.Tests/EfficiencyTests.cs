@@ -120,7 +120,7 @@ public class EfficiencyTests
             WordDocumentGenerator.Genereer(pad);
             Assert.NotEmpty(File.ReadAllBytes(pad));
             using var doc = WordprocessingDocument.Open(pad, false);
-            Assert.Empty(new OpenXmlValidator(FileFormatVersions.Office2019).Validate(doc));
+            Assert.Empty(new OpenXmlValidator(FileFormatVersions.Office2019).Validate(doc, TestContext.Current.CancellationToken));
             string tekst = doc.MainDocumentPart!.Document!.InnerText;
             Assert.Contains("0,33333", tekst);
             Assert.Contains("1,67", tekst);
@@ -133,4 +133,24 @@ public class EfficiencyTests
             File.Delete(pad);
         }
     }
+
+    [Theory]
+    [InlineData(6, 5, 0, 2.0)]
+    [InlineData(6, 5, 5, 1.0)]
+    [InlineData(3, 5, 0, 1.0)]
+    public void BerekenEfficientieFactorInclExtraUren_geeft_verwachte_factor(double schatting, double effort, double extra, double verwacht) =>
+        Assert.Equal(verwacht, Efficiency.BerekenEfficientieFactorInclExtraUren(schatting, effort, extra));
+
+    [Theory]
+    [InlineData(0, 5, 0)]
+    [InlineData(-1, 5, 0)]
+    [InlineData(6, 0, 0)]
+    [InlineData(6, -1, 0)]
+    [InlineData(6, 5, -1)]
+    [InlineData(double.NaN, 5, 0)]
+    [InlineData(6, double.NaN, 0)]
+    [InlineData(6, 5, double.NaN)]
+    [InlineData(6, 5, double.PositiveInfinity)]
+    public void BerekenEfficientieFactorInclExtraUren_weigert_ongeldige_invoer(double schatting, double effort, double extra) =>
+        Assert.Throws<ArgumentOutOfRangeException>(() => Efficiency.BerekenEfficientieFactorInclExtraUren(schatting, effort, extra));
 }

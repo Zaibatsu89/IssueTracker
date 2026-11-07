@@ -199,8 +199,43 @@ is, ten opzichte van de gemiddelde programmeur.
   één item, zonder reviews of meetings.
   Voorbeeld: vrijdag 15:30 met 6 uur effort geeft vrijdag 09:00.
 
+### Start/afmelden-flow (alle hoeveelheden in **uren**, niet minuten)
+
+1. `start`: Jira-key, eerste schatting (uren) en starttijd (leeg = nu) worden
+   onthouden. Een tweede openstaand item met dezelfde key (ook met andere
+   hoofdletters) wordt geweigerd.
+2. `afmelden [key]`: afmeldtijd na alle iteraties (leeg = nu). De tool berekent
+   de **roosteruren** tussen start en afmelding (`Werkrooster.BerekenRoosterUren`);
+   Enter neemt die over als effort, of voer handmatig de echte effort in
+   (verplicht bij 0 roosteruren). Daarna vraagt de tool de **extra uren**.
+3. `lijst`: toont openstaande items.
+
+- **Factor 1** = (schatting × 5/3) / effort.
+- **Factor 2 (incl. extra uren)** = (schatting × 5/3) / (effort + extra uren).
+  Extra uren zijn de uren boven 6 per werkdag **bovenop** de effort; tel ze niet
+  ook al in de effort mee (dubbel tellen).
+- **Opslag:** `%LOCALAPPDATA%\EfficiencyTool\items.json`, te overschrijven met
+  `--bestand <pad>` (absoluut of relatief, op elke positie). Het pad wordt
+  genormaliseerd. Opslaan schrijft eerst naar `<pad>.tmp` in dezelfde map en
+  vervangt daarna het bestand; bij een fout blijft het bestaande bestand intact.
+  Dit is geen universele crash-atomiciteitsgarantie voor elk bestandssysteem.
+  Schrijven én lezen (ook `lijst`) gebeuren onder een permanent lockbestand
+  (`<pad>.lock`, blijft bestaan). Een beschadigd JSON-bestand wordt nooit
+  overschreven. Afgemelde items blijven bewaard met roosteruren (door de tool
+  berekend), effort, extra uren, beide factoren en `BerekeningsVersie`.
+- **Lokaal bestandssysteem (geen netwerkshares):** De exclusieve lock op `<pad>.lock` via `FileShare.None` en het vervangen via `File.Move(..., overwrite: true)` zijn afhankelijk van ondersteuning door het onderliggende bestandssysteem en niet betrouwbaar op netwerkshares (SMB/NFS) of gesynchroniseerde cloudmappen. Gebruik voor `--bestand` altijd een pad op een lokaal bestandssysteem.
+- **Strikte CLI:** onbekende opties, onbekende woorden of overtollige argumenten
+  geven een foutmelding en exitcode 1; ook opslag- en invoerfouten geven exitcode 1.
+- **Tijden** zijn lokale Nederlandse kloktijd zonder tijdzone.
+- **Overlap:** items worden afzonderlijk berekend. Bij gelijktijdig openstaande
+  items kunnen roosteruren overlappen; tel resultaten dus niet op tot totaal
+  gewerkte uren.
+
 ```bash
 dotnet run --project EfficiencyTool                  # interactief
+dotnet run --project EfficiencyTool -- start         # item starten
+dotnet run --project EfficiencyTool -- afmelden ABC-123
+dotnet run --project EfficiencyTool -- lijst
 dotnet run --project EfficiencyTool -- --docx [pad]  # Word-opdracht genereren
 dotnet test EfficiencyTool.slnx
 ```
