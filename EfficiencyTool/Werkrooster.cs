@@ -89,12 +89,15 @@ public static class Werkrooster
             throw new ArgumentException("Eindtijd moet na de starttijd liggen.", nameof(eind));
 
         double minuten = 0.0;
-        for (DateTime dag = start.Date; dag <= eind.Date; dag = dag.AddDays(1))
+        for (DateTime dag = start.Date; ; dag = dag.AddDays(1))
         {
-            if (!IsWerkdag(dag.DayOfWeek))
-                continue;
-            minuten += BerekenOverlapMinuten(start, eind, dag + WerkdagStart.ToTimeSpan(), dag + PauzeStart.ToTimeSpan());
-            minuten += BerekenOverlapMinuten(start, eind, dag + PauzeEind.ToTimeSpan(), dag + WerkdagEind.ToTimeSpan());
+            if (IsWerkdag(dag.DayOfWeek))
+            {
+                minuten += BerekenOverlapMinuten(start, eind, dag + WerkdagStart.ToTimeSpan(), dag + PauzeStart.ToTimeSpan());
+                minuten += BerekenOverlapMinuten(start, eind, dag + PauzeEind.ToTimeSpan(), dag + WerkdagEind.ToTimeSpan());
+            }
+            if (dag >= eind.Date)
+                break;
         }
 
         return Math.Round(minuten / 60.0, 5, MidpointRounding.AwayFromZero);
