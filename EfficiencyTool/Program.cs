@@ -101,6 +101,7 @@ static void VoerLijstUit(string pad)
 
 static void VoerAfmeldenUit(string pad, string? key)
 {
+    WerkItem? geselecteerd = null;
     try
     {
         var open = ItemRegistratie.LaadOpenstaand(pad);
@@ -127,6 +128,8 @@ static void VoerAfmeldenUit(string pad, string? key)
             item = ItemRegistratie.ZoekOpenstaandItem(open, invoer) ?? throw new InvalidOperationException($"Geen openstaand item met key {invoer.Trim()}.");
         }
 
+        geselecteerd = item;
+
         if (open.Count > 1)
             Console.WriteLine("Let op: er staan meer items open; roosteruren kunnen overlappen en mogen niet worden opgeteld.");
 
@@ -151,7 +154,7 @@ static void VoerAfmeldenUit(string pad, string? key)
     }
     catch (Exception ex) when (ex is InvalidOperationException or IOException or ArgumentException or OverflowException or JsonException or UnauthorizedAccessException)
     {
-        Console.WriteLine($"Fout: {ex.Message} (item blijft open)");
+        Console.WriteLine(geselecteerd is null ? $"Fout: {ex.Message}" : $"Fout: {ex.Message} (item blijft open)");
         Environment.ExitCode = 1;
     }
 }
