@@ -57,8 +57,6 @@ static double LeesGetal(string prompt, bool striktPositief = false)
     }
 }
 
-static string F(double waarde, string formaat = "0.#####") => waarde.ToString(formaat, CultureInfo.InvariantCulture);
-
 static void VoerStartUit(string pad)
 {
     try
@@ -72,27 +70,6 @@ static void VoerStartUit(string pad)
         Console.WriteLine($"Gestart: {item.Key}, schatting {F(item.SchattingUren)} uur, start {item.Start:yyyy-MM-dd HH:mm}");
     }
     catch (Exception ex) when (ex is InvalidOperationException or IOException or ArgumentException or JsonException or UnauthorizedAccessException)
-    {
-        Console.WriteLine($"Fout: {ex.Message}");
-        Environment.ExitCode = 1;
-    }
-}
-
-static void VoerLijstUit(string pad)
-{
-    try
-    {
-        var open = ItemRegistratie.LaadOpenstaand(pad);
-        if (open.Count == 0)
-        {
-            Console.WriteLine("Geen openstaande items.");
-            return;
-        }
-        Console.WriteLine("Openstaande items:");
-        foreach (WerkItem item in open)
-            Console.WriteLine($"  {item.Key}: schatting {F(item.SchattingUren)} uur, start {item.Start:yyyy-MM-dd HH:mm}");
-    }
-    catch (Exception ex) when (ex is IOException or JsonException or UnauthorizedAccessException)
     {
         Console.WriteLine($"Fout: {ex.Message}");
         Environment.ExitCode = 1;
@@ -156,5 +133,33 @@ static void VoerAfmeldenUit(string pad, string? key)
     {
         Console.WriteLine(geselecteerd is null ? $"Fout: {ex.Message}" : $"Fout: {ex.Message} (item blijft open)");
         Environment.ExitCode = 1;
+    }
+}
+
+/// <summary>Impliciete programmaklasse; bevat de hulpmethoden die tests rechtstreeks aanroepen.</summary>
+partial class Program
+{
+    private static string F(double waarde, string formaat = "0.#####") => waarde.ToString(formaat, CultureInfo.InvariantCulture);
+
+    /// <summary>Toont de openstaande items; meldt verwachte fouten als <c>Fout: ...</c> met exitcode 1.</summary>
+    internal static void VoerLijstUit(string pad)
+    {
+        try
+        {
+            var open = ItemRegistratie.LaadOpenstaand(pad);
+            if (open.Count == 0)
+            {
+                Console.WriteLine("Geen openstaande items.");
+                return;
+            }
+            Console.WriteLine("Openstaande items:");
+            foreach (WerkItem item in open)
+                Console.WriteLine($"  {item.Key}: schatting {F(item.SchattingUren)} uur, start {item.Start:yyyy-MM-dd HH:mm}");
+        }
+        catch (Exception ex) when (ex is InvalidOperationException or IOException or ArgumentException or JsonException or UnauthorizedAccessException)
+        {
+            Console.WriteLine($"Fout: {ex.Message}");
+            Environment.ExitCode = 1;
+        }
     }
 }
