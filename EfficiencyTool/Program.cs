@@ -135,7 +135,7 @@ static void VoerAfmeldenUit(string pad, string? key)
         Console.WriteLine($"Roosteruren tussen start en afmelding: {F(roosterUren)} uur");
 
         if (roosterUren <= 0.0)
-            throw new InvalidOperationException("Geen roosteruren tussen start en afmelding; afmelden is niet mogelijk.");
+            throw new InvalidOperationException($"Geen roosteruren tussen start ({item.Start:yyyy-MM-dd HH:mm}) en afmelding ({eind:yyyy-MM-dd HH:mm}); afmelden is niet mogelijk. Het werkrooster is ma, di, do en vr 09:00-12:30 en 13:00-15:30; kies een afmeldtijd binnen die uren.");
         double effort = roosterUren;
 
         double extra = LeesGetal("Extra uren boven 6 per dag (in uren, niet al in de effort meegeteld; 0 = geen): ");
