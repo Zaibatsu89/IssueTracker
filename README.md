@@ -201,7 +201,8 @@ is, ten opzichte van de gemiddelde programmeur.
    deze worden direct als effort gebruikt; bij 0 roosteruren wordt afmelden
    geweigerd en blijft het item open; de foutmelding noemt dan de start- en
    afmeldtijd en het werkrooster (ma, di, do, vr 09:00-12:30 en 13:00-15:30). Daarna vraagt de tool de **extra uren**.
-3. `lijst`: toont openstaande items.
+3. `lijst`: toont openstaande items. Opslag-, JSON- en argumentfouten worden net
+   als bij `start` en `afmelden` als `Fout: <melding>` getoond met exitcode 1.
 
 - **Factor 1** = (schatting × 5/3) / effort.
 - **Factor 2 (incl. extra uren)** = (schatting × 5/3) / (effort + extra uren).
