@@ -21,7 +21,6 @@ public class AfmeldenZonderRoosterurenTests
             {
                 RedirectStandardInput = true,
                 RedirectStandardOutput = true,
-                RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true,
             };
