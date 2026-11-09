@@ -188,7 +188,9 @@ is, ten opzichte van de gemiddelde programmeur.
 - **Werkrooster:** `Werkrooster.BerekenRoosterUren` telt de uren tussen start en
   afmelding op maandag, dinsdag, donderdag en vrijdag, 09:00-12:30 en
   13:00-15:30 (pauze 12:30-13:00; 6,0 uur netto per dag, 24 per week).
-  Woensdag, weekend en feestdagen tellen niet mee. Tijden zijn lokale kloktijd.
+  Woensdag en weekend tellen niet mee. Feestdagen worden **niet** uitgesloten:
+  valt een feestdag op een roosterdag, dan telt die gewoon mee. Tijden zijn
+  lokale kloktijd.
   Zonder subcommando toont de tool een gebruiksaanwijzing met exitcode 1.
 
 ### Start/afmelden-flow (alle hoeveelheden in **uren**, niet minuten)
@@ -246,7 +248,7 @@ dotnet build EfficiencyTool.slnx
    voorkeur over een hele werkweek (24 roosteruren).
 4. Leg het verschil vast als niet-ticketgebonden tijd (stand-ups, reviews,
    ondersteuning, contextwissels, extra pauzes; de lunchpauze 12:30-13:00 zit
-   al buiten het rooster) en noteer afwijkingen (woensdag gewerkt, feestdag).
+   al buiten het rooster) en noteer afwijkingen (woensdag gewerkt, feestdag op een roosterdag; de tool sluit feestdagen niet uit).
 
 ### CI / Publish
 
