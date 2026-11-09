@@ -199,7 +199,8 @@ is, ten opzichte van de gemiddelde programmeur.
 2. `afmelden [key]`: afmeldtijd na alle iteraties (leeg = nu). De tool berekent
    de **roosteruren** tussen start en afmelding (`Werkrooster.BerekenRoosterUren`);
    deze worden direct als effort gebruikt; bij 0 roosteruren wordt afmelden
-   geweigerd en blijft het item open. Daarna vraagt de tool de **extra uren**.
+   geweigerd en blijft het item open; de foutmelding noemt dan de start- en
+   afmeldtijd en het werkrooster (ma, di, do, vr 09:00-12:30 en 13:00-15:30). Daarna vraagt de tool de **extra uren**.
 3. `lijst`: toont openstaande items.
 
 - **Factor 1** = (schatting × 5/3) / effort.
