@@ -48,4 +48,43 @@ public class AfmeldenZonderRoosterurenTests
                 Directory.Delete(map, recursive: true);
         }
     }
+
+    [Fact]
+    public async Task Afmelden_met_onbekende_key_toont_geen_item_blijft_open()
+    {
+        string map = Path.Combine(Path.GetTempPath(), "EfficiencyTool.Tests-" + Guid.NewGuid().ToString("N"));
+        string pad = Path.Combine(map, "items.json");
+        try
+        {
+            ItemRegistratie.RegistreerStart(pad, "FFA-9", 0.17, new DateTime(2026, 11, 9, 9, 0, 0));
+
+            var info = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "EfficiencyTool.exe"))
+            {
+                RedirectStandardInput = true,
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+            };
+            info.ArgumentList.Add("afmelden");
+            info.ArgumentList.Add("XYZ");
+            info.ArgumentList.Add("--bestand");
+            info.ArgumentList.Add(pad);
+
+            using var proces = Process.Start(info) ?? throw new InvalidOperationException("Proces kon niet worden gestart.");
+            var ct = TestContext.Current.CancellationToken;
+            proces.StandardInput.Close();
+            string uitvoer = await proces.StandardOutput.ReadToEndAsync(ct);
+            await proces.WaitForExitAsync(ct);
+
+            Assert.Equal(1, proces.ExitCode);
+            Assert.Contains("Fout: Geen openstaand item met key XYZ.", uitvoer);
+            Assert.DoesNotContain("(item blijft open)", uitvoer);
+            Assert.Single(ItemRegistratie.LaadOpenstaand(pad));
+        }
+        finally
+        {
+            if (Directory.Exists(map))
+                Directory.Delete(map, recursive: true);
+        }
+    }
 }
